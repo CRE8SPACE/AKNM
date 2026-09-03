@@ -1,0 +1,1650 @@
+/* =========================================================
+   AKNM LIVE REPLAY
+   Editorial / Broadcast / Original
+   ========================================================= */
+
+.live-replay-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+
+/* =========================================================
+   GLOBAL CONTENT
+   ========================================================= */
+
+.live-replay-content {
+  width: min(1280px, calc(100% - 64px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.live-replay-nav {
+  position: relative;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  min-height: 72px;
+
+  padding: 0 32px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: #000;
+}
+
+
+.live-replay-nav__left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+
+.live-replay-nav__right {
+  display: flex;
+  align-items: center;
+}
+
+
+.live-replay-logo {
+  color: rgba(255, 255, 255, 0.94);
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+
+  letter-spacing: 0.16em;
+
+  text-decoration: none;
+
+  transition: color 160ms ease;
+}
+
+
+.live-replay-logo:hover {
+  color: #00aeef;
+}
+
+
+.live-replay-nav__divider {
+  width: 24px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.18);
+}
+
+
+.live-replay-nav__live {
+  color: rgba(255, 255, 255, 0.46);
+
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+
+  text-decoration: none;
+
+  transition: color 160ms ease;
+}
+
+
+.live-replay-nav__live:hover {
+  color: #00aeef;
+}
+
+
+.live-replay-original {
+  color: rgba(255, 255, 255, 0.24);
+
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.live-replay-hero {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 112px 0 86px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+
+  background:
+    radial-gradient(
+      circle at 76% 42%,
+      rgba(0, 174, 239, 0.055),
+      transparent 34%
+    );
+}
+
+
+.live-replay-hero__glow {
+  position: absolute;
+
+  top: -240px;
+  right: -160px;
+
+  width: 620px;
+  height: 620px;
+
+  border: 1px solid rgba(0, 174, 239, 0.055);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+.live-replay-hero__glow::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 70px;
+
+  border: 1px solid rgba(255, 255, 255, 0.025);
+
+  border-radius: 50%;
+}
+
+
+.live-replay-hero__glow::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 150px;
+
+  border: 1px solid rgba(0, 174, 239, 0.035);
+
+  border-radius: 50%;
+}
+
+
+.live-replay-kicker {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-bottom: 34px;
+
+  color: rgba(255, 255, 255, 0.28);
+
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.live-replay-kicker__dot {
+  width: 6px;
+  height: 6px;
+
+  flex: 0 0 6px;
+
+  border-radius: 50%;
+
+  background: #04f751;
+
+  box-shadow:
+    0 0 0 4px rgba(4, 247, 81, 0.07);
+}
+
+
+.live-replay-kicker strong {
+  color: #00aeef;
+
+  font-size: inherit;
+  font-weight: 600;
+}
+
+
+.live-replay-hero h1 {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1080px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.95);
+
+  font-size: clamp(54px, 8.4vw, 126px);
+  font-weight: 500;
+
+  line-height: 0.91;
+
+  letter-spacing: -0.065em;
+
+  text-wrap: balance;
+}
+
+
+.live-replay-date {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 11px;
+
+  margin-top: 38px;
+
+  color: rgba(255, 255, 255, 0.27);
+
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+
+.live-replay-date strong {
+  color: rgba(255, 255, 255, 0.57);
+
+  font-size: inherit;
+  font-weight: 600;
+}
+
+
+.live-replay-date i {
+  color: rgba(255, 255, 255, 0.17);
+
+  font-style: normal;
+}
+
+
+.live-replay-date span:last-child {
+  color: rgba(255, 255, 255, 0.31);
+}
+
+
+/* =========================================================
+   PLAYER SECTION
+   ========================================================= */
+
+.live-replay-player-section {
+  width: min(1280px, calc(100% - 64px));
+
+  margin: 0 auto;
+
+  padding: 78px 0 88px;
+}
+
+
+.live-replay-player {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  aspect-ratio: 16 / 9;
+
+  min-height: 420px;
+
+  border: 1px solid rgba(255, 255, 255, 0.11);
+
+  border-radius: 6px;
+
+  background: #050505;
+}
+
+
+.live-replay-video {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  background: #000;
+}
+
+
+.live-replay-player-brand {
+  position: absolute;
+
+  right: 20px;
+  bottom: 18px;
+
+  z-index: 4;
+
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+
+  padding: 7px 9px;
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+
+  border-radius: 3px;
+
+  background: rgba(0, 0, 0, 0.62);
+
+  backdrop-filter: blur(8px);
+
+  pointer-events: none;
+}
+
+
+.live-replay-player-brand span {
+  color: rgba(255, 255, 255, 0.70);
+
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 1;
+
+  letter-spacing: 0.13em;
+}
+
+
+.live-replay-player-brand small {
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 7px;
+  line-height: 1;
+
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   NO VIDEO
+   ========================================================= */
+
+.live-replay-no-video {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(0, 174, 239, 0.07),
+      transparent 40%
+    );
+}
+
+
+.live-replay-no-video > div {
+  margin-bottom: 17px;
+
+  color: rgba(255, 255, 255, 0.13);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.25em;
+}
+
+
+.live-replay-no-video strong {
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+
+.live-replay-no-video p {
+  max-width: 420px;
+
+  margin: 12px 0 0;
+
+  color: rgba(255, 255, 255, 0.29);
+
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   PLAYER META
+   ========================================================= */
+
+.live-replay-player-meta {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+
+.live-replay-player-meta > div {
+  min-height: 82px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 0 22px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.live-replay-player-meta > div:first-child {
+  padding-left: 0;
+}
+
+
+.live-replay-player-meta > div:last-child {
+  border-right: 0;
+}
+
+
+.live-replay-player-meta span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: rgba(255, 255, 255, 0.23);
+
+  font-size: 7px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+
+.live-replay-player-meta strong {
+  color: rgba(255, 255, 255, 0.60);
+
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.2;
+
+  letter-spacing: 0.04em;
+}
+
+
+.live-replay-player-meta > div:first-child strong {
+  color: #04f751;
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+.live-replay-body {
+  width: min(1280px, calc(100% - 64px));
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    310px;
+
+  gap: 100px;
+
+  padding: 96px 0 110px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+
+.live-replay-description {
+  min-width: 0;
+}
+
+
+.live-replay-section-label {
+  display: block;
+
+  margin-bottom: 26px;
+
+  color: #00aeef;
+
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+.live-replay-description h2 {
+  max-width: 780px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.90);
+
+  font-size: clamp(32px, 4vw, 54px);
+  font-weight: 500;
+
+  line-height: 1.02;
+
+  letter-spacing: -0.04em;
+}
+
+
+.live-replay-description p {
+  max-width: 720px;
+
+  margin: 28px 0 0;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 14px;
+  font-weight: 400;
+
+  line-height: 1.9;
+}
+
+
+.live-replay-description p.is-muted {
+  color: rgba(255, 255, 255, 0.22);
+}
+
+
+/* =========================================================
+   SIDE COLUMN
+   ========================================================= */
+
+.live-replay-side {
+  align-self: start;
+}
+
+
+.live-replay-cover {
+  width: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  border-radius: 5px;
+
+  background: #070707;
+}
+
+
+.live-replay-cover img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-height: 440px;
+
+  object-fit: contain;
+  object-position: center;
+
+  background: #070707;
+}
+
+
+.live-replay-share {
+  margin-top: 34px;
+
+  padding-top: 22px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+.live-replay-share > span {
+  display: block;
+
+  margin-bottom: 13px;
+
+  color: rgba(255, 255, 255, 0.24);
+
+  font-size: 7px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+
+.live-replay-share button {
+  appearance: none;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.52);
+
+  font-family: inherit;
+
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: 0.10em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    color 160ms ease,
+    gap 160ms ease;
+}
+
+
+.live-replay-share button strong {
+  color: #00aeef;
+
+  font-size: 14px;
+  font-weight: 400;
+}
+
+
+.live-replay-share button:hover {
+  gap: 14px;
+
+  color: #00aeef;
+}
+
+
+/* =========================================================
+   BROADCAST DETAILS
+   ========================================================= */
+
+.live-replay-details {
+  width: min(1280px, calc(100% - 64px));
+
+  margin: 0 auto;
+
+  padding: 82px 0 92px;
+}
+
+
+.live-replay-details__heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 28px;
+}
+
+
+.live-replay-details__heading span {
+  color: #00aeef;
+
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+.live-replay-details__heading strong {
+  color: rgba(255, 255, 255, 0.24);
+
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+
+.live-replay-details__grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+.live-replay-details__grid > div {
+  min-height: 125px;
+
+  padding: 21px 24px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.live-replay-details__grid > div:nth-child(3n) {
+  border-right: 0;
+}
+
+
+.live-replay-details__grid span {
+  display: block;
+
+  margin-bottom: 24px;
+
+  color: rgba(255, 255, 255, 0.21);
+
+  font-size: 7px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+
+.live-replay-details__grid strong {
+  display: block;
+
+  overflow-wrap: anywhere;
+
+  color: rgba(255, 255, 255, 0.57);
+
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  letter-spacing: 0.02em;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.live-replay-footer {
+  width: min(1280px, calc(100% - 64px));
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    minmax(220px, 330px)
+    auto;
+
+  align-items: end;
+
+  gap: 60px;
+
+  padding: 38px 0 48px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+
+.live-replay-footer__brand {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+.live-replay-footer__brand strong {
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+}
+
+
+.live-replay-footer__brand span {
+  color: rgba(255, 255, 255, 0.23);
+
+  font-size: 7px;
+  line-height: 1;
+
+  letter-spacing: 0.10em;
+}
+
+
+.live-replay-footer__copy > span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: rgba(255, 255, 255, 0.22);
+
+  font-size: 7px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+
+.live-replay-footer__copy p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.30);
+
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+
+.live-replay-footer__link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 9px;
+
+  color: rgba(255, 255, 255, 0.43);
+
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: 0.10em;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 160ms ease,
+    gap 160ms ease;
+}
+
+
+.live-replay-footer__link:hover {
+  gap: 13px;
+
+  color: #00aeef;
+}
+
+
+/* =========================================================
+   LOADING / ERROR STATES
+   ========================================================= */
+
+.live-replay-state {
+  min-height: calc(100vh - 72px);
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 60px 24px;
+
+  text-align: center;
+}
+
+
+.live-replay-state > span {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: rgba(255, 255, 255, 0.27);
+
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: 0.17em;
+}
+
+
+.live-replay-state p {
+  margin: 10px 0 0;
+
+  color: rgba(255, 255, 255, 0.34);
+
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+
+.live-replay-loader {
+  width: 22px;
+  height: 22px;
+
+  margin-bottom: 25px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  border-top-color: #00aeef;
+
+  border-radius: 50%;
+
+  animation:
+    live-replay-spin
+    800ms
+    linear
+    infinite;
+}
+
+
+@keyframes live-replay-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   ERROR STATE
+   ========================================================= */
+
+.live-replay-state--error {
+  align-items: flex-start;
+
+  width: min(900px, calc(100% - 64px));
+
+  margin: 0 auto;
+
+  text-align: left;
+}
+
+
+.live-replay-state--error > span {
+  color: #00aeef;
+}
+
+
+.live-replay-state--error h1 {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.91);
+
+  font-size: clamp(48px, 7vw, 92px);
+  font-weight: 500;
+
+  line-height: 0.94;
+
+  letter-spacing: -0.055em;
+}
+
+
+.live-replay-state--error p {
+  max-width: 500px;
+
+  margin-top: 22px;
+
+  font-size: 13px;
+}
+
+
+.live-replay-button {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 30px;
+
+  padding: 12px 15px;
+
+  border:
+    1px solid
+    rgba(0, 174, 239, 0.40);
+
+  border-radius: 4px;
+
+  background: rgba(0, 174, 239, 0.05);
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: 0.11em;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+
+.live-replay-button:hover {
+  border-color: #00aeef;
+
+  background: #00aeef;
+
+  color: #000;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.live-replay-page a:focus-visible,
+.live-replay-page button:focus-visible {
+  outline: 1px solid #00aeef;
+
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+  .live-replay-content,
+  .live-replay-player-section,
+  .live-replay-body,
+  .live-replay-details,
+  .live-replay-footer {
+    width: min(100% - 48px, 1000px);
+  }
+
+
+  .live-replay-hero {
+    padding: 92px 0 74px;
+  }
+
+
+  .live-replay-hero h1 {
+    max-width: 900px;
+  }
+
+
+  .live-replay-player {
+    min-height: 360px;
+  }
+
+
+  .live-replay-body {
+    grid-template-columns:
+      minmax(0, 1fr)
+      270px;
+
+    gap: 65px;
+  }
+
+
+  .live-replay-details__grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .live-replay-details__grid > div:nth-child(3n) {
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+
+  .live-replay-details__grid > div:nth-child(2n) {
+    border-right: 0;
+  }
+
+
+  .live-replay-footer {
+    grid-template-columns:
+      1fr
+      280px
+      auto;
+
+    gap: 35px;
+  }
+}
+
+
+/* =========================================================
+   SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .live-replay-nav {
+    padding: 0 24px;
+  }
+
+
+  .live-replay-original {
+    display: none;
+  }
+
+
+  .live-replay-hero {
+    padding: 76px 0 70px;
+  }
+
+
+  .live-replay-kicker {
+    margin-bottom: 27px;
+  }
+
+
+  .live-replay-hero h1 {
+    font-size: clamp(48px, 9vw, 78px);
+  }
+
+
+  .live-replay-player-section {
+    padding: 62px 0 72px;
+  }
+
+
+  .live-replay-player {
+    min-height: 0;
+
+    aspect-ratio: 16 / 9;
+  }
+
+
+  .live-replay-player-meta {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .live-replay-player-meta > div {
+    min-height: 72px;
+
+    padding: 15px 18px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+
+  .live-replay-player-meta > div:first-child {
+    padding-left: 18px;
+  }
+
+
+  .live-replay-player-meta > div:nth-child(2n) {
+    border-right: 0;
+  }
+
+
+  .live-replay-body {
+    grid-template-columns: 1fr;
+
+    gap: 58px;
+
+    padding: 76px 0 82px;
+  }
+
+
+  .live-replay-side {
+    max-width: 360px;
+  }
+
+
+  .live-replay-cover img {
+    max-height: 500px;
+  }
+
+
+  .live-replay-details {
+    padding: 70px 0 78px;
+  }
+
+
+  .live-replay-footer {
+    grid-template-columns:
+      1fr
+      1fr;
+
+    align-items: start;
+
+    gap: 38px 30px;
+  }
+
+
+  .live-replay-footer__link {
+    grid-column: 1 / -1;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .live-replay-content,
+  .live-replay-player-section,
+  .live-replay-body,
+  .live-replay-details,
+  .live-replay-footer {
+    width: calc(100% - 36px);
+  }
+
+
+  .live-replay-nav {
+    min-height: 62px;
+
+    padding: 0 18px;
+  }
+
+
+  .live-replay-nav__left {
+    gap: 13px;
+  }
+
+
+  .live-replay-logo {
+    font-size: 12px;
+  }
+
+
+  .live-replay-nav__divider {
+    width: 18px;
+  }
+
+
+  .live-replay-hero {
+    padding: 64px 0 60px;
+  }
+
+
+  .live-replay-kicker {
+    gap: 8px;
+
+    margin-bottom: 24px;
+
+    font-size: 7px;
+  }
+
+
+  .live-replay-kicker__dot {
+    width: 5px;
+    height: 5px;
+
+    flex-basis: 5px;
+  }
+
+
+  .live-replay-hero h1 {
+    font-size: clamp(44px, 13vw, 70px);
+
+    line-height: 0.93;
+  }
+
+
+  .live-replay-date {
+    gap: 8px;
+
+    margin-top: 27px;
+
+    font-size: 7px;
+  }
+
+
+  .live-replay-player-section {
+    padding: 48px 0 60px;
+  }
+
+
+  .live-replay-player {
+    aspect-ratio: 4 / 3;
+
+    border-radius: 4px;
+  }
+
+
+  .live-replay-player-brand {
+    right: 12px;
+    bottom: 12px;
+
+    padding: 6px 7px;
+  }
+
+
+  .live-replay-player-brand span {
+    font-size: 7px;
+  }
+
+
+  .live-replay-player-brand small {
+    display: none;
+  }
+
+
+  .live-replay-no-video {
+    padding: 25px;
+  }
+
+
+  .live-replay-no-video strong {
+    font-size: 16px;
+  }
+
+
+  .live-replay-no-video p {
+    font-size: 10px;
+  }
+
+
+  .live-replay-player-meta {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  .live-replay-player-meta > div {
+    min-height: 68px;
+
+    padding: 13px 14px;
+  }
+
+
+  .live-replay-player-meta > div:first-child {
+    padding-left: 14px;
+  }
+
+
+  .live-replay-player-meta span {
+    margin-bottom: 7px;
+
+    font-size: 6px;
+  }
+
+
+  .live-replay-player-meta strong {
+    font-size: 8px;
+  }
+
+
+  .live-replay-body {
+    gap: 45px;
+
+    padding: 62px 0 68px;
+  }
+
+
+  .live-replay-section-label {
+    margin-bottom: 20px;
+
+    font-size: 7px;
+  }
+
+
+  .live-replay-description h2 {
+    font-size: 31px;
+  }
+
+
+  .live-replay-description p {
+    margin-top: 21px;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+  }
+
+
+  .live-replay-side {
+    max-width: 100%;
+  }
+
+
+  .live-replay-cover {
+    max-width: 360px;
+  }
+
+
+  .live-replay-share {
+    margin-top: 25px;
+
+    padding-top: 18px;
+  }
+
+
+  .live-replay-details {
+    padding: 58px 0 66px;
+  }
+
+
+  .live-replay-details__heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-bottom: 22px;
+  }
+
+
+  .live-replay-details__grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .live-replay-details__grid > div,
+  .live-replay-details__grid > div:nth-child(3n),
+  .live-replay-details__grid > div:nth-child(2n) {
+    min-height: 104px;
+
+    padding: 18px;
+
+    border-right: 0;
+  }
+
+
+  .live-replay-details__grid span {
+    margin-bottom: 20px;
+  }
+
+
+  .live-replay-footer {
+    width: calc(100% - 36px);
+
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    padding: 32px 0 42px;
+  }
+
+
+  .live-replay-footer__copy {
+    max-width: 320px;
+  }
+
+
+  .live-replay-footer__link {
+    grid-column: auto;
+  }
+
+
+  .live-replay-state {
+    min-height: calc(100vh - 62px);
+
+    padding: 45px 18px;
+  }
+
+
+  .live-replay-state--error {
+    width: calc(100% - 36px);
+
+    align-items: flex-start;
+  }
+
+
+  .live-replay-state--error h1 {
+    font-size: 48px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .live-replay-content,
+  .live-replay-player-section,
+  .live-replay-body,
+  .live-replay-details,
+  .live-replay-footer {
+    width: calc(100% - 28px);
+  }
+
+
+  .live-replay-nav {
+    padding: 0 14px;
+  }
+
+
+  .live-replay-hero {
+    padding: 54px 0 52px;
+  }
+
+
+  .live-replay-hero h1 {
+    font-size: 44px;
+  }
+
+
+  .live-replay-player {
+    aspect-ratio: 1 / 1;
+  }
+
+
+  .live-replay-player-meta {
+    grid-template-columns: 1fr;
+  }
+
+
+  .live-replay-player-meta > div,
+  .live-replay-player-meta > div:first-child {
+    padding: 14px;
+  }
+
+
+  .live-replay-player-meta > div:nth-child(2n) {
+    border-right: 0;
+  }
+
+
+  .live-replay-description h2 {
+    font-size: 28px;
+  }
+
+
+  .live-replay-description p {
+    font-size: 11px;
+  }
+
+
+  .live-replay-details__grid > div,
+  .live-replay-details__grid > div:nth-child(3n),
+  .live-replay-details__grid > div:nth-child(2n) {
+    min-height: 96px;
+
+    padding: 16px;
+  }
+
+
+  .live-replay-state--error h1 {
+    font-size: 42px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .live-replay-logo,
+  .live-replay-nav__live,
+  .live-replay-share button,
+  .live-replay-footer__link,
+  .live-replay-button {
+    transition: none;
+  }
+
+
+  .live-replay-loader {
+    animation: none;
+  }
+}

@@ -1,0 +1,410 @@
+.content-edit-page {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 55px 50px 100px;
+}
+
+.content-edit-header {
+  max-width: 1200px;
+  margin-bottom: 40px;
+}
+
+.content-edit-back {
+  display: inline-block;
+  margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.55rem;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.content-edit-back:hover {
+  color: #00aeef;
+}
+
+.content-edit-eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  color: #00aeef;
+  font-size: 0.45rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.content-edit-header h1 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.07em;
+}
+
+.content-edit-header p {
+  max-width: 600px;
+  margin: 20px 0 0;
+  color: rgba(255, 255, 255, 0.38);
+  font-size: 0.68rem;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.content-edit-form {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  align-items: start;
+  gap: 35px;
+}
+
+.content-edit-main {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+
+/* =========================================================
+   FIELD
+   ========================================================= */
+
+.content-edit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.content-edit-field label {
+  color: rgba(255, 255, 255, 0.28);
+  font-size: 0.42rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.content-edit-field input,
+.content-edit-field textarea,
+.content-edit-field select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  outline: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.025);
+  color: rgba(255, 255, 255, 0.78);
+  font-family: inherit;
+  font-size: 0.68rem;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.content-edit-field input,
+.content-edit-field select {
+  height: 48px;
+  padding: 0 14px;
+}
+
+.content-edit-field textarea {
+  min-height: 120px;
+  padding: 14px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.content-edit-field input:focus,
+.content-edit-field textarea:focus,
+.content-edit-field select:focus {
+  border-color: rgba(0, 174, 239, 0.35);
+  background: rgba(0, 174, 239, 0.025);
+}
+
+.content-edit-field select {
+  appearance: auto;
+}
+
+.content-edit-field small {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.45rem;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.content-edit-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.content-edit-card {
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.content-edit-card-title {
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.42rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+
+/* =========================================================
+   SAVE
+   ========================================================= */
+
+.content-edit-save {
+  width: 100%;
+  height: 46px;
+  margin-top: 8px;
+  border: 0;
+  border-radius: 9px;
+  background: #00aeef;
+  color: #000;
+  font-size: 0.5rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.content-edit-save:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.content-edit-save:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   CHECKBOX
+   ========================================================= */
+
+.content-edit-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.55rem;
+  cursor: pointer;
+}
+
+.content-edit-checkbox input {
+  width: 15px;
+  height: 15px;
+  accent-color: #00aeef;
+}
+
+
+/* =========================================================
+   MESSAGES
+   ========================================================= */
+
+.content-edit-message {
+  padding: 14px;
+  border-radius: 9px;
+  font-size: 0.5rem;
+  line-height: 1.5;
+}
+
+.content-edit-message--error {
+  border: 1px solid rgba(255, 70, 70, 0.15);
+  background: rgba(255, 70, 70, 0.04);
+  color: #ff8585;
+}
+
+.content-edit-message--success {
+  border: 1px solid rgba(0, 247, 81, 0.15);
+  background: rgba(0, 247, 81, 0.04);
+  color: #04f751;
+}
+
+
+/* =========================================================
+   LOADING / ERROR
+   ========================================================= */
+
+.content-edit-loading {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.55rem;
+}
+
+.content-edit-error {
+  max-width: 600px;
+  padding-top: 100px;
+}
+
+.content-edit-error > span {
+  color: #00aeef;
+  font-size: 0.45rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.content-edit-error h1 {
+  margin: 15px 0 0;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+}
+
+.content-edit-error p {
+  margin: 20px 0;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.65rem;
+}
+
+.content-edit-error a {
+  color: #00aeef;
+  font-size: 0.55rem;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .content-edit-page {
+    padding: 50px 35px 80px;
+  }
+
+  .content-edit-form {
+    grid-template-columns: 1fr;
+  }
+
+  .content-edit-sidebar {
+    order: -1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content-edit-message {
+    grid-column: 1 / -1;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .content-edit-page {
+    padding: 40px 20px 60px;
+  }
+
+  .content-edit-header h1 {
+    font-size: 3.5rem;
+  }
+
+  .content-edit-sidebar {
+    display: flex;
+  }
+
+  .content-edit-field input,
+  .content-edit-field select {
+    height: 46px;
+  }
+
+  .content-edit-card {
+    padding: 17px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .content-edit-page {
+    padding: 35px 15px 50px;
+  }
+
+  .content-edit-header h1 {
+    font-size: 3rem;
+  }
+}
+
+.content-edit-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.content-edit-status__label {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.42rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.content-edit-status__badge {
+  padding: 6px 9px;
+  border-radius: 999px;
+  font-size: 0.42rem;
+  font-weight: 700;
+}
+
+.content-edit-status__badge.is-draft {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.035);
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.content-edit-status__badge.is-published {
+  border: 1px solid rgba(0, 247, 81, 0.2);
+  background: rgba(0, 247, 81, 0.06);
+  color: #04f751;
+}
+
+.content-edit-publish-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.content-edit-save--draft {
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.content-edit-save--draft:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.11);
+}
+
+.content-edit-save--publish {
+  background: #04f751;
+  color: #000;
+}
+
+.content-edit-save--publish:hover:not(:disabled) {
+  opacity: 0.88;
+}

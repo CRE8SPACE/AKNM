@@ -1,0 +1,2062 @@
+/* =========================================================
+   AKNM STUDIO — BOOK EDITOR
+   ========================================================= */
+
+.book-edit-page {
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+
+  padding: 45px 56px 90px;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.book-edit-loading {
+  min-height: 420px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 0.58rem;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.book-edit-header {
+  width: 100%;
+  max-width: 1200px;
+
+  margin-bottom: 55px;
+}
+
+
+.book-edit-back {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 24px;
+
+  color: rgba(255, 255, 255, 0.28);
+
+  font-size: 0.55rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+
+.book-edit-back:hover {
+  color: #00aeef;
+
+  transform: translateX(-2px);
+}
+
+
+.book-edit-eyebrow {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: rgba(255, 255, 255, 0.24);
+
+  font-size: 0.52rem;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+}
+
+
+.book-edit-header h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(
+      3rem,
+      5vw,
+      5.2rem
+    );
+
+  font-weight: 500;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.065em;
+}
+
+
+.book-edit-header p {
+  max-width: 560px;
+
+  margin:
+    20px
+    0
+    0;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 0.82rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.book-edit-form {
+  width: 100%;
+  max-width: 1200px;
+
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.book-edit-section {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    205px
+    minmax(0, 1fr);
+
+  column-gap: 48px;
+
+  box-sizing: border-box;
+
+  padding:
+    42px
+    0;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+}
+
+
+.book-edit-section:last-of-type {
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.book-edit-section-heading {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  min-width: 0;
+}
+
+
+.book-edit-section-heading > span:first-child {
+  flex-shrink: 0;
+
+  color: rgba(255, 255, 255, 0.2);
+
+  font-size: 0.5rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  line-height: 1.5;
+}
+
+
+.book-edit-section-heading > div {
+  min-width: 0;
+}
+
+
+.book-edit-section-heading h2 {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 1.05rem;
+  font-weight: 500;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.025em;
+}
+
+
+.book-edit-section-heading p {
+  max-width: 190px;
+
+  margin:
+    9px
+    0
+    0;
+
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 0.55rem;
+
+  line-height: 1.65;
+}
+
+
+.book-edit-section-count {
+  margin-left: auto;
+
+  color: rgba(255, 255, 255, 0.2);
+
+  font-size: 0.48rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   FIELD AREA
+   ========================================================= */
+
+.book-edit-fields {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+.book-edit-fields label {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.book-edit-fields label > span {
+  color: rgba(255, 255, 255, 0.22);
+
+  font-size: 0.48rem;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.book-edit-fields input,
+.book-edit-fields select,
+.book-edit-fields textarea,
+.book-edit-audio-main input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.075);
+
+  border-radius: 6px;
+
+  outline: none;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-family: inherit;
+
+  font-size: 0.68rem;
+
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    color 160ms ease;
+}
+
+
+.book-edit-fields input,
+.book-edit-fields select {
+  min-height: 44px;
+
+  padding:
+    0
+    13px;
+}
+
+
+.book-edit-fields textarea {
+  min-height: 170px;
+
+  padding:
+    12px
+    13px;
+
+  resize: vertical;
+
+  line-height: 1.65;
+}
+
+
+.book-edit-fields input::placeholder,
+.book-edit-fields textarea::placeholder {
+  color: rgba(255, 255, 255, 0.18);
+}
+
+
+.book-edit-fields input:hover,
+.book-edit-fields select:hover,
+.book-edit-fields textarea:hover,
+.book-edit-audio-main input:hover {
+  border-color:
+    rgba(255, 255, 255, 0.14);
+
+  background:
+    rgba(255, 255, 255, 0.035);
+}
+
+
+.book-edit-fields input:focus,
+.book-edit-fields select:focus,
+.book-edit-fields textarea:focus,
+.book-edit-audio-main input:focus {
+  border-color:
+    rgba(0, 174, 239, 0.42);
+
+  background:
+    rgba(0, 174, 239, 0.018);
+}
+
+
+.book-edit-fields input:disabled,
+.book-edit-fields select:disabled,
+.book-edit-fields textarea:disabled,
+.book-edit-audio-main input:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.book-edit-fields select {
+  appearance: none;
+
+  cursor: pointer;
+
+  padding-right: 34px;
+
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 50%,
+      rgba(255, 255, 255, 0.3) 50%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 50%
+    );
+
+  background-position:
+    calc(100% - 15px) 18px,
+    calc(100% - 11px) 18px;
+
+  background-size:
+    4px 4px,
+    4px 4px;
+
+  background-repeat: no-repeat;
+}
+
+
+.book-edit-fields select option {
+  background: #090909;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   TWO COLUMNS
+   ========================================================= */
+
+.book-edit-two-columns {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   COVER OPTIONS
+   ========================================================= */
+
+.book-edit-cover-options,
+.book-edit-audio-actions {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 10px;
+}
+
+
+/* =========================================================
+   GENERIC OPTION
+   ========================================================= */
+
+.book-edit-option {
+  position: relative;
+
+  min-height: 125px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding:
+    22px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius: 7px;
+
+  background:
+    rgba(255, 255, 255, 0.018);
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+
+.book-edit-option:hover {
+  border-color:
+    rgba(0, 174, 239, 0.28);
+
+  background:
+    rgba(0, 174, 239, 0.025);
+
+  transform: translateY(-1px);
+}
+
+
+.book-edit-option > span {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.075);
+
+  border-radius: 50%;
+
+  color: #00aeef;
+
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+
+.book-edit-option strong {
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 0.65rem;
+  font-weight: 600;
+}
+
+
+.book-edit-option small {
+  margin-top: 6px;
+
+  color: rgba(255, 255, 255, 0.22);
+
+  font-size: 0.5rem;
+
+  line-height: 1.5;
+}
+
+
+.book-edit-option input {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   SELECTED COVER
+   ========================================================= */
+
+.book-edit-cover-selected {
+  display: grid;
+
+  grid-template-columns:
+    78px
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding:
+    12px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+
+  border-radius: 7px;
+
+  background:
+    rgba(255, 255, 255, 0.018);
+}
+
+
+.book-edit-cover-preview {
+  width: 78px;
+  height: 96px;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 5px;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+}
+
+
+.book-edit-cover-preview img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+.book-edit-cover-info {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+
+.book-edit-cover-info strong {
+  overflow: hidden;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 0.65rem;
+  font-weight: 600;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.book-edit-cover-info small {
+  color: rgba(255, 255, 255, 0.22);
+
+  font-size: 0.5rem;
+}
+
+
+.book-edit-cover-selected > button {
+  min-height: 32px;
+
+  padding:
+    0
+    10px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius: 5px;
+
+  background:
+    transparent;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 0.48rem;
+
+  transition:
+    color 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+
+.book-edit-cover-selected > button:hover {
+  border-color:
+    rgba(255, 70, 70, 0.28);
+
+  background:
+    rgba(255, 70, 70, 0.025);
+
+  color: #ff8585;
+}
+
+
+/* =========================================================
+   PDF SELECTED
+   ========================================================= */
+
+.book-edit-pdf-selected {
+  display: grid;
+
+  grid-template-columns:
+    50px
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding:
+    12px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+
+  border-radius: 7px;
+
+  background:
+    rgba(255, 255, 255, 0.018);
+}
+
+
+.book-edit-pdf-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.075);
+
+  border-radius: 6px;
+
+  color: rgba(255, 255, 255, 0.32);
+
+  font-size: 0.48rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+
+.book-edit-pdf-info {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+
+.book-edit-pdf-info strong {
+  overflow: hidden;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 0.65rem;
+  font-weight: 600;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.book-edit-pdf-info small {
+  color: rgba(255, 255, 255, 0.22);
+
+  font-size: 0.48rem;
+}
+
+
+.book-edit-pdf-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+
+.book-edit-pdf-replace,
+.book-edit-pdf-actions > button {
+  min-height: 31px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding:
+    0
+    10px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius: 5px;
+
+  background:
+    transparent;
+
+  color: rgba(255, 255, 255, 0.32);
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 0.48rem;
+
+  transition:
+    color 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+
+.book-edit-pdf-replace:hover {
+  border-color:
+    rgba(0, 174, 239, 0.3);
+
+  background:
+    rgba(0, 174, 239, 0.025);
+
+  color: #00aeef;
+}
+
+
+.book-edit-pdf-actions > button:hover {
+  border-color:
+    rgba(255, 70, 70, 0.28);
+
+  background:
+    rgba(255, 70, 70, 0.025);
+
+  color: #ff8585;
+}
+
+
+.book-edit-pdf-replace input {
+  display: none;
+}
+
+
+/* =========================================================
+   PDF UPLOAD
+   ========================================================= */
+
+.book-edit-pdf-upload {
+  min-height: 155px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding:
+    30px;
+
+  border:
+    1px dashed
+    rgba(255, 255, 255, 0.09);
+
+  border-radius: 7px;
+
+  background:
+    rgba(255, 255, 255, 0.012);
+
+  cursor: pointer;
+
+  text-align: center;
+
+  transition:
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+
+.book-edit-pdf-upload:hover {
+  border-color:
+    rgba(0, 174, 239, 0.3);
+
+  background:
+    rgba(0, 174, 239, 0.018);
+}
+
+
+.book-edit-pdf-upload > span {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 14px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.075);
+
+  border-radius: 50%;
+
+  color: #00aeef;
+
+  font-size: 0.8rem;
+}
+
+
+.book-edit-pdf-upload strong {
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 0.62rem;
+  font-weight: 600;
+}
+
+
+.book-edit-pdf-upload small {
+  margin-top: 6px;
+
+  color: rgba(255, 255, 255, 0.2);
+
+  font-size: 0.48rem;
+}
+
+
+.book-edit-pdf-upload input {
+  display: none;
+}
+
+
+/* =========================================================
+   HARDCOPY EDITION
+   ========================================================= */
+
+.book-edit-hardcopy {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+}
+
+
+.book-edit-hardcopy-toggle {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  min-height: 72px;
+
+  padding:
+    16px
+    0;
+
+  box-sizing: border-box;
+}
+
+
+.book-edit-hardcopy-toggle > div {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+.book-edit-hardcopy-toggle strong {
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 0.65rem;
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+
+.book-edit-hardcopy-toggle small {
+  color: rgba(255, 255, 255, 0.23);
+
+  font-size: 0.5rem;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   HARDCOPY SWITCH
+   ========================================================= */
+
+.book-edit-switch {
+  position: relative;
+
+  flex-shrink: 0;
+
+  width: 42px;
+  height: 23px;
+
+  padding: 0;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, 0.045);
+
+  cursor: pointer;
+
+  transition:
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+
+.book-edit-switch span {
+  position: absolute;
+
+  top: 4px;
+  left: 4px;
+
+  width: 13px;
+  height: 13px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.32);
+
+  transition:
+    transform 160ms ease,
+    background 160ms ease;
+}
+
+
+.book-edit-switch:hover {
+  border-color:
+    rgba(255, 255, 255, 0.25);
+}
+
+
+.book-edit-switch--active {
+  border-color:
+    rgba(0, 174, 239, 0.55);
+
+  background:
+    rgba(0, 174, 239, 0.12);
+}
+
+
+.book-edit-switch--active span {
+  transform:
+    translateX(19px);
+
+  background:
+    #00aeef;
+}
+
+
+.book-edit-switch:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   HARDCOPY FIELDS
+   ========================================================= */
+
+.book-edit-hardcopy-fields {
+  padding:
+    4px
+    0
+    4px;
+
+  gap: 18px;
+}
+
+
+.book-edit-hardcopy-fields .book-edit-two-columns {
+  gap: 14px;
+}
+
+
+.book-edit-hardcopy-fields label:first-child input {
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+
+.book-edit-hardcopy-fields label:first-child input::placeholder {
+  font-size: 0.68rem;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   HARDCOPY NOTE
+   ========================================================= */
+
+.book-edit-hardcopy-note {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  margin-top: 2px;
+
+  padding:
+    14px
+    0;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.045);
+}
+
+
+.book-edit-hardcopy-note strong {
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 0.5rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+
+.book-edit-hardcopy-note p {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.22);
+
+  font-size: 0.5rem;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   AUDIO LIST
+   ========================================================= */
+
+.book-edit-audio-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0;
+
+  margin-bottom: 12px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+}
+
+
+.book-edit-audio-item {
+  display: grid;
+
+  grid-template-columns:
+    32px
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 14px;
+
+  box-sizing: border-box;
+
+  padding:
+    13px
+    0;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+}
+
+
+.book-edit-audio-number {
+  color: rgba(255, 255, 255, 0.2);
+
+  font-size: 0.48rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+
+.book-edit-audio-main {
+  min-width: 0;
+}
+
+
+.book-edit-audio-main input {
+  min-height: 39px;
+
+  padding:
+    0
+    11px;
+}
+
+
+.book-edit-audio-meta {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 7px;
+
+  overflow: hidden;
+
+  color: rgba(255, 255, 255, 0.19);
+
+  font-size: 0.45rem;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+.book-edit-audio-meta span {
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+.book-edit-audio-remove {
+  min-height: 30px;
+
+  padding:
+    0
+    9px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius: 5px;
+
+  background:
+    transparent;
+
+  color: rgba(255, 255, 255, 0.25);
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 0.46rem;
+
+  transition:
+    color 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+
+.book-edit-audio-remove:hover {
+  border-color:
+    rgba(255, 70, 70, 0.28);
+
+  background:
+    rgba(255, 70, 70, 0.025);
+
+  color: #ff8585;
+}
+
+
+/* =========================================================
+   MESSAGES
+   ========================================================= */
+
+.book-edit-message {
+  margin-top: 20px;
+
+  box-sizing: border-box;
+
+  padding:
+    12px
+    14px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius: 6px;
+
+  font-size: 0.56rem;
+
+  line-height: 1.5;
+}
+
+
+.book-edit-message--error {
+  border-color:
+    rgba(255, 70, 70, 0.2);
+
+  background:
+    rgba(255, 70, 70, 0.025);
+
+  color: #ff8585;
+}
+
+
+.book-edit-message--success {
+  border-color:
+    rgba(0, 247, 81, 0.18);
+
+  background:
+    rgba(0, 247, 81, 0.025);
+
+  color: #04f751;
+}
+
+
+/* =========================================================
+   ACTION BAR
+   ========================================================= */
+
+.book-edit-actions {
+  position: sticky;
+
+  bottom: 0;
+
+  z-index: 30;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 7px;
+
+  box-sizing: border-box;
+
+  margin-top: 28px;
+
+  padding:
+    12px
+    0;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+
+  background:
+    rgba(0, 0, 0, 0.92);
+}
+
+
+.book-edit-actions a,
+.book-edit-actions button {
+  min-height: 38px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding:
+    0
+    14px;
+
+  border-radius: 5px;
+
+  font-family: inherit;
+
+  font-size: 0.5rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    color 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease,
+    transform 160ms ease,
+    opacity 160ms ease;
+}
+
+
+.book-edit-actions a:hover,
+.book-edit-actions button:hover:not(:disabled) {
+  transform:
+    translateY(-1px);
+}
+
+
+/* =========================================================
+   CANCEL
+   ========================================================= */
+
+.book-edit-cancel {
+  margin-right: auto;
+
+  border:
+    1px solid
+    transparent;
+
+  color: rgba(255, 255, 255, 0.25);
+}
+
+
+.book-edit-cancel:hover {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* =========================================================
+   SAVE
+   ========================================================= */
+
+.book-edit-save {
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  color: rgba(255, 255, 255, 0.62);
+}
+
+
+.book-edit-save:hover:not(:disabled) {
+  border-color:
+    rgba(0, 174, 239, 0.3);
+
+  background:
+    rgba(0, 174, 239, 0.025);
+
+  color: #00aeef;
+}
+
+
+/* =========================================================
+   PUBLISH
+   ========================================================= */
+
+.book-edit-publish {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  border:
+    1px solid
+    rgba(0, 247, 81, 0.25);
+
+  background:
+    rgba(0, 247, 81, 0.045);
+
+  color: rgba(255, 255, 255, 0.78);
+}
+
+
+.book-edit-publish:hover:not(:disabled) {
+  border-color:
+    rgba(0, 247, 81, 0.55);
+
+  background:
+    rgba(0, 247, 81, 0.09);
+
+  color: #ffffff;
+}
+
+
+.book-edit-publish span {
+  color: #04f751;
+
+  font-size: 0.72rem;
+}
+
+
+/* =========================================================
+   DISABLED
+   ========================================================= */
+
+.book-edit-actions button:disabled {
+  opacity: 0.35;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.book-edit-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding: 30px;
+}
+
+
+.book-edit-modal__backdrop {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    rgba(0, 0, 0, 0.82);
+
+  backdrop-filter:
+    blur(5px);
+
+  -webkit-backdrop-filter:
+    blur(5px);
+}
+
+
+.book-edit-modal__panel {
+  position: relative;
+
+  z-index: 1;
+
+  width: min(
+    100%,
+    1080px
+  );
+
+  max-height:
+    88vh;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 8px;
+
+  background:
+    #080808;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.book-edit-page
+  a:focus-visible,
+.book-edit-page
+  button:focus-visible,
+.book-edit-page
+  input:focus-visible,
+.book-edit-page
+  select:focus-visible,
+.book-edit-page
+  textarea:focus-visible {
+  outline:
+    1px solid
+    rgba(0, 174, 239, 0.65);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+   ========================================================= */
+
+@media (
+  max-width: 1100px
+) {
+
+  .book-edit-page {
+    padding:
+      40px
+      35px
+      80px;
+  }
+
+
+  .book-edit-section {
+    grid-template-columns:
+      175px
+      minmax(0, 1fr);
+
+    column-gap: 32px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (
+  max-width: 850px
+) {
+
+  .book-edit-page {
+    padding:
+      38px
+      30px
+      75px;
+  }
+
+
+  .book-edit-header {
+    margin-bottom: 45px;
+  }
+
+
+  .book-edit-section {
+    grid-template-columns:
+      1fr;
+
+    row-gap: 28px;
+
+    padding:
+      36px
+      0;
+  }
+
+
+  .book-edit-section-heading {
+    max-width: 600px;
+  }
+
+
+  .book-edit-section-heading p {
+    max-width: 420px;
+  }
+
+
+  .book-edit-fields {
+    max-width: none;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (
+  max-width: 600px
+) {
+
+  .book-edit-page {
+    padding:
+      30px
+      18px
+      60px;
+  }
+
+
+  .book-edit-header {
+    margin-bottom: 38px;
+  }
+
+
+  .book-edit-back {
+    margin-bottom: 20px;
+  }
+
+
+  .book-edit-header h1 {
+    font-size:
+      3.4rem;
+  }
+
+
+  .book-edit-header p {
+    margin-top: 17px;
+
+    font-size: 0.72rem;
+  }
+
+
+  .book-edit-section {
+    row-gap: 24px;
+
+    padding:
+      32px
+      0;
+  }
+
+
+  .book-edit-section-heading h2 {
+    font-size: 0.95rem;
+  }
+
+
+  .book-edit-section-heading p {
+    font-size: 0.52rem;
+  }
+
+
+  .book-edit-fields {
+    gap: 17px;
+  }
+
+
+  .book-edit-two-columns {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .book-edit-cover-options,
+  .book-edit-audio-actions {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .book-edit-option {
+    min-height: 110px;
+
+    padding:
+      18px;
+  }
+
+
+  .book-edit-cover-selected {
+    grid-template-columns:
+      64px
+      minmax(0, 1fr);
+
+    gap: 13px;
+  }
+
+
+  .book-edit-cover-preview {
+    width: 64px;
+    height: 80px;
+  }
+
+
+  .book-edit-cover-selected > button {
+    grid-column:
+      1 / -1;
+
+    width: 100%;
+  }
+
+
+  .book-edit-pdf-selected {
+    grid-template-columns:
+      46px
+      minmax(0, 1fr);
+  }
+
+
+  .book-edit-pdf-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+
+  .book-edit-pdf-actions {
+    grid-column:
+      1 / -1;
+
+    width: 100%;
+  }
+
+
+  .book-edit-pdf-replace,
+  .book-edit-pdf-actions > button {
+    flex: 1;
+  }
+
+
+  .book-edit-audio-item {
+    grid-template-columns:
+      28px
+      minmax(0, 1fr);
+  }
+
+
+  .book-edit-audio-remove {
+    grid-column:
+      2;
+
+    justify-self: start;
+
+    margin-top: 2px;
+  }
+
+
+  /* -------------------------------------------------------
+     HARDCOPY — MOBILE
+     ------------------------------------------------------- */
+
+  .book-edit-hardcopy-toggle {
+    min-height: auto;
+
+    padding:
+      16px
+      0;
+
+    gap: 18px;
+  }
+
+
+  .book-edit-hardcopy-toggle strong {
+    font-size: 0.62rem;
+  }
+
+
+  .book-edit-hardcopy-toggle small {
+    font-size: 0.48rem;
+  }
+
+
+  .book-edit-switch {
+    width: 40px;
+    height: 22px;
+  }
+
+
+  .book-edit-switch span {
+    width: 12px;
+    height: 12px;
+
+    top: 4px;
+    left: 4px;
+  }
+
+
+  .book-edit-switch--active span {
+    transform:
+      translateX(18px);
+  }
+
+
+  .book-edit-hardcopy-fields {
+    padding:
+      3px
+      0
+      3px;
+  }
+
+
+  .book-edit-hardcopy-note {
+    padding:
+      13px
+      0;
+  }
+
+
+  .book-edit-hardcopy-note p {
+    font-size: 0.48rem;
+  }
+
+
+  /* -------------------------------------------------------
+     ACTIONS
+     ------------------------------------------------------- */
+
+  .book-edit-actions {
+    padding:
+      10px
+      0;
+
+    gap: 5px;
+  }
+
+
+  .book-edit-actions a,
+  .book-edit-actions button {
+    min-height: 37px;
+
+    padding:
+      0
+      10px;
+
+    font-size: 0.47rem;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (
+  max-width: 420px
+) {
+
+  .book-edit-page {
+    padding:
+      25px
+      14px
+      55px;
+  }
+
+
+  .book-edit-header h1 {
+    font-size:
+      3rem;
+  }
+
+
+  .book-edit-section {
+    padding:
+      28px
+      0;
+  }
+
+
+  .book-edit-fields input,
+  .book-edit-fields select {
+    min-height: 42px;
+  }
+
+
+  .book-edit-fields textarea {
+    min-height: 150px;
+  }
+
+
+  .book-edit-cover-selected {
+    grid-template-columns:
+      58px
+      minmax(0, 1fr);
+  }
+
+
+  .book-edit-cover-preview {
+    width: 58px;
+    height: 74px;
+  }
+
+
+  .book-edit-pdf-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .book-edit-pdf-replace,
+  .book-edit-pdf-actions > button {
+    width: 100%;
+  }
+
+
+  .book-edit-actions {
+    justify-content: stretch;
+  }
+
+
+  .book-edit-cancel {
+    flex:
+      0 0 auto;
+  }
+
+
+  .book-edit-save,
+  .book-edit-publish {
+    flex: 1;
+  }
+
+
+  /* -------------------------------------------------------
+     HARDCOPY — SMALL MOBILE
+     ------------------------------------------------------- */
+
+  .book-edit-hardcopy-toggle {
+    align-items: flex-start;
+  }
+
+
+  .book-edit-hardcopy-toggle > div {
+    gap: 6px;
+  }
+
+
+  .book-edit-hardcopy-toggle small {
+    max-width: 240px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (
+  prefers-reduced-motion: reduce
+) {
+
+  .book-edit-page *,
+  .book-edit-page *::before,
+  .book-edit-page *::after {
+    transition: none !important;
+  }
+
+}

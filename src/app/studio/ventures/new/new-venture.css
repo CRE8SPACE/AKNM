@@ -1,0 +1,871 @@
+/* =========================================================
+   AKNM STUDIO — NEW VENTURE
+   Venture creation workspace
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.new-venture-page {
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: 48px 58px 110px;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.new-venture-header {
+  width: 100%;
+  max-width: 1080px;
+  margin-bottom: 62px;
+}
+
+.new-venture-header > div {
+  min-width: 0;
+}
+
+.new-venture-back {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 30px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.25);
+  font-family: inherit;
+  font-size: 0.52rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.new-venture-back:hover {
+  color: #00aeef;
+  transform: translateX(-2px);
+}
+
+.new-venture-eyebrow {
+  display: block;
+  margin-bottom: 17px;
+  color: rgba(255, 255, 255, 0.23);
+  font-size: 0.48rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+}
+
+.new-venture-header h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(3.2rem, 5.6vw, 5.8rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.075em;
+}
+
+.new-venture-header p {
+  max-width: 500px;
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.34);
+  font-size: 0.72rem;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.new-venture-form {
+  width: 100%;
+  max-width: 1080px;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.new-venture-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 55px;
+  box-sizing: border-box;
+  padding: 50px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.065);
+}
+
+.new-venture-section:last-of-type {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.065);
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.new-venture-section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+}
+
+.new-venture-section-heading > span {
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.17);
+  font-size: 0.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.12em;
+}
+
+.new-venture-section-heading > div {
+  min-width: 0;
+}
+
+.new-venture-section-heading h2 {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.018em;
+}
+
+.new-venture-section-heading p {
+  max-width: 185px;
+  margin: 9px 0 0;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.55rem;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   FIELD AREA
+   ========================================================= */
+
+.new-venture-fields {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.new-venture-fields label {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.new-venture-fields label > span {
+  color: rgba(255, 255, 255, 0.22);
+  font-size: 0.45rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.15em;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.new-venture-fields input,
+.new-venture-fields textarea,
+.new-venture-fields select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.085);
+  border-radius: 7px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.022);
+  color: rgba(255, 255, 255, 0.82);
+  font-family: inherit;
+  font-size: 0.68rem;
+  font-weight: 400;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.new-venture-fields input,
+.new-venture-fields select {
+  height: 47px;
+  padding: 0 14px;
+}
+
+.new-venture-fields textarea {
+  min-height: 180px;
+  padding: 14px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.new-venture-fields input::placeholder,
+.new-venture-fields textarea::placeholder {
+  color: rgba(255, 255, 255, 0.16);
+}
+
+.new-venture-fields select {
+  appearance: none;
+  cursor: pointer;
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 50%,
+      rgba(255, 255, 255, 0.25) 50%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.25) 50%,
+      transparent 50%
+    );
+  background-position:
+    calc(100% - 17px) 20px,
+    calc(100% - 12px) 20px;
+  background-repeat: no-repeat;
+  background-size: 5px 5px;
+}
+
+.new-venture-fields select option {
+  background: #0b0b0b;
+  color: #ffffff;
+}
+
+.new-venture-fields input:hover,
+.new-venture-fields textarea:hover,
+.new-venture-fields select:hover {
+  border-color: rgba(255, 255, 255, 0.13);
+}
+
+.new-venture-fields input:focus,
+.new-venture-fields textarea:focus,
+.new-venture-fields select:focus {
+  border-color: rgba(0, 174, 239, 0.45);
+  background: rgba(0, 174, 239, 0.018);
+  box-shadow:
+    0 0 0 3px rgba(0, 174, 239, 0.035);
+}
+
+.new-venture-fields input:disabled,
+.new-venture-fields textarea:disabled,
+.new-venture-fields select:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+
+/* =========================================================
+   TWO COLUMN FIELDS
+   ========================================================= */
+
+.new-venture-two-columns {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+
+/* =========================================================
+   PUBLIC LINK
+   ========================================================= */
+
+.new-venture-fields input[type="url"] {
+  color: rgba(0, 174, 239, 0.72);
+}
+
+
+/* =========================================================
+   PUBLICATION OPTIONS
+   ========================================================= */
+
+.new-venture-toggle {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 18px;
+  box-sizing: border-box;
+  padding: 19px 21px;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 9px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.028),
+      rgba(255, 255, 255, 0.009)
+    );
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.new-venture-toggle:hover {
+  border-color: rgba(255, 255, 255, 0.13);
+}
+
+.new-venture-toggle:has(
+  .new-venture-switch input:checked
+) {
+  border-color: rgba(4, 247, 81, 0.18);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(4, 247, 81, 0.035),
+      rgba(255, 255, 255, 0.009)
+    );
+  box-shadow:
+    0 0 35px rgba(4, 247, 81, 0.025);
+}
+
+.new-venture-toggle > div {
+  min-width: 0;
+}
+
+.new-venture-toggle strong {
+  display: block;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.64rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.new-venture-toggle p {
+  max-width: 560px;
+  margin: 6px 0 0;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.51rem;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   SWITCH
+   ========================================================= */
+
+.new-venture-switch {
+  position: relative;
+  flex-shrink: 0;
+  width: 45px;
+  height: 25px;
+  display: block;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.new-venture-switch input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  opacity: 0;
+}
+
+.new-venture-switch__track {
+  position: absolute;
+  inset: 0;
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 999px;
+  background:
+    rgba(255, 255, 255, 0.055);
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.new-venture-switch__thumb {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 15px;
+  height: 15px;
+  display: block;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.42);
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.new-venture-switch input:checked
+  + .new-venture-switch__track {
+  border-color: rgba(4, 247, 81, 0.45);
+  background:
+    rgba(4, 247, 81, 0.12);
+  box-shadow:
+    0 0 18px rgba(4, 247, 81, 0.07);
+}
+
+.new-venture-switch input:checked
+  + .new-venture-switch__track
+  .new-venture-switch__thumb {
+  background: #04f751;
+  transform: translateX(20px);
+  box-shadow:
+    0 0 10px rgba(4, 247, 81, 0.22);
+}
+
+.new-venture-switch input:focus-visible
+  + .new-venture-switch__track {
+  outline: 1px solid rgba(0, 174, 239, 0.65);
+  outline-offset: 3px;
+}
+
+.new-venture-switch input:disabled
+  + .new-venture-switch__track {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+
+/* =========================================================
+   MESSAGES
+   ========================================================= */
+
+.new-venture-message {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 25px;
+  padding: 14px 16px;
+  border-radius: 6px;
+  font-size: 0.55rem;
+  line-height: 1.5;
+}
+
+.new-venture-message--error {
+  border: 1px solid rgba(255, 75, 75, 0.2);
+  background: rgba(255, 75, 75, 0.035);
+  color: rgba(255, 125, 125, 0.85);
+}
+
+.new-venture-message--success {
+  border: 1px solid rgba(4, 247, 81, 0.18);
+  background: rgba(4, 247, 81, 0.03);
+  color: rgba(4, 247, 81, 0.85);
+}
+
+
+/* =========================================================
+   FORM ACTIONS
+   ========================================================= */
+
+.new-venture-actions {
+  position: sticky;
+  bottom: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  box-sizing: border-box;
+  margin-top: 45px;
+  padding: 16px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.065);
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.92) 28%
+    );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+
+/* =========================================================
+   CANCEL
+   ========================================================= */
+
+.new-venture-cancel {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.25);
+  font-family: inherit;
+  font-size: 0.5rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.new-venture-cancel:hover {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================================================
+   CREATE BUTTON
+   ========================================================= */
+
+.new-venture-create {
+  min-width: 120px;
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  box-sizing: border-box;
+  padding: 0 12px 0 16px;
+  border: 1px solid rgba(4, 247, 81, 0.28);
+  border-radius: 6px;
+  background: rgba(4, 247, 81, 0.065);
+  color: rgba(255, 255, 255, 0.86);
+  font-family: inherit;
+  font-size: 0.5rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.new-venture-create:hover {
+  border-color: rgba(4, 247, 81, 0.55);
+  background: rgba(4, 247, 81, 0.11);
+  box-shadow:
+    0 0 25px rgba(4, 247, 81, 0.035);
+  transform: translateY(-1px);
+}
+
+.new-venture-create span {
+  color: #04f751;
+  font-size: 0.72rem;
+  font-weight: 400;
+}
+
+.new-venture-cancel:disabled,
+.new-venture-create:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+  transform: none;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.new-venture-page a:focus-visible,
+.new-venture-page button:focus-visible,
+.new-venture-page input:focus-visible,
+.new-venture-page textarea:focus-visible,
+.new-venture-page select:focus-visible {
+  outline: 1px solid rgba(0, 174, 239, 0.65);
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .new-venture-page {
+    padding: 42px 38px 90px;
+  }
+
+  .new-venture-section {
+    grid-template-columns: 195px minmax(0, 1fr);
+    gap: 38px;
+  }
+
+  .new-venture-toggle {
+    padding: 18px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .new-venture-page {
+    padding: 38px 28px 80px;
+  }
+
+  .new-venture-header {
+    margin-bottom: 48px;
+  }
+
+  .new-venture-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 42px 0;
+  }
+
+  .new-venture-section-heading {
+    gap: 13px;
+  }
+
+  .new-venture-section-heading p {
+    max-width: 430px;
+  }
+
+  .new-venture-two-columns {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .new-venture-toggle {
+    grid-template-columns:
+      auto minmax(0, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .new-venture-page {
+    padding: 28px 18px 70px;
+  }
+
+
+  /* HEADER */
+
+  .new-venture-header {
+    margin-bottom: 38px;
+  }
+
+  .new-venture-back {
+    margin-bottom: 25px;
+  }
+
+  .new-venture-eyebrow {
+    margin-bottom: 14px;
+    font-size: 0.44rem;
+  }
+
+  .new-venture-header h1 {
+    font-size: clamp(3rem, 15vw, 4.2rem);
+  }
+
+  .new-venture-header p {
+    margin-top: 17px;
+    font-size: 0.65rem;
+  }
+
+
+  /* SECTIONS */
+
+  .new-venture-section {
+    gap: 25px;
+    padding: 36px 0;
+  }
+
+  .new-venture-section-heading h2 {
+    font-size: 0.86rem;
+  }
+
+  .new-venture-section-heading p {
+    margin-top: 7px;
+    font-size: 0.52rem;
+  }
+
+
+  /* FIELDS */
+
+  .new-venture-fields {
+    gap: 20px;
+  }
+
+  .new-venture-fields input,
+  .new-venture-fields select {
+    height: 45px;
+  }
+
+  .new-venture-fields textarea {
+    min-height: 170px;
+  }
+
+  .new-venture-two-columns {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+
+  /* PUBLICATION */
+
+  .new-venture-toggle {
+    grid-template-columns:
+      auto minmax(0, 1fr);
+    align-items: start;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .new-venture-toggle strong {
+    font-size: 0.59rem;
+  }
+
+  .new-venture-toggle p {
+    margin-top: 6px;
+    font-size: 0.47rem;
+    line-height: 1.6;
+  }
+
+  .new-venture-switch {
+    width: 42px;
+    height: 24px;
+  }
+
+  .new-venture-switch__thumb {
+    top: 4px;
+    left: 4px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .new-venture-switch input:checked
+    + .new-venture-switch__track
+    .new-venture-switch__thumb {
+    transform: translateX(18px);
+  }
+
+
+  /* ACTIONS */
+
+  .new-venture-actions {
+    justify-content: stretch;
+    gap: 6px;
+    margin-top: 35px;
+    padding: 13px 0;
+  }
+
+  .new-venture-cancel {
+    padding: 0 9px;
+  }
+
+  .new-venture-create {
+    flex: 1;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .new-venture-page {
+    padding:
+      24px 14px 60px;
+  }
+
+  .new-venture-header h1 {
+    font-size: 2.9rem;
+  }
+
+  .new-venture-section {
+    padding: 31px 0;
+  }
+
+  .new-venture-fields input,
+  .new-venture-fields select {
+    height: 43px;
+  }
+
+  .new-venture-fields textarea {
+    min-height: 150px;
+  }
+
+
+  /* PUBLICATION */
+
+  .new-venture-toggle {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .new-venture-toggle strong {
+    font-size: 0.56rem;
+  }
+
+  .new-venture-toggle p {
+    font-size: 0.44rem;
+  }
+
+
+  /* ACTIONS */
+
+  .new-venture-actions {
+    gap: 4px;
+  }
+
+  .new-venture-cancel {
+    font-size: 0.46rem;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .new-venture-page *,
+  .new-venture-page *::before,
+  .new-venture-page *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+
+}

@@ -1,0 +1,1057 @@
+/* =========================================================
+   AKNM.PRO — PUBLIC VENTURES
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.ventures-page {
+  min-height: 100vh;
+
+  background: #000;
+
+  color: rgba(255, 255, 255, 0.94);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.ventures-page__container {
+  width: min(
+    1240px,
+    calc(100% - 112px)
+  );
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.ventures-page__hero {
+  padding: 150px 0 120px;
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.10);
+}
+
+
+.ventures-page__eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 70px;
+
+  color: rgba(255, 255, 255, 0.46);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+
+.ventures-page__line {
+  width: 34px;
+
+  height: 1px;
+
+  background:
+    rgba(255, 255, 255, 0.35);
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.ventures-page__hero-content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.35fr)
+    minmax(280px, 0.65fr);
+
+  gap: 80px;
+
+  align-items: end;
+}
+
+
+.ventures-page__hero h1 {
+  max-width: 800px;
+
+  margin: 0;
+
+  color: #fff;
+
+  font-size: clamp(
+    64px,
+    9vw,
+    132px
+  );
+
+  font-weight: 500;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.065em;
+}
+
+
+.ventures-page__hero-content p {
+  max-width: 390px;
+
+  margin: 0 0 8px;
+
+  color: rgba(255, 255, 255, 0.52);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  letter-spacing: -0.01em;
+}
+
+
+/* =========================================================
+   LIBRARY
+   ========================================================= */
+
+.ventures-page__library {
+  padding: 0 0 140px;
+}
+
+
+/* =========================================================
+   FILTERS
+   ========================================================= */
+
+.ventures-page__filters {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+  padding: 28px 0;
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.10);
+}
+
+
+.ventures-page__filter-label {
+  flex: 0 0 auto;
+
+  color: rgba(255, 255, 255, 0.36);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+
+.ventures-page__filter-list {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  flex-wrap: wrap;
+
+  gap: 10px 28px;
+}
+
+
+.ventures-page__filter {
+  padding: 0;
+
+  border: 0;
+
+  outline: none;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.40);
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    color 160ms ease;
+}
+
+
+.ventures-page__filter:hover {
+  color: rgba(255, 255, 255, 0.90);
+}
+
+
+.ventures-page__filter--active {
+  color: #00aeef;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.ventures-page__intro {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.8fr)
+    minmax(280px, 0.65fr);
+
+  justify-content: space-between;
+
+  gap: 100px;
+
+  padding-top: 100px;
+
+  padding-bottom: 70px;
+}
+
+
+.ventures-page__intro > div > span {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: rgba(255, 255, 255, 0.34);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+
+.ventures-page__intro h2 {
+  margin: 0;
+
+  color: #fff;
+
+  font-size: clamp(
+    42px,
+    5vw,
+    70px
+  );
+
+  font-weight: 500;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.055em;
+}
+
+
+.ventures-page__intro > p {
+  align-self: end;
+
+  max-width: 390px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.46);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   VENTURE LIST
+   ========================================================= */
+
+.ventures-page__list {
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.10);
+}
+
+
+/* =========================================================
+   VENTURE ITEM
+   ========================================================= */
+
+.ventures-page__item {
+  display: grid;
+
+  grid-template-columns:
+    70px
+    minmax(190px, 0.65fr)
+    minmax(280px, 1.35fr)
+    130px
+    30px;
+
+  align-items: center;
+
+  gap: 30px;
+
+  min-height: 190px;
+
+  padding: 38px 0;
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.10);
+
+  transition:
+    border-color 160ms ease;
+}
+
+
+.ventures-page__item:hover {
+  border-color:
+    rgba(255, 255, 255, 0.22);
+}
+
+
+/* =========================================================
+   NUMBER
+   ========================================================= */
+
+.ventures-page__number {
+  align-self: start;
+
+  padding-top: 5px;
+
+  color: rgba(255, 255, 255, 0.24);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+}
+
+
+/* =========================================================
+   IDENTITY
+   ========================================================= */
+
+.ventures-page__identity {
+  min-width: 0;
+}
+
+
+.ventures-page__type {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: rgba(255, 255, 255, 0.34);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+}
+
+
+.ventures-page__identity h3 {
+  margin: 0;
+
+  color: #fff;
+
+  font-size: 29px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+
+  transition:
+    color 160ms ease;
+}
+
+
+.ventures-page__item:hover
+  .ventures-page__identity h3 {
+  color: #00aeef;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.ventures-page__description {
+  min-width: 0;
+}
+
+
+.ventures-page__description p {
+  max-width: 520px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 13px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.ventures-page__status {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 8px;
+}
+
+
+.ventures-page__status span {
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.ventures-page__status small {
+  color: rgba(255, 255, 255, 0.28);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ARROW
+   ========================================================= */
+
+.ventures-page__arrow {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  color: rgba(255, 255, 255, 0.28);
+
+  font-size: 17px;
+
+  line-height: 1;
+
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+
+.ventures-page__item:hover
+  .ventures-page__arrow {
+  color: #00aeef;
+
+  transform: translate(
+    2px,
+    -2px
+  );
+}
+
+
+/* =========================================================
+   STATEMENT
+   ========================================================= */
+
+.ventures-page__statement {
+  max-width: 920px;
+
+  padding-top: 160px;
+}
+
+
+.ventures-page__statement > span {
+  display: block;
+
+  margin-bottom: 28px;
+
+  color: rgba(255, 255, 255, 0.34);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+
+.ventures-page__statement blockquote {
+  max-width: 900px;
+
+  margin: 0;
+
+  color: #fff;
+
+  font-size: clamp(
+    38px,
+    5vw,
+    70px
+  );
+
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.055em;
+}
+
+
+.ventures-page__signature {
+  margin-top: 36px;
+
+  color: rgba(255, 255, 255, 0.34);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.ventures-page button:focus-visible {
+  outline: 1px solid #00aeef;
+
+  outline-offset: 5px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1150px
+   ========================================================= */
+
+@media (
+  max-width: 1150px
+) {
+
+  .ventures-page__container {
+    width: min(
+      100%,
+      calc(100% - 72px)
+    );
+  }
+
+
+  .ventures-page__item {
+    grid-template-columns:
+      55px
+      minmax(170px, 0.65fr)
+      minmax(240px, 1.35fr)
+      110px
+      25px;
+
+    gap: 24px;
+  }
+
+
+  .ventures-page__identity h3 {
+    font-size: 26px;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 950px
+   ========================================================= */
+
+@media (
+  max-width: 950px
+) {
+
+  .ventures-page__item {
+    grid-template-columns:
+      50px
+      minmax(170px, 0.7fr)
+      minmax(220px, 1.3fr)
+      100px;
+
+    gap: 24px;
+  }
+
+
+  .ventures-page__arrow {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 900px
+   ========================================================= */
+
+@media (
+  max-width: 900px
+) {
+
+  .ventures-page__hero {
+    padding-top: 120px;
+  }
+
+
+  .ventures-page__hero-content {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+
+  .ventures-page__hero-content p {
+    margin-bottom: 0;
+  }
+
+
+  .ventures-page__intro {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+
+  .ventures-page__intro > p {
+    align-self: auto;
+  }
+
+
+  .ventures-page__item {
+    grid-template-columns:
+      50px
+      minmax(180px, 0.7fr)
+      minmax(220px, 1.3fr);
+
+    gap: 25px;
+  }
+
+
+  .ventures-page__status {
+    grid-column: 2 / -1;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding-top: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 700px
+   ========================================================= */
+
+@media (
+  max-width: 700px
+) {
+
+  .ventures-page__container {
+    width: calc(100% - 40px);
+  }
+
+
+  .ventures-page__hero {
+    padding: 100px 0 80px;
+  }
+
+
+  .ventures-page__eyebrow {
+    margin-bottom: 48px;
+  }
+
+
+  .ventures-page__hero h1 {
+    font-size: clamp(
+      58px,
+      17vw,
+      92px
+    );
+  }
+
+
+  .ventures-page__hero-content p {
+    max-width: 340px;
+
+    font-size: 14px;
+  }
+
+
+  .ventures-page__filters {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 22px;
+  }
+
+
+  .ventures-page__filter-list {
+    justify-content: flex-start;
+  }
+
+
+  .ventures-page__intro {
+    padding-top: 80px;
+
+    padding-bottom: 55px;
+  }
+
+
+  .ventures-page__intro h2 {
+    font-size: 46px;
+  }
+
+
+  .ventures-page__item {
+    grid-template-columns:
+      40px
+      minmax(0, 1fr);
+
+    gap: 20px;
+
+    min-height: 0;
+
+    padding: 34px 0;
+  }
+
+
+  .ventures-page__number {
+    padding-top: 4px;
+  }
+
+
+  .ventures-page__identity {
+    grid-column: 2;
+  }
+
+
+  .ventures-page__description {
+    grid-column: 2;
+
+    margin-top: 2px;
+  }
+
+
+  .ventures-page__description p {
+    max-width: 500px;
+
+    font-size: 13px;
+  }
+
+
+  .ventures-page__status {
+    grid-column: 2;
+
+    padding-top: 6px;
+  }
+
+
+  .ventures-page__identity h3 {
+    font-size: 27px;
+  }
+
+
+  .ventures-page__statement {
+    padding-top: 110px;
+  }
+
+
+  .ventures-page__statement blockquote {
+    font-size: 42px;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 600px
+   ========================================================= */
+
+@media (
+  max-width: 600px
+) {
+
+  .ventures-page__hero h1 {
+    font-size: 58px;
+  }
+
+
+  .ventures-page__intro h2 {
+    font-size: 42px;
+  }
+
+
+  .ventures-page__identity h3 {
+    font-size: 25px;
+  }
+
+
+  .ventures-page__statement blockquote {
+    font-size: 38px;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 480px
+   ========================================================= */
+
+@media (
+  max-width: 480px
+) {
+
+  .ventures-page__container {
+    width: calc(100% - 32px);
+  }
+
+
+  .ventures-page__hero {
+    padding: 85px 0 70px;
+  }
+
+
+  .ventures-page__hero h1 {
+    font-size: 54px;
+
+    letter-spacing: -0.06em;
+  }
+
+
+  .ventures-page__hero-content p {
+    font-size: 13px;
+  }
+
+
+  .ventures-page__filters {
+    padding: 24px 0;
+  }
+
+
+  .ventures-page__filter-list {
+    gap: 14px 20px;
+  }
+
+
+  .ventures-page__filter {
+    font-size: 9px;
+  }
+
+
+  .ventures-page__intro {
+    padding-top: 70px;
+
+    padding-bottom: 45px;
+  }
+
+
+  .ventures-page__intro h2 {
+    font-size: 39px;
+  }
+
+
+  .ventures-page__intro > p {
+    font-size: 13px;
+  }
+
+
+  .ventures-page__item {
+    grid-template-columns:
+      30px
+      minmax(0, 1fr);
+
+    gap: 16px;
+
+    padding: 30px 0;
+  }
+
+
+  .ventures-page__number {
+    font-size: 8px;
+  }
+
+
+  .ventures-page__type {
+    margin-bottom: 13px;
+
+    font-size: 8px;
+  }
+
+
+  .ventures-page__identity h3 {
+    font-size: 22px;
+  }
+
+
+  .ventures-page__description p {
+    font-size: 12px;
+
+    line-height: 1.7;
+  }
+
+
+  .ventures-page__status {
+    gap: 16px;
+  }
+
+
+  .ventures-page__status span,
+  .ventures-page__status small {
+    font-size: 8px;
+  }
+
+
+  .ventures-page__statement {
+    padding-top: 90px;
+  }
+
+
+  .ventures-page__statement blockquote {
+    font-size: 34px;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 380px
+   ========================================================= */
+
+@media (
+  max-width: 380px
+) {
+
+  .ventures-page__hero h1 {
+    font-size: 50px;
+  }
+
+
+  .ventures-page__intro h2 {
+    font-size: 36px;
+  }
+
+
+  .ventures-page__item {
+    grid-template-columns:
+      25px
+      minmax(0, 1fr);
+
+    gap: 13px;
+  }
+
+
+  .ventures-page__identity h3 {
+    font-size: 20px;
+  }
+
+
+  .ventures-page__statement blockquote {
+    font-size: 31px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (
+  prefers-reduced-motion: reduce
+) {
+
+  .ventures-page *,
+  .ventures-page *::before,
+  .ventures-page *::after {
+    scroll-behavior: auto !important;
+
+    transition-duration: 0.01ms !important;
+
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+  }
+
+}

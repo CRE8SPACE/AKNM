@@ -1,0 +1,1277 @@
+/* =========================================================
+   AKNM STUDIO
+   LIVE BROADCAST STUDIO
+   ========================================================= */
+
+.live-session-page {
+  min-height: 100vh;
+
+  box-sizing: border-box;
+
+  padding:
+    0 42px 45px;
+
+  background:
+    #000;
+
+  color:
+    #fff;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.live-session-topbar {
+  min-height: 82px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+.live-session-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.live-session-back {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 4px;
+
+  color:
+    rgba(255, 255, 255, 0.4);
+
+  font-size: 0.7rem;
+
+  text-decoration: none;
+}
+
+.live-session-back:hover {
+  border-color:
+    rgba(0, 174, 239, 0.4);
+
+  color:
+    #00aeef;
+}
+
+.live-session-brand div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.live-session-brand span {
+  color:
+    #00aeef;
+
+  font-size: 0.4rem;
+
+  font-weight: 700;
+
+  letter-spacing:
+    0.16em;
+}
+
+.live-session-brand strong {
+  max-width: 420px;
+
+  overflow: hidden;
+
+  color:
+    rgba(255, 255, 255, 0.75);
+
+  font-size: 0.6rem;
+
+  font-weight: 500;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.live-session-live-indicator {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color:
+    #04f751;
+
+  font-size: 0.44rem;
+
+  font-weight: 700;
+
+  letter-spacing:
+    0.14em;
+}
+
+.live-session-live-indicator i {
+  width: 7px;
+  height: 7px;
+
+  display: block;
+
+  border-radius: 50%;
+
+  background:
+    #04f751;
+
+  box-shadow:
+    0 0 12px
+    rgba(4, 247, 81, 0.7);
+
+  animation:
+    live-session-pulse
+    1.2s
+    infinite;
+}
+
+@keyframes live-session-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.live-session-status {
+  padding:
+    7px 10px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 999px;
+
+  color:
+    rgba(255, 255, 255, 0.3);
+
+  font-size: 0.4rem;
+
+  font-weight: 700;
+
+  letter-spacing:
+    0.13em;
+}
+
+
+/* =========================================================
+   STUDIO LAYOUT
+   ========================================================= */
+
+.live-session-studio {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    300px;
+
+  gap: 18px;
+
+  padding:
+    28px 0;
+}
+
+
+/* =========================================================
+   VIDEO PREVIEW
+   ========================================================= */
+
+.live-session-preview {
+  min-width: 0;
+}
+
+.live-session-preview__screen {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio:
+    16 / 9;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 7px;
+
+  background:
+    #050505;
+}
+
+.live-session-preview__screen video {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  background:
+    #050505;
+
+  transform:
+    scaleX(-1);
+}
+
+.live-session-preview__screen video.is-camera-off {
+  display: none;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+.live-session-preview__placeholder {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  text-align: center;
+}
+
+.live-session-preview__placeholder-icon {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 7px;
+
+  border:
+    1px solid
+    rgba(0, 174, 239, 0.2);
+
+  border-radius: 7px;
+
+  background:
+    rgba(0, 174, 239, 0.04);
+
+  color:
+    #00aeef;
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.55rem;
+}
+
+.live-session-preview__placeholder strong {
+  color:
+    rgba(255, 255, 255, 0.55);
+
+  font-size: 0.58rem;
+
+  font-weight: 500;
+}
+
+.live-session-preview__placeholder span {
+  max-width: 260px;
+
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size: 0.45rem;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   CAMERA OFF
+   ========================================================= */
+
+.live-session-camera-off {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  background:
+    #050505;
+}
+
+.live-session-camera-off__icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-radius: 6px;
+
+  color:
+    rgba(255, 255, 255, 0.25);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.5rem;
+}
+
+.live-session-camera-off span {
+  color:
+    rgba(255, 255, 255, 0.25);
+
+  font-size: 0.48rem;
+}
+
+
+/* =========================================================
+   RECORDING BADGE
+   ========================================================= */
+
+.live-session-recording-badge {
+  position: absolute;
+
+  top: 15px;
+  left: 15px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding:
+    7px 9px;
+
+  border:
+    1px solid
+    rgba(4, 247, 81, 0.25);
+
+  border-radius: 4px;
+
+  background:
+    rgba(0, 0, 0, 0.6);
+
+  backdrop-filter:
+    blur(8px);
+
+  color:
+    #04f751;
+
+  font-size: 0.4rem;
+
+  font-weight: 700;
+
+  letter-spacing:
+    0.12em;
+}
+
+.live-session-recording-badge i {
+  width: 6px;
+  height: 6px;
+
+  display: block;
+
+  border-radius: 50%;
+
+  background:
+    #04f751;
+}
+
+
+/* =========================================================
+   TIMER
+   ========================================================= */
+
+.live-session-timer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding:
+    15px 2px 0;
+}
+
+.live-session-timer span {
+  color:
+    rgba(255, 255, 255, 0.22);
+
+  font-size: 0.4rem;
+
+  font-weight: 700;
+
+  letter-spacing:
+    0.14em;
+}
+
+.live-session-timer strong {
+  color:
+    rgba(255, 255, 255, 0.7);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.8rem;
+
+  font-weight: 400;
+
+  letter-spacing:
+    0.04em;
+}
+
+
+/* =========================================================
+   CONTROL PANEL
+   ========================================================= */
+
+.live-session-controls {
+  min-width: 0;
+
+  padding:
+    20px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius: 7px;
+
+  background:
+    rgba(255, 255, 255, 0.018);
+}
+
+.live-session-controls__header {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+
+  padding-bottom:
+    20px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.06);
+}
+
+.live-session-controls__header span {
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size: 0.39rem;
+
+  font-weight: 700;
+
+  letter-spacing:
+    0.14em;
+}
+
+.live-session-controls__header strong {
+  color:
+    rgba(255, 255, 255, 0.62);
+
+  font-size: 0.55rem;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   SETTINGS
+   ========================================================= */
+
+.live-session-settings {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  padding:
+    16px 0;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.06);
+}
+
+.live-session-settings label {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.live-session-settings label span {
+  color:
+    rgba(255, 255, 255, 0.22);
+
+  font-size: 0.38rem;
+
+  font-weight: 700;
+
+  letter-spacing:
+    0.12em;
+}
+
+.live-session-settings select {
+  width: 100%;
+  height: 39px;
+
+  box-sizing: border-box;
+
+  padding:
+    0 10px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+
+  border-radius: 4px;
+
+  outline: none;
+
+  background:
+    #080808;
+
+  color:
+    rgba(255, 255, 255, 0.65);
+
+  font-family: inherit;
+
+  font-size: 0.46rem;
+
+  color-scheme: dark;
+}
+
+.live-session-settings select:focus {
+  border-color:
+    rgba(0, 174, 239, 0.5);
+}
+
+.live-session-settings option {
+  background:
+    #080808;
+
+  color:
+    #fff;
+}
+
+
+/* =========================================================
+   MEDIA CONTROLS
+   ========================================================= */
+
+.live-session-media-controls {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 7px;
+
+  padding:
+    18px 0;
+}
+
+.live-session-media-controls button {
+  min-width: 0;
+
+  min-height: 70px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius: 5px;
+
+  background:
+    rgba(255, 255, 255, 0.015);
+
+  color:
+    rgba(255, 255, 255, 0.35);
+
+  font-family: inherit;
+
+  cursor: pointer;
+}
+
+.live-session-media-controls button:hover:not(:disabled) {
+  border-color:
+    rgba(0, 174, 239, 0.35);
+
+  color:
+    rgba(255, 255, 255, 0.65);
+}
+
+.live-session-media-controls button.is-off {
+  border-color:
+    rgba(255, 70, 70, 0.2);
+
+  background:
+    rgba(255, 70, 70, 0.03);
+
+  color:
+    #ff7777;
+}
+
+.live-session-media-controls button:disabled {
+  opacity: 0.35;
+
+  cursor:
+    not-allowed;
+}
+
+.live-session-media-controls button span {
+  color:
+    #00aeef;
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.4rem;
+}
+
+.live-session-media-controls button strong {
+  font-size: 0.42rem;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   GO LIVE
+   ========================================================= */
+
+.live-session-go-live {
+  width: 100%;
+
+  min-height: 78px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  border:
+    1px solid
+    rgba(4, 247, 81, 0.3);
+
+  border-radius: 6px;
+
+  background:
+    rgba(4, 247, 81, 0.045);
+
+  color:
+    #04f751;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.live-session-go-live:hover:not(:disabled) {
+  border-color:
+    rgba(4, 247, 81, 0.6);
+
+  background:
+    rgba(4, 247, 81, 0.08);
+
+  transform:
+    translateY(-1px);
+}
+
+.live-session-go-live:disabled {
+  opacity: 0.4;
+
+  cursor:
+    not-allowed;
+
+  transform:
+    none;
+}
+
+.live-session-go-live__dot {
+  width: 7px;
+  height: 7px;
+
+  margin-bottom: 2px;
+
+  border-radius: 50%;
+
+  background:
+    #04f751;
+
+  box-shadow:
+    0 0 12px
+    rgba(4, 247, 81, 0.5);
+}
+
+.live-session-go-live strong {
+  font-size: 0.62rem;
+
+  font-weight: 600;
+}
+
+.live-session-go-live small {
+  color:
+    rgba(4, 247, 81, 0.5);
+
+  font-size: 0.39rem;
+}
+
+
+/* =========================================================
+   END LIVE
+   ========================================================= */
+
+.live-session-end {
+  width: 100%;
+
+  min-height: 78px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  border:
+    1px solid
+    rgba(255, 70, 70, 0.3);
+
+  border-radius: 6px;
+
+  background:
+    rgba(255, 70, 70, 0.035);
+
+  color:
+    #ff7777;
+
+  font-family: inherit;
+
+  cursor: pointer;
+}
+
+.live-session-end:hover:not(:disabled) {
+  border-color:
+    rgba(255, 70, 70, 0.55);
+
+  background:
+    rgba(255, 70, 70, 0.07);
+}
+
+.live-session-end:disabled {
+  opacity: 0.45;
+
+  cursor:
+    not-allowed;
+}
+
+.live-session-end > span {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 2px;
+
+  background:
+    #ff7777;
+}
+
+.live-session-end strong {
+  font-size: 0.56rem;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   CONTROL INFO
+   ========================================================= */
+
+.live-session-control-info {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 8px;
+
+  margin-top: 15px;
+
+  padding-top:
+    15px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.06);
+}
+
+.live-session-control-info div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.live-session-control-info span {
+  color:
+    rgba(255, 255, 255, 0.18);
+
+  font-size: 0.35rem;
+
+  font-weight: 700;
+
+  letter-spacing:
+    0.1em;
+}
+
+.live-session-control-info strong {
+  color:
+    rgba(255, 255, 255, 0.45);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.42rem;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   MESSAGES
+   ========================================================= */
+
+.live-session-message {
+  margin:
+    0 0 18px;
+
+  padding:
+    13px 15px;
+
+  border-radius: 5px;
+
+  font-size: 0.5rem;
+
+  line-height: 1.5;
+}
+
+.live-session-message--success {
+  border:
+    1px solid
+    rgba(4, 247, 81, 0.16);
+
+  background:
+    rgba(4, 247, 81, 0.025);
+
+  color:
+    rgba(4, 247, 81, 0.8);
+}
+
+.live-session-message--error {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  border:
+    1px solid
+    rgba(255, 60, 60, 0.18);
+
+  background:
+    rgba(255, 60, 60, 0.035);
+
+  color:
+    rgba(255, 120, 120, 0.85);
+}
+
+.live-session-message--error strong {
+  font-size: 0.48rem;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   FOOTER STATUS
+   ========================================================= */
+
+.live-session-footer {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 10px;
+
+  padding-top:
+    10px;
+}
+
+.live-session-footer div {
+  min-height: 60px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  padding:
+    0 13px;
+
+  border-left:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+.live-session-footer span {
+  color:
+    rgba(255, 255, 255, 0.18);
+
+  font-size: 0.35rem;
+
+  font-weight: 700;
+
+  letter-spacing:
+    0.12em;
+}
+
+.live-session-footer strong {
+  color:
+    rgba(255, 255, 255, 0.5);
+
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    monospace;
+
+  font-size: 0.44rem;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   LOADING / ERROR
+   ========================================================= */
+
+.live-session-state {
+  min-height:
+    80vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color:
+    rgba(255, 255, 255, 0.3);
+}
+
+.live-session-loader {
+  width: 24px;
+  height: 24px;
+
+  margin-bottom: 15px;
+
+  border:
+    2px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-top-color:
+    #00aeef;
+
+  border-radius: 50%;
+
+  animation:
+    live-session-spin
+    0.8s
+    linear
+    infinite;
+}
+
+@keyframes live-session-spin {
+  to {
+    transform:
+      rotate(360deg);
+  }
+}
+
+.live-session-state p {
+  margin: 0;
+
+  font-size: 0.5rem;
+}
+
+.live-session-state--error {
+  text-align: center;
+}
+
+.live-session-state--error > span {
+  margin-bottom: 12px;
+
+  color:
+    #00aeef;
+
+  font-size: 0.42rem;
+
+  font-weight: 700;
+
+  letter-spacing:
+    0.15em;
+}
+
+.live-session-state--error h1 {
+  margin: 0;
+
+  font-size: 2rem;
+
+  font-weight: 500;
+
+  letter-spacing:
+    -0.04em;
+}
+
+.live-session-state--error p {
+  max-width: 430px;
+
+  margin:
+    12px 0 20px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .live-session-studio {
+    grid-template-columns:
+      minmax(0, 1fr);
+  }
+
+  .live-session-controls {
+    display: grid;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 18px;
+  }
+
+  .live-session-controls__header {
+    grid-column:
+      1 / -1;
+  }
+
+  .live-session-media-controls {
+    padding:
+      0;
+  }
+
+  .live-session-go-live,
+  .live-session-end {
+    min-height: 70px;
+  }
+
+  .live-session-control-info {
+    margin-top: 0;
+
+    padding-top: 0;
+
+    border-top: 0;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .live-session-page {
+    padding:
+      0 18px 35px;
+  }
+
+  .live-session-topbar {
+    min-height: 70px;
+  }
+
+  .live-session-studio {
+    padding:
+      18px 0;
+  }
+
+  .live-session-controls {
+    display: block;
+
+    padding: 15px;
+  }
+
+  .live-session-controls__header {
+    margin-bottom: 0;
+  }
+
+  .live-session-footer {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .live-session-footer div {
+    min-height: 50px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .live-session-brand strong {
+    max-width: 190px;
+  }
+
+  .live-session-preview__screen {
+    border-radius: 5px;
+  }
+
+  .live-session-media-controls button {
+    min-height: 62px;
+  }
+
+  .live-session-footer {
+    gap: 5px;
+  }
+
+  .live-session-footer div {
+    padding:
+      0 9px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .live-session-page *,
+  .live-session-page *::before,
+  .live-session-page *::after {
+    animation: none !important;
+
+    transition: none !important;
+  }
+}
+
+.live-session-branding-canvas {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}

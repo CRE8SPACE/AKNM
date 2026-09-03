@@ -1,0 +1,1131 @@
+/* =========================================================
+   AKNM STUDIO — EDIT MEDIA
+   ========================================================= */
+
+.edit-media-page {
+  width: 100%;
+  min-height: 100vh;
+
+  box-sizing: border-box;
+
+  padding:
+    48px 56px 70px;
+
+  background:
+    #050505;
+
+  color:
+    #fff;
+}
+
+
+/* =========================================================
+   WRAPPER
+   ========================================================= */
+
+.edit-media {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.edit-media__header {
+  padding-bottom:
+    34px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+.edit-media__back {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    8px;
+
+  margin-bottom:
+    24px;
+
+  color:
+    rgba(255, 255, 255, 0.35);
+
+  font-size:
+    0.58rem;
+
+  text-decoration:
+    none;
+
+  transition:
+    color 180ms ease;
+}
+
+.edit-media__back:hover {
+  color:
+    #00aeef;
+}
+
+.edit-media__back span {
+  font-size:
+    0.8rem;
+}
+
+.edit-media__eyebrow {
+  display:
+    block;
+
+  margin-bottom:
+    10px;
+
+  color:
+    #00aeef;
+
+  font-size:
+    0.48rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.18em;
+}
+
+.edit-media__header h1 {
+  margin:
+    0;
+
+  font-size:
+    clamp(
+      2.5rem,
+      5vw,
+      4.8rem
+    );
+
+  font-weight:
+    400;
+
+  line-height:
+    0.95;
+
+  letter-spacing:
+    -0.05em;
+}
+
+.edit-media__header p {
+  max-width:
+    500px;
+
+  margin:
+    18px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.35);
+
+  font-size:
+    0.68rem;
+
+  line-height:
+    1.7;
+}
+
+
+/* =========================================================
+   FORM LAYOUT
+   ========================================================= */
+
+.edit-media__form {
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    350px;
+
+  gap:
+    55px;
+
+  padding-top:
+    45px;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.edit-media__main {
+  min-width:
+    0;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.edit-media__section {
+  padding:
+    0 0 48px;
+
+  margin-bottom:
+    48px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+.edit-media__section-heading {
+  display:
+    grid;
+
+  grid-template-columns:
+    35px
+    minmax(0, 1fr);
+
+  gap:
+    15px;
+
+  margin-bottom:
+    28px;
+}
+
+.edit-media__section-heading > span {
+  color:
+    #00aeef;
+
+  font-size:
+    0.45rem;
+
+  font-weight:
+    700;
+}
+
+.edit-media__section-heading h2 {
+  margin:
+    0;
+
+  font-size:
+    1.15rem;
+
+  font-weight:
+    400;
+
+  letter-spacing:
+    -0.02em;
+}
+
+.edit-media__section-heading p {
+  margin:
+    7px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.28);
+
+  font-size:
+    0.56rem;
+
+  line-height:
+    1.5;
+}
+
+
+/* =========================================================
+   FIELDS
+   ========================================================= */
+
+.edit-media__fields {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    24px;
+
+  padding-left:
+    50px;
+}
+
+.edit-media__field {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    9px;
+}
+
+.edit-media__field > span {
+  color:
+    rgba(255, 255, 255, 0.25);
+
+  font-size:
+    0.45rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.13em;
+}
+
+.edit-media__field input,
+.edit-media__field textarea {
+  width:
+    100%;
+
+  box-sizing:
+    border-box;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-radius:
+    7px;
+
+  outline:
+    none;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  color:
+    #fff;
+
+  font-family:
+    inherit;
+
+  font-size:
+    0.7rem;
+
+  transition:
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.edit-media__field input {
+  height:
+    52px;
+
+  padding:
+    0 16px;
+}
+
+.edit-media__field textarea {
+  min-height:
+    120px;
+
+  padding:
+    15px 16px;
+
+  resize:
+    vertical;
+
+  line-height:
+    1.65;
+}
+
+.edit-media__field input::placeholder,
+.edit-media__field textarea::placeholder {
+  color:
+    rgba(255, 255, 255, 0.17);
+}
+
+.edit-media__field input:focus,
+.edit-media__field textarea:focus {
+  border-color:
+    rgba(0, 174, 239, 0.45);
+
+  background:
+    rgba(0, 174, 239, 0.025);
+}
+
+.edit-media__field small {
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size:
+    0.48rem;
+
+  line-height:
+    1.5;
+}
+
+
+/* =========================================================
+   MESSAGES
+   ========================================================= */
+
+.edit-media__message {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    6px;
+
+  margin-bottom:
+    25px;
+
+  padding:
+    15px 17px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius:
+    7px;
+}
+
+.edit-media__message strong {
+  font-size:
+    0.55rem;
+
+  font-weight:
+    600;
+}
+
+.edit-media__message span {
+  font-size:
+    0.52rem;
+
+  line-height:
+    1.5;
+}
+
+.edit-media__message--error {
+  border-color:
+    rgba(255, 70, 70, 0.2);
+
+  background:
+    rgba(255, 70, 70, 0.035);
+}
+
+.edit-media__message--error strong {
+  color:
+    #ff7070;
+}
+
+.edit-media__message--error span {
+  color:
+    rgba(255, 150, 150, 0.7);
+}
+
+.edit-media__message--success {
+  border-color:
+    rgba(0, 247, 81, 0.18);
+
+  background:
+    rgba(0, 247, 81, 0.03);
+}
+
+.edit-media__message--success strong {
+  color:
+    #04f751;
+}
+
+.edit-media__message--success span {
+  color:
+    rgba(150, 255, 180, 0.65);
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.edit-media__actions {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    flex-end;
+
+  gap:
+    12px;
+
+  padding-left:
+    50px;
+}
+
+.edit-media__cancel,
+.edit-media__save {
+  min-height:
+    46px;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    10px;
+
+  box-sizing:
+    border-box;
+
+  padding:
+    0 18px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius:
+    7px;
+
+  font-family:
+    inherit;
+
+  font-size:
+    0.55rem;
+
+  text-decoration:
+    none;
+
+  cursor:
+    pointer;
+
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.edit-media__cancel {
+  color:
+    rgba(255, 255, 255, 0.35);
+}
+
+.edit-media__cancel:hover {
+  border-color:
+    rgba(255, 255, 255, 0.15);
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  color:
+    #fff;
+}
+
+.edit-media__save {
+  border-color:
+    rgba(0, 174, 239, 0.25);
+
+  background:
+    rgba(0, 174, 239, 0.09);
+
+  color:
+    #00aeef;
+}
+
+.edit-media__save:hover {
+  border-color:
+    rgba(0, 174, 239, 0.45);
+
+  background:
+    rgba(0, 174, 239, 0.15);
+}
+
+.edit-media__save:disabled {
+  opacity:
+    0.45;
+
+  cursor:
+    not-allowed;
+}
+
+.edit-media__save span {
+  font-size:
+    0.7rem;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.edit-media__sidebar {
+  min-width:
+    0;
+}
+
+
+/* =========================================================
+   PREVIEW
+   ========================================================= */
+
+.edit-media__preview {
+  overflow:
+    hidden;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  background:
+    #080808;
+}
+
+.edit-media__preview-header {
+  min-height:
+    43px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  padding:
+    0 14px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size:
+    0.42rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.12em;
+}
+
+.edit-media__preview-body {
+  min-height:
+    260px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  padding:
+    22px;
+
+  box-sizing:
+    border-box;
+}
+
+.edit-media__preview-body img {
+  display:
+    block;
+
+  width:
+    auto;
+
+  max-width:
+    100%;
+
+  max-height:
+    310px;
+
+  object-fit:
+    contain;
+}
+
+.edit-media__preview-body video {
+  display:
+    block;
+
+  width:
+    100%;
+
+  max-height:
+    310px;
+
+  object-fit:
+    contain;
+}
+
+
+/* =========================================================
+   AUDIO
+   ========================================================= */
+
+.edit-media__audio {
+  width:
+    100%;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  gap:
+    15px;
+
+  text-align:
+    center;
+}
+
+.edit-media__audio > div {
+  width:
+    70px;
+
+  height:
+    70px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border:
+    1px solid
+    rgba(0, 174, 239, 0.2);
+
+  border-radius:
+    50%;
+
+  color:
+    #00aeef;
+
+  font-size:
+    0.42rem;
+
+  font-weight:
+    700;
+}
+
+.edit-media__audio strong {
+  font-size:
+    0.65rem;
+
+  font-weight:
+    500;
+}
+
+.edit-media__audio audio {
+  width:
+    100%;
+}
+
+
+/* =========================================================
+   DOCUMENT
+   ========================================================= */
+
+.edit-media__document {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  gap:
+    12px;
+
+  text-align:
+    center;
+}
+
+.edit-media__document strong {
+  width:
+    70px;
+
+  height:
+    85px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  color:
+    rgba(255, 255, 255, 0.35);
+
+  font-size:
+    0.42rem;
+}
+
+.edit-media__document span {
+  max-width:
+    250px;
+
+  overflow:
+    hidden;
+
+  color:
+    rgba(255, 255, 255, 0.3);
+
+  font-size:
+    0.48rem;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+/* =========================================================
+   NO PREVIEW
+   ========================================================= */
+
+.edit-media__no-preview {
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size:
+    0.5rem;
+}
+
+
+/* =========================================================
+   FILE INFORMATION
+   ========================================================= */
+
+.edit-media__file-info {
+  margin-top:
+    20px;
+
+  padding:
+    22px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  background:
+    #080808;
+}
+
+.edit-media__sidebar-label {
+  display:
+    block;
+
+  margin-bottom:
+    17px;
+
+  color:
+    rgba(255, 255, 255, 0.22);
+
+  font-size:
+    0.43rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.13em;
+}
+
+.edit-media__info-row {
+  display:
+    flex;
+
+  align-items:
+    flex-start;
+
+  justify-content:
+    space-between;
+
+  gap:
+    15px;
+
+  padding:
+    10px 0;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.05);
+}
+
+.edit-media__info-row:first-of-type {
+  padding-top:
+    0;
+}
+
+.edit-media__info-row:last-child {
+  padding-bottom:
+    0;
+
+  border-bottom:
+    0;
+}
+
+.edit-media__info-row span {
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size:
+    0.46rem;
+}
+
+.edit-media__info-row strong {
+  max-width:
+    190px;
+
+  overflow:
+    hidden;
+
+  color:
+    rgba(255, 255, 255, 0.48);
+
+  font-size:
+    0.46rem;
+
+  font-weight:
+    500;
+
+  text-align:
+    right;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+/* =========================================================
+   STORAGE NOTICE
+   ========================================================= */
+
+.edit-media__notice {
+  margin-top:
+    20px;
+
+  padding:
+    18px;
+
+  border:
+    1px solid
+    rgba(0, 174, 239, 0.1);
+
+  background:
+    rgba(0, 174, 239, 0.025);
+}
+
+.edit-media__notice > span {
+  display:
+    block;
+
+  margin-bottom:
+    8px;
+
+  color:
+    rgba(0, 174, 239, 0.65);
+
+  font-size:
+    0.4rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.12em;
+}
+
+.edit-media__notice p {
+  margin:
+    0;
+
+  color:
+    rgba(255, 255, 255, 0.28);
+
+  font-size:
+    0.5rem;
+
+  line-height:
+    1.6;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.edit-media__field input:focus-visible,
+.edit-media__field textarea:focus-visible,
+.edit-media__cancel:focus-visible,
+.edit-media__save:focus-visible,
+.edit-media__back:focus-visible {
+  outline:
+    1px solid
+    rgba(0, 174, 239, 0.6);
+
+  outline-offset:
+    2px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+  .edit-media-page {
+    padding:
+      42px 38px 60px;
+  }
+
+  .edit-media__form {
+    grid-template-columns:
+      minmax(0, 1fr)
+      300px;
+
+    gap:
+      35px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .edit-media-page {
+    padding:
+      32px 20px 50px;
+  }
+
+  .edit-media__form {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      40px;
+  }
+
+  .edit-media__sidebar {
+    order:
+      -1;
+  }
+
+  .edit-media__fields,
+  .edit-media__actions {
+    padding-left:
+      0;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .edit-media-page {
+    padding:
+      26px 15px 45px;
+  }
+
+  .edit-media__header h1 {
+    font-size:
+      2.7rem;
+  }
+
+  .edit-media__section-heading {
+    grid-template-columns:
+      28px
+      minmax(0, 1fr);
+
+    gap:
+      10px;
+  }
+
+  .edit-media__section {
+    padding-bottom:
+      38px;
+
+    margin-bottom:
+      38px;
+  }
+
+  .edit-media__actions {
+    flex-direction:
+      column-reverse;
+
+    align-items:
+      stretch;
+  }
+
+  .edit-media__cancel,
+  .edit-media__save {
+    width:
+      100%;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .edit-media-page *,
+  .edit-media-page *::before,
+  .edit-media-page *::after {
+    transition:
+      none !important;
+  }
+
+}

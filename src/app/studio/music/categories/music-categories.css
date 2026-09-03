@@ -1,0 +1,831 @@
+/* =========================================================
+   AKNM STUDIO — MUSIC CATEGORIES
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.music-categories-page {
+  width: 100%;
+  min-height: 100vh;
+
+  box-sizing: border-box;
+
+  padding:
+    55px 50px 90px;
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.music-categories-header {
+  width: 100%;
+  max-width: 1200px;
+
+  margin:
+    0 auto 50px;
+}
+
+.music-categories-header__back {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 25px;
+
+  color:
+    rgba(255, 255, 255, 0.3);
+
+  font-size: 0.55rem;
+
+  text-decoration: none;
+
+  transition:
+    color 180ms ease;
+}
+
+.music-categories-header__back:hover {
+  color: #00aeef;
+}
+
+.music-categories-header__eyebrow {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: #00aeef;
+
+  font-size: 0.48rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.17em;
+}
+
+.music-categories-header h1 {
+  margin: 0;
+
+  color: #fff;
+
+  font-family:
+    var(--font-heading);
+
+  font-size:
+    clamp(
+      3.5rem,
+      7vw,
+      6rem
+    );
+
+  font-weight: 600;
+
+  line-height: 0.85;
+
+  letter-spacing:
+    -0.075em;
+}
+
+.music-categories-header p {
+  max-width: 520px;
+
+  margin:
+    20px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.38);
+
+  font-family:
+    var(--font-body);
+
+  font-size: 0.68rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+
+.music-categories-layout {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    320px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 30px;
+}
+
+
+/* =========================================================
+   FORM PANEL
+   ========================================================= */
+
+.music-categories-form {
+  position: sticky;
+
+  top: 90px;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 22px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius: 15px;
+
+  background:
+    rgba(255, 255, 255, 0.018);
+}
+
+
+/* =========================================================
+   PANEL HEADING
+   ========================================================= */
+
+.music-categories-panel__heading {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+
+  margin-bottom: 22px;
+}
+
+.music-categories-panel__heading span {
+  color:
+    rgba(255, 255, 255, 0.23);
+
+  font-size: 0.42rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+.music-categories-panel__heading strong {
+  color:
+    rgba(255, 255, 255, 0.75);
+
+  font-family:
+    var(--font-heading);
+
+  font-size: 1rem;
+
+  font-weight: 500;
+
+  letter-spacing:
+    -0.02em;
+}
+
+
+/* =========================================================
+   FORM FIELD
+   ========================================================= */
+
+.music-categories-field {
+  display: block;
+
+  margin-bottom: 15px;
+}
+
+.music-categories-field > span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color:
+    rgba(255, 255, 255, 0.25);
+
+  font-size: 0.42rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+.music-categories-field input,
+.music-categories-field textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding:
+    11px 12px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 8px;
+
+  outline: none;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  color: #fff;
+
+  font-family:
+    var(--font-body);
+
+  font-size: 0.58rem;
+
+  transition:
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.music-categories-field input {
+  height: 42px;
+}
+
+.music-categories-field textarea {
+  resize: vertical;
+
+  min-height: 105px;
+
+  line-height: 1.7;
+}
+
+.music-categories-field input::placeholder,
+.music-categories-field textarea::placeholder {
+  color:
+    rgba(255, 255, 255, 0.18);
+}
+
+.music-categories-field input:focus,
+.music-categories-field textarea:focus {
+  border-color:
+    rgba(0, 174, 239, 0.5);
+
+  background:
+    rgba(0, 174, 239, 0.025);
+}
+
+
+/* =========================================================
+   FORM ACTIONS
+   ========================================================= */
+
+.music-categories-form__actions {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 7px;
+
+  margin-top: 20px;
+}
+
+.music-categories-form__actions button {
+  height: 43px;
+
+  border-radius: 8px;
+
+  font-family:
+    var(--font-body);
+
+  font-size: 0.5rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.music-categories-save {
+  border: 0;
+
+  background: #00aeef;
+
+  color: #000;
+}
+
+.music-categories-save:hover:not(:disabled) {
+  background: #04f751;
+
+  transform:
+    translateY(-1px);
+}
+
+.music-categories-cancel {
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  background:
+    transparent;
+
+  color:
+    rgba(255, 255, 255, 0.5);
+}
+
+
+/* =========================================================
+   CATEGORY LIST
+   ========================================================= */
+
+.music-categories-list {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   LIST HEADER
+   ========================================================= */
+
+.music-categories-list__header {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 20px;
+}
+
+.music-categories-list__header span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color:
+    rgba(255, 255, 255, 0.22);
+
+  font-size: 0.42rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+}
+
+.music-categories-list__header h2 {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.85);
+
+  font-family:
+    var(--font-heading);
+
+  font-size: 1.35rem;
+
+  font-weight: 500;
+
+  letter-spacing:
+    -0.04em;
+}
+
+.music-categories-list__header > strong {
+  min-width: 38px;
+
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 50%;
+
+  color: #00aeef;
+
+  font-size: 0.58rem;
+}
+
+
+/* =========================================================
+   CATEGORY GRID
+   ========================================================= */
+
+.music-categories-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   CATEGORY CARD
+   ========================================================= */
+
+.music-category-card {
+  min-width: 0;
+
+  min-height: 205px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  padding: 20px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius: 14px;
+
+  background:
+    rgba(255, 255, 255, 0.018);
+
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.music-category-card:hover {
+  border-color:
+    rgba(255, 255, 255, 0.13);
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================================================
+   CARD TOP
+   ========================================================= */
+
+.music-category-card__top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+.music-category-card__top > span {
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size: 0.38rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+}
+
+.music-category-card code {
+  max-width: 130px;
+
+  overflow: hidden;
+
+  padding:
+    5px 7px;
+
+  border-radius: 5px;
+
+  background:
+    rgba(0, 174, 239, 0.06);
+
+  color:
+    rgba(0, 174, 239, 0.7);
+
+  font-family:
+    var(--font-body);
+
+  font-size: 0.4rem;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.music-category-card h3 {
+  margin:
+    25px 0 9px;
+
+  color:
+    rgba(255, 255, 255, 0.85);
+
+  font-family:
+    var(--font-heading);
+
+  font-size: 1.1rem;
+
+  font-weight: 500;
+
+  letter-spacing:
+    -0.03em;
+}
+
+.music-category-card p {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.3);
+
+  font-size: 0.52rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   CARD FOOTER
+   ========================================================= */
+
+.music-category-card footer {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: auto;
+
+  padding-top: 22px;
+}
+
+.music-category-card footer button {
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color:
+    rgba(255, 255, 255, 0.35);
+
+  font-family:
+    var(--font-body);
+
+  font-size: 0.45rem;
+
+  cursor: pointer;
+
+  transition:
+    color 180ms ease;
+}
+
+.music-category-card footer button:hover:not(:disabled) {
+  color: #00aeef;
+}
+
+.music-category-card__delete:hover:not(:disabled) {
+  color: #ff7777 !important;
+}
+
+
+/* =========================================================
+   EMPTY / LOADING
+   ========================================================= */
+
+.music-categories-loading,
+.music-categories-empty {
+  min-height: 250px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  box-sizing: border-box;
+
+  border:
+    1px dashed
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 15px;
+
+  color:
+    rgba(255, 255, 255, 0.25);
+
+  font-size: 0.55rem;
+
+  text-align: center;
+}
+
+.music-categories-empty strong {
+  color:
+    rgba(255, 255, 255, 0.55);
+
+  font-size: 0.65rem;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   MESSAGES
+   ========================================================= */
+
+.music-categories-message {
+  position: fixed;
+
+  right: 30px;
+
+  bottom: 30px;
+
+  z-index: 100;
+
+  max-width: 380px;
+
+  padding:
+    12px 15px;
+
+  border-radius: 9px;
+
+  font-size: 0.52rem;
+
+  line-height: 1.6;
+
+  box-shadow:
+    0 20px 60px
+    rgba(0, 0, 0, 0.4);
+}
+
+.music-categories-message--error {
+  border:
+    1px solid
+    rgba(255, 70, 70, 0.2);
+
+  background:
+    #160909;
+
+  color:
+    rgba(255, 130, 130, 0.9);
+}
+
+.music-categories-message--success {
+  border:
+    1px solid
+    rgba(4, 247, 81, 0.2);
+
+  background:
+    #07150c;
+
+  color:
+    rgba(4, 247, 81, 0.85);
+}
+
+
+/* =========================================================
+   DISABLED
+   ========================================================= */
+
+.music-categories-page button:disabled,
+.music-categories-page input:disabled,
+.music-categories-page textarea:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .music-categories-page {
+    padding:
+      50px 35px 75px;
+  }
+
+  .music-categories-layout {
+    grid-template-columns:
+      280px
+      minmax(0, 1fr);
+
+    gap: 20px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+  .music-categories-page {
+    padding:
+      40px 20px 60px;
+  }
+
+  .music-categories-header {
+    margin-bottom: 35px;
+  }
+
+  .music-categories-header h1 {
+    font-size: 4rem;
+  }
+
+  .music-categories-layout {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .music-categories-form {
+    position: static;
+  }
+
+  .music-categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .music-categories-page {
+    padding:
+      32px 15px 50px;
+  }
+
+  .music-categories-header h1 {
+    font-size: 3.5rem;
+  }
+
+  .music-categories-header p {
+    font-size: 0.62rem;
+  }
+
+  .music-categories-form {
+    padding: 18px;
+  }
+
+  .music-categories-form__actions {
+    grid-template-columns: 1fr;
+  }
+
+  .music-category-card {
+    min-height: 185px;
+  }
+
+  .music-categories-message {
+    right: 15px;
+
+    bottom: 15px;
+
+    left: 15px;
+
+    max-width: none;
+  }
+
+}

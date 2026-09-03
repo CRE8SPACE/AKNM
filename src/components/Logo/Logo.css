@@ -1,0 +1,41 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+
+  position: relative;
+
+  flex-shrink: 0;
+}
+
+.logo img {
+  display: block;
+
+  width: auto;
+
+  object-fit: contain;
+}
+
+.logo--full img {
+  width: 82px;
+  height: auto;
+}
+
+.logo--mark {
+  width: 42px;
+  height: 42px;
+
+  overflow: hidden;
+}
+
+.logo--mark img {
+  width: 120px;
+  max-width: none;
+
+  transform: translateX(-39px);
+}
+
+@media (max-width: 768px) {
+  .logo--full img {
+    width: 70px;
+  }
+}

@@ -1,0 +1,2703 @@
+/* =========================================================
+   AKNM.PRO — PUBLIC BOOK DETAIL
+   Editorial Publishing System
+   ========================================================= */
+
+.book-public-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #000;
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.book-public-container {
+  width: min(
+    100%,
+    1280px
+  );
+
+  margin: 0 auto;
+
+  padding:
+    0
+    42px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.book-public-hero {
+  position: relative;
+
+  padding:
+    42px
+    0
+    115px;
+
+  overflow: hidden;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.075);
+}
+
+
+.book-public-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 850px;
+  height: 850px;
+
+  top: -440px;
+  right: -260px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0, 174, 239, 0.065),
+      transparent 68%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   BACK
+   ========================================================= */
+
+.book-public-back {
+  position: relative;
+
+  z-index: 2;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 75px;
+
+  color:
+    rgba(255, 255, 255, 0.3);
+
+  font-size: 0.52rem;
+  font-weight: 700;
+
+  letter-spacing: 0.11em;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  transition:
+    color 160ms ease,
+    gap 160ms ease;
+}
+
+
+.book-public-back:hover {
+  color: #fff;
+
+  gap: 15px;
+}
+
+
+/* =========================================================
+   HERO GRID
+   ========================================================= */
+
+.book-public-hero-grid {
+  position: relative;
+
+  z-index: 1;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(300px, 430px)
+    minmax(0, 1fr);
+
+  gap: 95px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   COVER
+   ========================================================= */
+
+.book-public-cover {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio:
+    4 / 5;
+
+  overflow: hidden;
+
+  background:
+    #090909;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 35px 90px
+    rgba(0, 0, 0, 0.55);
+}
+
+
+.book-public-cover::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.035);
+}
+
+
+.book-public-cover img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: autofit;
+  object-position: center;
+
+  background: #090909;
+}
+
+
+.book-public-cover:hover img {
+  transform:
+    scale(1.025);
+}
+
+
+/* =========================================================
+   EMPTY COVER
+   ========================================================= */
+
+.book-public-cover-empty {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 480px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  padding: 35px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #080808,
+      #121212
+    );
+}
+
+
+.book-public-cover-empty::before {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  right: -190px;
+  bottom: -180px;
+
+  border:
+    1px solid
+    rgba(0, 247, 81, 0.15);
+
+  border-radius: 50%;
+}
+
+
+.book-public-cover-empty::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -120px;
+  bottom: -110px;
+
+  border:
+    1px solid
+    rgba(0, 174, 239, 0.13);
+
+  border-radius: 50%;
+}
+
+
+.book-public-cover-empty span,
+.book-public-cover-empty strong {
+  position: relative;
+
+  z-index: 1;
+}
+
+
+.book-public-cover-empty span {
+  color:
+    #04f751;
+
+  font-size: 0.52rem;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+}
+
+
+.book-public-cover-empty strong {
+  max-width: 340px;
+
+  color:
+    rgba(255, 255, 255, 0.82);
+
+  font-size:
+    clamp(
+      1.7rem,
+      3vw,
+      3rem
+    );
+
+  font-weight: 500;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.055em;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.book-public-intro {
+  min-width: 0;
+
+  padding:
+    20px
+    0;
+}
+
+
+.book-public-eyebrow {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: 10px 20px;
+
+  margin-bottom: 30px;
+}
+
+
+.book-public-eyebrow span {
+  color:
+    rgba(255, 255, 255, 0.24);
+
+  font-size: 0.48rem;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+.book-public-eyebrow span:first-child {
+  color:
+    rgba(0, 247, 81, 0.7);
+}
+
+
+.book-public-eyebrow span:not(:last-child)::after {
+  content: "";
+
+  display: inline-block;
+
+  width: 3px;
+  height: 3px;
+
+  margin-left: 20px;
+
+  vertical-align: middle;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.18);
+}
+
+
+.book-public-intro h1 {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: #fff;
+
+  font-size:
+    clamp(
+      3.8rem,
+      7.2vw,
+      8rem
+    );
+
+  font-weight: 500;
+
+  line-height: 0.87;
+
+  letter-spacing: -0.08em;
+}
+
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.book-public-subtitle {
+  max-width: 650px;
+
+  margin:
+    28px
+    0
+    0;
+
+  color:
+    rgba(255, 255, 255, 0.38);
+
+  font-size:
+    clamp(
+      0.8rem,
+      1.1vw,
+      1rem
+    );
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   AUTHOR
+   ========================================================= */
+
+.book-public-author {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+
+  margin-top: 38px;
+}
+
+
+.book-public-author span {
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size: 0.46rem;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.book-public-author strong {
+  color:
+    rgba(255, 255, 255, 0.72);
+
+  font-size: 0.78rem;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   PRICE
+   ========================================================= */
+
+.book-public-price {
+  display: flex;
+
+  align-items: baseline;
+
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  margin-top: 35px;
+
+  padding-top: 22px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+}
+
+
+.book-public-price > span {
+  color:
+    rgba(255, 255, 255, 0.85);
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  letter-spacing: -0.02em;
+}
+
+
+.book-public-price small {
+  color:
+    #04f751;
+
+  font-size: 0.47rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.book-public-actions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+
+.book-public-primary-action,
+.book-public-secondary-action {
+  min-height: 48px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 28px;
+
+  box-sizing: border-box;
+
+  padding:
+    0
+    19px;
+
+  border:
+    1px solid
+    transparent;
+
+  font-size: 0.5rem;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background 170ms ease,
+    border-color 170ms ease,
+    color 170ms ease,
+    gap 170ms ease;
+}
+
+
+.book-public-primary-action {
+  background:
+    #04f751;
+
+  color:
+    #000;
+}
+
+
+.book-public-primary-action:hover {
+  background:
+    #fff;
+
+  gap: 38px;
+}
+
+
+.book-public-primary-action span {
+  font-size: 0.75rem;
+}
+
+
+.book-public-secondary-action {
+  border-color:
+    rgba(255, 255, 255, 0.13);
+
+  color:
+    rgba(255, 255, 255, 0.58);
+}
+
+
+.book-public-secondary-action:hover {
+  border-color:
+    rgba(0, 174, 239, 0.45);
+
+  color: #fff;
+
+  gap: 36px;
+}
+
+
+.book-public-secondary-action span {
+  color:
+    #00aeef;
+
+  font-size: 0.8rem;
+}
+
+
+.book-public-access-note {
+  display: block;
+
+  max-width: 240px;
+
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size: 0.52rem;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.book-public-content {
+  padding:
+    0
+    0
+    130px;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.book-public-section {
+  display: grid;
+
+  grid-template-columns:
+    minmax(180px, 0.32fr)
+    minmax(0, 0.68fr);
+
+  gap: 80px;
+
+  padding:
+    100px
+    0;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+}
+
+
+.book-public-section-heading {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 22px;
+}
+
+
+.book-public-section-heading
+  > span:first-child {
+  color:
+    rgba(0, 247, 81, 0.55);
+
+  font-size: 0.48rem;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+}
+
+
+.book-public-section-heading > div {
+  min-width: 0;
+}
+
+
+.book-public-section-heading
+  > div
+  > span {
+  display: block;
+
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size: 0.47rem;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.book-public-section-heading h2 {
+  margin:
+    12px
+    0
+    0;
+
+  color:
+    rgba(255, 255, 255, 0.88);
+
+  font-size:
+    clamp(
+      1.9rem,
+      3.2vw,
+      3.5rem
+    );
+
+  font-weight: 500;
+
+  line-height: 0.96;
+
+  letter-spacing: -0.055em;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.book-public-description {
+  max-width: 720px;
+
+  align-self: center;
+}
+
+
+.book-public-description p {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.48);
+
+  font-size:
+    clamp(
+      0.85rem,
+      1.25vw,
+      1.08rem
+    );
+
+  line-height: 1.95;
+
+  white-space: pre-line;
+}
+
+
+/* =========================================================
+   ACCESS GRID
+   ========================================================= */
+
+.book-public-access-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+
+  border-left:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+}
+
+
+.book-public-access-grid > div {
+  min-height: 130px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  box-sizing: border-box;
+
+  padding: 24px;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+}
+
+
+.book-public-access-grid span {
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size: 0.45rem;
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+}
+
+
+.book-public-access-grid strong {
+  color:
+    rgba(255, 255, 255, 0.7);
+
+  font-size: 0.76rem;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   HARDCOPY EDITION
+   ========================================================= */
+
+.book-public-hardcopy {
+  min-width: 0;
+}
+
+
+/* ---------------------------------------------------------
+   HARDcopy information
+   --------------------------------------------------------- */
+
+.book-public-hardcopy-info {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+
+  border-left:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+}
+
+
+.book-public-hardcopy-info > div {
+  min-height: 130px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  box-sizing: border-box;
+
+  padding: 24px;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+}
+
+
+.book-public-hardcopy-info span {
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size: 0.45rem;
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+
+.book-public-hardcopy-info strong {
+  color:
+    rgba(255, 255, 255, 0.72);
+
+  font-size: 0.78rem;
+
+  font-weight: 500;
+
+  line-height: 1.45;
+}
+
+
+/* ---------------------------------------------------------
+   Hardcopy price
+   --------------------------------------------------------- */
+
+.book-public-hardcopy-info > div:nth-child(2) strong {
+  color:
+    rgba(255, 255, 255, 0.9);
+
+  font-size:
+    clamp(
+      0.9rem,
+      1.3vw,
+      1.15rem
+    );
+
+  font-weight: 600;
+
+  letter-spacing: -0.02em;
+}
+
+
+/* ---------------------------------------------------------
+   Hardcopy status
+   --------------------------------------------------------- */
+
+.book-public-hardcopy-info > div:nth-child(3) strong {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color:
+    #04f751;
+}
+
+
+.book-public-hardcopy-info
+  > div:nth-child(3)
+  strong::before {
+  content: "";
+
+  width: 5px;
+  height: 5px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background:
+    currentColor;
+}
+
+
+/*
+ * Pre-order status is blue.
+ * This is applied when the surrounding section
+ * is given the optional modifier class.
+ */
+
+.book-public-hardcopy--preorder
+  .book-public-hardcopy-info
+  > div:nth-child(3)
+  strong {
+  color:
+    #00aeef;
+}
+
+
+/*
+ * Unavailable status is muted.
+ */
+
+.book-public-hardcopy--unavailable
+  .book-public-hardcopy-info
+  > div:nth-child(3)
+  strong {
+  color:
+    rgba(255, 255, 255, 0.32);
+}
+
+
+/* ---------------------------------------------------------
+   Hardcopy action
+   --------------------------------------------------------- */
+
+.book-public-hardcopy-action {
+  display: flex;
+
+  align-items: center;
+
+  margin-top: 24px;
+}
+
+
+.book-public-hardcopy-action
+  .book-public-primary-action {
+  min-width: 190px;
+}
+
+
+/* ---------------------------------------------------------
+   Hardcopy unavailable note
+   --------------------------------------------------------- */
+
+.book-public-hardcopy-action
+  .book-public-access-note {
+  max-width: 360px;
+
+  padding:
+    14px
+    0;
+
+  color:
+    rgba(255, 255, 255, 0.28);
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+}
+
+
+/* =========================================================
+   HARDCOPY ORDER ANCHOR
+   ========================================================= */
+
+.book-public-hardcopy-order-anchor {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(180px, 0.32fr)
+    minmax(0, 0.68fr);
+
+  gap: 80px;
+
+  padding:
+    65px
+    0;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+
+  scroll-margin-top: 80px;
+}
+
+
+.book-public-hardcopy-order-anchor::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 247, 81, 0.45),
+      rgba(0, 174, 239, 0.18),
+      transparent
+    );
+}
+
+
+.book-public-hardcopy-order-anchor > span {
+  color:
+    rgba(4, 247, 81, 0.7);
+
+  font-size: 0.48rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.book-public-hardcopy-order-anchor p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.3);
+
+  font-size:
+    0.68rem;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   AUDIO
+   ========================================================= */
+
+.book-public-audio-list {
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+}
+
+
+.book-public-audio {
+  min-height: 100px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  box-sizing: border-box;
+
+  padding:
+    20px
+    0;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+}
+
+
+.book-public-audio > div {
+  min-width: 0;
+}
+
+
+.book-public-audio > div > span {
+  color:
+    rgba(0, 174, 239, 0.65);
+
+  font-size: 0.44rem;
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+}
+
+
+.book-public-audio h3 {
+  margin:
+    9px
+    0
+    0;
+
+  color:
+    rgba(255, 255, 255, 0.72);
+
+  font-size: 0.9rem;
+
+  font-weight: 500;
+}
+
+
+.book-public-audio a {
+  flex-shrink: 0;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  color:
+    rgba(255, 255, 255, 0.38);
+
+  font-size: 0.49rem;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  transition:
+    color 160ms ease,
+    gap 160ms ease;
+}
+
+
+.book-public-audio a span {
+  color:
+    #04f751;
+
+  font-size: 0.75rem;
+}
+
+
+.book-public-audio a:hover {
+  color: #fff;
+
+  gap: 27px;
+}
+
+
+/* =========================================================
+   PUBLICATION META
+   ========================================================= */
+
+.book-public-meta {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+
+  border-left:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+}
+
+
+.book-public-meta > div {
+  min-height: 115px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  box-sizing: border-box;
+
+  padding: 23px;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+}
+
+
+.book-public-meta span {
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size: 0.45rem;
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+}
+
+
+.book-public-meta strong {
+  color:
+    rgba(255, 255, 255, 0.65);
+
+  font-size: 0.72rem;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   CLOSING
+   ========================================================= */
+
+.book-public-closing {
+  position: relative;
+
+  padding:
+    150px
+    0
+    70px;
+
+  overflow: hidden;
+}
+
+
+.book-public-closing::before {
+  content: "";
+
+  position: absolute;
+
+  width: 650px;
+  height: 650px;
+
+  left: 48%;
+  bottom: -500px;
+
+  transform:
+    translateX(-50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0, 247, 81, 0.045),
+      transparent 68%
+    );
+
+  pointer-events: none;
+}
+
+
+.book-public-closing > span {
+  position: relative;
+
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size: 0.48rem;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+.book-public-closing h2 {
+  position: relative;
+
+  margin:
+    22px
+    0
+    0;
+
+  color:
+    rgba(255, 255, 255, 0.9);
+
+  font-size:
+    clamp(
+      4rem,
+      8vw,
+      9rem
+    );
+
+  font-weight: 500;
+
+  line-height: 0.83;
+
+  letter-spacing: -0.085em;
+}
+
+
+.book-public-closing a {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 30px;
+
+  margin-top: 50px;
+
+  padding-bottom: 10px;
+
+  border-bottom:
+    1px solid
+    rgba(0, 247, 81, 0.4);
+
+  color:
+    rgba(255, 255, 255, 0.58);
+
+  font-size: 0.52rem;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  transition:
+    color 160ms ease,
+    gap 160ms ease,
+    border-color 160ms ease;
+}
+
+
+.book-public-closing a span {
+  color:
+    #04f751;
+
+  font-size: 0.8rem;
+}
+
+
+.book-public-closing a:hover {
+  gap: 42px;
+
+  border-color:
+    #04f751;
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (
+  max-width: 1000px
+) {
+
+  .book-public-container {
+    padding:
+      0
+      30px;
+  }
+
+
+  .book-public-hero {
+    padding:
+      35px
+      0
+      90px;
+  }
+
+
+  .book-public-hero-grid {
+    grid-template-columns:
+      minmax(260px, 350px)
+      minmax(0, 1fr);
+
+    gap: 55px;
+  }
+
+
+  .book-public-intro h1 {
+    font-size:
+      clamp(
+        3rem,
+        6vw,
+        5.5rem
+      );
+  }
+
+
+  .book-public-section {
+    gap: 55px;
+  }
+
+
+  .book-public-hardcopy-order-anchor {
+    gap: 55px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (
+  max-width: 700px
+) {
+
+  .book-public-container {
+    padding:
+      0
+      18px;
+  }
+
+
+  /* HERO */
+
+  .book-public-hero {
+    padding:
+      25px
+      0
+      70px;
+  }
+
+
+  .book-public-back {
+    margin-bottom: 45px;
+  }
+
+
+  .book-public-hero-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 48px;
+
+    align-items: start;
+  }
+
+
+  .book-public-cover {
+    width: min(
+      100%,
+      360px
+    );
+
+    margin: 0 auto;
+  }
+
+
+  .book-public-cover-empty {
+    min-height: 430px;
+  }
+
+
+  .book-public-intro {
+    padding: 0;
+  }
+
+
+  .book-public-eyebrow {
+    margin-bottom: 25px;
+  }
+
+
+  .book-public-intro h1 {
+    font-size:
+      clamp(
+        3.2rem,
+        15vw,
+        5.5rem
+      );
+  }
+
+
+  .book-public-subtitle {
+    margin-top: 22px;
+
+    font-size: 0.72rem;
+  }
+
+
+  .book-public-author {
+    margin-top: 30px;
+  }
+
+
+  .book-public-price {
+    margin-top: 28px;
+
+    padding-top: 18px;
+  }
+
+
+  .book-public-actions {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+
+  .book-public-primary-action,
+  .book-public-secondary-action {
+    width: 100%;
+  }
+
+
+  .book-public-access-note {
+    margin-top: 5px;
+  }
+
+
+  /* CONTENT */
+
+  .book-public-content {
+    padding-bottom: 80px;
+  }
+
+
+  .book-public-section {
+    grid-template-columns:
+      1fr;
+
+    gap: 40px;
+
+    padding:
+      70px
+      0;
+  }
+
+
+  .book-public-section-heading {
+    gap: 15px;
+  }
+
+
+  .book-public-section-heading h2 {
+    font-size:
+      2.4rem;
+  }
+
+
+  .book-public-description p {
+    font-size: 0.78rem;
+
+    line-height: 1.8;
+  }
+
+
+  /* ACCESS */
+
+  .book-public-access-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .book-public-access-grid > div {
+    min-height: 100px;
+
+    padding: 20px;
+  }
+
+
+  /* HARDCOPY */
+
+  .book-public-hardcopy-info {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .book-public-hardcopy-info > div {
+    min-height: 100px;
+
+    padding: 20px;
+  }
+
+
+  .book-public-hardcopy-action {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+
+  .book-public-hardcopy-action
+    .book-public-primary-action {
+    width: 100%;
+  }
+
+
+  .book-public-hardcopy-order-anchor {
+    grid-template-columns:
+      1fr;
+
+    gap: 20px;
+
+    padding:
+      50px
+      0;
+  }
+
+
+  /* AUDIO */
+
+  .book-public-audio {
+    min-height: 90px;
+
+    gap: 20px;
+  }
+
+
+  .book-public-audio h3 {
+    font-size: 0.78rem;
+  }
+
+
+  .book-public-audio a {
+    gap: 10px;
+
+    font-size: 0.45rem;
+  }
+
+
+  /* META */
+
+  .book-public-meta {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .book-public-meta > div {
+    min-height: 90px;
+
+    padding: 20px;
+  }
+
+
+  /* CLOSING */
+
+  .book-public-closing {
+    padding:
+      100px
+      0
+      35px;
+  }
+
+
+  .book-public-closing h2 {
+    font-size:
+      clamp(
+        4rem,
+        18vw,
+        7rem
+      );
+  }
+
+
+  .book-public-closing a {
+    margin-top: 40px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (
+  max-width: 420px
+) {
+
+  .book-public-container {
+    padding:
+      0
+      14px;
+  }
+
+
+  .book-public-hero {
+    padding:
+      20px
+      0
+      60px;
+  }
+
+
+  .book-public-cover {
+    width: 100%;
+  }
+
+
+  .book-public-intro h1 {
+    font-size:
+      3.3rem;
+  }
+
+
+  .book-public-section {
+    padding:
+      60px
+      0;
+  }
+
+
+  .book-public-section-heading h2 {
+    font-size:
+      2.15rem;
+  }
+
+
+  .book-public-closing h2 {
+    font-size:
+      4rem;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.book-public-page
+  a:focus-visible,
+.book-public-page
+  button:focus-visible {
+  outline:
+    1px solid
+    rgba(0, 174, 239, 0.8);
+
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (
+  prefers-reduced-motion: reduce
+) {
+
+  .book-public-page *,
+  .book-public-page *::before,
+  .book-public-page *::after {
+    transition: none !important;
+  }
+
+}
+
+
+/* =========================================================
+   AKNM.PRO — BOOK PAYMENT MODAL
+   ========================================================= */
+
+.book-payment-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+}
+
+
+.book-payment-modal__backdrop {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+
+  background:
+    rgba(0, 0, 0, 0.78);
+
+  backdrop-filter:
+    blur(18px);
+
+  -webkit-backdrop-filter:
+    blur(18px);
+
+  cursor: pointer;
+}
+
+
+.book-payment-modal__panel {
+  position: relative;
+  z-index: 2;
+
+  width: min(
+    100%,
+    560px
+  );
+
+  max-height:
+    calc(100vh - 48px);
+
+  overflow-y: auto;
+
+  padding: 38px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(20, 20, 20, 0.98),
+      rgba(7, 7, 7, 0.99)
+    );
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 40px 100px
+    rgba(0, 0, 0, 0.65);
+
+  border-radius:
+    2px;
+}
+
+
+.book-payment-modal__panel::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background:
+    #04f751;
+}
+
+
+.book-payment-modal__close {
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  background:
+    rgba(255, 255, 255, 0.03);
+
+  color:
+    rgba(255, 255, 255, 0.72);
+
+  font-size: 24px;
+  font-weight: 300;
+
+  cursor: pointer;
+
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+
+.book-payment-modal__close:hover {
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  border-color:
+    rgba(255, 255, 255, 0.25);
+
+  color:
+    #fff;
+}
+
+
+.book-payment-modal__header {
+  padding-right: 48px;
+
+  margin-bottom: 32px;
+}
+
+
+.book-payment-modal__header > span {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color:
+    #04f751;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing:
+    0.18em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.book-payment-modal__header h2 {
+  margin: 0;
+
+  color:
+    #fff;
+
+  font-size:
+    clamp(30px, 5vw, 44px);
+
+  line-height:
+    0.98;
+
+  letter-spacing:
+    -0.04em;
+
+  font-weight:
+    500;
+}
+
+
+.book-payment-modal__header p {
+  margin:
+    16px 0 0;
+
+  max-width:
+    390px;
+
+  color:
+    rgba(255, 255, 255, 0.48);
+
+  font-size:
+    14px;
+
+  line-height:
+    1.65;
+}
+
+
+/* =========================================================
+   BOOK
+   ========================================================= */
+
+.book-payment-modal__book {
+  display: grid;
+
+  grid-template-columns:
+    72px 1fr;
+
+  gap: 18px;
+
+  padding:
+    18px;
+
+  margin-bottom: 26px;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+
+.book-payment-modal__cover {
+  width: 72px;
+  height: 94px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #151515,
+      #050505
+    );
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+}
+
+
+.book-payment-modal__cover img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+.book-payment-modal__cover span {
+  color:
+    #04f751;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing:
+    0.12em;
+}
+
+
+.book-payment-modal__book > div:last-child {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+.book-payment-modal__book > div:last-child > span {
+  margin-bottom: 8px;
+
+  color:
+    rgba(255, 255, 255, 0.38);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing:
+    0.16em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.book-payment-modal__book h3 {
+  margin: 0 0 12px;
+
+  color:
+    #fff;
+
+  font-size:
+    19px;
+
+  line-height:
+    1.2;
+
+  font-weight:
+    500;
+}
+
+
+.book-payment-modal__book strong {
+  color:
+    #04f751;
+
+  font-size:
+    14px;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.04em;
+}
+
+
+/* =========================================================
+   FIELD
+   ========================================================= */
+
+.book-payment-modal__field {
+  display: block;
+
+  margin-bottom: 20px;
+}
+
+
+.book-payment-modal__field > span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color:
+    rgba(255, 255, 255, 0.46);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing:
+    0.16em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.book-payment-modal__field input {
+  width: 100%;
+
+  height: 54px;
+
+  padding:
+    0 16px;
+
+  box-sizing:
+    border-box;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  outline: none;
+
+  border-radius: 0;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  color:
+    #fff;
+
+  font-family:
+    inherit;
+
+  font-size:
+    15px;
+
+  transition:
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+
+.book-payment-modal__field input::placeholder {
+  color:
+    rgba(255, 255, 255, 0.25);
+}
+
+
+.book-payment-modal__field input:focus {
+  border-color:
+    rgba(4, 247, 81, 0.55);
+
+  background:
+    rgba(4, 247, 81, 0.025);
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.book-payment-modal__error {
+  margin:
+    0 0 18px;
+
+  padding:
+    13px 15px;
+
+  border:
+    1px solid
+    rgba(255, 70, 70, 0.24);
+
+  background:
+    rgba(255, 70, 70, 0.06);
+
+  color:
+    #ff8d8d;
+
+  font-size:
+    12px;
+
+  line-height:
+    1.5;
+}
+
+
+/* =========================================================
+   PRIMARY PAYMENT ACTION
+   ========================================================= */
+
+.book-payment-modal__pay {
+  width: 100%;
+  min-height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding:
+    0 20px;
+
+  border:
+    1px solid
+    #04f751;
+
+  border-radius: 0;
+
+  background:
+    #04f751;
+
+  color:
+    #000;
+
+  font-family:
+    inherit;
+
+  font-size:
+    12px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    0.08em;
+
+  text-transform:
+    uppercase;
+
+  cursor: pointer;
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+
+.book-payment-modal__pay span {
+  font-size:
+    17px;
+
+  line-height:
+    1;
+}
+
+
+.book-payment-modal__pay:hover {
+  transform:
+    translateY(-1px);
+
+  box-shadow:
+    0 14px 40px
+    rgba(4, 247, 81, 0.18);
+}
+
+
+.book-payment-modal__pay:disabled {
+  opacity:
+    0.55;
+
+  cursor:
+    wait;
+
+  transform:
+    none;
+
+  box-shadow:
+    none;
+}
+
+
+/* =========================================================
+   SECURITY
+   ========================================================= */
+
+.book-payment-modal__secure {
+  margin-top:
+    22px;
+
+  padding-top:
+    18px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+
+.book-payment-modal__secure > span {
+  display: block;
+
+  margin-bottom:
+    7px;
+
+  color:
+    rgba(255, 255, 255, 0.38);
+
+  font-size:
+    9px;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.15em;
+}
+
+
+.book-payment-modal__secure p {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.35);
+
+  font-size:
+    11px;
+
+  line-height:
+    1.6;
+}
+
+
+/* =========================================================
+   SUCCESS
+   ========================================================= */
+
+.book-payment-modal__success {
+  padding:
+    28px 4px 4px;
+
+  text-align:
+    center;
+}
+
+
+.book-payment-modal__success-mark {
+  width: 68px;
+  height: 68px;
+
+  margin:
+    0 auto 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(4, 247, 81, 0.45);
+
+  background:
+    rgba(4, 247, 81, 0.07);
+
+  color:
+    #04f751;
+
+  font-size:
+    30px;
+
+  border-radius:
+    50%;
+}
+
+
+.book-payment-modal__success > span {
+  display: block;
+
+  color:
+    #04f751;
+
+  font-size:
+    9px;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.18em;
+}
+
+
+.book-payment-modal__success h2 {
+  margin:
+    12px 0 14px;
+
+  color:
+    #fff;
+
+  font-size:
+    clamp(30px, 5vw, 42px);
+
+  line-height:
+    1;
+
+  letter-spacing:
+    -0.04em;
+
+  font-weight:
+    500;
+}
+
+
+.book-payment-modal__success > p {
+  max-width:
+    400px;
+
+  margin:
+    0 auto 28px;
+
+  color:
+    rgba(255, 255, 255, 0.48);
+
+  font-size:
+    14px;
+
+  line-height:
+    1.65;
+}
+
+
+.book-payment-modal__success-actions {
+  display:
+    grid;
+
+  gap:
+    10px;
+
+  margin-bottom:
+    12px;
+}
+
+
+.book-payment-modal__download {
+  width: 100%;
+  min-height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  box-sizing:
+    border-box;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.16);
+
+  background:
+    transparent;
+
+  color:
+    #fff;
+
+  text-decoration:
+    none;
+
+  font-size:
+    11px;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.08em;
+
+  text-transform:
+    uppercase;
+
+  transition:
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+
+.book-payment-modal__download:hover {
+  border-color:
+    rgba(255, 255, 255, 0.35);
+
+  background:
+    rgba(255, 255, 255, 0.04);
+}
+
+
+.book-payment-modal__done {
+  width: 100%;
+
+  padding:
+    14px;
+
+  border:
+    0;
+
+  background:
+    transparent;
+
+  color:
+    rgba(255, 255, 255, 0.4);
+
+  font-family:
+    inherit;
+
+  font-size:
+    10px;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.12em;
+
+  text-transform:
+    uppercase;
+
+  cursor:
+    pointer;
+}
+
+
+.book-payment-modal__done:hover {
+  color:
+    #fff;
+}
+
+
+/* =========================================================
+   PAYMENT MODAL MOBILE
+   ========================================================= */
+
+@media (
+  max-width: 640px
+) {
+
+  .book-payment-modal {
+    align-items:
+      flex-end;
+
+    padding:
+      0;
+  }
+
+
+  .book-payment-modal__panel {
+    width: 100%;
+
+    max-height:
+      92vh;
+
+    padding:
+      30px 22px 24px;
+
+    border-left:
+      0;
+
+    border-right:
+      0;
+
+    border-bottom:
+      0;
+  }
+
+
+  .book-payment-modal__header {
+    padding-right:
+      38px;
+
+    margin-bottom:
+      24px;
+  }
+
+
+  .book-payment-modal__header h2 {
+    font-size:
+      32px;
+  }
+
+
+  .book-payment-modal__book {
+    grid-template-columns:
+      62px 1fr;
+
+    gap:
+      14px;
+
+    padding:
+      14px;
+  }
+
+
+  .book-payment-modal__cover {
+    width:
+      62px;
+
+    height:
+      82px;
+  }
+
+
+  .book-payment-modal__book h3 {
+    font-size:
+      16px;
+  }
+
+}

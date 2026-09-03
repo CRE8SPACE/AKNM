@@ -1,0 +1,1110 @@
+/* =========================================================
+   AKNM STUDIO — NEW LIVE SESSION
+   ========================================================= */
+
+.live-new-page {
+  width: 100%;
+  min-height: 100%;
+
+  box-sizing: border-box;
+
+  padding:
+    42px 46px 80px;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.live-new-header {
+  padding-bottom: 35px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+.live-new-back {
+  display: inline-flex;
+
+  margin-bottom: 25px;
+
+  color:
+    rgba(255, 255, 255, 0.28);
+
+  font-size: 0.55rem;
+
+  text-decoration: none;
+
+  transition:
+    color 160ms ease;
+}
+
+.live-new-back:hover {
+  color: #00aeef;
+}
+
+.live-new-eyebrow {
+  display: block;
+
+  margin-bottom: 13px;
+
+  color: #00aeef;
+
+  font-size: 0.46rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+}
+
+.live-new-header h1 {
+  margin: 0;
+
+  font-size: clamp(
+    2.4rem,
+    5vw,
+    4.4rem
+  );
+
+  font-weight: 500;
+
+  letter-spacing: -0.06em;
+
+  line-height: 0.98;
+}
+
+.live-new-header p {
+  max-width: 560px;
+
+  margin: 17px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.35);
+
+  font-size: 0.75rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.live-new-form {
+  max-width: 1050px;
+
+  margin-top: 45px;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.live-new-section {
+  padding:
+    0 0 45px;
+
+  margin-bottom: 45px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.06);
+}
+
+.live-new-section-heading {
+  display: grid;
+
+  grid-template-columns:
+    38px
+    minmax(0, 1fr);
+
+  gap: 18px;
+
+  margin-bottom: 28px;
+}
+
+.live-new-section-heading > span {
+  padding-top: 4px;
+
+  color:
+    rgba(255, 255, 255, 0.18);
+
+  font-size: 0.48rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.05em;
+}
+
+.live-new-section-heading h2 {
+  margin: 0;
+
+  font-size: 1rem;
+
+  font-weight: 500;
+
+  letter-spacing: -0.025em;
+}
+
+.live-new-section-heading p {
+  max-width: 620px;
+
+  margin: 7px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.27);
+
+  font-size: 0.58rem;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   FIELDS
+   ========================================================= */
+
+.live-new-fields {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap:
+    22px 18px;
+
+  padding-left: 56px;
+}
+
+.live-new-fields label,
+.live-new-schedule label {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.live-new-fields label > span,
+.live-new-schedule label > span {
+  color:
+    rgba(255, 255, 255, 0.28);
+
+  font-size: 0.44rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+.live-new-fields input,
+.live-new-fields select,
+.live-new-fields textarea,
+.live-new-schedule input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+
+  border-radius: 6px;
+
+  outline: none;
+
+  background:
+    #090909;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 0.66rem;
+
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.live-new-fields input,
+.live-new-fields select,
+.live-new-schedule input {
+  height: 48px;
+
+  padding:
+    0 14px;
+}
+
+.live-new-fields textarea {
+  min-height: 150px;
+
+  padding:
+    14px;
+
+  resize: vertical;
+
+  line-height: 1.6;
+}
+
+.live-new-fields input::placeholder,
+.live-new-fields textarea::placeholder {
+  color:
+    rgba(255, 255, 255, 0.16);
+}
+
+.live-new-fields input:focus,
+.live-new-fields select:focus,
+.live-new-fields textarea:focus,
+.live-new-schedule input:focus {
+  border-color:
+    rgba(0, 174, 239, 0.55);
+
+  background:
+    #0b0b0b;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(0, 174, 239, 0.045);
+}
+
+.live-new-fields select {
+  appearance: none;
+
+  cursor: pointer;
+
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.live-new-fields select option {
+  background: #090909;
+
+  color: #ffffff;
+}
+
+.live-new-field--full {
+  grid-column:
+    1 / -1;
+}
+
+
+/* =========================================================
+   COVER
+   ========================================================= */
+
+.live-new-selected-cover {
+  margin-left: 56px;
+
+  min-height: 120px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 12px;
+
+  border:
+    1px solid
+    rgba(0, 174, 239, 0.16);
+
+  border-radius: 7px;
+
+  background:
+    rgba(0, 174, 239, 0.025);
+}
+
+.live-new-cover-preview {
+  width: 76px;
+  height: 92px;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border-radius: 4px;
+
+  background: #111;
+}
+
+.live-new-cover-preview img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.live-new-cover-info {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.live-new-cover-info strong {
+  overflow: hidden;
+
+  color:
+    rgba(255, 255, 255, 0.75);
+
+  font-size: 0.65rem;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+.live-new-cover-info small {
+  color:
+    rgba(255, 255, 255, 0.25);
+
+  font-size: 0.5rem;
+}
+
+.live-new-selected-cover button {
+  min-height: 35px;
+
+  padding:
+    0 12px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 5px;
+
+  background:
+    transparent;
+
+  color:
+    rgba(255, 255, 255, 0.3);
+
+  font-family: inherit;
+
+  font-size: 0.5rem;
+
+  cursor: pointer;
+
+  transition:
+    color 160ms ease,
+    border-color 160ms ease;
+}
+
+.live-new-selected-cover button:hover {
+  color: #ffffff;
+
+  border-color:
+    rgba(255, 255, 255, 0.2);
+}
+
+.live-new-cover-picker {
+  width: calc(100% - 56px);
+
+  min-height: 105px;
+
+  margin-left: 56px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding:
+    0 18px;
+
+  border:
+    1px dashed
+    rgba(255, 255, 255, 0.12);
+
+  border-radius: 7px;
+
+  background:
+    rgba(255, 255, 255, 0.012);
+
+  color: #ffffff;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 180ms ease,
+    border-color 180ms ease;
+}
+
+.live-new-cover-picker:hover {
+  border-color:
+    rgba(0, 174, 239, 0.4);
+
+  background:
+    rgba(0, 174, 239, 0.025);
+}
+
+.live-new-cover-picker > span:first-child {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border:
+    1px solid
+    rgba(0, 174, 239, 0.22);
+
+  border-radius: 50%;
+
+  color: #00aeef;
+
+  font-size: 1rem;
+}
+
+.live-new-cover-picker div {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.live-new-cover-picker strong {
+  font-size: 0.63rem;
+
+  font-weight: 500;
+}
+
+.live-new-cover-picker small {
+  color:
+    rgba(255, 255, 255, 0.25);
+
+  font-size: 0.52rem;
+}
+
+.live-new-cover-picker__arrow {
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size: 0.8rem;
+
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.live-new-cover-picker:hover
+.live-new-cover-picker__arrow {
+  color: #00aeef;
+
+  transform:
+    translate(2px, -2px);
+}
+
+
+/* =========================================================
+   SCHEDULE
+   ========================================================= */
+
+.live-new-schedule {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  gap: 20px;
+
+  margin-left: 56px;
+}
+
+.live-new-schedule-note {
+  align-self: end;
+
+  min-height: 48px;
+
+  box-sizing: border-box;
+
+  padding:
+    10px 13px;
+
+  border-left:
+    1px solid
+    rgba(0, 174, 239, 0.3);
+
+  background:
+    rgba(0, 174, 239, 0.025);
+}
+
+.live-new-schedule-note span {
+  display: block;
+
+  color: #00aeef;
+
+  font-size: 0.4rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.live-new-schedule-note p {
+  margin: 5px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.25);
+
+  font-size: 0.5rem;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   TOGGLE
+   ========================================================= */
+
+.live-new-toggle {
+  margin-left: 56px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  cursor: pointer;
+}
+
+.live-new-toggle input {
+  position: absolute;
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+.live-new-toggle__switch {
+  width: 38px;
+  height: 22px;
+
+  position: relative;
+
+  flex-shrink: 0;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, 0.04);
+
+  transition:
+    background 180ms ease,
+    border-color 180ms ease;
+}
+
+.live-new-toggle__switch > span {
+  position: absolute;
+
+  top: 4px;
+  left: 4px;
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.35);
+
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.live-new-toggle input:checked
++ .live-new-toggle__switch {
+  border-color:
+    rgba(0, 174, 239, 0.45);
+
+  background:
+    rgba(0, 174, 239, 0.15);
+}
+
+.live-new-toggle input:checked
++ .live-new-toggle__switch > span {
+  transform:
+    translateX(16px);
+
+  background:
+    #00aeef;
+}
+
+.live-new-toggle__content {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.live-new-toggle__content strong {
+  color:
+    rgba(255, 255, 255, 0.7);
+
+  font-size: 0.61rem;
+
+  font-weight: 500;
+}
+
+.live-new-toggle__content small {
+  color:
+    rgba(255, 255, 255, 0.24);
+
+  font-size: 0.51rem;
+}
+
+
+/* =========================================================
+   MESSAGES
+   ========================================================= */
+
+.live-new-message {
+  margin:
+    -10px 0 30px 56px;
+
+  padding:
+    14px 16px;
+
+  border-radius: 6px;
+
+  font-size: 0.55rem;
+}
+
+.live-new-message strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 0.58rem;
+}
+
+.live-new-message span {
+  color:
+    rgba(255, 255, 255, 0.4);
+}
+
+.live-new-message--error {
+  border:
+    1px solid
+    rgba(255, 70, 70, 0.18);
+
+  background:
+    rgba(255, 60, 60, 0.035);
+}
+
+.live-new-message--success {
+  border:
+    1px solid
+    rgba(0, 247, 81, 0.15);
+
+  background:
+    rgba(0, 247, 81, 0.025);
+}
+
+.live-new-message--success strong {
+  color: #04f751;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.live-new-actions {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 8px;
+
+  padding-left: 56px;
+}
+
+.live-new-cancel,
+.live-new-draft,
+.live-new-schedule,
+.live-new-go-live {
+  min-height: 45px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  box-sizing: border-box;
+
+  padding:
+    0 16px;
+
+  border-radius: 6px;
+
+  font-family: inherit;
+
+  font-size: 0.56rem;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.live-new-cancel {
+  margin-right: auto;
+
+  color:
+    rgba(255, 255, 255, 0.28);
+}
+
+.live-new-cancel:hover {
+  color:
+    rgba(255, 255, 255, 0.7);
+}
+
+.live-new-draft {
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  color:
+    rgba(255, 255, 255, 0.6);
+}
+
+.live-new-draft:hover {
+  border-color:
+    rgba(255, 255, 255, 0.2);
+
+  color: #ffffff;
+}
+
+.live-new-schedule {
+  border:
+    1px solid
+    rgba(0, 174, 239, 0.25);
+
+  background:
+    rgba(0, 174, 239, 0.05);
+
+  color:
+    rgba(255, 255, 255, 0.75);
+}
+
+.live-new-schedule:hover {
+  border-color:
+    rgba(0, 174, 239, 0.55);
+
+  background:
+    rgba(0, 174, 239, 0.1);
+
+  color: #ffffff;
+}
+
+.live-new-go-live {
+  border:
+    1px solid
+    rgba(0, 174, 239, 0.45);
+
+  background:
+    rgba(0, 174, 239, 0.12);
+
+  color: #ffffff;
+}
+
+.live-new-go-live:hover {
+  border-color:
+    rgba(0, 174, 239, 0.75);
+
+  background:
+    rgba(0, 174, 239, 0.2);
+
+  transform:
+    translateY(-1px);
+}
+
+.live-new-schedule span,
+.live-new-go-live span {
+  color: #00aeef;
+
+  font-size: 0.75rem;
+}
+
+.live-new-actions button:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.live-new-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 30px;
+}
+
+.live-new-modal__backdrop {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    rgba(0, 0, 0, 0.78);
+
+  backdrop-filter:
+    blur(8px);
+}
+
+.live-new-modal__panel {
+  position: relative;
+
+  z-index: 1;
+
+  width: min(
+    1050px,
+    100%
+  );
+
+  max-height:
+    calc(100vh - 60px);
+
+  overflow-y: auto;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 10px;
+
+  background:
+    #050505;
+
+  box-shadow:
+    0 30px 100px
+    rgba(0, 0, 0, 0.65);
+}
+
+
+/* =========================================================
+   RESPONSIVE — 900
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .live-new-page {
+    padding:
+      35px 30px 65px;
+  }
+
+  .live-new-fields {
+    padding-left: 0;
+  }
+
+  .live-new-selected-cover,
+  .live-new-cover-picker,
+  .live-new-schedule,
+  .live-new-toggle {
+    margin-left: 0;
+  }
+
+  .live-new-cover-picker {
+    width: 100%;
+  }
+
+  .live-new-message {
+    margin-left: 0;
+  }
+
+  .live-new-actions {
+    padding-left: 0;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 700
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .live-new-page {
+    padding:
+      28px 20px 50px;
+  }
+
+  .live-new-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .live-new-field--full {
+    grid-column: auto;
+  }
+
+  .live-new-schedule {
+    grid-template-columns: 1fr;
+  }
+
+  .live-new-actions {
+    align-items: stretch;
+
+    flex-wrap: wrap;
+  }
+
+  .live-new-cancel {
+    width: 100%;
+
+    margin-right: 0;
+
+    justify-content: flex-start;
+  }
+
+  .live-new-draft,
+  .live-new-schedule,
+  .live-new-go-live {
+    flex: 1;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 480
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .live-new-page {
+    padding:
+      22px 15px 40px;
+  }
+
+  .live-new-header h1 {
+    font-size: 2.7rem;
+  }
+
+  .live-new-section {
+    margin-bottom: 35px;
+
+    padding-bottom: 35px;
+  }
+
+  .live-new-section-heading {
+    grid-template-columns: 28px 1fr;
+
+    gap: 12px;
+  }
+
+  .live-new-selected-cover {
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+  }
+
+  .live-new-cover-info {
+    padding-top: 5px;
+  }
+
+  .live-new-selected-cover button {
+    width: 100%;
+  }
+
+  .live-new-actions {
+    flex-direction: column;
+  }
+
+  .live-new-cancel,
+  .live-new-draft,
+  .live-new-schedule,
+  .live-new-go-live {
+    width: 100%;
+  }
+
+  .live-new-modal {
+    padding: 10px;
+  }
+
+  .live-new-modal__panel {
+    max-height:
+      calc(100vh - 20px);
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .live-new-page *,
+  .live-new-page *::before,
+  .live-new-page *::after {
+    transition: none !important;
+  }
+
+}

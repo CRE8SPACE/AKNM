@@ -1,0 +1,1738 @@
+/* =========================================================
+   AKNM.PRO — ABOUT
+   Editorial / Personal / Founder
+   ========================================================= */
+
+.about-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #000;
+
+  color: rgba(255, 255, 255, 0.92);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.about-page__container {
+  width: min(1280px, calc(100% - 64px));
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   SHARED SECTION HEADING
+   ========================================================= */
+
+.about-page__section-heading {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 52px;
+
+  padding-bottom: 18px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+}
+
+
+.about-page__section-heading span {
+  color:
+    rgba(255, 255, 255, 0.24);
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.about-page__section-heading span:first-child {
+  color: #00aeef;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.about-page__hero {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 105px 0 115px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+
+  background:
+    radial-gradient(
+      circle at 78% 42%,
+      rgba(0, 174, 239, 0.055),
+      transparent 34%
+    );
+}
+
+
+.about-page__hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 620px;
+  height: 620px;
+
+  top: -310px;
+  right: -220px;
+
+  border:
+    1px solid
+    rgba(0, 174, 239, 0.045);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+.about-page__hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  top: -210px;
+  right: -120px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.025);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+.about-page__hero-top {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 70px;
+}
+
+
+.about-page__eyebrow,
+.about-page__hero-index {
+  color:
+    rgba(255, 255, 255, 0.29);
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+.about-page__eyebrow {
+  color: #00aeef;
+}
+
+
+.about-page__hero-content {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    360px;
+
+  gap: 90px;
+
+  align-items: end;
+}
+
+
+.about-page__hero h1 {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.96);
+
+  font-size:
+    clamp(90px, 13vw, 185px);
+
+  font-weight: 500;
+
+  line-height: 0.79;
+
+  letter-spacing: -0.08em;
+}
+
+
+.about-page__hero-description {
+  padding-bottom: 5px;
+}
+
+
+.about-page__hero-description > span {
+  display: block;
+
+  margin-bottom: 17px;
+
+  color:
+    rgba(255, 255, 255, 0.31);
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.about-page__hero-description p {
+  max-width: 340px;
+
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.45);
+
+  font-size: 14px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.about-page__intro {
+  padding: 105px 0 115px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+}
+
+
+.about-page__intro-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(0, 1.05fr);
+
+  gap: 110px;
+}
+
+
+.about-page__intro-title h2 {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.90);
+
+  font-size:
+    clamp(44px, 5.4vw, 72px);
+
+  font-weight: 500;
+
+  line-height: 0.97;
+
+  letter-spacing: -0.055em;
+}
+
+
+.about-page__intro-copy {
+  max-width: 630px;
+}
+
+
+.about-page__intro-copy p {
+  margin: 0 0 25px;
+
+  color:
+    rgba(255, 255, 255, 0.40);
+
+  font-size: 13px;
+
+  line-height: 1.9;
+}
+
+
+.about-page__intro-copy p:last-child {
+  margin-bottom: 0;
+
+  color:
+    rgba(255, 255, 255, 0.52);
+}
+
+
+/* =========================================================
+   ECOSYSTEM
+   ========================================================= */
+
+.about-page__ecosystem {
+  padding: 105px 0 115px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+}
+
+
+.about-page__ecosystem-intro {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    360px;
+
+  gap: 90px;
+
+  align-items: end;
+
+  margin-bottom: 70px;
+}
+
+
+.about-page__ecosystem-intro h2 {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.91);
+
+  font-size:
+    clamp(54px, 7vw, 92px);
+
+  font-weight: 500;
+
+  line-height: 0.91;
+
+  letter-spacing: -0.065em;
+}
+
+
+.about-page__ecosystem-intro p {
+  max-width: 350px;
+
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.39);
+
+  font-size: 12px;
+
+  line-height: 1.85;
+}
+
+
+.about-page__ecosystem-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.10);
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.10);
+}
+
+
+.about-page__ecosystem-grid article {
+  min-height: 255px;
+
+  padding: 23px 24px;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+
+.about-page__ecosystem-grid article:last-child {
+  border-right: 0;
+}
+
+
+.about-page__ecosystem-grid article > span {
+  display: block;
+
+  margin-bottom: 55px;
+
+  color:
+    rgba(255, 255, 255, 0.20);
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+
+.about-page__ecosystem-grid h3 {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.70);
+
+  font-size: 19px;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.025em;
+}
+
+
+.about-page__ecosystem-grid p {
+  max-width: 235px;
+
+  margin: 12px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.30);
+
+  font-size: 10px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   BUILDING
+   ========================================================= */
+
+.about-page__building {
+  padding: 105px 0 115px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+}
+
+
+.about-page__building-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 0.92fr);
+
+  gap: 120px;
+}
+
+
+.about-page__building-grid h2 {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.91);
+
+  font-size:
+    clamp(56px, 7vw, 94px);
+
+  font-weight: 500;
+
+  line-height: 0.90;
+
+  letter-spacing: -0.065em;
+}
+
+
+.about-page__building-copy {
+  max-width: 600px;
+}
+
+
+.about-page__building-copy p {
+  margin: 0 0 23px;
+
+  color:
+    rgba(255, 255, 255, 0.40);
+
+  font-size: 13px;
+
+  line-height: 1.85;
+}
+
+
+.about-page__text-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 15px;
+
+  color:
+    rgba(255, 255, 255, 0.53);
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.11em;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  transition:
+    color 160ms ease,
+    gap 160ms ease;
+}
+
+
+.about-page__text-link span {
+  color: #00aeef;
+
+  font-size: 14px;
+}
+
+
+.about-page__text-link:hover {
+  gap: 14px;
+
+  color: #00aeef;
+}
+
+
+/* =========================================================
+   PLATFORM
+   ========================================================= */
+
+.about-page__platform {
+  padding: 110px 0 125px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(0, 174, 239, 0.045),
+      transparent 42%
+    );
+}
+
+
+.about-page__platform-content {
+  max-width: 950px;
+}
+
+
+.about-page__platform-label {
+  display: block;
+
+  margin-bottom: 23px;
+
+  color: #00aeef;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+.about-page__platform-content h2 {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.93);
+
+  font-size:
+    clamp(52px, 7vw, 94px);
+
+  font-weight: 500;
+
+  line-height: 0.91;
+
+  letter-spacing: -0.065em;
+}
+
+
+.about-page__platform-content p {
+  max-width: 680px;
+
+  margin: 30px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.39);
+
+  font-size: 13px;
+
+  line-height: 1.9;
+}
+
+
+.about-page__platform-content p strong {
+  color:
+    rgba(255, 255, 255, 0.72);
+
+  font-weight: 500;
+}
+
+
+.about-page__platform-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 31px;
+
+  color:
+    rgba(255, 255, 255, 0.56);
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.11em;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  transition:
+    color 160ms ease,
+    gap 160ms ease;
+}
+
+
+.about-page__platform-link span {
+  color: #00aeef;
+
+  font-size: 14px;
+}
+
+
+.about-page__platform-link:hover {
+  gap: 14px;
+
+  color: #00aeef;
+}
+
+
+/* =========================================================
+   CREATIVE / PUBLISHING
+   ========================================================= */
+
+.about-page__creative {
+  padding: 105px 0 115px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+}
+
+
+.about-page__creative-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.10);
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.10);
+}
+
+
+.about-page__creative-grid > div {
+  min-height: 330px;
+
+  padding: 25px 28px;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+
+.about-page__creative-grid > div:last-child {
+  border-right: 0;
+}
+
+
+.about-page__creative-number {
+  display: block;
+
+  margin-bottom: 75px;
+
+  color:
+    rgba(255, 255, 255, 0.21);
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+
+.about-page__creative-grid h2 {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.78);
+
+  font-size: 29px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: -0.035em;
+}
+
+
+.about-page__creative-grid p {
+  max-width: 420px;
+
+  margin: 13px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.32);
+
+  font-size: 11px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   MUSIC
+   ========================================================= */
+
+.about-page__music {
+  padding: 105px 0 115px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+}
+
+
+.about-page__music-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    400px;
+
+  gap: 110px;
+
+  align-items: end;
+}
+
+
+.about-page__music-grid h2 {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.91);
+
+  font-size:
+    clamp(56px, 7vw, 92px);
+
+  font-weight: 500;
+
+  line-height: 0.90;
+
+  letter-spacing: -0.065em;
+}
+
+
+.about-page__music-grid p {
+  margin: 0 0 22px;
+
+  color:
+    rgba(255, 255, 255, 0.40);
+
+  font-size: 13px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   MEDIA
+   ========================================================= */
+
+.about-page__media {
+  padding: 105px 0 115px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+}
+
+
+.about-page__media-intro {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    360px;
+
+  gap: 100px;
+
+  align-items: end;
+
+  margin-bottom: 68px;
+}
+
+
+.about-page__media-intro h2 {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.91);
+
+  font-size:
+    clamp(52px, 6.7vw, 88px);
+
+  font-weight: 500;
+
+  line-height: 0.91;
+
+  letter-spacing: -0.06em;
+}
+
+
+.about-page__media-intro p {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.39);
+
+  font-size: 12px;
+
+  line-height: 1.85;
+}
+
+
+.about-page__media-links {
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.10);
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.10);
+}
+
+
+.about-page__media-links a {
+  display: grid;
+
+  grid-template-columns:
+    180px
+    minmax(0, 1fr)
+    30px;
+
+  gap: 25px;
+
+  align-items: center;
+
+  min-height: 88px;
+
+  padding: 0 20px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  color: inherit;
+
+  text-decoration: none;
+
+  transition:
+    padding 160ms ease,
+    background-color 160ms ease;
+}
+
+
+.about-page__media-links a:last-child {
+  border-bottom: 0;
+}
+
+
+.about-page__media-links a:hover {
+  padding-left: 28px;
+
+  background:
+    rgba(255, 255, 255, 0.015);
+}
+
+
+.about-page__media-links a > span:first-child {
+  color: #00aeef;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+
+.about-page__media-links a strong {
+  color:
+    rgba(255, 255, 255, 0.55);
+
+  font-size: 11px;
+
+  font-weight: 500;
+}
+
+
+.about-page__media-links a > span:last-child {
+  color: #00aeef;
+
+  font-size: 14px;
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   PHILOSOPHY
+   ========================================================= */
+
+.about-page__philosophy {
+  padding: 110px 0 125px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+}
+
+
+.about-page__philosophy-content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    390px;
+
+  gap: 110px;
+
+  align-items: start;
+}
+
+
+.about-page__philosophy-content h2 {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.92);
+
+  font-size:
+    clamp(58px, 7.5vw, 100px);
+
+  font-weight: 500;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.07em;
+}
+
+
+.about-page__philosophy-content > div {
+  padding-top: 8px;
+}
+
+
+.about-page__philosophy-content p {
+  margin: 0 0 24px;
+
+  color:
+    rgba(255, 255, 255, 0.40);
+
+  font-size: 13px;
+
+  line-height: 1.85;
+}
+
+
+.about-page__philosophy-content p:first-child {
+  color:
+    rgba(255, 255, 255, 0.68);
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   CURRENT FOCUS
+   ========================================================= */
+
+.about-page__focus {
+  padding: 105px 0 115px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+}
+
+
+.about-page__focus-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.10);
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.10);
+}
+
+
+.about-page__focus-grid > div {
+  min-height: 240px;
+
+  padding: 22px 24px;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+
+.about-page__focus-grid > div:last-child {
+  border-right: 0;
+}
+
+
+.about-page__focus-grid > div > span {
+  display: block;
+
+  margin-bottom: 58px;
+
+  color:
+    rgba(255, 255, 255, 0.20);
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+
+.about-page__focus-grid h3 {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.70);
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  line-height: 1.15;
+}
+
+
+.about-page__focus-grid p {
+  max-width: 230px;
+
+  margin: 11px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.30);
+
+  font-size: 10px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   CLOSING
+   ========================================================= */
+
+.about-page__closing {
+  padding: 135px 0 155px;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(0, 174, 239, 0.045),
+      transparent 42%
+    );
+}
+
+
+.about-page__closing > .about-page__container > span {
+  display: block;
+
+  margin-bottom: 22px;
+
+  color: #00aeef;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+.about-page__closing h2 {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.94);
+
+  font-size:
+    clamp(66px, 9vw, 125px);
+
+  font-weight: 500;
+
+  line-height: 0.87;
+
+  letter-spacing: -0.075em;
+}
+
+
+.about-page__closing p {
+  max-width: 550px;
+
+  margin: 32px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.38);
+
+  font-size: 13px;
+
+  line-height: 1.85;
+}
+
+
+.about-page__closing-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 32px;
+
+  color:
+    rgba(255, 255, 255, 0.57);
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.11em;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  transition:
+    color 160ms ease,
+    gap 160ms ease;
+}
+
+
+.about-page__closing-link span {
+  color: #00aeef;
+
+  font-size: 14px;
+}
+
+
+.about-page__closing-link:hover {
+  gap: 14px;
+
+  color: #00aeef;
+}
+
+
+/* =========================================================
+   FOCUS STATES
+   ========================================================= */
+
+.about-page a:focus-visible {
+  outline: 1px solid #00aeef;
+
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+  .about-page__container {
+    width: min(100% - 48px, 1000px);
+  }
+
+
+  .about-page__hero-content {
+    grid-template-columns:
+      minmax(0, 1fr)
+      300px;
+
+    gap: 60px;
+  }
+
+
+  .about-page__intro-grid,
+  .about-page__building-grid {
+    gap: 70px;
+  }
+
+
+  .about-page__ecosystem-intro,
+  .about-page__media-intro {
+    grid-template-columns:
+      minmax(0, 1fr)
+      300px;
+
+    gap: 55px;
+  }
+
+
+  .about-page__ecosystem-grid,
+  .about-page__focus-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .about-page__ecosystem-grid article:nth-child(2),
+  .about-page__focus-grid > div:nth-child(2) {
+    border-right: 0;
+  }
+
+
+  .about-page__ecosystem-grid article:nth-child(n + 3),
+  .about-page__focus-grid > div:nth-child(n + 3) {
+    border-top:
+      1px solid
+      rgba(255, 255, 255, 0.08);
+  }
+
+
+  .about-page__philosophy-content {
+    gap: 65px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .about-page__hero {
+    padding: 82px 0 85px;
+  }
+
+
+  .about-page__hero-content {
+    grid-template-columns: 1fr;
+
+    gap: 42px;
+  }
+
+
+  .about-page__hero-description {
+    max-width: 520px;
+  }
+
+
+  .about-page__intro,
+  .about-page__ecosystem,
+  .about-page__building,
+  .about-page__creative,
+  .about-page__music,
+  .about-page__media,
+  .about-page__focus {
+    padding: 82px 0 88px;
+  }
+
+
+  .about-page__platform,
+  .about-page__philosophy {
+    padding: 88px 0 96px;
+  }
+
+
+  .about-page__intro-grid,
+  .about-page__building-grid,
+  .about-page__music-grid,
+  .about-page__philosophy-content {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+
+  .about-page__ecosystem-intro,
+  .about-page__media-intro {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+
+  .about-page__creative-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .about-page__creative-grid > div {
+    min-height: 270px;
+
+    border-right: 0;
+  }
+
+
+  .about-page__creative-grid > div + div {
+    border-top:
+      1px solid
+      rgba(255, 255, 255, 0.08);
+  }
+
+
+  .about-page__philosophy-content > div {
+    max-width: 600px;
+  }
+
+
+  .about-page__closing {
+    padding: 105px 0 120px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .about-page__container {
+    width: calc(100% - 36px);
+  }
+
+
+  .about-page__hero {
+    padding: 64px 0 70px;
+  }
+
+
+  .about-page__hero-top {
+    margin-bottom: 47px;
+  }
+
+
+  .about-page__hero h1 {
+    font-size:
+      clamp(68px, 18vw, 96px);
+
+    line-height: 0.82;
+  }
+
+
+  .about-page__hero-description > span {
+    font-size: 7px;
+  }
+
+
+  .about-page__hero-description p {
+    font-size: 12px;
+
+    line-height: 1.8;
+  }
+
+
+  .about-page__section-heading {
+    margin-bottom: 38px;
+
+    padding-bottom: 15px;
+  }
+
+
+  .about-page__section-heading span {
+    font-size: 7px;
+  }
+
+
+  .about-page__intro,
+  .about-page__ecosystem,
+  .about-page__building,
+  .about-page__creative,
+  .about-page__music,
+  .about-page__media,
+  .about-page__focus {
+    padding: 68px 0 74px;
+  }
+
+
+  .about-page__platform,
+  .about-page__philosophy {
+    padding: 75px 0 82px;
+  }
+
+
+  .about-page__intro-grid,
+  .about-page__building-grid,
+  .about-page__music-grid,
+  .about-page__philosophy-content {
+    gap: 40px;
+  }
+
+
+  .about-page__intro-title h2 {
+    font-size: 39px;
+  }
+
+
+  .about-page__intro-copy p,
+  .about-page__building-copy p,
+  .about-page__music-grid p,
+  .about-page__philosophy-content p {
+    font-size: 11px;
+
+    line-height: 1.8;
+  }
+
+
+  .about-page__ecosystem-intro h2 {
+    font-size: 53px;
+  }
+
+
+  .about-page__ecosystem-intro p {
+    font-size: 11px;
+  }
+
+
+  .about-page__ecosystem-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .about-page__ecosystem-grid article,
+  .about-page__ecosystem-grid article:nth-child(2) {
+    min-height: 205px;
+
+    padding: 19px 18px;
+
+    border-right: 0;
+  }
+
+
+  .about-page__ecosystem-grid article:nth-child(n + 2) {
+    border-top:
+      1px solid
+      rgba(255, 255, 255, 0.08);
+  }
+
+
+  .about-page__ecosystem-grid article > span {
+    margin-bottom: 40px;
+  }
+
+
+  .about-page__building-grid h2 {
+    font-size: 57px;
+  }
+
+
+  .about-page__platform-content h2 {
+    font-size: 49px;
+  }
+
+
+  .about-page__platform-content p {
+    font-size: 11px;
+
+    line-height: 1.8;
+  }
+
+
+  .about-page__creative-grid > div {
+    min-height: 225px;
+
+    padding: 20px 18px;
+  }
+
+
+  .about-page__creative-number {
+    margin-bottom: 50px;
+  }
+
+
+  .about-page__creative-grid h2 {
+    font-size: 25px;
+  }
+
+
+  .about-page__creative-grid p {
+    font-size: 10px;
+  }
+
+
+  .about-page__music-grid h2 {
+    font-size: 54px;
+  }
+
+
+  .about-page__media-intro h2 {
+    font-size: 51px;
+  }
+
+
+  .about-page__media-intro p {
+    font-size: 11px;
+  }
+
+
+  .about-page__media-links a {
+    grid-template-columns:
+      100px
+      minmax(0, 1fr)
+      20px;
+
+    gap: 12px;
+
+    min-height: 74px;
+
+    padding: 0 14px;
+  }
+
+
+  .about-page__media-links a:hover {
+    padding-left: 18px;
+  }
+
+
+  .about-page__media-links a > span:first-child {
+    font-size: 7px;
+  }
+
+
+  .about-page__media-links a strong {
+    font-size: 9px;
+  }
+
+
+  .about-page__philosophy-content h2 {
+    font-size: 59px;
+  }
+
+
+  .about-page__focus-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .about-page__focus-grid > div,
+  .about-page__focus-grid > div:nth-child(2) {
+    min-height: 190px;
+
+    padding: 19px 18px;
+
+    border-right: 0;
+  }
+
+
+  .about-page__focus-grid > div:nth-child(n + 2) {
+    border-top:
+      1px solid
+      rgba(255, 255, 255, 0.08);
+  }
+
+
+  .about-page__focus-grid > div > span {
+    margin-bottom: 43px;
+  }
+
+
+  .about-page__closing {
+    padding: 90px 0 105px;
+  }
+
+
+  .about-page__closing h2 {
+    font-size: 62px;
+  }
+
+
+  .about-page__closing p {
+    font-size: 11px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .about-page__container {
+    width: calc(100% - 28px);
+  }
+
+
+  .about-page__hero {
+    padding: 55px 0 62px;
+  }
+
+
+  .about-page__hero h1 {
+    font-size: 67px;
+  }
+
+
+  .about-page__hero-description p {
+    font-size: 11px;
+  }
+
+
+  .about-page__intro-title h2 {
+    font-size: 34px;
+  }
+
+
+  .about-page__ecosystem-intro h2 {
+    font-size: 46px;
+  }
+
+
+  .about-page__building-grid h2 {
+    font-size: 50px;
+  }
+
+
+  .about-page__platform-content h2 {
+    font-size: 43px;
+  }
+
+
+  .about-page__music-grid h2 {
+    font-size: 48px;
+  }
+
+
+  .about-page__media-intro h2 {
+    font-size: 44px;
+  }
+
+
+  .about-page__philosophy-content h2 {
+    font-size: 51px;
+  }
+
+
+  .about-page__closing h2 {
+    font-size: 53px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .about-page__text-link,
+  .about-page__platform-link,
+  .about-page__media-links a,
+  .about-page__closing-link {
+    transition: none;
+  }
+
+}

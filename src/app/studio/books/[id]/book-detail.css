@@ -1,0 +1,1520 @@
+/* =========================================================
+   AKNM STUDIO — BOOK DETAIL
+   ========================================================= */
+
+.book-detail-page {
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+
+  padding: 45px 56px 90px;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.book-detail-header {
+  width: 100%;
+  max-width: 1200px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  margin-bottom: 55px;
+}
+
+
+.book-detail-header > div:first-child {
+  min-width: 0;
+}
+
+
+.book-detail-back {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 24px;
+
+  color: rgba(255, 255, 255, 0.28);
+
+  font-size: 0.55rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+
+.book-detail-back:hover {
+  color: #00aeef;
+
+  transform:
+    translateX(-2px);
+}
+
+
+.book-detail-eyebrow {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: rgba(255, 255, 255, 0.24);
+
+  font-size: 0.52rem;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+}
+
+
+.book-detail-title-row {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 25px;
+}
+
+
+.book-detail-title-row > div {
+  min-width: 0;
+}
+
+
+.book-detail-title-row h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(
+      3rem,
+      5vw,
+      5.2rem
+    );
+
+  font-weight: 500;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.065em;
+}
+
+
+.book-detail-title-row p {
+  max-width: 600px;
+
+  margin:
+    20px
+    0
+    0;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 0.82rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.book-detail-status {
+  flex-shrink: 0;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 25px;
+
+  box-sizing: border-box;
+
+  margin-top: 10px;
+
+  padding:
+    0
+    9px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+
+  border-radius: 4px;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 0.45rem;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+.book-detail-status--published {
+  border-color:
+    rgba(0, 247, 81, 0.22);
+
+  background:
+    rgba(0, 247, 81, 0.025);
+
+  color:
+    rgba(4, 247, 81, 0.75);
+}
+
+
+.book-detail-status--draft {
+  color:
+    rgba(255, 255, 255, 0.3);
+}
+
+
+.book-detail-status--scheduled {
+  border-color:
+    rgba(0, 174, 239, 0.22);
+
+  background:
+    rgba(0, 174, 239, 0.025);
+
+  color:
+    rgba(0, 174, 239, 0.78);
+}
+
+
+.book-detail-status--archived {
+  color:
+    rgba(255, 255, 255, 0.2);
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+   ========================================================= */
+
+.book-detail-header-actions {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+
+.book-detail-edit {
+  min-height: 36px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding:
+    0
+    14px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-radius: 5px;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  color:
+    rgba(255, 255, 255, 0.55);
+
+  font-family: inherit;
+
+  font-size: 0.5rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    color 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+
+.book-detail-edit:hover {
+  border-color:
+    rgba(0, 174, 239, 0.3);
+
+  background:
+    rgba(0, 174, 239, 0.025);
+
+  color:
+    #00aeef;
+
+  transform:
+    translateY(-1px);
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
+
+.book-detail-layout {
+  width: 100%;
+  max-width: 1200px;
+
+  display: grid;
+
+  grid-template-columns:
+    220px
+    minmax(0, 1fr);
+
+  column-gap: 65px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   COVER COLUMN
+   ========================================================= */
+
+.book-detail-cover-column {
+  min-width: 0;
+
+  position: sticky;
+
+  top: 35px;
+}
+
+
+.book-detail-cover {
+  width: 100%;
+
+  aspect-ratio:
+    2 / 3;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+
+  border-radius: 6px;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+}
+
+
+.book-detail-cover img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+.book-detail-cover-empty {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+}
+
+
+.book-detail-cover-empty span {
+  color:
+    rgba(255, 255, 255, 0.18);
+
+  font-size: 0.48rem;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+
+.book-detail-cover-empty strong {
+  color:
+    rgba(255, 255, 255, 0.38);
+
+  font-size: 0.58rem;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   COVER META
+   ========================================================= */
+
+.book-detail-cover-meta {
+  display: flex;
+
+  align-items: baseline;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding:
+    12px
+    0;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+}
+
+
+.book-detail-cover-meta span {
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size: 0.45rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+
+.book-detail-cover-meta strong {
+  min-width: 0;
+
+  overflow: hidden;
+
+  color:
+    rgba(255, 255, 255, 0.45);
+
+  font-size: 0.48rem;
+  font-weight: 500;
+
+  text-align: right;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.book-detail-content {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.book-detail-section {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    205px
+    minmax(0, 1fr);
+
+  column-gap: 48px;
+
+  box-sizing: border-box;
+
+  padding:
+    42px
+    0;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+}
+
+
+.book-detail-section:last-of-type {
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.book-detail-section-heading {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  min-width: 0;
+}
+
+
+.book-detail-section-heading > span:first-child {
+  flex-shrink: 0;
+
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size: 0.5rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  line-height: 1.5;
+}
+
+
+.book-detail-section-heading > div {
+  min-width: 0;
+}
+
+
+.book-detail-section-heading h2 {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.85);
+
+  font-size: 1.05rem;
+  font-weight: 500;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.025em;
+}
+
+
+.book-detail-section-heading p {
+  max-width: 190px;
+
+  margin:
+    9px
+    0
+    0;
+
+  color:
+    rgba(255, 255, 255, 0.25);
+
+  font-size: 0.55rem;
+
+  line-height: 1.65;
+}
+
+
+.book-detail-section-count {
+  margin-left: auto;
+
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size: 0.48rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   INFORMATION GRID
+   ========================================================= */
+
+.book-detail-info-grid {
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  column-gap: 30px;
+  row-gap: 25px;
+}
+
+
+.book-detail-info {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.book-detail-info > span {
+  color:
+    rgba(255, 255, 255, 0.22);
+
+  font-size: 0.48rem;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.book-detail-info > strong {
+  min-width: 0;
+
+  color:
+    rgba(255, 255, 255, 0.68);
+
+  font-size: 0.65rem;
+  font-weight: 500;
+
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.book-detail-description {
+  max-width: 680px;
+
+  color:
+    rgba(255, 255, 255, 0.48);
+
+  font-size: 0.72rem;
+
+  line-height: 1.85;
+
+  white-space: pre-wrap;
+}
+
+
+.book-detail-empty-text {
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size: 0.56rem;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   AUDIO / PDF RECORD
+   ========================================================= */
+
+.book-detail-audio-list {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+}
+
+
+.book-detail-audio {
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    32px
+    50px
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 14px;
+
+  box-sizing: border-box;
+
+  padding:
+    13px
+    0;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+}
+
+
+.book-detail-audio-number {
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size: 0.48rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+
+.book-detail-audio-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.075);
+
+  border-radius: 6px;
+
+  color:
+    rgba(255, 255, 255, 0.32);
+
+  font-size: 0.48rem;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+
+.book-detail-audio-main {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+.book-detail-audio-main h3 {
+  margin: 0;
+
+  overflow: hidden;
+
+  color:
+    rgba(255, 255, 255, 0.72);
+
+  font-size: 0.65rem;
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.book-detail-audio-meta {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  color:
+    rgba(255, 255, 255, 0.19);
+
+  font-size: 0.45rem;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+.book-detail-audio-meta span {
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+.book-detail-audio-open {
+  min-height: 31px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  box-sizing: border-box;
+
+  padding:
+    0
+    10px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius: 5px;
+
+  background:
+    transparent;
+
+  color:
+    rgba(255, 255, 255, 0.32);
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 0.48rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+
+.book-detail-audio-open:hover {
+  border-color:
+    rgba(0, 174, 239, 0.3);
+
+  background:
+    rgba(0, 174, 239, 0.025);
+
+  color:
+    #00aeef;
+
+  transform:
+    translateY(-1px);
+}
+
+
+.book-detail-audio-open span {
+  font-size: 0.65rem;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.book-detail-empty {
+  min-height: 150px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding:
+    25px
+    0;
+}
+
+
+.book-detail-empty-icon {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.075);
+
+  border-radius: 50%;
+
+  color:
+    rgba(255, 255, 255, 0.28);
+
+  font-size: 0.72rem;
+}
+
+
+.book-detail-empty h3 {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.58);
+
+  font-size: 0.65rem;
+  font-weight: 600;
+}
+
+
+.book-detail-empty p {
+  max-width: 450px;
+
+  margin:
+    7px
+    0
+    14px;
+
+  color:
+    rgba(255, 255, 255, 0.22);
+
+  font-size: 0.5rem;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   MEDIA SUMMARY
+   ========================================================= */
+
+.book-detail-media-summary {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      5,
+      minmax(0, 1fr)
+    );
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+}
+
+
+.book-detail-media-summary > div {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  padding:
+    18px
+    14px;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+}
+
+
+.book-detail-media-summary > div:first-child {
+  padding-left: 0;
+}
+
+
+.book-detail-media-summary > div:last-child {
+  padding-right: 0;
+
+  border-right: 0;
+}
+
+
+.book-detail-media-summary span {
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size: 0.45rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+
+.book-detail-media-summary strong {
+  color:
+    rgba(255, 255, 255, 0.68);
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  letter-spacing: -0.03em;
+}
+
+
+/* =========================================================
+   METADATA
+   ========================================================= */
+
+.book-detail-metadata {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+.book-detail-metadata > div {
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    140px
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  column-gap: 25px;
+
+  padding:
+    12px
+    0;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.045);
+}
+
+
+.book-detail-metadata > div:first-child {
+  padding-top: 0;
+}
+
+
+.book-detail-metadata > div:last-child {
+  border-bottom: 0;
+}
+
+
+.book-detail-metadata span {
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size: 0.45rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+
+.book-detail-metadata code {
+  min-width: 0;
+
+  overflow: hidden;
+
+  color:
+    rgba(255, 255, 255, 0.34);
+
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    monospace;
+
+  font-size: 0.48rem;
+
+  line-height: 1.5;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.book-detail-metadata strong {
+  color:
+    rgba(255, 255, 255, 0.38);
+
+  font-size: 0.5rem;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.book-detail-page
+  a:focus-visible,
+.book-detail-page
+  button:focus-visible {
+  outline:
+    1px solid
+    rgba(0, 174, 239, 0.65);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+   ========================================================= */
+
+@media (
+  max-width: 1100px
+) {
+
+  .book-detail-page {
+    padding:
+      40px
+      35px
+      80px;
+  }
+
+
+  .book-detail-layout {
+    grid-template-columns:
+      190px
+      minmax(0, 1fr);
+
+    column-gap: 45px;
+  }
+
+
+  .book-detail-section {
+    grid-template-columns:
+      175px
+      minmax(0, 1fr);
+
+    column-gap: 32px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (
+  max-width: 850px
+) {
+
+  .book-detail-page {
+    padding:
+      38px
+      30px
+      75px;
+  }
+
+
+  .book-detail-header {
+    align-items: flex-start;
+
+    margin-bottom: 45px;
+  }
+
+
+  .book-detail-layout {
+    grid-template-columns:
+      165px
+      minmax(0, 1fr);
+
+    column-gap: 32px;
+  }
+
+
+  .book-detail-title-row {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+
+  .book-detail-status {
+    margin-top: 0;
+  }
+
+
+  .book-detail-section {
+    grid-template-columns:
+      1fr;
+
+    row-gap: 28px;
+
+    padding:
+      36px
+      0;
+  }
+
+
+  .book-detail-section-heading {
+    max-width: 600px;
+  }
+
+
+  .book-detail-section-heading p {
+    max-width: 420px;
+  }
+
+
+  .book-detail-cover-column {
+    position: static;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (
+  max-width: 600px
+) {
+
+  .book-detail-page {
+    padding:
+      30px
+      18px
+      60px;
+  }
+
+
+  .book-detail-header {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 22px;
+
+    margin-bottom: 38px;
+  }
+
+
+  .book-detail-back {
+    margin-bottom: 20px;
+  }
+
+
+  .book-detail-title-row {
+    gap: 17px;
+  }
+
+
+  .book-detail-title-row h1 {
+    font-size:
+      3.4rem;
+  }
+
+
+  .book-detail-title-row p {
+    margin-top: 17px;
+
+    font-size: 0.72rem;
+  }
+
+
+  .book-detail-header-actions {
+    width: 100%;
+  }
+
+
+  .book-detail-edit {
+    width: 100%;
+  }
+
+
+  .book-detail-layout {
+    grid-template-columns:
+      1fr;
+
+    row-gap: 35px;
+  }
+
+
+  .book-detail-cover-column {
+    width: min(
+      190px,
+      100%
+    );
+  }
+
+
+  .book-detail-section {
+    row-gap: 24px;
+
+    padding:
+      32px
+      0;
+  }
+
+
+  .book-detail-section-heading h2 {
+    font-size: 0.95rem;
+  }
+
+
+  .book-detail-section-heading p {
+    font-size: 0.52rem;
+  }
+
+
+  .book-detail-info-grid {
+    grid-template-columns:
+      1fr;
+
+    row-gap: 19px;
+  }
+
+
+  .book-detail-description {
+    font-size: 0.68rem;
+
+    line-height: 1.8;
+  }
+
+
+  .book-detail-audio {
+    grid-template-columns:
+      28px
+      46px
+      minmax(0, 1fr);
+  }
+
+
+  .book-detail-audio-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+
+  .book-detail-audio-open {
+    grid-column:
+      3;
+
+    justify-self: start;
+
+    margin-top: 3px;
+  }
+
+
+  .book-detail-audio-meta {
+    font-size: 0.42rem;
+  }
+
+
+  .book-detail-media-summary {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .book-detail-media-summary > div {
+    padding:
+      16px
+      12px;
+
+    border-right:
+      1px solid
+      rgba(255, 255, 255, 0.055);
+
+    border-bottom:
+      1px solid
+      rgba(255, 255, 255, 0.055);
+  }
+
+
+  .book-detail-media-summary > div:nth-child(2n) {
+    border-right: 0;
+  }
+
+
+  .book-detail-media-summary > div:nth-last-child(-n + 1) {
+    border-bottom: 0;
+  }
+
+
+  .book-detail-media-summary > div:first-child {
+    padding-left: 12px;
+  }
+
+
+  .book-detail-media-summary > div:last-child {
+    padding-right: 12px;
+  }
+
+
+  .book-detail-metadata > div {
+    grid-template-columns:
+      1fr;
+
+    row-gap: 7px;
+
+    padding:
+      13px
+      0;
+  }
+
+
+  .book-detail-metadata code {
+    white-space: normal;
+
+    overflow-wrap: anywhere;
+  }
+
+
+  .book-detail-empty {
+    min-height: 130px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (
+  max-width: 420px
+) {
+
+  .book-detail-page {
+    padding:
+      25px
+      14px
+      55px;
+  }
+
+
+  .book-detail-title-row h1 {
+    font-size:
+      3rem;
+  }
+
+
+  .book-detail-cover-column {
+    width: 170px;
+  }
+
+
+  .book-detail-section {
+    padding:
+      28px
+      0;
+  }
+
+
+  .book-detail-section-heading {
+    gap: 11px;
+  }
+
+
+  .book-detail-section-heading h2 {
+    font-size: 0.9rem;
+  }
+
+
+  .book-detail-audio {
+    grid-template-columns:
+      26px
+      42px
+      minmax(0, 1fr);
+  }
+
+
+  .book-detail-audio-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .book-detail-audio-main h3 {
+    font-size: 0.6rem;
+  }
+
+
+  .book-detail-audio-open {
+    width: 100%;
+  }
+
+
+  .book-detail-media-summary strong {
+    font-size: 0.9rem;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (
+  prefers-reduced-motion: reduce
+) {
+
+  .book-detail-page *,
+  .book-detail-page *::before,
+  .book-detail-page *::after {
+    transition: none !important;
+  }
+
+}

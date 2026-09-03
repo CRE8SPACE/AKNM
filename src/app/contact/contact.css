@@ -1,0 +1,1483 @@
+/* =========================================================
+   AKNM.PRO — PUBLIC CONNECT
+   Editorial / Personal / Professional
+   Database-driven Contact Page
+   ========================================================= */
+
+.contact-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #000;
+  color: rgba(255, 255, 255, 0.92);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.contact-page__container {
+  width: min(1280px, calc(100% - 64px));
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.contact-page__hero {
+  padding: 112px 0 100px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+
+.contact-page__eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 62px;
+
+  color: rgba(255, 255, 255, 0.31);
+
+  font-size: 9px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+}
+
+
+.contact-page__line {
+  width: 32px;
+  height: 1px;
+
+  flex: 0 0 auto;
+
+  background: rgba(255, 255, 255, 0.27);
+}
+
+
+.contact-page__hero-content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    360px;
+
+  gap: 90px;
+
+  align-items: end;
+}
+
+
+.contact-page__hero-content h1 {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.96);
+
+  font-size: clamp(78px, 11vw, 158px);
+
+  font-weight: 500;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.075em;
+}
+
+
+.contact-page__hero-content p {
+  max-width: 330px;
+
+  margin: 0 0 5px;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   MAIN CONTACT AREA
+   ========================================================= */
+
+.contact-page__main {
+  padding: 92px 0 110px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+
+.contact-page__grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.82fr)
+    minmax(0, 1.18fr);
+
+  gap: 120px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   INFORMATION
+   ========================================================= */
+
+.contact-page__information {
+  min-width: 0;
+}
+
+
+.contact-page__information-block {
+  max-width: 500px;
+}
+
+
+.contact-page__information-block > span {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #00aeef;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+.contact-page__information-block h2 {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: clamp(36px, 4vw, 55px);
+
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.045em;
+}
+
+
+.contact-page__information-block p {
+  max-width: 440px;
+
+  margin: 25px 0 0;
+
+  color: rgba(255, 255, 255, 0.37);
+
+  font-size: 12px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   DIRECT CHANNELS
+   ========================================================= */
+
+.contact-page__channels {
+  margin-top: 68px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+.contact-page__channels a {
+  display: grid;
+
+  grid-template-columns:
+    90px
+    minmax(0, 1fr)
+    20px;
+
+  gap: 20px;
+
+  align-items: center;
+
+  min-height: 82px;
+
+  padding: 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: inherit;
+
+  text-decoration: none;
+
+  transition:
+    background-color 160ms ease,
+    padding 160ms ease,
+    border-color 160ms ease;
+}
+
+
+.contact-page__channels a:hover {
+  padding-left: 8px;
+
+  background: rgba(255, 255, 255, 0.018);
+
+  border-color: rgba(0, 174, 239, 0.18);
+}
+
+
+.contact-page__channels a > span:first-child {
+  color: rgba(255, 255, 255, 0.24);
+
+  font-size: 7px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.13em;
+}
+
+
+.contact-page__channels a strong {
+  min-width: 0;
+
+  overflow-wrap: anywhere;
+
+  color: rgba(255, 255, 255, 0.66);
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  line-height: 1.4;
+}
+
+
+.contact-page__channels a > span:last-child {
+  color: #00aeef;
+
+  font-size: 14px;
+
+  line-height: 1;
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   FORM WRAPPER
+   ========================================================= */
+
+.contact-page__form-wrapper {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.contact-page__form {
+  width: 100%;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+.contact-page__field {
+  display: grid;
+
+  grid-template-columns:
+    150px
+    minmax(0, 1fr);
+
+  gap: 30px;
+
+  align-items: start;
+
+  padding: 24px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.contact-page__field label {
+  padding-top: 12px;
+
+  color: rgba(255, 255, 255, 0.30);
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.contact-page__field input,
+.contact-page__field select,
+.contact-page__field textarea {
+  display: block;
+
+  width: 100%;
+
+  appearance: none;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255, 255, 255, 0.11);
+
+  border-radius: 5px;
+
+  outline: none;
+
+  background: #050505;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+
+.contact-page__field input,
+.contact-page__field select {
+  height: 46px;
+
+  padding: 0 14px;
+}
+
+
+.contact-page__field textarea {
+  min-height: 170px;
+
+  padding: 13px 14px;
+
+  resize: vertical;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+.contact-page__field input::placeholder,
+.contact-page__field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.19);
+
+  opacity: 1;
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.contact-page__field select {
+  cursor: pointer;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+
+.contact-page__field select option {
+  background: #080808;
+
+  color: rgba(255, 255, 255, 0.82);
+}
+
+
+.contact-page__field select:invalid {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+
+/* =========================================================
+   SELECT ARROW
+   ========================================================= */
+
+.contact-page__field select {
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 50%,
+      rgba(255, 255, 255, 0.38) 50%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.38) 50%,
+      transparent 50%
+    );
+
+  background-position:
+    calc(100% - 17px) 20px,
+    calc(100% - 12px) 20px;
+
+  background-size:
+    5px 5px,
+    5px 5px;
+
+  background-repeat: no-repeat;
+
+  padding-right: 40px;
+}
+
+
+/* =========================================================
+   INPUT STATES
+   ========================================================= */
+
+.contact-page__field input:hover,
+.contact-page__field select:hover,
+.contact-page__field textarea:hover {
+  border-color: rgba(255, 255, 255, 0.19);
+}
+
+
+.contact-page__field input:focus,
+.contact-page__field select:focus,
+.contact-page__field textarea:focus {
+  border-color: rgba(0, 174, 239, 0.70);
+
+  background: #060606;
+
+  box-shadow:
+    0 0 0 3px rgba(0, 174, 239, 0.055);
+}
+
+
+/* =========================================================
+   INVALID INPUT
+   ========================================================= */
+
+.contact-page__field input:invalid:not(:placeholder-shown),
+.contact-page__field textarea:invalid:not(:placeholder-shown) {
+  border-color: rgba(255, 85, 85, 0.42);
+}
+
+
+/* =========================================================
+   SUBMIT
+   ========================================================= */
+
+.contact-page__submit {
+  appearance: none;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  min-height: 64px;
+
+  margin-top: 22px;
+
+  padding: 0 18px;
+
+  border: 1px solid rgba(0, 174, 239, 0.32);
+
+  border-radius: 5px;
+
+  background: rgba(0, 174, 239, 0.035);
+
+  color: rgba(255, 255, 255, 0.67);
+
+  font-family: inherit;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease,
+    opacity 160ms ease;
+}
+
+
+.contact-page__submit > span:last-child {
+  color: #00aeef;
+
+  font-size: 15px;
+
+  transition: transform 160ms ease;
+}
+
+
+.contact-page__submit:hover {
+  border-color: #00aeef;
+
+  background: #00aeef;
+
+  color: #000;
+
+  transform: translateY(-1px);
+}
+
+
+.contact-page__submit:hover > span:last-child {
+  color: #000;
+
+  transform: translateX(4px);
+}
+
+
+.contact-page__submit:active {
+  transform: translateY(0);
+}
+
+
+.contact-page__submit:disabled {
+  opacity: 0.45;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+.contact-page__submit:disabled:hover {
+  border-color: rgba(0, 174, 239, 0.32);
+
+  background: rgba(0, 174, 239, 0.035);
+
+  color: rgba(255, 255, 255, 0.67);
+}
+
+
+.contact-page__submit:disabled:hover > span:last-child {
+  color: #00aeef;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   FORM DISABLED STATE
+   ========================================================= */
+
+.contact-page__form--disabled {
+  opacity: 0.65;
+}
+
+
+.contact-page__form--disabled input,
+.contact-page__form--disabled select,
+.contact-page__form--disabled textarea {
+  cursor: not-allowed;
+
+  opacity: 0.55;
+}
+
+
+.contact-page__form--disabled .contact-page__submit {
+  cursor: not-allowed;
+
+  opacity: 0.4;
+}
+
+
+/* =========================================================
+   FORM STATUS / FEEDBACK
+   ========================================================= */
+
+.contact-page__form-status {
+  margin-top: 18px;
+
+  padding: 14px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 5px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+
+.contact-page__form-status--success {
+  border-color: rgba(0, 174, 239, 0.28);
+
+  background: rgba(0, 174, 239, 0.035);
+
+  color: rgba(255, 255, 255, 0.70);
+}
+
+
+.contact-page__form-status--error {
+  border-color: rgba(255, 75, 75, 0.28);
+
+  background: rgba(255, 75, 75, 0.035);
+
+  color: rgba(255, 255, 255, 0.70);
+}
+
+
+/* =========================================================
+   FORM DISABLED NOTICE
+   ========================================================= */
+
+.contact-page__disabled-notice {
+  padding: 28px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.contact-page__disabled-notice span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: rgba(255, 255, 255, 0.24);
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.contact-page__disabled-notice p {
+  max-width: 440px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   OPPORTUNITIES
+   ========================================================= */
+
+.contact-page__opportunities {
+  padding: 105px 0 110px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+
+.contact-page__opportunities-heading {
+  display: grid;
+
+  grid-template-columns:
+    205px
+    minmax(0, 1fr);
+
+  gap: 50px;
+
+  align-items: start;
+
+  margin-bottom: 66px;
+}
+
+
+.contact-page__opportunities-heading > span {
+  padding-top: 10px;
+
+  color: #00aeef;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.contact-page__opportunities-heading h2 {
+  max-width: 800px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.91);
+
+  font-size: clamp(40px, 5vw, 68px);
+
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.05em;
+}
+
+
+/* =========================================================
+   OPPORTUNITY GRID
+   ========================================================= */
+
+.contact-page__opportunities-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+.contact-page__opportunities-grid article {
+  min-height: 225px;
+
+  padding: 22px 24px 25px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+
+.contact-page__opportunities-grid article:last-child {
+  border-right: 0;
+}
+
+
+.contact-page__opportunities-grid article:hover {
+  background: rgba(255, 255, 255, 0.018);
+}
+
+
+.contact-page__opportunities-grid article > span {
+  display: block;
+
+  margin-bottom: 55px;
+
+  color: rgba(255, 255, 255, 0.21);
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+
+.contact-page__opportunities-grid h3 {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.02em;
+}
+
+
+.contact-page__opportunities-grid p {
+  max-width: 210px;
+
+  margin: 11px 0 0;
+
+  color: rgba(255, 255, 255, 0.31);
+
+  font-size: 10px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   SOCIAL
+   ========================================================= */
+
+.contact-page__social {
+  padding: 120px 0 135px;
+}
+
+
+.contact-page__social > .contact-page__container > span {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #00aeef;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+.contact-page__social h2 {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.93);
+
+  font-size: clamp(52px, 7vw, 96px);
+
+  font-weight: 500;
+
+  line-height: 0.91;
+
+  letter-spacing: -0.06em;
+}
+
+
+.contact-page__social p {
+  max-width: 520px;
+
+  margin: 28px 0 0;
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   SOCIAL LINKS
+   ========================================================= */
+
+.contact-page__social-links {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  margin-top: 58px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+.contact-page__social-links a {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  min-height: 82px;
+
+  padding: 0 20px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.10em;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  transition:
+    color 160ms ease,
+    background-color 160ms ease,
+    padding 160ms ease;
+}
+
+
+.contact-page__social-links a:last-child {
+  border-right: 0;
+}
+
+
+.contact-page__social-links a span {
+  color: #00aeef;
+
+  font-size: 14px;
+
+  transition: transform 160ms ease;
+}
+
+
+.contact-page__social-links a:hover {
+  padding-left: 26px;
+
+  background: rgba(255, 255, 255, 0.018);
+
+  color: #00aeef;
+}
+
+
+.contact-page__social-links a:hover span {
+  transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   EMPTY / FALLBACK STATES
+   ========================================================= */
+
+.contact-page__empty {
+  padding: 30px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.28);
+
+  font-size: 10px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.contact-page a:focus-visible,
+.contact-page button:focus-visible,
+.contact-page input:focus-visible,
+.contact-page select:focus-visible,
+.contact-page textarea:focus-visible {
+  outline: 1px solid #00aeef;
+
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+  .contact-page__container {
+    width: min(100% - 48px, 1000px);
+  }
+
+
+  .contact-page__hero-content {
+    grid-template-columns:
+      minmax(0, 1fr)
+      300px;
+
+    gap: 55px;
+  }
+
+
+  .contact-page__grid {
+    gap: 70px;
+  }
+
+
+  .contact-page__opportunities-heading {
+    grid-template-columns:
+      160px
+      minmax(0, 1fr);
+
+    gap: 35px;
+  }
+
+
+  .contact-page__opportunities-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .contact-page__opportunities-grid article:nth-child(2) {
+    border-right: 0;
+  }
+
+
+  .contact-page__opportunities-grid article:nth-child(n + 3) {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+
+  .contact-page__social-links {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .contact-page__social-links a:nth-child(2) {
+    border-right: 0;
+  }
+
+
+  .contact-page__social-links a:nth-child(n + 3) {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .contact-page__hero {
+    padding: 82px 0 76px;
+  }
+
+
+  .contact-page__eyebrow {
+    margin-bottom: 48px;
+  }
+
+
+  .contact-page__hero-content {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+
+  .contact-page__hero-content h1 {
+    font-size: clamp(72px, 15vw, 120px);
+  }
+
+
+  .contact-page__hero-content p {
+    max-width: 500px;
+  }
+
+
+  .contact-page__main {
+    padding: 75px 0 85px;
+  }
+
+
+  .contact-page__grid {
+    grid-template-columns: 1fr;
+
+    gap: 75px;
+  }
+
+
+  .contact-page__information {
+    max-width: 700px;
+  }
+
+
+  .contact-page__channels {
+    margin-top: 45px;
+  }
+
+
+  .contact-page__opportunities {
+    padding: 82px 0 88px;
+  }
+
+
+  .contact-page__opportunities-heading {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+    margin-bottom: 48px;
+  }
+
+
+  .contact-page__opportunities-heading > span {
+    padding-top: 0;
+  }
+
+
+  .contact-page__social {
+    padding: 90px 0 105px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .contact-page__container {
+    width: calc(100% - 36px);
+  }
+
+
+  .contact-page__hero {
+    padding: 64px 0 68px;
+  }
+
+
+  .contact-page__eyebrow {
+    gap: 10px;
+
+    margin-bottom: 42px;
+
+    font-size: 8px;
+  }
+
+
+  .contact-page__line {
+    width: 26px;
+  }
+
+
+  .contact-page__hero-content {
+    gap: 30px;
+  }
+
+
+  .contact-page__hero-content h1 {
+    font-size: clamp(62px, 18vw, 88px);
+
+    line-height: 0.84;
+  }
+
+
+  .contact-page__hero-content p {
+    max-width: 390px;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+  }
+
+
+  .contact-page__main {
+    padding: 64px 0 72px;
+  }
+
+
+  .contact-page__grid {
+    gap: 60px;
+  }
+
+
+  .contact-page__information-block h2 {
+    font-size: 37px;
+  }
+
+
+  .contact-page__information-block p {
+    font-size: 11px;
+  }
+
+
+  .contact-page__channels {
+    margin-top: 38px;
+  }
+
+
+  .contact-page__channels a {
+    grid-template-columns:
+      75px
+      minmax(0, 1fr)
+      18px;
+
+    gap: 12px;
+
+    min-height: 76px;
+  }
+
+
+  .contact-page__channels a strong {
+    font-size: 10px;
+  }
+
+
+  .contact-page__field {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+    padding: 20px 0;
+  }
+
+
+  .contact-page__field label {
+    padding-top: 0;
+  }
+
+
+  .contact-page__field input,
+  .contact-page__field select {
+    height: 44px;
+  }
+
+
+  .contact-page__field textarea {
+    min-height: 145px;
+  }
+
+
+  .contact-page__submit {
+    min-height: 58px;
+
+    margin-top: 18px;
+  }
+
+
+  .contact-page__disabled-notice {
+    padding: 24px 0;
+  }
+
+
+  .contact-page__opportunities {
+    padding: 70px 0 76px;
+  }
+
+
+  .contact-page__opportunities-heading {
+    margin-bottom: 40px;
+  }
+
+
+  .contact-page__opportunities-heading h2 {
+    font-size: 39px;
+  }
+
+
+  .contact-page__opportunities-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .contact-page__opportunities-grid article,
+  .contact-page__opportunities-grid article:nth-child(2) {
+    min-height: 185px;
+
+    padding: 19px 18px 22px;
+
+    border-right: 0;
+  }
+
+
+  .contact-page__opportunities-grid article:nth-child(n + 2) {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+
+  .contact-page__opportunities-grid article > span {
+    margin-bottom: 40px;
+  }
+
+
+  .contact-page__opportunities-grid h3 {
+    font-size: 17px;
+  }
+
+
+  .contact-page__opportunities-grid p {
+    font-size: 9px;
+  }
+
+
+  .contact-page__social {
+    padding: 78px 0 90px;
+  }
+
+
+  .contact-page__social h2 {
+    font-size: 52px;
+
+    line-height: 0.92;
+  }
+
+
+  .contact-page__social p {
+    margin-top: 23px;
+
+    font-size: 11px;
+  }
+
+
+  .contact-page__social-links {
+    grid-template-columns: 1fr;
+
+    margin-top: 42px;
+  }
+
+
+  .contact-page__social-links a,
+  .contact-page__social-links a:nth-child(2) {
+    min-height: 70px;
+
+    border-right: 0;
+  }
+
+
+  .contact-page__social-links a:nth-child(n + 2) {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .contact-page__container {
+    width: calc(100% - 28px);
+  }
+
+
+  .contact-page__hero {
+    padding: 54px 0 58px;
+  }
+
+
+  .contact-page__hero-content h1 {
+    font-size: 62px;
+  }
+
+
+  .contact-page__hero-content p {
+    font-size: 11px;
+  }
+
+
+  .contact-page__information-block h2 {
+    font-size: 32px;
+  }
+
+
+  .contact-page__channels a {
+    grid-template-columns:
+      65px
+      minmax(0, 1fr)
+      16px;
+
+    gap: 9px;
+  }
+
+
+  .contact-page__channels a strong {
+    font-size: 9px;
+  }
+
+
+  .contact-page__opportunities-heading h2 {
+    font-size: 34px;
+  }
+
+
+  .contact-page__social h2 {
+    font-size: 45px;
+  }
+
+
+  .contact-page__social-links a {
+    padding: 0 15px;
+  }
+
+
+  .contact-page__form-status {
+    font-size: 9px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .contact-page *,
+  .contact-page *::before,
+  .contact-page *::after {
+    scroll-behavior: auto !important;
+
+    transition: none !important;
+
+    animation: none !important;
+  }
+
+}
+

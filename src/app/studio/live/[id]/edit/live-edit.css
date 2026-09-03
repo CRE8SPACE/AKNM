@@ -1,0 +1,2774 @@
+/* =========================================================
+   AKNM LIVE — POST PRODUCTION EDITOR
+   ========================================================= */
+
+.live-edit-page {
+  min-height: 100vh;
+
+  background:
+    var(--color-black);
+
+  color:
+    var(--color-white);
+}
+
+
+/* =========================================================
+   GLOBAL CONTAINER
+   ========================================================= */
+
+.live-edit-header,
+.live-edit-workspace,
+.live-edit-footer {
+  width:
+    min(
+      calc(100% - 64px),
+      var(--container-width)
+    );
+
+  margin:
+    0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.live-edit-header {
+  display:
+    flex;
+
+  align-items:
+    flex-end;
+
+  justify-content:
+    space-between;
+
+  gap:
+    60px;
+
+  padding:
+    150px 0 70px;
+
+  border-bottom:
+    1px solid
+    var(--color-border);
+}
+
+.live-edit-header__left {
+  max-width:
+    850px;
+}
+
+.live-edit-back {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  margin-bottom:
+    35px;
+
+  color:
+    var(--color-text-muted);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.55rem;
+
+  letter-spacing:
+    0.06em;
+
+  text-decoration:
+    none;
+
+  transition:
+    color 180ms ease;
+}
+
+.live-edit-back:hover {
+  color:
+    var(--color-blue);
+}
+
+
+.live-edit-eyebrow {
+  display:
+    block;
+
+  margin-bottom:
+    22px;
+
+  color:
+    var(--color-blue);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.52rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.14em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.live-edit-header h1 {
+  margin:
+    0;
+
+  color:
+    var(--color-white);
+
+  font-family:
+    var(--font-heading);
+
+  font-size:
+    clamp(
+      4rem,
+      7vw,
+      7.5rem
+    );
+
+  font-weight:
+    600;
+
+  line-height:
+    0.82;
+
+  letter-spacing:
+    -0.08em;
+}
+
+
+.live-edit-header__left > p {
+  max-width:
+    460px;
+
+  margin:
+    28px 0 0;
+
+  color:
+    var(--color-text-secondary);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.75rem;
+
+  line-height:
+    1.7;
+}
+
+
+/* =========================================================
+   HEADER STATUS
+   ========================================================= */
+
+.live-edit-header__status {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    flex-end;
+
+  gap:
+    10px;
+
+  padding-bottom:
+    5px;
+}
+
+.live-edit-header__status > span {
+  color:
+    var(--color-text-muted);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.48rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.12em;
+}
+
+
+/* =========================================================
+   STATUS BADGE
+   ========================================================= */
+
+.live-edit-status {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  min-height:
+    28px;
+
+  padding:
+    0 11px;
+
+  border:
+    1px solid
+    var(--color-border);
+
+  color:
+    var(--color-text-secondary);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.48rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.1em;
+}
+
+
+/* STATUS VARIANTS */
+
+.live-edit-status--draft {
+  color:
+    var(--color-text-muted);
+}
+
+.live-edit-status--scheduled {
+  color:
+    #f5c451;
+
+  border-color:
+    rgba(
+      245,
+      196,
+      81,
+      0.25
+    );
+}
+
+.live-edit-status--live {
+  color:
+    #ff3b30;
+
+  border-color:
+    rgba(
+      255,
+      59,
+      48,
+      0.3
+    );
+}
+
+.live-edit-status--ended {
+  color:
+    var(--color-blue);
+
+  border-color:
+    rgba(
+      0,
+      136,
+      245,
+      0.3
+    );
+}
+
+.live-edit-status--published {
+  color:
+    #04f751;
+
+  border-color:
+    rgba(
+      4,
+      247,
+      81,
+      0.3
+    );
+}
+
+.live-edit-status--cancelled,
+.live-edit-status--archived {
+  color:
+    var(--color-text-muted);
+
+  border-color:
+    var(--color-border);
+}
+
+
+/* =========================================================
+   WORKSPACE
+   ========================================================= */
+
+.live-edit-workspace {
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(
+      0,
+      1fr
+    )
+    330px;
+
+  gap:
+    22px;
+
+  align-items:
+    start;
+
+  padding:
+    50px 0 120px;
+}
+
+
+/* =========================================================
+   MAIN COLUMN
+   ========================================================= */
+
+.live-edit-main {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    18px;
+
+  min-width:
+    0;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.live-edit-card {
+  overflow:
+    hidden;
+
+  border:
+    1px solid
+    var(--color-border-light);
+
+  background:
+    var(--color-black-soft);
+
+  box-shadow:
+    0 20px 70px
+    rgba(
+      0,
+      0,
+      0,
+      0.12
+    );
+}
+
+
+/* =========================================================
+   CARD HEADING
+   ========================================================= */
+
+.live-edit-card-heading {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    30px;
+
+  padding:
+    26px 28px;
+
+  border-bottom:
+    1px solid
+    var(--color-border);
+}
+
+.live-edit-card-heading > div {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    18px;
+
+  min-width:
+    0;
+}
+
+.live-edit-card-heading > div > span {
+  flex:
+    0 0 auto;
+
+  color:
+    var(--color-blue);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.5rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.08em;
+}
+
+.live-edit-card-heading h2 {
+  margin:
+    0 0 6px;
+
+  color:
+    var(--color-white);
+
+  font-family:
+    var(--font-heading);
+
+  font-size:
+    1.45rem;
+
+  font-weight:
+    500;
+
+  line-height:
+    0.95;
+
+  letter-spacing:
+    -0.04em;
+}
+
+.live-edit-card-heading p {
+  margin:
+    0;
+
+  color:
+    var(--color-text-muted);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.55rem;
+
+  line-height:
+    1.5;
+}
+
+
+/* =========================================================
+   RECORDING STATUS
+   ========================================================= */
+
+.live-edit-recording-status {
+  flex:
+    0 0 auto;
+
+  color:
+    #04f751;
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.48rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.1em;
+}
+
+
+/* =========================================================
+   RECORDING VIDEO
+   ========================================================= */
+
+.live-edit-video-wrapper {
+  position:
+    relative;
+
+  overflow:
+    hidden;
+
+  aspect-ratio:
+    16 / 9;
+
+  background:
+    #000;
+}
+
+.live-edit-video {
+  display:
+    block;
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    contain;
+
+  background:
+    #000;
+}
+
+
+/* =========================================================
+   VIDEO OVERLAY
+   ========================================================= */
+
+.live-edit-video-overlay {
+  position:
+    absolute;
+
+  top:
+    18px;
+
+  right:
+    18px;
+
+  z-index:
+    2;
+
+  pointer-events:
+    none;
+}
+
+.live-edit-video-overlay span {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  min-height:
+    25px;
+
+  padding:
+    0 9px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.15
+    );
+
+  background:
+    rgba(
+      0,
+      0,
+      0,
+      0.55
+    );
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.7
+    );
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.42rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.1em;
+
+  backdrop-filter:
+    blur(10px);
+}
+
+
+/* =========================================================
+   NO RECORDING
+   ========================================================= */
+
+.live-edit-no-recording {
+  min-height:
+    360px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    12px;
+
+  padding:
+    50px;
+
+  text-align:
+    center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(
+        0,
+        136,
+        245,
+        0.08
+      ),
+      transparent 38%
+    );
+}
+
+.live-edit-no-recording > div {
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.045
+    );
+
+  font-family:
+    var(--font-heading);
+
+  font-size:
+    7rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    -0.1em;
+}
+
+.live-edit-no-recording strong {
+  color:
+    var(--color-white);
+
+  font-family:
+    var(--font-heading);
+
+  font-size:
+    1.25rem;
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    -0.04em;
+}
+
+.live-edit-no-recording p {
+  max-width:
+    350px;
+
+  margin:
+    0;
+
+  color:
+    var(--color-text-muted);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.6rem;
+
+  line-height:
+    1.6;
+}
+
+
+/* =========================================================
+   RECORDING META
+   ========================================================= */
+
+.live-edit-recording-meta {
+  display:
+    grid;
+
+  grid-template-columns:
+    2fr
+    1fr
+    1fr
+    1fr;
+
+  border-top:
+    1px solid
+    var(--color-border);
+}
+
+.live-edit-recording-meta > div {
+  min-width:
+    0;
+
+  padding:
+    17px 20px;
+
+  border-right:
+    1px solid
+    var(--color-border);
+}
+
+.live-edit-recording-meta > div:last-child {
+  border-right:
+    0;
+}
+
+.live-edit-recording-meta span {
+  display:
+    block;
+
+  margin-bottom:
+    8px;
+
+  color:
+    var(--color-text-muted);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.44rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.1em;
+}
+
+.live-edit-recording-meta strong {
+  display:
+    block;
+
+  overflow:
+    hidden;
+
+  color:
+    var(--color-white);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.57rem;
+
+  font-weight:
+    500;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+/* =========================================================
+   CONTENT FIELDS
+   ========================================================= */
+
+.live-edit-fields {
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap:
+    24px;
+
+  padding:
+    30px;
+}
+
+.live-edit-fields label {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    10px;
+}
+
+.live-edit-fields label:nth-child(3),
+.live-edit-featured {
+  grid-column:
+    1 / -1;
+}
+
+.live-edit-fields label > span {
+  color:
+    var(--color-text-muted);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.47rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.11em;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.live-edit-fields input[type="text"],
+.live-edit-fields select,
+.live-edit-fields textarea {
+  width:
+    100%;
+
+  border:
+    1px solid
+    var(--color-border);
+
+  outline:
+    none;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.018
+    );
+
+  color:
+    var(--color-white);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.68rem;
+
+  transition:
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.live-edit-fields input[type="text"],
+.live-edit-fields select {
+  height:
+    48px;
+
+  padding:
+    0 14px;
+}
+
+.live-edit-fields textarea {
+  min-height:
+    180px;
+
+  padding:
+    14px;
+
+  resize:
+    vertical;
+
+  line-height:
+    1.7;
+}
+
+.live-edit-fields input[type="text"]::placeholder,
+.live-edit-fields textarea::placeholder {
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.22
+    );
+}
+
+.live-edit-fields input[type="text"]:focus,
+.live-edit-fields select:focus,
+.live-edit-fields textarea:focus {
+  border-color:
+    rgba(
+      0,
+      136,
+      245,
+      0.55
+    );
+
+  background:
+    rgba(
+      0,
+      136,
+      245,
+      0.025
+    );
+}
+
+.live-edit-fields input:disabled,
+.live-edit-fields select:disabled,
+.live-edit-fields textarea:disabled {
+  opacity:
+    0.5;
+
+  cursor:
+    not-allowed;
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.live-edit-fields select {
+  appearance:
+    none;
+
+  padding-right:
+    35px;
+
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 50%,
+      rgba(
+        255,
+        255,
+        255,
+        0.5
+      ) 50%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(
+        255,
+        255,
+        255,
+        0.5
+      ) 50%,
+      transparent 50%
+    );
+
+  background-position:
+    calc(100% - 17px) 20px,
+    calc(100% - 12px) 20px;
+
+  background-size:
+    5px 5px,
+    5px 5px;
+
+  background-repeat:
+    no-repeat;
+}
+
+.live-edit-fields select option {
+  background:
+    #080b0f;
+
+  color:
+    var(--color-white);
+}
+
+
+/* =========================================================
+   FEATURED CHECKBOX
+   ========================================================= */
+
+.live-edit-featured {
+  display:
+    flex !important;
+
+  flex-direction:
+    row !important;
+
+  align-items:
+    center;
+
+  gap:
+    13px;
+
+  padding:
+    17px;
+
+  border:
+    1px solid
+    var(--color-border);
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.015
+    );
+}
+
+.live-edit-featured > input {
+  flex:
+    0 0 auto;
+
+  width:
+    17px;
+
+  height:
+    17px;
+
+  margin:
+    0;
+
+  accent-color:
+    var(--color-blue);
+
+  cursor:
+    pointer;
+}
+
+.live-edit-featured > span {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    5px;
+}
+
+.live-edit-featured strong {
+  color:
+    var(--color-white);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.58rem;
+
+  font-weight:
+    600;
+}
+
+.live-edit-featured small {
+  color:
+    var(--color-text-muted);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.52rem;
+
+  line-height:
+    1.5;
+}
+
+
+/* =========================================================
+   COVER SELECTED
+   ========================================================= */
+
+.live-edit-cover-selected {
+  display:
+    grid;
+
+  grid-template-columns:
+    220px
+    1fr;
+
+  gap:
+    25px;
+
+  padding:
+    30px;
+}
+
+.live-edit-cover-preview {
+  overflow:
+    hidden;
+
+  aspect-ratio:
+    16 / 10;
+
+  border:
+    1px solid
+    var(--color-border);
+
+  background:
+    #030507;
+}
+
+.live-edit-cover-preview img {
+  display:
+    block;
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    cover;
+}
+
+.live-edit-cover-info {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    flex-start;
+
+  justify-content:
+    center;
+
+  gap:
+    8px;
+}
+
+.live-edit-cover-info strong {
+  color:
+    var(--color-white);
+
+  font-family:
+    var(--font-heading);
+
+  font-size:
+    1.2rem;
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    -0.03em;
+}
+
+.live-edit-cover-info small {
+  max-width:
+    350px;
+
+  color:
+    var(--color-text-muted);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.55rem;
+
+  line-height:
+    1.6;
+}
+
+.live-edit-cover-info button {
+  min-height:
+    34px;
+
+  margin-top:
+    8px;
+
+  padding:
+    0 12px;
+
+  border:
+    1px solid
+    var(--color-border);
+
+  background:
+    transparent;
+
+  color:
+    var(--color-text-secondary);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.5rem;
+
+  cursor:
+    pointer;
+
+  transition:
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.live-edit-cover-info button:hover {
+  border-color:
+    rgba(
+      255,
+      59,
+      48,
+      0.4
+    );
+
+  color:
+    #ff6b63;
+}
+
+
+/* =========================================================
+   COVER EMPTY
+   ========================================================= */
+
+.live-edit-cover-empty {
+  width:
+    calc(
+      100% - 60px
+    );
+
+  min-height:
+    210px;
+
+  margin:
+    30px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    8px;
+
+  border:
+    1px dashed
+    rgba(
+      255,
+      255,
+      255,
+      0.15
+    );
+
+  background:
+    transparent;
+
+  color:
+    var(--color-white);
+
+  cursor:
+    pointer;
+
+  transition:
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.live-edit-cover-empty:hover {
+  border-color:
+    rgba(
+      0,
+      136,
+      245,
+      0.5
+    );
+
+  background:
+    rgba(
+      0,
+      136,
+      245,
+      0.025
+    );
+}
+
+.live-edit-cover-empty > span {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  width:
+    38px;
+
+  height:
+    38px;
+
+  margin-bottom:
+    5px;
+
+  border:
+    1px solid
+    var(--color-border);
+
+  border-radius:
+    50%;
+
+  color:
+    var(--color-blue);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    1rem;
+}
+
+.live-edit-cover-empty strong {
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.6rem;
+
+  font-weight:
+    600;
+}
+
+.live-edit-cover-empty small {
+  color:
+    var(--color-text-muted);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.5rem;
+}
+
+
+/* =========================================================
+   INFO GRID
+   ========================================================= */
+
+.live-edit-info-grid {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      1fr
+    );
+
+  border-top:
+    1px solid
+    var(--color-border);
+
+  border-left:
+    1px solid
+    var(--color-border);
+}
+
+.live-edit-info-grid > div {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    10px;
+
+  min-width:
+    0;
+
+  min-height:
+    105px;
+
+  padding:
+    20px;
+
+  border-right:
+    1px solid
+    var(--color-border);
+
+  border-bottom:
+    1px solid
+    var(--color-border);
+}
+
+.live-edit-info-grid span {
+  color:
+    var(--color-text-muted);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.45rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.1em;
+}
+
+.live-edit-info-grid strong {
+  overflow:
+    hidden;
+
+  color:
+    var(--color-white);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.58rem;
+
+  font-weight:
+    500;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.live-edit-sidebar {
+  position:
+    sticky;
+
+  top:
+    25px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    18px;
+}
+
+
+/* =========================================================
+   PUBLISH CARD
+   ========================================================= */
+
+.live-edit-publish-card {
+  padding:
+    28px;
+
+  border:
+    1px solid
+    var(--color-border-light);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(
+        0,
+        136,
+        245,
+        0.07
+      ),
+      rgba(
+        255,
+        255,
+        255,
+        0.018
+      )
+    );
+
+  box-shadow:
+    0 25px 80px
+    rgba(
+      0,
+      0,
+      0,
+      0.2
+    );
+}
+
+.live-edit-publish-eyebrow {
+  color:
+    var(--color-blue);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.48rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.12em;
+}
+
+.live-edit-publish-card h2 {
+  margin:
+    18px 0 12px;
+
+  color:
+    var(--color-white);
+
+  font-family:
+    var(--font-heading);
+
+  font-size:
+    2rem;
+
+  font-weight:
+    500;
+
+  line-height:
+    0.9;
+
+  letter-spacing:
+    -0.05em;
+}
+
+.live-edit-publish-card > p {
+  margin:
+    0;
+
+  color:
+    var(--color-text-secondary);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.58rem;
+
+  line-height:
+    1.7;
+}
+
+
+/* =========================================================
+   CHECKLIST
+   ========================================================= */
+
+.live-edit-checklist {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    1px;
+
+  margin:
+    25px 0;
+
+  border:
+    1px solid
+    var(--color-border);
+}
+
+.live-edit-checklist > div {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    12px;
+
+  min-height:
+    48px;
+
+  padding:
+    0 13px;
+
+  border-bottom:
+    1px solid
+    var(--color-border);
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.01
+    );
+}
+
+.live-edit-checklist > div:last-child {
+  border-bottom:
+    0;
+}
+
+.live-edit-checklist span {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  width:
+    20px;
+
+  height:
+    20px;
+
+  border:
+    1px solid
+    var(--color-border);
+
+  color:
+    var(--color-text-muted);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.45rem;
+}
+
+.live-edit-checklist strong {
+  color:
+    var(--color-text-secondary);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.54rem;
+
+  font-weight:
+    500;
+}
+
+.live-edit-checklist .is-ready span {
+  border-color:
+    rgba(
+      4,
+      247,
+      81,
+      0.35
+    );
+
+  background:
+    rgba(
+      4,
+      247,
+      81,
+      0.06
+    );
+
+  color:
+    #04f751;
+}
+
+.live-edit-checklist .is-ready strong {
+  color:
+    var(--color-white);
+}
+
+
+/* =========================================================
+   PUBLISH BUTTON
+   ========================================================= */
+
+.live-edit-publish-button {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  width:
+    100%;
+
+  min-height:
+    50px;
+
+  padding:
+    0 16px;
+
+  border:
+    1px solid
+    rgba(
+      0,
+      136,
+      245,
+      0.45
+    );
+
+  background:
+    rgba(
+      0,
+      136,
+      245,
+      0.1
+    );
+
+  color:
+    var(--color-white);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.56rem;
+
+  font-weight:
+    600;
+
+  cursor:
+    pointer;
+
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.live-edit-publish-button:hover:not(:disabled) {
+  border-color:
+    var(--color-blue);
+
+  background:
+    rgba(
+      0,
+      136,
+      245,
+      0.18
+    );
+
+  transform:
+    translateY(-1px);
+}
+
+.live-edit-publish-button:disabled {
+  opacity:
+    0.35;
+
+  cursor:
+    not-allowed;
+}
+
+
+/* =========================================================
+   SAVE BUTTON
+   ========================================================= */
+
+.live-edit-save-button {
+  width:
+    100%;
+
+  min-height:
+    44px;
+
+  margin-top:
+    9px;
+
+  border:
+    1px solid
+    var(--color-border);
+
+  background:
+    transparent;
+
+  color:
+    var(--color-text-secondary);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.54rem;
+
+  cursor:
+    pointer;
+
+  transition:
+    border-color 180ms ease,
+    color 180ms ease,
+    background 180ms ease;
+}
+
+.live-edit-save-button:hover:not(:disabled) {
+  border-color:
+    rgba(
+      255,
+      255,
+      255,
+      0.25
+    );
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.025
+    );
+
+  color:
+    var(--color-white);
+}
+
+.live-edit-save-button:disabled {
+  opacity:
+    0.4;
+
+  cursor:
+    not-allowed;
+}
+
+
+/* =========================================================
+   STUDIO RETURN
+   ========================================================= */
+
+.live-edit-studio-link {
+  display:
+    block;
+
+  margin-top:
+    22px;
+
+  color:
+    var(--color-text-muted);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.5rem;
+
+  text-align:
+    center;
+
+  text-decoration:
+    none;
+
+  transition:
+    color 180ms ease;
+}
+
+.live-edit-studio-link:hover {
+  color:
+    var(--color-blue);
+}
+
+
+/* =========================================================
+   STATUS CARD
+   ========================================================= */
+
+.live-edit-status-card {
+  padding:
+    24px;
+
+  border:
+    1px solid
+    var(--color-border);
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.012
+    );
+}
+
+.live-edit-status-card > span {
+  display:
+    block;
+
+  margin-bottom:
+    13px;
+
+  color:
+    var(--color-text-muted);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.45rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.1em;
+}
+
+.live-edit-status-card .live-edit-status {
+  margin-bottom:
+    13px;
+}
+
+.live-edit-status-card p {
+  margin:
+    0;
+
+  color:
+    var(--color-text-muted);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.55rem;
+
+  line-height:
+    1.6;
+}
+
+
+/* =========================================================
+   MESSAGES
+   ========================================================= */
+
+.live-edit-message {
+  position:
+    fixed;
+
+  right:
+    25px;
+
+  bottom:
+    25px;
+
+  z-index:
+    100;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    5px;
+
+  max-width:
+    420px;
+
+  padding:
+    15px 18px;
+
+  border:
+    1px solid
+    var(--color-border-light);
+
+  background:
+    rgba(
+      5,
+      8,
+      13,
+      0.94
+    );
+
+  box-shadow:
+    0 20px 60px
+    rgba(
+      0,
+      0,
+      0,
+      0.4
+    );
+
+  backdrop-filter:
+    blur(18px);
+}
+
+.live-edit-message--success {
+  border-color:
+    rgba(
+      4,
+      247,
+      81,
+      0.25
+    );
+}
+
+.live-edit-message--error {
+  border-color:
+    rgba(
+      255,
+      59,
+      48,
+      0.3
+    );
+}
+
+.live-edit-message strong {
+  color:
+    var(--color-white);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.55rem;
+}
+
+.live-edit-message--success {
+  color:
+    #04f751;
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.55rem;
+}
+
+.live-edit-message--error strong {
+  color:
+    #ff6259;
+}
+
+.live-edit-message--error span {
+  color:
+    var(--color-text-secondary);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.55rem;
+
+  line-height:
+    1.5;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.live-edit-footer {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      1fr
+    );
+
+  border-top:
+    1px solid
+    var(--color-border);
+}
+
+.live-edit-footer > div {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    7px;
+
+  min-height:
+    85px;
+
+  padding:
+    20px;
+
+  border-right:
+    1px solid
+    var(--color-border);
+}
+
+.live-edit-footer > div:last-child {
+  border-right:
+    0;
+}
+
+.live-edit-footer span {
+  color:
+    var(--color-text-muted);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.45rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.1em;
+}
+
+.live-edit-footer strong {
+  color:
+    var(--color-white);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.56rem;
+
+  font-weight:
+    500;
+}
+
+
+/* =========================================================
+   LOADING STATE
+   ========================================================= */
+
+.live-edit-state {
+  min-height:
+    100vh;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    15px;
+}
+
+.live-edit-state p {
+  margin:
+    0;
+
+  color:
+    var(--color-text-muted);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.6rem;
+}
+
+
+/* =========================================================
+   LOADER
+   ========================================================= */
+
+.live-edit-loader {
+  width:
+    30px;
+
+  height:
+    30px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.12
+    );
+
+  border-top-color:
+    var(--color-blue);
+
+  border-radius:
+    50%;
+
+  animation:
+    live-edit-spin
+    800ms linear infinite;
+}
+
+@keyframes live-edit-spin {
+
+  to {
+    transform:
+      rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   ERROR STATE
+   ========================================================= */
+
+.live-edit-state--error {
+  padding:
+    40px;
+}
+
+.live-edit-state--error > span {
+  color:
+    var(--color-blue);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.5rem;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    0.12em;
+}
+
+.live-edit-state--error h1 {
+  margin:
+    0;
+
+  color:
+    var(--color-white);
+
+  font-family:
+    var(--font-heading);
+
+  font-size:
+    clamp(
+      3rem,
+      7vw,
+      7rem
+    );
+
+  line-height:
+    0.82;
+
+  letter-spacing:
+    -0.08em;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.live-edit-modal {
+  position:
+    fixed;
+
+  inset:
+    0;
+
+  z-index:
+    1000;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  padding:
+    30px;
+}
+
+
+/* =========================================================
+   MODAL BACKDROP
+   ========================================================= */
+
+.live-edit-modal__backdrop {
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  background:
+    rgba(
+      0,
+      0,
+      0,
+      0.78
+    );
+
+  backdrop-filter:
+    blur(12px);
+}
+
+
+/* =========================================================
+   MODAL PANEL
+   ========================================================= */
+
+.live-edit-modal__panel {
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  width:
+    min(
+      1100px,
+      100%
+    );
+
+  max-height:
+    calc(
+      100vh - 60px
+    );
+
+  overflow:
+    auto;
+
+  border:
+    1px solid
+    var(--color-border-light);
+
+  background:
+    #05080d;
+
+  box-shadow:
+    0 40px 120px
+    rgba(
+      0,
+      0,
+      0,
+      0.65
+    );
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .live-edit-workspace {
+    grid-template-columns:
+      minmax(
+        0,
+        1fr
+      )
+      290px;
+  }
+
+  .live-edit-recording-meta {
+    grid-template-columns:
+      repeat(
+        2,
+        1fr
+      );
+  }
+
+  .live-edit-recording-meta > div:nth-child(2) {
+    border-right:
+      0;
+  }
+
+  .live-edit-recording-meta > div:nth-child(-n + 2) {
+    border-bottom:
+      1px solid
+      var(--color-border);
+  }
+}
+
+
+/* =========================================================
+   TABLET / SMALL DESKTOP
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .live-edit-header {
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+
+    gap:
+      35px;
+  }
+
+  .live-edit-header__status {
+    align-items:
+      flex-start;
+  }
+
+  .live-edit-workspace {
+    grid-template-columns:
+      1fr;
+  }
+
+  .live-edit-sidebar {
+    position:
+      static;
+
+    display:
+      grid;
+
+    grid-template-columns:
+      1fr
+      1fr;
+
+    align-items:
+      start;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .live-edit-header,
+  .live-edit-workspace,
+  .live-edit-footer {
+    width:
+      calc(
+        100% - 40px
+      );
+  }
+
+
+  .live-edit-header {
+    padding:
+      120px 0 55px;
+  }
+
+
+  .live-edit-header h1 {
+    font-size:
+      clamp(
+        3.5rem,
+        16vw,
+        6rem
+      );
+  }
+
+
+  .live-edit-workspace {
+    padding:
+      35px 0 90px;
+  }
+
+
+  .live-edit-card-heading {
+    padding:
+      22px 20px;
+  }
+
+
+  .live-edit-card-heading > div {
+    gap:
+      12px;
+  }
+
+
+  .live-edit-fields {
+    grid-template-columns:
+      1fr;
+
+    padding:
+      22px 20px;
+  }
+
+
+  .live-edit-fields label:nth-child(3),
+  .live-edit-featured {
+    grid-column:
+      auto;
+  }
+
+
+  .live-edit-cover-selected {
+    grid-template-columns:
+      1fr;
+
+    padding:
+      20px;
+  }
+
+
+  .live-edit-cover-empty {
+    width:
+      calc(
+        100% - 40px
+      );
+
+    margin:
+      20px;
+  }
+
+
+  .live-edit-info-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .live-edit-sidebar {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .live-edit-publish-card,
+  .live-edit-status-card {
+    padding:
+      22px;
+  }
+
+
+  .live-edit-footer {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .live-edit-footer > div {
+    border-right:
+      0;
+
+    border-bottom:
+      1px solid
+      var(--color-border);
+  }
+
+
+  .live-edit-footer > div:last-child {
+    border-bottom:
+      0;
+  }
+
+
+  .live-edit-message {
+    right:
+      15px;
+
+    bottom:
+      15px;
+
+    left:
+      15px;
+
+    max-width:
+      none;
+  }
+
+
+  .live-edit-modal {
+    padding:
+      12px;
+  }
+
+
+  .live-edit-modal__panel {
+    max-height:
+      calc(
+        100vh - 24px
+      );
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .live-edit-header,
+  .live-edit-workspace,
+  .live-edit-footer {
+    width:
+      calc(
+        100% - 28px
+      );
+  }
+
+
+  .live-edit-header {
+    padding:
+      95px 0 45px;
+  }
+
+
+  .live-edit-header h1 {
+    font-size:
+      3.3rem;
+  }
+
+
+  .live-edit-card-heading h2 {
+    font-size:
+      1.25rem;
+  }
+
+
+  .live-edit-card-heading p {
+    font-size:
+      0.5rem;
+  }
+
+
+  .live-edit-video-wrapper {
+    aspect-ratio:
+      16 / 10;
+  }
+
+
+  .live-edit-recording-meta {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .live-edit-recording-meta > div {
+    border-right:
+      0;
+
+    border-bottom:
+      1px solid
+      var(--color-border);
+  }
+
+
+  .live-edit-recording-meta > div:last-child {
+    border-bottom:
+      0;
+  }
+
+
+  .live-edit-no-recording {
+    min-height:
+      280px;
+
+    padding:
+      30px;
+  }
+
+
+  .live-edit-no-recording > div {
+    font-size:
+      5rem;
+  }
+
+
+  .live-edit-cover-empty {
+    min-height:
+      180px;
+  }
+
+
+  .live-edit-publish-card h2 {
+    font-size:
+      1.7rem;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .live-edit-loader {
+    animation:
+      none;
+  }
+
+  .live-edit-publish-button,
+  .live-edit-save-button,
+  .live-edit-cover-empty,
+  .live-edit-cover-info button,
+  .live-edit-fields input,
+  .live-edit-fields select,
+  .live-edit-fields textarea {
+    transition:
+      none;
+  }
+}

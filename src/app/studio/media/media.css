@@ -1,0 +1,647 @@
+/* =========================================================
+   AKNM STUDIO — MEDIA
+   ========================================================= */
+
+.media-page {
+  width:
+    100%;
+
+  min-height:
+    100vh;
+
+  box-sizing:
+    border-box;
+
+  padding:
+    55px 50px 100px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.media-header {
+  width:
+    100%;
+
+  max-width:
+    1200px;
+
+  margin-bottom:
+    55px;
+}
+
+.media-header__eyebrow {
+  display:
+    block;
+
+  margin-bottom:
+    14px;
+
+  color:
+    #00aeef;
+
+  font-size:
+    0.45rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.17em;
+}
+
+.media-header h1 {
+  margin:
+    0;
+
+  color:
+    #fff;
+
+  font-family:
+    var(--font-heading);
+
+  font-size:
+    clamp(
+      3.5rem,
+      7vw,
+      6.5rem
+    );
+
+  font-weight:
+    600;
+
+  line-height:
+    0.86;
+
+  letter-spacing:
+    -0.075em;
+}
+
+.media-header__intro p {
+  max-width:
+    600px;
+
+  margin:
+    22px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.38);
+
+  font-size:
+    0.68rem;
+
+  line-height:
+    1.75;
+}
+
+
+/* =========================================================
+   STATS
+   ========================================================= */
+
+.media-stats {
+  width:
+    100%;
+
+  max-width:
+    1200px;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      5,
+      1fr
+    );
+
+  margin-bottom:
+    45px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+}
+
+.media-stat {
+  min-height:
+    110px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  justify-content:
+    center;
+
+  gap:
+    5px;
+
+  padding:
+    15px 17px;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+}
+
+.media-stat:first-child {
+  padding-left:
+    0;
+}
+
+.media-stat:last-child {
+  border-right:
+    0;
+}
+
+.media-stat span {
+  color:
+    rgba(255, 255, 255, 0.22);
+
+  font-size:
+    0.4rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.14em;
+}
+
+.media-stat strong {
+  color:
+    rgba(255, 255, 255, 0.8);
+
+  font-family:
+    var(--font-heading);
+
+  font-size:
+    2rem;
+
+  font-weight:
+    500;
+
+  line-height:
+    1;
+}
+
+.media-stat small {
+  color:
+    rgba(255, 255, 255, 0.22);
+
+  font-size:
+    0.4rem;
+}
+
+
+/* =========================================================
+   UPLOAD
+   ========================================================= */
+
+.media-upload-section {
+  width:
+    100%;
+
+  max-width:
+    1200px;
+
+  margin-bottom:
+    65px;
+}
+
+
+/* =========================================================
+   LIBRARY
+   ========================================================= */
+
+.media-library {
+  width:
+    100%;
+
+  max-width:
+    1200px;
+}
+
+.media-library__header {
+  display:
+    flex;
+
+  align-items:
+    flex-end;
+
+  justify-content:
+    space-between;
+
+  margin-bottom:
+    22px;
+}
+
+.media-library__header > div > span {
+  display:
+    block;
+
+  margin-bottom:
+    9px;
+
+  color:
+    rgba(255, 255, 255, 0.22);
+
+  font-size:
+    0.42rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.15em;
+}
+
+.media-library__header h2 {
+  margin:
+    0;
+
+  color:
+    rgba(255, 255, 255, 0.78);
+
+  font-family:
+    var(--font-heading);
+
+  font-size:
+    1.7rem;
+
+  font-weight:
+    500;
+
+  line-height:
+    1;
+
+  letter-spacing:
+    -0.04em;
+}
+
+.media-library__count {
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size:
+    0.42rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.1em;
+}
+
+
+/* =========================================================
+   MEDIA GRID
+   ========================================================= */
+
+.media-grid {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap:
+    28px 18px;
+}
+
+
+/* =========================================================
+   EMPTY
+   ========================================================= */
+
+.media-empty {
+  min-height:
+    330px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  padding:
+    50px 25px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius:
+    15px;
+
+  background:
+    rgba(255, 255, 255, 0.015);
+
+  text-align:
+    center;
+}
+
+.media-empty__icon {
+  width:
+    52px;
+
+  height:
+    52px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  margin-bottom:
+    18px;
+
+  border:
+    1px solid
+    rgba(0, 174, 239, 0.2);
+
+  border-radius:
+    12px;
+
+  color:
+    #00aeef;
+
+  font-size:
+    1.2rem;
+
+  font-weight:
+    300;
+}
+
+.media-empty h3 {
+  margin:
+    0;
+
+  color:
+    rgba(255, 255, 255, 0.75);
+
+  font-family:
+    var(--font-heading);
+
+  font-size:
+    1.3rem;
+
+  font-weight:
+    500;
+}
+
+.media-empty p {
+  max-width:
+    430px;
+
+  margin:
+    12px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.28);
+
+  font-size:
+    0.55rem;
+
+  line-height:
+    1.7;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .media-page {
+    padding:
+      50px 35px 90px;
+  }
+
+  .media-stats,
+  .media-library,
+  .media-upload-section,
+  .media-header {
+    max-width:
+      none;
+  }
+
+  .media-grid {
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(
+          0,
+          1fr
+        )
+      );
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .media-stats {
+    grid-template-columns:
+      repeat(
+        3,
+        1fr
+      );
+  }
+
+  .media-stat:nth-child(3) {
+    border-right:
+      0;
+  }
+
+  .media-stat:nth-child(4),
+  .media-stat:nth-child(5) {
+    border-top:
+      1px solid
+      rgba(255, 255, 255, 0.055);
+  }
+
+  .media-stat:nth-child(5) {
+    border-right:
+      0;
+  }
+
+  .media-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(
+          0,
+          1fr
+        )
+      );
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .media-page {
+    padding:
+      40px 20px 70px;
+  }
+
+  .media-header {
+    margin-bottom:
+      40px;
+  }
+
+  .media-header h1 {
+    font-size:
+      4rem;
+  }
+
+  .media-header__intro p {
+    margin-top:
+      17px;
+
+    font-size:
+      0.62rem;
+  }
+
+  .media-stats {
+    grid-template-columns:
+      repeat(
+        2,
+        1fr
+      );
+
+    margin-bottom:
+      35px;
+  }
+
+  .media-stat {
+    min-height:
+      95px;
+
+    padding:
+      14px 12px;
+  }
+
+  .media-stat:first-child {
+    padding-left:
+      12px;
+  }
+
+  .media-stat:nth-child(2) {
+    border-right:
+      0;
+  }
+
+  .media-stat:nth-child(3) {
+    border-top:
+      1px solid
+      rgba(255, 255, 255, 0.055);
+  }
+
+  .media-stat:nth-child(4) {
+    border-top:
+      1px solid
+      rgba(255, 255, 255, 0.055);
+
+    border-right:
+      0;
+  }
+
+  .media-stat:nth-child(5) {
+    grid-column:
+      1 / -1;
+
+    border-top:
+      1px solid
+      rgba(255, 255, 255, 0.055);
+
+    border-right:
+      0;
+  }
+
+  .media-stat strong {
+    font-size:
+      1.8rem;
+  }
+
+  .media-library__header h2 {
+    font-size:
+      1.4rem;
+  }
+
+  .media-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(
+          0,
+          1fr
+        )
+      );
+
+    gap:
+      20px 12px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .media-page {
+    padding:
+      35px 15px 55px;
+  }
+
+  .media-header h1 {
+    font-size:
+      3.4rem;
+  }
+
+  .media-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+}

@@ -1,0 +1,167 @@
+/* =========================================================
+   MUSIC RELEASE ACTIONS
+   ========================================================= */
+
+.music-release-actions {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.music-release-actions__error {
+  position: absolute;
+
+  right: 0;
+
+  top: calc(100% + 8px);
+
+  z-index: 10;
+
+  max-width: 300px;
+
+  padding: 8px 11px;
+
+  border:
+    1px solid
+    rgba(255, 80, 80, 0.2);
+
+  border-radius: 6px;
+
+  background:
+    #100707;
+
+  color:
+    rgba(255, 130, 130, 0.9);
+
+  font-size:
+    0.55rem;
+
+  line-height:
+    1.4;
+}
+
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+.music-release-actions button {
+  min-height: 39px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  box-sizing: border-box;
+
+  padding:
+    0 13px;
+
+  border-radius:
+    7px;
+
+  font-family:
+    inherit;
+
+  font-size:
+    0.58rem;
+
+  font-weight:
+    600;
+
+  cursor:
+    pointer;
+
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+
+/* =========================================================
+   ARCHIVE
+   ========================================================= */
+
+.music-release-actions__archive {
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  background:
+    transparent;
+
+  color:
+    rgba(255, 255, 255, 0.4);
+}
+
+.music-release-actions__archive:hover:not(:disabled) {
+  border-color:
+    rgba(255, 100, 100, 0.3);
+
+  color:
+    rgba(255, 120, 120, 0.9);
+}
+
+
+/* =========================================================
+   PUBLISH
+   ========================================================= */
+
+.music-release-actions__publish {
+  border:
+    1px solid
+    rgba(0, 247, 81, 0.35);
+
+  background:
+    rgba(0, 247, 81, 0.08);
+
+  color:
+    #ffffff;
+}
+
+.music-release-actions__publish:hover:not(:disabled) {
+  border-color:
+    rgba(0, 247, 81, 0.65);
+
+  background:
+    rgba(0, 247, 81, 0.14);
+
+  transform:
+    translateY(-1px);
+}
+
+.music-release-actions__publish span {
+  color:
+    #04f751;
+
+  font-size:
+    0.72rem;
+}
+
+
+/* =========================================================
+   DISABLED
+   ========================================================= */
+
+.music-release-actions button:disabled {
+  opacity:
+    0.45;
+
+  cursor:
+    not-allowed;
+}

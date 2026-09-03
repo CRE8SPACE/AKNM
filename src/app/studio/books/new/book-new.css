@@ -1,0 +1,1692 @@
+/* =========================================================
+   AKNM STUDIO — NEW BOOK
+   Publication creation workspace
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.book-new-page {
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: 48px 58px 110px;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.book-new-header {
+  width: 100%;
+  max-width: 1080px;
+  margin-bottom: 62px;
+}
+
+.book-new-header > div {
+  min-width: 0;
+}
+
+.book-new-back {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.52rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.book-new-back:hover {
+  color: #00aeef;
+  transform: translateX(-2px);
+}
+
+.book-new-eyebrow {
+  display: block;
+  margin-bottom: 17px;
+  color: rgba(255, 255, 255, 0.23);
+  font-size: 0.48rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+}
+
+.book-new-header h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(3.2rem, 5.6vw, 5.8rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.075em;
+}
+
+.book-new-header p {
+  max-width: 500px;
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.34);
+  font-size: 0.72rem;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.book-new-form {
+  width: 100%;
+  max-width: 1080px;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.book-new-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 55px;
+  box-sizing: border-box;
+  padding: 50px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.065);
+}
+
+.book-new-section:last-of-type {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.065);
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.book-new-section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+}
+
+.book-new-section-heading > span {
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.17);
+  font-size: 0.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.12em;
+}
+
+.book-new-section-heading > div {
+  min-width: 0;
+}
+
+.book-new-section-heading h2 {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.018em;
+}
+
+.book-new-section-heading p {
+  max-width: 185px;
+  margin: 9px 0 0;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.55rem;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   FIELD AREA
+   ========================================================= */
+
+.book-new-fields {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.book-new-fields label {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.book-new-fields label > span {
+  color: rgba(255, 255, 255, 0.22);
+  font-size: 0.45rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.15em;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.book-new-fields input,
+.book-new-fields textarea,
+.book-new-fields select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.085);
+  border-radius: 7px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.022);
+  color: rgba(255, 255, 255, 0.82);
+  font-family: inherit;
+  font-size: 0.68rem;
+  font-weight: 400;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.book-new-fields input,
+.book-new-fields select {
+  height: 47px;
+  padding: 0 14px;
+}
+
+.book-new-fields textarea {
+  min-height: 180px;
+  padding: 14px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.book-new-fields input::placeholder,
+.book-new-fields textarea::placeholder {
+  color: rgba(255, 255, 255, 0.16);
+}
+
+.book-new-fields select {
+  appearance: none;
+  cursor: pointer;
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 50%,
+      rgba(255, 255, 255, 0.25) 50%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.25) 50%,
+      transparent 50%
+    );
+  background-position:
+    calc(100% - 17px) 20px,
+    calc(100% - 12px) 20px;
+  background-repeat: no-repeat;
+  background-size: 5px 5px;
+}
+
+.book-new-fields select option {
+  background: #0b0b0b;
+  color: #ffffff;
+}
+
+.book-new-fields input:hover,
+.book-new-fields textarea:hover,
+.book-new-fields select:hover {
+  border-color: rgba(255, 255, 255, 0.13);
+}
+
+.book-new-fields input:focus,
+.book-new-fields textarea:focus,
+.book-new-fields select:focus {
+  border-color: rgba(0, 174, 239, 0.45);
+  background: rgba(0, 174, 239, 0.018);
+  box-shadow:
+    0 0 0 3px rgba(0, 174, 239, 0.035);
+}
+
+.book-new-fields input:disabled,
+.book-new-fields textarea:disabled,
+.book-new-fields select:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+
+/* =========================================================
+   TWO COLUMN FIELDS
+   ========================================================= */
+
+.book-new-two-columns {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+
+/* =========================================================
+   COVER OPTIONS
+   ========================================================= */
+
+.book-new-cover-options {
+  min-width: 0;
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.book-new-cover-option {
+  position: relative;
+  min-height: 175px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 9px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.025),
+      rgba(255, 255, 255, 0.008)
+    );
+  color: inherit;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.book-new-cover-option:hover {
+  border-color: rgba(0, 174, 239, 0.32);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(0, 174, 239, 0.045),
+      rgba(255, 255, 255, 0.012)
+    );
+  transform: translateY(-2px);
+}
+
+.book-new-cover-option > span {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  border: 1px solid rgba(0, 174, 239, 0.2);
+  border-radius: 50%;
+  color: #00aeef;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.book-new-cover-option strong {
+  display: block;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.66rem;
+  font-weight: 600;
+}
+
+.book-new-cover-option small {
+  display: block;
+  margin-top: 7px;
+  color: rgba(255, 255, 255, 0.23);
+  font-size: 0.5rem;
+  line-height: 1.5;
+}
+
+.book-new-cover-option input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   SELECTED COVER
+   ========================================================= */
+
+.book-new-selected-cover {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+  padding: 14px;
+  border: 1px solid rgba(0, 174, 239, 0.16);
+  border-radius: 9px;
+  background: rgba(0, 174, 239, 0.018);
+}
+
+.book-new-cover-preview {
+  width: 88px;
+  height: 112px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.book-new-cover-preview img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.book-new-cover-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.book-new-cover-info strong {
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.64rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.book-new-cover-info small {
+  color: rgba(255, 255, 255, 0.22);
+  font-size: 0.48rem;
+}
+
+.book-new-selected-cover button,
+.book-new-pdf-selected button {
+  min-height: 31px;
+  padding: 0 10px;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 5px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: inherit;
+  font-size: 0.47rem;
+  cursor: pointer;
+  transition:
+    color 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+.book-new-selected-cover button:hover,
+.book-new-pdf-selected button:hover {
+  border-color: rgba(255, 75, 75, 0.3);
+  background: rgba(255, 75, 75, 0.025);
+  color: rgba(255, 110, 110, 0.8);
+}
+
+
+/* =========================================================
+   PDF UPLOAD
+   ========================================================= */
+
+.book-new-pdf-upload {
+  position: relative;
+  min-height: 145px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 9px;
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(0, 174, 239, 0.035),
+      transparent 55%
+    );
+  text-align: center;
+  cursor: pointer;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.book-new-pdf-upload:hover {
+  border-color: rgba(0, 174, 239, 0.35);
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(0, 174, 239, 0.055),
+      transparent 60%
+    );
+}
+
+.book-new-pdf-upload > span {
+  margin-bottom: 14px;
+  color: #00aeef;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.book-new-pdf-upload strong {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.62rem;
+  font-weight: 600;
+}
+
+.book-new-pdf-upload small {
+  margin-top: 7px;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.48rem;
+}
+
+.book-new-pdf-upload input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   SELECTED PDF
+   ========================================================= */
+
+.book-new-pdf-selected {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 17px;
+  box-sizing: border-box;
+  padding: 15px;
+  border: 1px solid rgba(4, 247, 81, 0.16);
+  border-radius: 8px;
+  background: rgba(4, 247, 81, 0.018);
+}
+
+.book-new-pdf-icon {
+  width: 52px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(4, 247, 81, 0.2);
+  border-radius: 5px;
+  background: rgba(4, 247, 81, 0.025);
+  color: #04f751;
+  font-size: 0.46rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.book-new-pdf-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.book-new-pdf-info strong {
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.62rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.book-new-pdf-info small {
+  color: rgba(255, 255, 255, 0.22);
+  font-size: 0.48rem;
+}
+
+
+/* =========================================================
+   HARDCOPY EDITION
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   HARDCOPY ENABLE PANEL
+   --------------------------------------------------------- */
+
+.book-new-hardcopy-toggle {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 18px;
+  box-sizing: border-box;
+  padding: 19px 21px;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 9px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.028),
+      rgba(255, 255, 255, 0.009)
+    );
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.book-new-hardcopy-toggle:hover {
+  border-color: rgba(255, 255, 255, 0.13);
+}
+
+.book-new-hardcopy-toggle:has(
+  .book-new-switch input:checked
+) {
+  border-color: rgba(4, 247, 81, 0.18);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(4, 247, 81, 0.035),
+      rgba(255, 255, 255, 0.009)
+    );
+  box-shadow:
+    0 0 35px rgba(4, 247, 81, 0.025);
+}
+
+.book-new-hardcopy-toggle > div {
+  min-width: 0;
+}
+
+.book-new-hardcopy-toggle strong {
+  display: block;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.64rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.book-new-hardcopy-toggle p {
+  max-width: 560px;
+  margin: 6px 0 0;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.51rem;
+  line-height: 1.65;
+}
+
+
+/* ---------------------------------------------------------
+   HARDCOPY SWITCH
+   --------------------------------------------------------- */
+
+.book-new-switch {
+  position: relative;
+  flex-shrink: 0;
+  width: 45px;
+  height: 25px;
+  display: block;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.book-new-switch input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  opacity: 0;
+}
+
+.book-new-switch__track {
+  position: absolute;
+  inset: 0;
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 999px;
+  background:
+    rgba(255, 255, 255, 0.055);
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.book-new-switch__thumb {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 15px;
+  height: 15px;
+  display: block;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.42);
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.book-new-switch input:checked
+  + .book-new-switch__track {
+  border-color: rgba(4, 247, 81, 0.45);
+  background:
+    rgba(4, 247, 81, 0.12);
+  box-shadow:
+    0 0 18px rgba(4, 247, 81, 0.07);
+}
+
+.book-new-switch input:checked
+  + .book-new-switch__track
+  .book-new-switch__thumb {
+  background: #04f751;
+  transform: translateX(20px);
+  box-shadow:
+    0 0 10px rgba(4, 247, 81, 0.22);
+}
+
+.book-new-switch input:focus-visible
+  + .book-new-switch__track {
+  outline: 1px solid rgba(0, 174, 239, 0.65);
+  outline-offset: 3px;
+}
+
+.book-new-switch input:disabled
+  + .book-new-switch__track {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+
+/* ---------------------------------------------------------
+   HARDCOPY SETTINGS AREA
+   --------------------------------------------------------- */
+
+.book-new-hardcopy-toggle
+  + .book-new-fields {
+  margin-top: 21px;
+  padding: 21px;
+  border: 1px solid rgba(4, 247, 81, 0.11);
+  border-radius: 9px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(4, 247, 81, 0.018),
+      rgba(255, 255, 255, 0.006)
+    );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.018);
+  animation:
+    book-new-hardcopy-open 180ms ease both;
+}
+
+
+/* ---------------------------------------------------------
+   HARDCOPY PRICE / CURRENCY
+   --------------------------------------------------------- */
+
+.book-new-hardcopy-toggle
+  + .book-new-fields
+  .book-new-two-columns {
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+}
+
+.book-new-hardcopy-toggle
+  + .book-new-fields
+  .book-new-two-columns
+  label {
+  position: relative;
+}
+
+.book-new-hardcopy-toggle
+  + .book-new-fields
+  label
+  > span {
+  color: rgba(255, 255, 255, 0.27);
+}
+
+.book-new-hardcopy-toggle
+  + .book-new-fields
+  input:focus,
+.book-new-hardcopy-toggle
+  + .book-new-fields
+  select:focus {
+  border-color: rgba(4, 247, 81, 0.35);
+  background: rgba(4, 247, 81, 0.015);
+  box-shadow:
+    0 0 0 3px rgba(4, 247, 81, 0.025);
+}
+
+
+/* ---------------------------------------------------------
+   HARDCOPY STATUS
+   --------------------------------------------------------- */
+
+.book-new-hardcopy-toggle
+  + .book-new-fields
+  > label {
+  max-width: 100%;
+}
+
+.book-new-hardcopy-toggle
+  + .book-new-fields
+  > label
+  select {
+  border-color: rgba(255, 255, 255, 0.085);
+}
+
+
+/* ---------------------------------------------------------
+   HARDCOPY INFORMATION CARD
+   --------------------------------------------------------- */
+
+.book-new-hardcopy-note {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 55px minmax(0, 1fr);
+  align-items: center;
+  gap: 18px;
+  box-sizing: border-box;
+  margin-top: 1px;
+  padding: 18px 19px;
+  border: 1px solid rgba(0, 174, 239, 0.12);
+  border-radius: 8px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 174, 239, 0.025),
+      rgba(255, 255, 255, 0.008)
+    );
+}
+
+.book-new-hardcopy-note__mark {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 174, 239, 0.22);
+  border-radius: 7px;
+  background:
+    rgba(0, 174, 239, 0.035);
+  color: rgba(0, 174, 239, 0.85);
+  font-size: 0.43rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.11em;
+}
+
+.book-new-hardcopy-note > div:last-child {
+  min-width: 0;
+}
+
+.book-new-hardcopy-note strong {
+  display: block;
+  color: rgba(255, 255, 255, 0.67);
+  font-size: 0.58rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.book-new-hardcopy-note p {
+  max-width: 590px;
+  margin: 6px 0 0;
+  color: rgba(255, 255, 255, 0.23);
+  font-size: 0.48rem;
+  line-height: 1.65;
+}
+
+
+/* ---------------------------------------------------------
+   HARDCOPY FIELD LABEL EMPHASIS
+   --------------------------------------------------------- */
+
+.book-new-hardcopy-toggle
+  + .book-new-fields
+  .book-new-two-columns
+  label:first-child
+  > span {
+  color: rgba(4, 247, 81, 0.42);
+}
+
+.book-new-hardcopy-toggle
+  + .book-new-fields
+  .book-new-two-columns
+  label:first-child
+  input {
+  border-color: rgba(4, 247, 81, 0.13);
+}
+
+
+/* =========================================================
+   AUDIO
+   ========================================================= */
+
+.book-new-audio-list {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.065);
+}
+
+.book-new-audio-item {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 17px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.book-new-audio-number {
+  width: 31px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.24);
+  font-size: 0.43rem;
+  font-weight: 700;
+}
+
+.book-new-audio-main {
+  min-width: 0;
+}
+
+.book-new-audio-main input {
+  width: 100%;
+  height: 38px;
+  box-sizing: border-box;
+  padding: 0 11px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 5px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.018);
+  color: rgba(255, 255, 255, 0.72);
+  font-family: inherit;
+  font-size: 0.58rem;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+.book-new-audio-main input::placeholder {
+  color: rgba(255, 255, 255, 0.16);
+}
+
+.book-new-audio-main input:focus {
+  border-color: rgba(0, 174, 239, 0.35);
+  background: rgba(0, 174, 239, 0.015);
+}
+
+.book-new-audio-meta {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 7px;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.18);
+  font-size: 0.42rem;
+  line-height: 1;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.book-new-audio-meta span:nth-child(even) {
+  color: rgba(255, 255, 255, 0.08);
+}
+
+.book-new-audio-remove {
+  min-height: 31px;
+  padding: 0 9px;
+  border: 1px solid rgba(255, 255, 255, 0.065);
+  border-radius: 5px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.25);
+  font-family: inherit;
+  font-size: 0.45rem;
+  cursor: pointer;
+  transition:
+    color 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+.book-new-audio-remove:hover {
+  border-color: rgba(255, 75, 75, 0.3);
+  background: rgba(255, 75, 75, 0.025);
+  color: rgba(255, 110, 110, 0.8);
+}
+
+
+/* =========================================================
+   AUDIO ACTIONS
+   ========================================================= */
+
+.book-new-audio-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.book-new-audio-add,
+.book-new-audio-upload {
+  min-height: 39px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  border: 1px solid rgba(0, 174, 239, 0.17);
+  border-radius: 6px;
+  background: rgba(0, 174, 239, 0.02);
+  color: rgba(255, 255, 255, 0.48);
+  font-family: inherit;
+  font-size: 0.49rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    color 160ms ease;
+}
+
+.book-new-audio-add > span,
+.book-new-audio-upload > span {
+  color: #00aeef;
+  font-size: 0.72rem;
+  font-weight: 300;
+}
+
+.book-new-audio-add:hover,
+.book-new-audio-upload:hover {
+  border-color: rgba(0, 174, 239, 0.4);
+  background: rgba(0, 174, 239, 0.05);
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.book-new-audio-upload {
+  position: relative;
+  overflow: hidden;
+}
+
+.book-new-audio-upload input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   MESSAGES
+   ========================================================= */
+
+.book-new-message {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 25px;
+  padding: 14px 16px;
+  border-radius: 6px;
+  font-size: 0.55rem;
+  line-height: 1.5;
+}
+
+.book-new-message--error {
+  border: 1px solid rgba(255, 75, 75, 0.2);
+  background: rgba(255, 75, 75, 0.035);
+  color: rgba(255, 125, 125, 0.85);
+}
+
+.book-new-message--success {
+  border: 1px solid rgba(4, 247, 81, 0.18);
+  background: rgba(4, 247, 81, 0.03);
+  color: rgba(4, 247, 81, 0.85);
+}
+
+
+/* =========================================================
+   FORM ACTIONS
+   ========================================================= */
+
+.book-new-actions {
+  position: sticky;
+  bottom: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  box-sizing: border-box;
+  margin-top: 45px;
+  padding: 16px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.065);
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.92) 28%
+    );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.book-new-cancel,
+.book-new-draft,
+.book-new-publish {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.5rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.book-new-cancel {
+  padding: 0 14px;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.book-new-cancel:hover {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.book-new-draft {
+  padding: 0 15px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.025);
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.book-new-draft:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.045);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.book-new-publish {
+  min-width: 100px;
+  gap: 16px;
+  padding: 0 12px 0 16px;
+  border: 1px solid rgba(4, 247, 81, 0.28);
+  background: rgba(4, 247, 81, 0.065);
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.book-new-publish:hover {
+  border-color: rgba(4, 247, 81, 0.55);
+  background: rgba(4, 247, 81, 0.11);
+  box-shadow: 0 0 25px rgba(4, 247, 81, 0.035);
+  transform: translateY(-1px);
+}
+
+.book-new-publish span {
+  color: #04f751;
+  font-size: 0.72rem;
+  font-weight: 400;
+}
+
+.book-new-cancel:disabled,
+.book-new-draft:disabled,
+.book-new-publish:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+  transform: none;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.book-new-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.book-new-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.book-new-modal__panel {
+  position: relative;
+  z-index: 1;
+  width: min(900px, 100%);
+  max-height: min(780px, 90vh);
+  overflow: auto;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 12px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(20, 20, 20, 0.98),
+      rgba(7, 7, 7, 0.99)
+    );
+  box-shadow:
+    0 35px 100px rgba(0, 0, 0, 0.55),
+    0 0 60px rgba(0, 174, 239, 0.018);
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.book-new-page a:focus-visible,
+.book-new-page button:focus-visible,
+.book-new-page input:focus-visible,
+.book-new-page textarea:focus-visible,
+.book-new-page select:focus-visible {
+  outline: 1px solid rgba(0, 174, 239, 0.65);
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .book-new-page {
+    padding: 42px 38px 90px;
+  }
+
+  .book-new-section {
+    grid-template-columns: 195px minmax(0, 1fr);
+    gap: 38px;
+  }
+
+  .book-new-hardcopy-toggle {
+    padding: 18px;
+  }
+
+  .book-new-hardcopy-toggle
+    + .book-new-fields {
+    padding: 19px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .book-new-page {
+    padding: 38px 28px 80px;
+  }
+
+  .book-new-header {
+    margin-bottom: 48px;
+  }
+
+  .book-new-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 42px 0;
+  }
+
+  .book-new-section-heading {
+    gap: 13px;
+  }
+
+  .book-new-section-heading p {
+    max-width: 430px;
+  }
+
+  .book-new-cover-options {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .book-new-hardcopy-toggle {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .book-new-hardcopy-toggle
+    + .book-new-fields
+    .book-new-two-columns {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .book-new-page {
+    padding: 28px 18px 70px;
+  }
+
+
+  /* HEADER */
+
+  .book-new-header {
+    margin-bottom: 38px;
+  }
+
+  .book-new-back {
+    margin-bottom: 25px;
+  }
+
+  .book-new-eyebrow {
+    margin-bottom: 14px;
+    font-size: 0.44rem;
+  }
+
+  .book-new-header h1 {
+    font-size: clamp(3rem, 15vw, 4.2rem);
+  }
+
+  .book-new-header p {
+    margin-top: 17px;
+    font-size: 0.65rem;
+  }
+
+
+  /* SECTIONS */
+
+  .book-new-section {
+    gap: 25px;
+    padding: 36px 0;
+  }
+
+  .book-new-section-heading h2 {
+    font-size: 0.86rem;
+  }
+
+  .book-new-section-heading p {
+    margin-top: 7px;
+    font-size: 0.52rem;
+  }
+
+
+  /* FIELDS */
+
+  .book-new-fields {
+    gap: 20px;
+  }
+
+  .book-new-fields input,
+  .book-new-fields select {
+    height: 45px;
+  }
+
+  .book-new-fields textarea {
+    min-height: 170px;
+  }
+
+  .book-new-two-columns {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+
+  /* COVER */
+
+  .book-new-cover-options {
+    grid-template-columns: 1fr;
+  }
+
+  .book-new-cover-option {
+    min-height: 145px;
+  }
+
+  .book-new-selected-cover {
+    grid-template-columns: 70px minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  .book-new-cover-preview {
+    width: 70px;
+    height: 91px;
+  }
+
+  .book-new-cover-info {
+    align-self: center;
+  }
+
+  .book-new-selected-cover button {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+
+  /* PDF */
+
+  .book-new-pdf-selected {
+    grid-template-columns: 45px minmax(0, 1fr);
+    gap: 13px;
+  }
+
+  .book-new-pdf-icon {
+    width: 45px;
+    height: 55px;
+  }
+
+  .book-new-pdf-selected button {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+
+  /* HARDCOPY */
+
+  .book-new-hardcopy-toggle {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .book-new-hardcopy-toggle strong {
+    font-size: 0.59rem;
+  }
+
+  .book-new-hardcopy-toggle p {
+    margin-top: 6px;
+    font-size: 0.47rem;
+    line-height: 1.6;
+  }
+
+  .book-new-switch {
+    width: 42px;
+    height: 24px;
+  }
+
+  .book-new-switch__thumb {
+    top: 4px;
+    left: 4px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .book-new-switch input:checked
+    + .book-new-switch__track
+    .book-new-switch__thumb {
+    transform: translateX(18px);
+  }
+
+  .book-new-hardcopy-toggle
+    + .book-new-fields {
+    margin-top: 15px;
+    padding: 16px;
+    gap: 19px;
+  }
+
+  .book-new-hardcopy-toggle
+    + .book-new-fields
+    .book-new-two-columns {
+    grid-template-columns: 1fr;
+    gap: 19px;
+  }
+
+  .book-new-hardcopy-note {
+    grid-template-columns: 45px minmax(0, 1fr);
+    gap: 13px;
+    padding: 15px;
+  }
+
+  .book-new-hardcopy-note__mark {
+    width: 45px;
+    height: 45px;
+    font-size: 0.38rem;
+  }
+
+  .book-new-hardcopy-note strong {
+    font-size: 0.55rem;
+  }
+
+  .book-new-hardcopy-note p {
+    margin-top: 5px;
+    font-size: 0.45rem;
+    line-height: 1.6;
+  }
+
+
+  /* AUDIO */
+
+  .book-new-audio-item {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .book-new-audio-remove {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .book-new-audio-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .book-new-audio-add,
+  .book-new-audio-upload {
+    width: 100%;
+  }
+
+
+  /* ACTIONS */
+
+  .book-new-actions {
+    justify-content: stretch;
+    gap: 6px;
+    margin-top: 35px;
+    padding: 13px 0;
+  }
+
+  .book-new-cancel {
+    padding: 0 9px;
+  }
+
+  .book-new-draft,
+  .book-new-publish {
+    flex: 1;
+  }
+
+
+  /* MODAL */
+
+  .book-new-modal {
+    padding: 12px;
+  }
+
+  .book-new-modal__panel {
+    max-height: 94vh;
+    border-radius: 9px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .book-new-page {
+    padding:
+      24px 14px 60px;
+  }
+
+  .book-new-header h1 {
+    font-size: 2.9rem;
+  }
+
+  .book-new-section {
+    padding: 31px 0;
+  }
+
+  .book-new-cover-option {
+    min-height: 130px;
+    padding: 20px;
+  }
+
+  .book-new-cover-option > span {
+    margin-bottom: 18px;
+  }
+
+  .book-new-fields input,
+  .book-new-fields select {
+    height: 43px;
+  }
+
+  .book-new-fields textarea {
+    min-height: 150px;
+  }
+
+
+  /* HARDCOPY */
+
+  .book-new-hardcopy-toggle {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .book-new-hardcopy-toggle strong {
+    font-size: 0.56rem;
+  }
+
+  .book-new-hardcopy-toggle p {
+    font-size: 0.44rem;
+  }
+
+  .book-new-hardcopy-toggle
+    + .book-new-fields {
+    padding: 14px;
+  }
+
+  .book-new-hardcopy-note {
+    grid-template-columns: 1fr;
+    gap: 11px;
+    padding: 14px;
+  }
+
+  .book-new-hardcopy-note__mark {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  /* ACTIONS */
+
+  .book-new-actions {
+    gap: 4px;
+  }
+
+  .book-new-cancel {
+    font-size: 0.46rem;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .book-new-page *,
+  .book-new-page *::before,
+  .book-new-page *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+
+}
+
+
+/* =========================================================
+   HARDCOPY OPEN ANIMATION
+   ========================================================= */
+
+@keyframes book-new-hardcopy-open {
+
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
