@@ -4,6 +4,7 @@ import { createClient } from "@/lib/supabase/server";
 
 import "./Ventures.css";
 
+
 /* =========================================================
    TYPES
    ========================================================= */
@@ -19,6 +20,37 @@ interface Venture {
   year: string | null;
   href: string | null;
   featured: boolean;
+}
+
+
+/* =========================================================
+   ARROW ICON
+   ========================================================= */
+
+function ArrowUpRightIcon() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        d="M3 13L13 3"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M6 3H13V10"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
 }
 
 
@@ -221,8 +253,11 @@ export default async function Ventures() {
 
                   {/* ARROW */}
 
-                  <div className="venture__arrow">
-                    ↗
+                  <div
+                    className="venture__arrow"
+                    aria-hidden="true"
+                  >
+                    <ArrowUpRightIcon />
                   </div>
 
                 </Link>
@@ -278,13 +313,18 @@ export default async function Ventures() {
           </span>
 
           <Link href="/ventures">
+
             <span>
               Explore everything
             </span>
 
-            <span>
-              ↗
+            <span
+              className="ventures__footer-icon"
+              aria-hidden="true"
+            >
+              <ArrowUpRightIcon />
             </span>
+
           </Link>
 
         </div>

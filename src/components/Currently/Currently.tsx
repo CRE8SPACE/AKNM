@@ -19,6 +19,37 @@ type CurrentItem = {
 
 
 /* =========================================================
+   ARROW ICON
+   ========================================================= */
+
+function ArrowUpRightIcon() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        d="M3 13L13 3"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M6 3H13V10"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+
+/* =========================================================
    CURRENT FOCUS
    ========================================================= */
 
@@ -192,8 +223,11 @@ export default function Currently() {
                 Explore projects
               </span>
 
-              <span className="currently__featured-arrow">
-                ↗
+              <span
+                className="currently__featured-arrow"
+                aria-hidden="true"
+              >
+                <ArrowUpRightIcon />
               </span>
 
             </div>
@@ -277,8 +311,11 @@ export default function Currently() {
                       Explore
                     </span>
 
-                    <span className="currently__card-arrow">
-                      ↗
+                    <span
+                      className="currently__card-arrow"
+                      aria-hidden="true"
+                    >
+                      <ArrowUpRightIcon />
                     </span>
 
                   </div>

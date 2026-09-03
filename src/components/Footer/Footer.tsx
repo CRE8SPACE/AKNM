@@ -81,6 +81,68 @@ const explore = [
 
 
 /* =========================================================
+   ARROW ICON
+   ========================================================= */
+
+function ArrowUpRightIcon() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        d="M3 13L13 3"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M6 3H13V10"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+
+/* =========================================================
+   ARROW UP ICON
+   ========================================================= */
+
+function ArrowUpIcon() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        d="M8 13V3"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M4 7L8 3L12 7"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+
+/* =========================================================
    HELPERS
    ========================================================= */
 
@@ -266,11 +328,18 @@ export default function Footer() {
                 href={`mailto:${contactEmail}`}
                 className="site-footer__email"
               >
-                {contactEmail}
 
                 <span>
-                  ↗
+                  {contactEmail}
                 </span>
+
+                <span
+                  className="site-footer__email-icon"
+                  aria-hidden="true"
+                >
+                  <ArrowUpRightIcon />
+                </span>
+
               </a>
             )}
 
@@ -360,11 +429,18 @@ export default function Footer() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      {item.label}
 
                       <span>
-                        ↗
+                        {item.label}
                       </span>
+
+                      <span
+                        className="site-footer__social-icon"
+                        aria-hidden="true"
+                      >
+                        <ArrowUpRightIcon />
+                      </span>
+
                     </a>
                   ))}
 
@@ -434,13 +510,18 @@ export default function Footer() {
             className="site-footer__top-link"
             aria-label="Back to top"
           >
+
             <span>
               Back to top
             </span>
 
-            <span>
-              ↑
+            <span
+              className="site-footer__top-icon"
+              aria-hidden="true"
+            >
+              <ArrowUpIcon />
             </span>
+
           </a>
 
         </div>

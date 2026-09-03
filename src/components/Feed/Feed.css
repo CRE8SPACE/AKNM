@@ -115,6 +115,7 @@
     uppercase;
 }
 
+
 .feed__line {
   position: relative;
 
@@ -128,6 +129,7 @@
     0 0 12px
     rgba(0, 136, 245, 0.6);
 }
+
 
 .feed__line::after {
   content: "";
@@ -168,6 +170,7 @@
   gap: 60px;
 }
 
+
 .feed__heading h2 {
   margin: 0;
 
@@ -189,6 +192,7 @@
   font-weight:
     600;
 }
+
 
 .feed__heading p {
   max-width:
@@ -286,6 +290,7 @@
     opacity 350ms ease;
 }
 
+
 .feed__post:hover::before {
   opacity: 1;
 }
@@ -328,6 +333,7 @@
       1
     );
 }
+
 
 .feed__post:hover::after {
   transform:
@@ -432,6 +438,7 @@
     600;
 }
 
+
 .feed__post-category::before {
   content: "";
 
@@ -494,6 +501,7 @@
     );
 }
 
+
 .feed__post:hover
 .feed__post-title {
   color:
@@ -548,6 +556,9 @@
   align-items: center;
   justify-content: center;
 
+  box-sizing:
+    border-box;
+
   border:
     1px solid
     var(--color-border);
@@ -557,12 +568,6 @@
 
   color:
     var(--color-text-secondary);
-
-  font-family:
-    var(--font-body);
-
-  font-size:
-    0.85rem;
 
   text-decoration:
     none;
@@ -580,6 +585,30 @@
     ),
     box-shadow 250ms ease;
 }
+
+
+/* =========================================================
+   POST ARROW SVG
+   ========================================================= */
+
+.feed__post-arrow svg {
+  display:
+    block;
+
+  width:
+    14px;
+
+  height:
+    14px;
+
+  flex:
+    0 0 auto;
+}
+
+
+/* =========================================================
+   POST ARROW HOVER
+   ========================================================= */
 
 .feed__post:hover
 .feed__post-arrow {
@@ -656,6 +685,7 @@
     650px;
 }
 
+
 .feed__empty-label {
   display: block;
 
@@ -681,6 +711,7 @@
     uppercase;
 }
 
+
 .feed__empty-content h3 {
   margin: 0 0 20px;
 
@@ -702,6 +733,7 @@
   font-weight:
     600;
 }
+
 
 .feed__empty-content p {
   max-width:
@@ -809,6 +841,11 @@
     transform 250ms ease;
 }
 
+
+/* =========================================================
+   BUTTON ICON
+   ========================================================= */
+
 .feed__button-icon {
   width:
     38px;
@@ -821,8 +858,12 @@
 
   align-items:
     center;
+
   justify-content:
     center;
+
+  flex:
+    0 0 auto;
 
   border-radius:
     50%;
@@ -847,6 +888,30 @@
     );
 }
 
+
+/* =========================================================
+   BUTTON ICON SVG
+   ========================================================= */
+
+.feed__button-icon svg {
+  display:
+    block;
+
+  width:
+    14px;
+
+  height:
+    14px;
+
+  flex:
+    0 0 auto;
+}
+
+
+/* =========================================================
+   BUTTON HOVER
+   ========================================================= */
+
 .feed__button:hover {
   border-color:
     rgba(0, 136, 245, 0.5);
@@ -857,6 +922,7 @@
   transform:
     translateY(-2px);
 }
+
 
 .feed__button:hover
 .feed__button-icon {
@@ -878,6 +944,7 @@
     gap:
       30px;
   }
+
 
   .feed__heading {
     max-width:
@@ -914,6 +981,7 @@
       55px;
   }
 
+
   .feed__eyebrow {
     padding-top:
       0;
@@ -921,6 +989,7 @@
     font-size:
       0.57rem;
   }
+
 
   .feed__line {
     width:
@@ -944,6 +1013,7 @@
       25px;
   }
 
+
   .feed__heading h2 {
     font-size:
       clamp(
@@ -955,6 +1025,7 @@
     line-height:
       0.9;
   }
+
 
   .feed__heading p {
     max-width:
@@ -987,6 +1058,7 @@
     padding:
       30px 0;
   }
+
 
   .feed__post::before {
     left:
@@ -1053,6 +1125,7 @@
       0.96;
   }
 
+
   .feed__post:hover
   .feed__post-title {
     transform:
@@ -1088,9 +1161,15 @@
 
     height:
       34px;
+  }
 
-    font-size:
-      0.72rem;
+
+  .feed__post-arrow svg {
+    width:
+      13px;
+
+    height:
+      13px;
   }
 
 
@@ -1108,10 +1187,12 @@
       45px 0 50px;
   }
 
+
   .feed__empty-content {
     padding-right:
       10px;
   }
+
 
   .feed__empty-label {
     margin-bottom:
@@ -1121,6 +1202,7 @@
       0.52rem;
   }
 
+
   .feed__empty-content h3 {
     font-size:
       clamp(
@@ -1129,6 +1211,7 @@
         3rem
       );
   }
+
 
   .feed__empty-content p {
     font-size:
@@ -1152,10 +1235,12 @@
       25px;
   }
 
+
   .feed__footer-note {
     font-size:
       0.52rem;
   }
+
 
   .feed__button {
     min-height:
@@ -1165,12 +1250,22 @@
       0.63rem;
   }
 
+
   .feed__button-icon {
     width:
       35px;
 
     height:
       35px;
+  }
+
+
+  .feed__button-icon svg {
+    width:
+      13px;
+
+    height:
+      13px;
   }
 
 }
@@ -1187,30 +1282,36 @@
       100px 0 110px;
   }
 
+
   .feed__container {
     width:
       calc(100% - 32px);
   }
+
 
   .feed__heading h2 {
     font-size:
       2.65rem;
   }
 
+
   .feed__post {
     padding:
       26px 0;
   }
+
 
   .feed__post-main {
     padding-right:
       38px;
   }
 
+
   .feed__post-title {
     font-size:
       1.7rem;
   }
+
 
   .feed__post-arrow {
     width:
@@ -1218,6 +1319,15 @@
 
     height:
       32px;
+  }
+
+
+  .feed__post-arrow svg {
+    width:
+      12px;
+
+    height:
+      12px;
   }
 
 }
@@ -1239,4 +1349,5 @@
     transition:
       none;
   }
+
 }

@@ -48,12 +48,52 @@ const navigation = [
 
 
 /* =========================================================
+   ARROW ICON
+   ========================================================= */
+
+function ArrowUpRightIcon() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        d="M3 13L13 3"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M6 3H13V10"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+
+/* =========================================================
    HEADER
    ========================================================= */
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+
+  const [
+    menuOpen,
+    setMenuOpen,
+  ] = useState(false);
+
+
+  const [
+    scrolled,
+    setScrolled,
+  ] = useState(false);
 
 
   /* =======================================================
@@ -61,11 +101,18 @@ export default function Header() {
      ======================================================= */
 
   useEffect(() => {
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+
+      setScrolled(
+        window.scrollY > 40
+      );
+
     };
 
+
     handleScroll();
+
 
     window.addEventListener(
       "scroll",
@@ -75,12 +122,16 @@ export default function Header() {
       }
     );
 
+
     return () => {
+
       window.removeEventListener(
         "scroll",
         handleScroll
       );
+
     };
+
   }, []);
 
 
@@ -89,14 +140,23 @@ export default function Header() {
      ======================================================= */
 
   useEffect(() => {
-    document.body.style.overflow = menuOpen
-      ? "hidden"
-      : "";
+
+    document.body.style.overflow =
+      menuOpen
+        ? "hidden"
+        : "";
+
 
     return () => {
-      document.body.style.overflow = "";
+
+      document.body.style.overflow =
+        "";
+
     };
-  }, [menuOpen]);
+
+  }, [
+    menuOpen,
+  ]);
 
 
   /* =======================================================
@@ -104,7 +164,9 @@ export default function Header() {
      ======================================================= */
 
   const closeMenu = () => {
+
     setMenuOpen(false);
+
   };
 
 
@@ -113,9 +175,11 @@ export default function Header() {
      ======================================================= */
 
   const toggleMenu = () => {
+
     setMenuOpen(
       (current) => !current
     );
+
   };
 
 
@@ -124,12 +188,15 @@ export default function Header() {
      ======================================================= */
 
   return (
+
     <header
       className={[
         "site-header",
+
         scrolled
           ? "site-header--scrolled"
           : "",
+
         menuOpen
           ? "site-header--menu-open"
           : "",
@@ -142,7 +209,9 @@ export default function Header() {
           HEADER BAR
           ================================================= */}
 
-      <div className="site-header__bar">
+      <div
+        className="site-header__bar"
+      >
 
 
         {/* ===============================================
@@ -155,7 +224,9 @@ export default function Header() {
           aria-label="AKNM Home"
           onClick={closeMenu}
         >
+
           <Logo />
+
         </Link>
 
 
@@ -167,18 +238,24 @@ export default function Header() {
           className="site-header__nav"
           aria-label="Main navigation"
         >
+
           {navigation.map(
             (item) => (
+
               <Link
                 key={item.href}
                 href={item.href}
                 className="site-header__link"
                 onClick={closeMenu}
               >
+
                 {item.label}
+
               </Link>
+
             )
           )}
+
         </nav>
 
 
@@ -186,30 +263,38 @@ export default function Header() {
             HEADER MENU
             =============================================== */}
 
-        <div className="site-header__actions">
+        <div
+          className="site-header__actions"
+        >
 
           <button
             type="button"
             className={[
               "site-header__menu",
+
               menuOpen
                 ? "is-open"
                 : "",
             ]
               .filter(Boolean)
               .join(" ")}
+
             onClick={toggleMenu}
+
             aria-label={
               menuOpen
                 ? "Close navigation"
                 : "Open navigation"
             }
+
             aria-expanded={
               menuOpen
             }
           >
+
             <span />
             <span />
+
           </button>
 
         </div>
@@ -224,23 +309,31 @@ export default function Header() {
       <div
         className={[
           "site-header__mobile",
+
           menuOpen
             ? "is-open"
             : "",
         ]
           .filter(Boolean)
           .join(" ")}
-        aria-hidden={!menuOpen}
+
+        aria-hidden={
+          !menuOpen
+        }
       >
 
-        <div className="site-header__mobile-inner">
+        <div
+          className="site-header__mobile-inner"
+        >
 
 
           {/* =============================================
               MOBILE HEADER
               ============================================= */}
 
-          <div className="site-header__mobile-heading">
+          <div
+            className="site-header__mobile-heading"
+          >
 
             <span>
               AKNM
@@ -264,6 +357,7 @@ export default function Header() {
 
             {navigation.map(
               (item, index) => (
+
                 <Link
                   key={item.href}
                   href={item.href}
@@ -276,26 +370,52 @@ export default function Header() {
                   }
                 >
 
-                  <span className="site-header__mobile-number">
+                  {/* ===================================
+                      NUMBER
+                      =================================== */}
+
+                  <span
+                    className="site-header__mobile-number"
+                  >
+
                     {String(
                       index + 1
                     ).padStart(
                       2,
                       "0"
                     )}
+
                   </span>
 
 
-                  <span className="site-header__mobile-label">
+                  {/* ===================================
+                      LABEL
+                      =================================== */}
+
+                  <span
+                    className="site-header__mobile-label"
+                  >
+
                     {item.label}
+
                   </span>
 
 
-                  <span className="site-header__mobile-arrow">
-                    ↗
+                  {/* ===================================
+                      ARROW
+                      =================================== */}
+
+                  <span
+                    className="site-header__mobile-arrow"
+                    aria-hidden="true"
+                  >
+
+                    <ArrowUpRightIcon />
+
                   </span>
 
                 </Link>
+
               )
             )}
 
@@ -306,7 +426,9 @@ export default function Header() {
               MOBILE FOOTER
               ============================================= */}
 
-          <div className="site-header__mobile-bottom">
+          <div
+            className="site-header__mobile-bottom"
+          >
 
             <span>
               AKNM.PRO
@@ -323,5 +445,7 @@ export default function Header() {
       </div>
 
     </header>
+
   );
+
 }

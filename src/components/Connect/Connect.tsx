@@ -25,6 +25,37 @@ interface ConnectSettings {
 
 
 /* =========================================================
+   ARROW ICON
+   ========================================================= */
+
+function ArrowUpRightIcon() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        d="M3 13L13 3"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M6 3H13V10"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+
+/* =========================================================
    OPPORTUNITIES
    ========================================================= */
 
@@ -101,8 +132,15 @@ export default async function Connect() {
           BACKGROUND
           ================================================= */}
 
-      <div className="connect__ambient" />
-      <div className="connect__grid" />
+      <div
+        className="connect__ambient"
+        aria-hidden="true"
+      />
+
+      <div
+        className="connect__grid"
+        aria-hidden="true"
+      />
 
 
       <div className="connect__container">
@@ -163,10 +201,16 @@ export default async function Connect() {
               </span>
 
               <span className="connect__email-address">
+
                 {email}
-                <span className="connect__email-arrow">
-                  ↗
+
+                <span
+                  className="connect__email-arrow"
+                  aria-hidden="true"
+                >
+                  <ArrowUpRightIcon />
                 </span>
+
               </span>
 
             </a>
@@ -181,6 +225,7 @@ export default async function Connect() {
             ================================================= */}
 
         <div className="connect__section-label">
+
           <span>
             What we can talk about
           </span>
@@ -188,6 +233,7 @@ export default async function Connect() {
           <span>
             01 — 04
           </span>
+
         </div>
 
 
@@ -218,8 +264,11 @@ export default async function Connect() {
               </div>
 
 
-              <span className="connect__opportunity-arrow">
-                ↗
+              <span
+                className="connect__opportunity-arrow"
+                aria-hidden="true"
+              >
+                <ArrowUpRightIcon />
               </span>
 
             </div>
@@ -245,10 +294,19 @@ export default async function Connect() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Instagram
-                <span>↗</span>
+                <span>
+                  Instagram
+                </span>
+
+                <span
+                  className="connect__social-arrow"
+                  aria-hidden="true"
+                >
+                  <ArrowUpRightIcon />
+                </span>
               </a>
             )}
+
 
             {settings?.x && (
               <a
@@ -256,10 +314,19 @@ export default async function Connect() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                X
-                <span>↗</span>
+                <span>
+                  X
+                </span>
+
+                <span
+                  className="connect__social-arrow"
+                  aria-hidden="true"
+                >
+                  <ArrowUpRightIcon />
+                </span>
               </a>
             )}
+
 
             {settings?.youtube && (
               <a
@@ -267,10 +334,19 @@ export default async function Connect() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                YouTube
-                <span>↗</span>
+                <span>
+                  YouTube
+                </span>
+
+                <span
+                  className="connect__social-arrow"
+                  aria-hidden="true"
+                >
+                  <ArrowUpRightIcon />
+                </span>
               </a>
             )}
+
 
             {settings?.linkedin && (
               <a
@@ -278,8 +354,16 @@ export default async function Connect() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                LinkedIn
-                <span>↗</span>
+                <span>
+                  LinkedIn
+                </span>
+
+                <span
+                  className="connect__social-arrow"
+                  aria-hidden="true"
+                >
+                  <ArrowUpRightIcon />
+                </span>
               </a>
             )}
 
@@ -298,8 +382,11 @@ export default async function Connect() {
                 Start a conversation
               </span>
 
-              <span className="connect__button-icon">
-                ↗
+              <span
+                className="connect__button-icon"
+                aria-hidden="true"
+              >
+                <ArrowUpRightIcon />
               </span>
 
             </Link>

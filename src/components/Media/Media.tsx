@@ -35,6 +35,52 @@ type MediaItem = {
 
 
 /* =========================================================
+   ICONS
+   ========================================================= */
+
+/**
+ * AKNM.PRO Header ArrowUpRight icon.
+ *
+ * IMPORTANT:
+ * This is the standard AKNM arrow SVG.
+ *
+ * Do not replace with:
+ * - Unicode arrows
+ * - emoji arrows
+ * - text characters
+ * - CSS-drawn arrows
+ */
+function ArrowUpRightIcon() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      aria-hidden="true"
+      focusable="false"
+      className="media__arrow-icon"
+    >
+      <path
+        d="M3 13L13 3"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M6 3H13V10"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+
+/* =========================================================
    HELPERS
    ========================================================= */
 
@@ -57,11 +103,13 @@ function formatDuration(
     return null;
   }
 
-  const totalSeconds = Math.floor(seconds);
+  const totalSeconds =
+    Math.floor(seconds);
 
-  const minutes = Math.floor(
-    totalSeconds / 60
-  );
+  const minutes =
+    Math.floor(
+      totalSeconds / 60
+    );
 
   const remainingSeconds =
     totalSeconds % 60;
@@ -103,10 +151,16 @@ export default async function Media() {
       created_at,
       category_id
     `)
-    .eq("media_type", "video")
-    .order("created_at", {
-      ascending: false,
-    })
+    .eq(
+      "media_type",
+      "video"
+    )
+    .order(
+      "created_at",
+      {
+        ascending: false,
+      }
+    )
     .limit(5);
 
 
@@ -131,19 +185,30 @@ export default async function Media() {
 
 
   return (
-    <section className="media">
-      <div className="media__container">
+    <section
+      className="media"
+    >
+
+      <div
+        className="media__container"
+      >
 
 
         {/* =================================================
             HEADER
             ================================================= */}
 
-        <div className="media__header">
+        <div
+          className="media__header"
+        >
 
-          <div className="media__eyebrow">
+          <div
+            className="media__eyebrow"
+          >
 
-            <span className="media__line" />
+            <span
+              className="media__line"
+            />
 
             <span>
               Latest Media
@@ -152,7 +217,9 @@ export default async function Media() {
           </div>
 
 
-          <div className="media__header-right">
+          <div
+            className="media__header-right"
+          >
 
             <div>
 
@@ -162,7 +229,9 @@ export default async function Media() {
                 happening.
               </h2>
 
-              <p className="media__header-description">
+              <p
+                className="media__header-description"
+              >
                 The latest videos from my
                 work, ideas, experiences and
                 life.
@@ -175,12 +244,16 @@ export default async function Media() {
               href="/media"
               className="media__view-all"
             >
+
               <span>
                 View all media
               </span>
 
-              <span className="media__view-all-icon">
-                ↗
+              <span
+                className="media__view-all-icon"
+                aria-hidden="true"
+              >
+                <ArrowUpRightIcon />
               </span>
 
             </Link>
@@ -196,7 +269,9 @@ export default async function Media() {
 
         {mediaItems.length > 0 ? (
 
-          <div className="media__grid">
+          <div
+            className="media__grid"
+          >
 
             {mediaItems.map(
               (item, index) => {
@@ -251,7 +326,9 @@ export default async function Media() {
                         VISUAL
                         =================================== */}
 
-                    <div className="media__visual">
+                    <div
+                      className="media__visual"
+                    >
 
                       {item.thumbnail_url ? (
 
@@ -267,15 +344,23 @@ export default async function Media() {
 
                       ) : (
 
-                        <div className="media__placeholder">
+                        <div
+                          className="media__placeholder"
+                        >
 
-                          <div className="media__placeholder-glow" />
+                          <div
+                            className="media__placeholder-glow"
+                          />
 
-                          <span className="media__placeholder-mark">
+                          <span
+                            className="media__placeholder-mark"
+                          >
                             AKNM
                           </span>
 
-                          <span className="media__placeholder-label">
+                          <span
+                            className="media__placeholder-label"
+                          >
                             VIDEO
                           </span>
 
@@ -284,12 +369,19 @@ export default async function Media() {
                       )}
 
 
-                      <div className="media__overlay" />
+                      <div
+                        className="media__overlay"
+                      />
 
 
-                      {/* PLAY */}
+                      {/* =================================
+                          PLAY
+                          ================================= */}
 
-                      <div className="media__play">
+                      <div
+                        className="media__play"
+                        aria-hidden="true"
+                      >
 
                         <span>
                           ▶
@@ -298,18 +390,26 @@ export default async function Media() {
                       </div>
 
 
-                      {/* TYPE */}
+                      {/* =================================
+                          TYPE
+                          ================================= */}
 
-                      <span className="media__type">
+                      <span
+                        className="media__type"
+                      >
                         VIDEO
                       </span>
 
 
-                      {/* DURATION */}
+                      {/* =================================
+                          DURATION
+                          ================================= */}
 
                       {duration && (
 
-                        <span className="media__duration">
+                        <span
+                          className="media__duration"
+                        >
                           {duration}
                         </span>
 
@@ -322,14 +422,21 @@ export default async function Media() {
                         CONTENT
                         =================================== */}
 
-                    <div className="media__content">
+                    <div
+                      className="media__content"
+                    >
 
-                      <div className="media__meta">
+                      <div
+                        className="media__meta"
+                      >
 
                         <span>
                           {String(
                             index + 1
-                          ).padStart(2, "0")}
+                          ).padStart(
+                            2,
+                            "0"
+                          )}
                         </span>
 
                         <span>
@@ -351,8 +458,15 @@ export default async function Media() {
                       </p>
 
 
-                      <span className="media__arrow">
-                        ↗
+                      {/* =================================
+                          AKNM HEADER SVG ARROW
+                          ================================= */}
+
+                      <span
+                        className="media__arrow"
+                        aria-hidden="true"
+                      >
+                        <ArrowUpRightIcon />
                       </span>
 
                     </div>
@@ -370,9 +484,13 @@ export default async function Media() {
              EMPTY STATE
              ================================================= */
 
-          <div className="media__empty">
+          <div
+            className="media__empty"
+          >
 
-            <div className="media__empty-mark">
+            <div
+              className="media__empty-mark"
+            >
               +
             </div>
 
@@ -398,19 +516,27 @@ export default async function Media() {
             FOOTER
             ================================================= */}
 
-        <div className="media__footer">
+        <div
+          className="media__footer"
+        >
 
           <span>
             Latest 5 videos
           </span>
 
 
-          <Link href="/media">
-
-            Explore AKNM Media
+          <Link
+            href="/media"
+          >
 
             <span>
-              ↗
+              Explore AKNM Media
+            </span>
+
+            <span
+              aria-hidden="true"
+            >
+              <ArrowUpRightIcon />
             </span>
 
           </Link>
@@ -418,6 +544,7 @@ export default async function Media() {
         </div>
 
       </div>
+
     </section>
   );
 }

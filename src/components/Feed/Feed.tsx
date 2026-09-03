@@ -4,6 +4,7 @@ import { createClient } from "@/lib/supabase/server";
 
 import "./Feed.css";
 
+
 /* =========================================================
    TYPES
    ========================================================= */
@@ -18,6 +19,37 @@ interface FeedPost {
   category: {
     name: string;
   } | null;
+}
+
+
+/* =========================================================
+   ARROW ICON
+   ========================================================= */
+
+function ArrowUpRightIcon() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        d="M3 13L13 3"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M6 3H13V10"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
 }
 
 
@@ -95,16 +127,16 @@ export default async function Feed() {
   }
 
   const posts: FeedPost[] = (data ?? []).map((post) => ({
-  id: post.id,
-  title: post.title,
-  slug: post.slug,
-  excerpt: post.excerpt,
-  content: post.content,
-  published_at: post.published_at,
-  category: Array.isArray(post.category)
-    ? post.category[0] ?? null
-    : post.category ?? null,
-}));
+    id: post.id,
+    title: post.title,
+    slug: post.slug,
+    excerpt: post.excerpt,
+    content: post.content,
+    published_at: post.published_at,
+    category: Array.isArray(post.category)
+      ? post.category[0] ?? null
+      : post.category ?? null,
+  }));
 
 
   return (
@@ -215,7 +247,7 @@ export default async function Feed() {
                     className="feed__post-arrow"
                     aria-label={`Read ${post.title}`}
                   >
-                    ↗
+                    <ArrowUpRightIcon />
                   </Link>
 
                 </article>
@@ -279,7 +311,7 @@ export default async function Feed() {
             </span>
 
             <span className="feed__button-icon">
-              ↗
+              <ArrowUpRightIcon />
             </span>
           </Link>
 

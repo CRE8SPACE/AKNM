@@ -824,23 +824,15 @@
    ========================================================= */
 
 .site-header__mobile-arrow {
-  color:
-    #00aeef;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  font-family:
-    var(--font-body);
-
-  font-size:
-    0.75rem;
-
-  line-height:
-    1;
-
-  text-align:
-    right;
-
-  transition:
-    transform 160ms ease;
+.site-header__mobile-arrow svg {
+  width: 14px;
+  height: 14px;
+  display: block;
 }
 
 

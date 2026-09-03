@@ -21,10 +21,11 @@
    ========================================================= */
 
 .site-footer__container {
-  width: min(
-    calc(100% - 64px),
-    var(--container-width)
-  );
+  width:
+    min(
+      calc(100% - 64px),
+      var(--container-width)
+    );
 
   margin:
     0 auto;
@@ -64,6 +65,11 @@
     430px;
 }
 
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
 .site-footer__logo {
   display:
     inline-block;
@@ -85,7 +91,20 @@
 
   font-weight:
     700;
+
+  transition:
+    color 200ms ease;
 }
+
+.site-footer__logo:hover {
+  color:
+    var(--color-blue-bright);
+}
+
+
+/* =========================================================
+   STATEMENT
+   ========================================================= */
 
 .site-footer__statement {
   margin-top:
@@ -98,7 +117,11 @@
     var(--font-heading);
 
   font-size:
-    clamp(1.6rem, 2.5vw, 2.5rem);
+    clamp(
+      1.6rem,
+      2.5vw,
+      2.5rem
+    );
 
   line-height:
     1;
@@ -109,6 +132,11 @@
   font-weight:
     500;
 }
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
 
 .site-footer__description {
   max-width:
@@ -132,6 +160,106 @@
 
 
 /* =========================================================
+   CONTACT EMAIL
+   ========================================================= */
+
+.site-footer__email {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    10px;
+
+  margin-top:
+    28px;
+
+  color:
+    var(--color-text-secondary);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.68rem;
+
+  transition:
+    color 200ms ease;
+}
+
+
+/* =========================================================
+   EMAIL SVG
+   ========================================================= */
+
+.site-footer__email-icon {
+  width:
+    17px;
+
+  height:
+    17px;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  flex-shrink:
+    0;
+
+  color:
+    var(--color-blue);
+
+  transition:
+    color 200ms ease,
+    transform 250ms
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    );
+}
+
+.site-footer__email-icon svg {
+  width:
+    100%;
+
+  height:
+    100%;
+
+  display:
+    block;
+
+  overflow:
+    visible;
+}
+
+.site-footer__email:hover {
+  color:
+    var(--color-white);
+}
+
+.site-footer__email:hover
+.site-footer__email-icon {
+  color:
+    var(--color-blue-bright);
+
+  transform:
+    translate(
+      3px,
+      -3px
+    );
+}
+
+
+/* =========================================================
    NAVIGATION
    ========================================================= */
 
@@ -146,6 +274,11 @@
     35px;
 }
 
+
+/* =========================================================
+   NAVIGATION COLUMN
+   ========================================================= */
+
 .site-footer__column {
   display:
     flex;
@@ -153,6 +286,11 @@
   flex-direction:
     column;
 }
+
+
+/* =========================================================
+   COLUMN TITLE
+   ========================================================= */
 
 .site-footer__column-title {
   margin-bottom:
@@ -177,6 +315,11 @@
     uppercase;
 }
 
+
+/* =========================================================
+   COLUMN NAV
+   ========================================================= */
+
 .site-footer__column nav {
   display:
     flex;
@@ -191,6 +334,11 @@
     13px;
 }
 
+
+/* =========================================================
+   NAV LINKS
+   ========================================================= */
+
 .site-footer__column nav a {
   display:
     inline-flex;
@@ -199,7 +347,7 @@
     center;
 
   gap:
-    6px;
+    7px;
 
   color:
     var(--color-text-secondary);
@@ -215,13 +363,62 @@
     transform 200ms ease;
 }
 
-.site-footer__column nav a span {
+
+/* =========================================================
+   SOCIAL SVG ICON
+   ========================================================= */
+
+.site-footer__social-icon {
+  width:
+    13px;
+
+  height:
+    13px;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  flex-shrink:
+    0;
+
   color:
     var(--color-blue);
 
-  font-size:
-    0.65rem;
+  transition:
+    color 200ms ease,
+    transform 250ms
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    );
 }
+
+.site-footer__social-icon svg {
+  width:
+    100%;
+
+  height:
+    100%;
+
+  display:
+    block;
+
+  overflow:
+    visible;
+}
+
+
+/* =========================================================
+   NAV HOVER
+   ========================================================= */
 
 .site-footer__column nav a:hover {
   color:
@@ -229,6 +426,18 @@
 
   transform:
     translateX(3px);
+}
+
+.site-footer__column nav a:hover
+.site-footer__social-icon {
+  color:
+    var(--color-blue-bright);
+
+  transform:
+    translate(
+      2px,
+      -2px
+    );
 }
 
 
@@ -241,13 +450,22 @@
     100px;
 
   color:
-    rgba(255, 255, 255, 0.055);
+    rgba(
+      255,
+      255,
+      255,
+      0.055
+    );
 
   font-family:
     var(--font-heading);
 
   font-size:
-    clamp(7rem, 20vw, 22rem);
+    clamp(
+      7rem,
+      20vw,
+      22rem
+    );
 
   line-height:
     0.72;
@@ -289,6 +507,11 @@
     30px;
 }
 
+
+/* =========================================================
+   META
+   ========================================================= */
+
 .site-footer__meta {
   display:
     flex;
@@ -314,6 +537,11 @@
   text-transform:
     uppercase;
 }
+
+
+/* =========================================================
+   LEGAL
+   ========================================================= */
 
 .site-footer__legal {
   display:
@@ -382,7 +610,12 @@
     color 200ms ease;
 }
 
-.site-footer__top-link span:last-child {
+
+/* =========================================================
+   BACK TO TOP ICON WRAPPER
+   ========================================================= */
+
+.site-footer__top-icon {
   width:
     28px;
 
@@ -390,13 +623,16 @@
     28px;
 
   display:
-    flex;
+    inline-flex;
 
   align-items:
     center;
 
   justify-content:
     center;
+
+  flex-shrink:
+    0;
 
   border:
     1px solid
@@ -411,15 +647,48 @@
   transition:
     background 200ms ease,
     border-color 200ms ease,
-    transform 200ms ease;
+    color 200ms ease,
+    transform 250ms
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    ),
+    box-shadow 200ms ease;
 }
+
+
+/* =========================================================
+   BACK TO TOP SVG
+   ========================================================= */
+
+.site-footer__top-icon svg {
+  width:
+    13px;
+
+  height:
+    13px;
+
+  display:
+    block;
+
+  overflow:
+    visible;
+}
+
+
+/* =========================================================
+   BACK TO TOP HOVER
+   ========================================================= */
 
 .site-footer__top-link:hover {
   color:
     var(--color-white);
 }
 
-.site-footer__top-link:hover span:last-child {
+.site-footer__top-link:hover
+.site-footer__top-icon {
   background:
     var(--color-blue);
 
@@ -431,6 +700,40 @@
 
   transform:
     translateY(-2px);
+
+  box-shadow:
+    0 0 22px
+    rgba(
+      0,
+      136,
+      245,
+      0.25
+    );
+}
+
+
+/* =========================================================
+   EMPTY SOCIAL STATE
+   ========================================================= */
+
+.site-footer__empty {
+  display:
+    block;
+
+  max-width:
+    150px;
+
+  color:
+    var(--color-text-muted);
+
+  font-family:
+    var(--font-body);
+
+  font-size:
+    0.62rem;
+
+  line-height:
+    1.5;
 }
 
 
@@ -462,15 +765,30 @@
       90px 0 25px;
   }
 
+
+  /* -------------------------------------------------------
+     CONTAINER
+     ------------------------------------------------------- */
+
   .site-footer__container {
     width:
       calc(100% - 40px);
   }
 
+
+  /* -------------------------------------------------------
+     TOP
+     ------------------------------------------------------- */
+
   .site-footer__top {
     padding-bottom:
       70px;
   }
+
+
+  /* -------------------------------------------------------
+     STATEMENT
+     ------------------------------------------------------- */
 
   .site-footer__statement {
     margin-top:
@@ -479,6 +797,11 @@
     font-size:
       1.8rem;
   }
+
+
+  /* -------------------------------------------------------
+     NAVIGATION
+     ------------------------------------------------------- */
 
   .site-footer__navigation {
     grid-template-columns:
@@ -493,6 +816,11 @@
       span 2;
   }
 
+
+  /* -------------------------------------------------------
+     LARGE MARK
+     ------------------------------------------------------- */
+
   .site-footer__mark {
     margin-top:
       70px;
@@ -500,6 +828,11 @@
     font-size:
       31vw;
   }
+
+
+  /* -------------------------------------------------------
+     BOTTOM
+     ------------------------------------------------------- */
 
   .site-footer__bottom {
     grid-template-columns:
@@ -512,10 +845,20 @@
       flex-start;
   }
 
+
+  /* -------------------------------------------------------
+     LEGAL
+     ------------------------------------------------------- */
+
   .site-footer__legal {
     order:
       2;
   }
+
+
+  /* -------------------------------------------------------
+     TOP LINK
+     ------------------------------------------------------- */
 
   .site-footer__top-link {
     justify-self:
@@ -525,6 +868,40 @@
       3;
   }
 
+
+  /* -------------------------------------------------------
+     EMAIL
+     ------------------------------------------------------- */
+
+  .site-footer__email {
+    margin-top:
+      24px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .site-footer__container {
+    width:
+      calc(100% - 32px);
+  }
+
+  .site-footer__navigation {
+    column-gap:
+      24px;
+  }
+
+  .site-footer__mark {
+    font-size:
+      30vw;
+  }
+
 }
 
 
@@ -534,92 +911,16 @@
 
 @media (prefers-reduced-motion: reduce) {
 
+  .site-footer__logo,
+  .site-footer__email,
+  .site-footer__email-icon,
   .site-footer__column nav a,
+  .site-footer__social-icon,
+  .site-footer__legal a,
   .site-footer__top-link,
-  .site-footer__top-link span:last-child {
+  .site-footer__top-icon {
     transition:
       none;
-  }
-}
-
-/* =========================================================
-   CONTACT EMAIL
-   ========================================================= */
-
-.site-footer__email {
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 10px;
-
-  margin-top: 28px;
-
-  color:
-    var(--color-text-secondary);
-
-  font-family:
-    var(--font-body);
-
-  font-size:
-    0.68rem;
-
-  transition:
-    color 200ms ease;
-}
-
-.site-footer__email span {
-  color:
-    var(--color-blue);
-
-  transition:
-    transform 200ms ease;
-}
-
-.site-footer__email:hover {
-  color:
-    var(--color-white);
-}
-
-.site-footer__email:hover span {
-  transform:
-    translate(2px, -2px);
-}
-
-
-/* =========================================================
-   EMPTY SOCIAL STATE
-   ========================================================= */
-
-.site-footer__empty {
-  display: block;
-
-  max-width:
-    150px;
-
-  color:
-    var(--color-text-muted);
-
-  font-family:
-    var(--font-body);
-
-  font-size:
-    0.62rem;
-
-  line-height:
-    1.5;
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .site-footer__email,
-  .site-footer__email span {
-    transition: none;
   }
 
 }

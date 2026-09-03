@@ -125,6 +125,7 @@
     uppercase;
 }
 
+
 .media__line {
   width:
     28px;
@@ -149,7 +150,8 @@
    ========================================================= */
 
 .media__header-right {
-  display: flex;
+  display:
+    flex;
 
   align-items:
     flex-end;
@@ -161,10 +163,12 @@
     50px;
 }
 
+
 .media__header-right > div {
   min-width:
     0;
 }
+
 
 .media__header-right h2 {
   margin:
@@ -192,6 +196,7 @@
   letter-spacing:
     -0.06em;
 }
+
 
 .media__header-description {
   max-width:
@@ -249,12 +254,19 @@
   letter-spacing:
     0.02em;
 
+  line-height:
+    1;
+
   white-space:
     nowrap;
+
+  text-decoration:
+    none;
 
   transition:
     color 220ms ease;
 }
+
 
 .media__view-all-icon {
   width:
@@ -272,6 +284,9 @@
   justify-content:
     center;
 
+  flex-shrink:
+    0;
+
   border:
     1px solid
     var(--color-border);
@@ -286,13 +301,53 @@
     background 250ms ease,
     border-color 250ms ease,
     color 250ms ease,
+    transform 250ms ease,
+    box-shadow 250ms ease;
+}
+
+
+/* =========================================================
+   HEADER SVG
+   ========================================================= */
+
+.media__view-all-icon svg {
+  width:
+    15px;
+
+  height:
+    15px;
+
+  display:
+    block;
+
+  flex-shrink:
+    0;
+
+  stroke:
+    currentColor;
+
+  fill:
+    none;
+
+  stroke-width:
+    1.8;
+
+  stroke-linecap:
+    round;
+
+  stroke-linejoin:
+    round;
+
+  transition:
     transform 250ms ease;
 }
+
 
 .media__view-all:hover {
   color:
     var(--color-white);
 }
+
 
 .media__view-all:hover
 .media__view-all-icon {
@@ -309,6 +364,20 @@
     translate(
       2px,
       -2px
+    );
+
+  box-shadow:
+    0 0 24px
+    rgba(0, 136, 245, 0.2);
+}
+
+
+.media__view-all:hover
+.media__view-all-icon svg {
+  transform:
+    translate(
+      1px,
+      -1px
     );
 }
 
@@ -362,6 +431,9 @@
   color:
     inherit;
 
+  text-decoration:
+    none;
+
   transition:
     border-color 300ms ease,
     transform 400ms
@@ -386,6 +458,7 @@
   grid-row:
     span 2;
 }
+
 
 .media__card:hover {
   border-color:
@@ -424,6 +497,7 @@
   background:
     var(--color-surface-raised);
 }
+
 
 .media__card--featured
 .media__visual {
@@ -472,6 +546,7 @@
     ),
     filter 500ms ease;
 }
+
 
 .media__card:hover
 .media__visual img {
@@ -541,6 +616,7 @@
     );
 }
 
+
 .media__placeholder-glow {
   position:
     absolute;
@@ -574,6 +650,7 @@
     opacity 500ms ease;
 }
 
+
 .media__card:hover
 .media__placeholder-glow {
   transform:
@@ -582,6 +659,7 @@
   opacity:
     1.3;
 }
+
 
 .media__placeholder-mark {
   position:
@@ -611,6 +689,7 @@
   letter-spacing:
     -0.08em;
 }
+
 
 .media__placeholder-label {
   position:
@@ -676,6 +755,7 @@
   transition:
     background 350ms ease;
 }
+
 
 .media__card:hover
 .media__overlay {
@@ -918,6 +998,7 @@
     box-shadow 300ms ease;
 }
 
+
 .media__play span {
   display:
     block;
@@ -931,6 +1012,7 @@
   line-height:
     1;
 }
+
 
 .media__card:hover
 .media__play {
@@ -1016,6 +1098,7 @@
     uppercase;
 }
 
+
 .media__meta span:first-child {
   color:
     var(--color-blue);
@@ -1058,6 +1141,7 @@
   transition:
     color 250ms ease;
 }
+
 
 .media__card:hover
 .media__content h3 {
@@ -1109,10 +1193,10 @@
     18px;
 
   width:
-    28px;
+    32px;
 
   height:
-    28px;
+    32px;
 
   display:
     flex;
@@ -1122,6 +1206,9 @@
 
   justify-content:
     center;
+
+  flex-shrink:
+    0;
 
   border:
     1px solid
@@ -1133,15 +1220,51 @@
   color:
     var(--color-text-muted);
 
-  font-size:
-    0.72rem;
-
   transition:
     color 250ms ease,
     border-color 250ms ease,
     background 250ms ease,
-    transform 300ms ease;
+    transform 300ms ease,
+    box-shadow 250ms ease;
 }
+
+
+/* =========================================================
+   CARD ARROW SVG
+   ========================================================= */
+
+.media__arrow svg {
+  width:
+    13px;
+
+  height:
+    13px;
+
+  display:
+    block;
+
+  flex-shrink:
+    0;
+
+  stroke:
+    currentColor;
+
+  fill:
+    none;
+
+  stroke-width:
+    1.8;
+
+  stroke-linecap:
+    round;
+
+  stroke-linejoin:
+    round;
+
+  transition:
+    transform 250ms ease;
+}
+
 
 .media__card:hover
 .media__arrow {
@@ -1158,6 +1281,25 @@
     translate(
       2px,
       -2px
+    );
+
+  box-shadow:
+    0 0 22px
+    rgba(
+      0,
+      136,
+      245,
+      0.18
+    );
+}
+
+
+.media__card:hover
+.media__arrow svg {
+  transform:
+    translate(
+      1px,
+      -1px
     );
 }
 
@@ -1196,6 +1338,7 @@
     center;
 }
 
+
 .media__empty-mark {
   width:
     48px;
@@ -1229,6 +1372,7 @@
     1.2rem;
 }
 
+
 .media__empty > span {
   margin-bottom:
     12px;
@@ -1248,6 +1392,7 @@
   letter-spacing:
     0.15em;
 }
+
 
 .media__empty h3 {
   margin:
@@ -1275,6 +1420,7 @@
   letter-spacing:
     -0.05em;
 }
+
 
 .media__empty p {
   max-width:
@@ -1333,6 +1479,7 @@
     uppercase;
 }
 
+
 .media__footer a {
   display:
     inline-flex;
@@ -1346,11 +1493,24 @@
   color:
     var(--color-text-secondary);
 
+  text-decoration:
+    none;
+
   transition:
     color 200ms ease;
 }
 
+
 .media__footer a span {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
   color:
     var(--color-blue);
 
@@ -1358,12 +1518,42 @@
     transform 200ms ease;
 }
 
+
+.media__footer a span svg {
+  width:
+    13px;
+
+  height:
+    13px;
+
+  display:
+    block;
+
+  stroke:
+    currentColor;
+
+  fill:
+    none;
+
+  stroke-width:
+    1.8;
+
+  stroke-linecap:
+    round;
+
+  stroke-linejoin:
+    round;
+}
+
+
 .media__footer a:hover {
   color:
     var(--color-white);
 }
 
-.media__footer a:hover span {
+
+.media__footer a:hover
+span {
   transform:
     translate(
       2px,
@@ -1386,10 +1576,12 @@
       28px;
   }
 
+
   .media__eyebrow {
     padding-top:
       0;
   }
+
 
   .media__grid {
     grid-template-columns:
@@ -1399,6 +1591,7 @@
       );
   }
 
+
   .media__card--featured {
     grid-column:
       span 2;
@@ -1406,6 +1599,7 @@
     grid-row:
       auto;
   }
+
 
   .media__card--featured
   .media__visual {
@@ -1428,6 +1622,7 @@
       140px;
   }
 
+
   .media__header-right {
     align-items:
       flex-start;
@@ -1438,6 +1633,7 @@
     gap:
       30px;
   }
+
 
   .media__header-right h2 {
     font-size:
@@ -1464,7 +1660,9 @@
   }
 
 
-  /* CONTAINER */
+  /* =======================================================
+     CONTAINER
+     ======================================================= */
 
   .media__container {
     width:
@@ -1472,17 +1670,21 @@
   }
 
 
-  /* HEADER */
+  /* =======================================================
+     HEADER
+     ======================================================= */
 
   .media__header {
     margin-bottom:
       48px;
   }
 
+
   .media__header-right {
     gap:
       24px;
   }
+
 
   .media__header-right h2 {
     font-size:
@@ -1496,6 +1698,7 @@
       0.92;
   }
 
+
   .media__header-description {
     max-width:
       310px;
@@ -1508,7 +1711,40 @@
   }
 
 
-  /* GRID */
+  /* =======================================================
+     VIEW ALL
+     ======================================================= */
+
+  .media__view-all {
+    gap:
+      10px;
+
+    font-size:
+      0.61rem;
+  }
+
+
+  .media__view-all-icon {
+    width:
+      34px;
+
+    height:
+      34px;
+  }
+
+
+  .media__view-all-icon svg {
+    width:
+      14px;
+
+    height:
+      14px;
+  }
+
+
+  /* =======================================================
+     GRID
+     ======================================================= */
 
   .media__grid {
     grid-template-columns:
@@ -1518,10 +1754,12 @@
       12px;
   }
 
+
   .media__card--featured {
     grid-column:
       auto;
   }
+
 
   .media__card--featured
   .media__visual,
@@ -1531,12 +1769,15 @@
   }
 
 
-  /* CARD */
+  /* =======================================================
+     CARD
+     ======================================================= */
 
   .media__card {
     transform:
       none;
   }
+
 
   .media__card:hover {
     transform:
@@ -1544,7 +1785,9 @@
   }
 
 
-  /* VISUAL */
+  /* =======================================================
+     VISUAL
+     ======================================================= */
 
   .media__type {
     top:
@@ -1554,6 +1797,7 @@
       13px;
   }
 
+
   .media__duration {
     right:
       13px;
@@ -1561,6 +1805,7 @@
     bottom:
       13px;
   }
+
 
   .media__play {
     width:
@@ -1571,7 +1816,9 @@
   }
 
 
-  /* CONTENT */
+  /* =======================================================
+     CONTENT
+     ======================================================= */
 
   .media__content {
     min-height:
@@ -1581,15 +1828,18 @@
       20px;
   }
 
+
   .media__meta {
     margin-bottom:
       24px;
   }
 
+
   .media__content h3 {
     font-size:
       2.15rem;
   }
+
 
   .media__content p {
     max-width:
@@ -1600,7 +1850,37 @@
   }
 
 
-  /* FOOTER */
+  /* =======================================================
+     CARD ARROW
+     ======================================================= */
+
+  .media__arrow {
+    right:
+      18px;
+
+    bottom:
+      17px;
+
+    width:
+      30px;
+
+    height:
+      30px;
+  }
+
+
+  .media__arrow svg {
+    width:
+      12px;
+
+    height:
+      12px;
+  }
+
+
+  /* =======================================================
+     FOOTER
+     ======================================================= */
 
   .media__footer {
     align-items:
@@ -1633,10 +1913,12 @@
       calc(100% - 32px);
   }
 
+
   .media__header-right h2 {
     font-size:
       2.7rem;
   }
+
 
   .media__content {
     min-height:
@@ -1646,14 +1928,25 @@
       18px;
   }
 
+
   .media__content h3 {
     font-size:
       1.95rem;
   }
 
+
   .media__content p {
     font-size:
       0.7rem;
+  }
+
+
+  .media__arrow {
+    right:
+      16px;
+
+    bottom:
+      15px;
   }
 
 }
@@ -1670,7 +1963,9 @@
   .media__placeholder-glow,
   .media__play,
   .media__arrow,
+  .media__arrow svg,
   .media__view-all-icon,
+  .media__view-all-icon svg,
   .media__footer a span {
     transition:
       none;
