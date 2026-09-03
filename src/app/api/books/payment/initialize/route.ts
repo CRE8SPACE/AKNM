@@ -87,6 +87,7 @@ export async function POST(
         .select(`
           id,
           title,
+          slug,
           status,
           price,
           currency,

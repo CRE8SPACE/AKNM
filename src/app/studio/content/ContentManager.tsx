@@ -92,7 +92,7 @@ type ContentPost = {
 
   created_at: string;
 
-  categories: ContentCategory | null;
+  categories: ContentCategory[];
 
   cover_media: ContentMedia | null;
 
@@ -289,14 +289,13 @@ export default function ContentManager({
               false
             ) ||
 
-            (
-              post.categories
-                ?.name
-                .toLowerCase()
-                .includes(
-                  normalizedSearch
-                ) ??
-              false
+            post.categories.some(
+              (category) =>
+                category.name
+                  .toLowerCase()
+                  .includes(
+                    normalizedSearch
+                  )
             );
 
 
@@ -845,14 +844,13 @@ export default function ContentManager({
                         className="content-row__meta"
                       >
 
-                        {post.categories && (
+                        {post.categories.length > 0 && (
 
                           <span
                             className="content-row__category"
                           >
                             {
-                              post.categories
-                                .name
+                              post.categories[0]?.name
                             }
                           </span>
 
