@@ -999,20 +999,46 @@
 }
 
 
-.media__play span {
+/* =========================================================
+   PLAY SVG
+   ========================================================= */
+
+.media__play svg {
+  width:
+    18px;
+
+  height:
+    18px;
+
   display:
     block;
 
-  margin-left:
-    3px;
+  flex-shrink:
+    0;
 
-  font-size:
-    0.78rem;
+  fill:
+    currentColor;
 
-  line-height:
-    1;
+  stroke:
+    none;
+
+  transform:
+    translateX(1px);
+
+  transition:
+    transform 300ms
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    );
 }
 
+
+/* =========================================================
+   PLAY HOVER
+   ========================================================= */
 
 .media__card:hover
 .media__play {
@@ -1037,6 +1063,13 @@
       245,
       0.3
     );
+}
+
+
+.media__card:hover
+.media__play svg {
+  transform:
+    translateX(2px);
 }
 
 
@@ -1807,12 +1840,25 @@ span {
   }
 
 
+  /* =======================================================
+     PLAY
+     ======================================================= */
+
   .media__play {
     width:
       52px;
 
     height:
       52px;
+  }
+
+
+  .media__play svg {
+    width:
+      17px;
+
+    height:
+      17px;
   }
 
 
@@ -1962,6 +2008,7 @@ span {
   .media__visual img,
   .media__placeholder-glow,
   .media__play,
+  .media__play svg,
   .media__arrow,
   .media__arrow svg,
   .media__view-all-icon,

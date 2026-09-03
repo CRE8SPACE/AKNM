@@ -80,6 +80,28 @@ function ArrowUpRightIcon() {
 }
 
 
+/**
+ * AKNM.PRO Media Play icon.
+ *
+ * SVG version of the play button.
+ */
+function PlayIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      focusable="false"
+      className="media__play-icon"
+    >
+      <path
+        d="M9 6.5L17 12L9 17.5V6.5Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+
 /* =========================================================
    HELPERS
    ========================================================= */
@@ -383,9 +405,7 @@ export default async function Media() {
                         aria-hidden="true"
                       >
 
-                        <span>
-                          ▶
-                        </span>
+                        <PlayIcon />
 
                       </div>
 
