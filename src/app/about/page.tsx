@@ -7,6 +7,52 @@ import "./about.css";
 
 
 /* =========================================================
+   ICONS
+   ========================================================= */
+
+/**
+ * AKNM.PRO standard ArrowUpRight icon.
+ *
+ * IMPORTANT:
+ * This is the standard AKNM arrow SVG.
+ *
+ * Do not replace with:
+ * - Unicode arrows
+ * - emoji arrows
+ * - text characters
+ * - CSS-drawn arrows
+ */
+function ArrowUpRightIcon() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      aria-hidden="true"
+      focusable="false"
+      className="about-page__arrow-icon"
+    >
+      <path
+        d="M3 13L13 3"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M6 3H13V10"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+
+/* =========================================================
    ABOUT PAGE
    ========================================================= */
 
@@ -344,7 +390,13 @@ export default function AboutPage() {
                   className="about-page__text-link"
                 >
                   Explore the ventures
-                  <span>↗</span>
+
+                  <span
+                    aria-hidden="true"
+                  >
+                    <ArrowUpRightIcon />
+                  </span>
+
                 </Link>
 
               </div>
@@ -422,7 +474,13 @@ export default function AboutPage() {
                 className="about-page__platform-link"
               >
                 Discover what I&apos;m building
-                <span>↗</span>
+
+                <span
+                  aria-hidden="true"
+                >
+                  <ArrowUpRightIcon />
+                </span>
+
               </Link>
 
             </div>
@@ -476,7 +534,13 @@ export default function AboutPage() {
                   className="about-page__text-link"
                 >
                   Explore the books
-                  <span>↗</span>
+
+                  <span
+                    aria-hidden="true"
+                  >
+                    <ArrowUpRightIcon />
+                  </span>
+
                 </Link>
 
               </div>
@@ -504,7 +568,13 @@ export default function AboutPage() {
                   className="about-page__text-link"
                 >
                   Enter the library
-                  <span>↗</span>
+
+                  <span
+                    aria-hidden="true"
+                  >
+                    <ArrowUpRightIcon />
+                  </span>
+
                 </Link>
 
               </div>
@@ -568,7 +638,13 @@ export default function AboutPage() {
                   className="about-page__text-link"
                 >
                   Explore the music
-                  <span>↗</span>
+
+                  <span
+                    aria-hidden="true"
+                  >
+                    <ArrowUpRightIcon />
+                  </span>
+
                 </Link>
 
               </div>
@@ -634,8 +710,10 @@ export default function AboutPage() {
                   Watch original media
                 </strong>
 
-                <span>
-                  ↗
+                <span
+                  aria-hidden="true"
+                >
+                  <ArrowUpRightIcon />
                 </span>
 
               </Link>
@@ -651,8 +729,10 @@ export default function AboutPage() {
                   Watch live broadcasts
                 </strong>
 
-                <span>
-                  ↗
+                <span
+                  aria-hidden="true"
+                >
+                  <ArrowUpRightIcon />
                 </span>
 
               </Link>
@@ -668,8 +748,10 @@ export default function AboutPage() {
                   Read the latest
                 </strong>
 
-                <span>
-                  ↗
+                <span
+                  aria-hidden="true"
+                >
+                  <ArrowUpRightIcon />
                 </span>
 
               </Link>
@@ -880,7 +962,13 @@ export default function AboutPage() {
               className="about-page__closing-link"
             >
               Start a conversation
-              <span>↗</span>
+
+              <span
+                aria-hidden="true"
+              >
+                <ArrowUpRightIcon />
+              </span>
+
             </Link>
 
           </div>

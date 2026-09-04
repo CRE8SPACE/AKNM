@@ -9,6 +9,45 @@ import "./ventures.css";
 
 
 /* =========================================================
+   ICONS
+   ========================================================= */
+
+/**
+ * AKNM.PRO standard ArrowUpRight icon.
+ *
+ * Matches the SVG arrow used by the Header.
+ */
+function ArrowUpRightIcon() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      aria-hidden="true"
+      focusable="false"
+      className="ventures-page__arrow-icon"
+    >
+      <path
+        d="M3 13L13 3"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M6 3H13V10"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+
+/* =========================================================
    TYPES
    ========================================================= */
 
@@ -301,7 +340,7 @@ export default async function VenturesPage() {
 
 
                       <div className="ventures-page__arrow">
-                        ↗
+                        <ArrowUpRightIcon />
                       </div>
                     </>
                   );

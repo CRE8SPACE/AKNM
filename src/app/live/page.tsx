@@ -103,6 +103,61 @@ type SessionWithMedia = LiveSession & {
 
 
 /* =========================================================
+   SVG ICONS
+   ========================================================= */
+
+function ArrowIcon() {
+  return (
+    <svg
+      className="live-page__arrow-icon"
+      viewBox="0 0 24 24"
+      width="16"
+      height="16"
+      fill="none"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        d="M5 19L19 5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M9 5H19V15"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+
+function PlayIcon() {
+  return (
+    <svg
+      className="live-page__play-icon"
+      viewBox="0 0 24 24"
+      width="20"
+      height="20"
+      fill="none"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        d="M8 5.5L18 12L8 18.5V5.5Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+
+/* =========================================================
    HELPERS
    ========================================================= */
 
@@ -836,15 +891,20 @@ export default function LivePage() {
                       href={`/live/${liveSession.slug}`}
                       className="live-page__watch-live"
                     >
+
                       Watch live
-                      <span>
-                        ↗
+
+                      <span className="live-page__icon-wrapper">
+                        <ArrowIcon />
                       </span>
+
                     </Link>
+
 
                     <div className="live-page__progress">
                       <span />
                     </div>
+
 
                     <span>
                       LIVE
@@ -947,10 +1007,13 @@ export default function LivePage() {
                     );
                   }}
                 >
+
                   Get notified
-                  <span>
-                    ↗
+
+                  <span className="live-page__icon-wrapper">
+                    <ArrowIcon />
                   </span>
+
                 </button>
 
               ) : (
@@ -1099,10 +1162,13 @@ export default function LivePage() {
                           );
                         }}
                       >
+
                         Remind me
-                        <span>
-                          ↗
+
+                        <span className="live-page__icon-wrapper">
+                          <ArrowIcon />
                         </span>
+
                       </button>
 
                     </article>
@@ -1258,10 +1324,13 @@ export default function LivePage() {
               <Link
                 href="/media"
               >
+
                 View media
-                <span>
-                  ↗
+
+                <span className="live-page__icon-wrapper">
+                  <ArrowIcon />
                 </span>
+
               </Link>
 
             </div>
@@ -1344,8 +1413,11 @@ export default function LivePage() {
                         <Link
                           href={`/live/${event.slug}`}
                           aria-label={`Watch ${event.title}`}
+                          className="live-page__recorded-play"
                         >
-                          ▶
+
+                          <PlayIcon />
+
                         </Link>
 
                       </div>
@@ -1384,10 +1456,13 @@ export default function LivePage() {
                         <Link
                           href={`/live/${event.slug}`}
                         >
+
                           Watch recording
-                          <span>
-                            ↗
+
+                          <span className="live-page__icon-wrapper">
+                            <ArrowIcon />
                           </span>
+
                         </Link>
 
                       </div>
@@ -1438,10 +1513,13 @@ export default function LivePage() {
               <Link
                 href="/contact"
               >
+
                 Get in touch
-                <span>
-                  ↗
+
+                <span className="live-page__icon-wrapper">
+                  <ArrowIcon />
                 </span>
+
               </Link>
 
             </div>

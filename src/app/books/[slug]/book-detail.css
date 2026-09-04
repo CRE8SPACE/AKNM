@@ -120,6 +120,48 @@
 
 
 /* =========================================================
+   BACK SVG ARROW
+   ========================================================= */
+
+.book-public-back svg {
+  width: 15px;
+  height: 15px;
+
+  flex-shrink: 0;
+
+  display: block;
+
+  color:
+    currentColor;
+
+  stroke:
+    currentColor;
+
+  fill:
+    none;
+
+  stroke-width:
+    1.6;
+
+  stroke-linecap:
+    round;
+
+  stroke-linejoin:
+    round;
+
+  transition:
+    transform 160ms ease,
+    color 160ms ease;
+}
+
+
+.book-public-back:hover svg {
+  transform:
+    translateX(-3px);
+}
+
+
+/* =========================================================
    HERO GRID
    ========================================================= */
 
@@ -188,10 +230,13 @@
 
   display: block;
 
-  object-fit: autofit;
+  object-fit: auto;
   object-position: center;
 
   background: #090909;
+
+  transition:
+    transform 240ms ease;
 }
 
 
@@ -567,6 +612,10 @@
 }
 
 
+/* =========================================================
+   PRIMARY ACTION
+   ========================================================= */
+
 .book-public-primary-action {
   background:
     #04f751;
@@ -584,10 +633,50 @@
 }
 
 
-.book-public-primary-action span {
-  font-size: 0.75rem;
+/* =========================================================
+   PRIMARY ACTION SVG
+   ========================================================= */
+
+.book-public-primary-action svg {
+  width: 16px;
+  height: 16px;
+
+  flex-shrink: 0;
+
+  display: block;
+
+  color:
+    currentColor;
+
+  stroke:
+    currentColor;
+
+  fill:
+    none;
+
+  stroke-width:
+    1.7;
+
+  stroke-linecap:
+    round;
+
+  stroke-linejoin:
+    round;
+
+  transition:
+    transform 170ms ease;
 }
 
+
+.book-public-primary-action:hover svg {
+  transform:
+    translate(3px, -3px);
+}
+
+
+/* =========================================================
+   SECONDARY ACTION
+   ========================================================= */
 
 .book-public-secondary-action {
   border-color:
@@ -608,11 +697,48 @@
 }
 
 
-.book-public-secondary-action span {
+/* =========================================================
+   SECONDARY ACTION SVG
+   ========================================================= */
+
+.book-public-secondary-action svg {
+  width: 16px;
+  height: 16px;
+
+  flex-shrink: 0;
+
+  display: block;
+
   color:
     #00aeef;
 
-  font-size: 0.8rem;
+  stroke:
+    currentColor;
+
+  fill:
+    none;
+
+  stroke-width:
+    1.7;
+
+  stroke-linecap:
+    round;
+
+  stroke-linejoin:
+    round;
+
+  transition:
+    transform 170ms ease,
+    color 170ms ease;
+}
+
+
+.book-public-secondary-action:hover svg {
+  transform:
+    translateY(3px);
+
+  color:
+    #00aeef;
 }
 
 
@@ -1206,11 +1332,38 @@
 }
 
 
-.book-public-audio a span {
+/* =========================================================
+   AUDIO SVG ARROW
+   ========================================================= */
+
+.book-public-audio a svg {
+  width: 15px;
+  height: 15px;
+
+  flex-shrink: 0;
+
+  display: block;
+
   color:
     #04f751;
 
-  font-size: 0.75rem;
+  stroke:
+    currentColor;
+
+  fill:
+    none;
+
+  stroke-width:
+    1.6;
+
+  stroke-linecap:
+    round;
+
+  stroke-linejoin:
+    round;
+
+  transition:
+    transform 160ms ease;
 }
 
 
@@ -1218,6 +1371,12 @@
   color: #fff;
 
   gap: 27px;
+}
+
+
+.book-public-audio a:hover svg {
+  transform:
+    translate(3px, -3px);
 }
 
 
@@ -1410,11 +1569,38 @@
 }
 
 
-.book-public-closing a span {
+/* =========================================================
+   CLOSING SVG ARROW
+   ========================================================= */
+
+.book-public-closing a svg {
+  width: 16px;
+  height: 16px;
+
+  flex-shrink: 0;
+
+  display: block;
+
   color:
     #04f751;
 
-  font-size: 0.8rem;
+  stroke:
+    currentColor;
+
+  fill:
+    none;
+
+  stroke-width:
+    1.7;
+
+  stroke-linecap:
+    round;
+
+  stroke-linejoin:
+    round;
+
+  transition:
+    transform 160ms ease;
 }
 
 
@@ -1425,6 +1611,12 @@
     #04f751;
 
   color: #fff;
+}
+
+
+.book-public-closing a:hover svg {
+  transform:
+    translate(3px, -3px);
 }
 
 
@@ -1509,6 +1701,12 @@
 
   .book-public-back {
     margin-bottom: 45px;
+  }
+
+
+  .book-public-back svg {
+    width: 14px;
+    height: 14px;
   }
 
 
@@ -1707,6 +1905,12 @@
   }
 
 
+  .book-public-audio a svg {
+    width: 14px;
+    height: 14px;
+  }
+
+
   /* META */
 
   .book-public-meta {
@@ -1744,6 +1948,12 @@
 
   .book-public-closing a {
     margin-top: 40px;
+  }
+
+
+  .book-public-closing a svg {
+    width: 15px;
+    height: 15px;
   }
 
 }
@@ -1828,9 +2038,7 @@
   prefers-reduced-motion: reduce
 ) {
 
-  .book-public-page *,
-  .book-public-page *::before,
-  .book-public-page *::after {
+  .book-public-page * {
     transition: none !important;
   }
 

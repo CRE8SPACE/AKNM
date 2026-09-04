@@ -334,11 +334,6 @@
    MEDIA ATTACHMENTS
    ========================================================= */
 
-/*
-   Attachments intentionally kept small.
-   They should support the post rather than dominate it.
-*/
-
 .feed-page__post-media-link {
   display: block;
 
@@ -481,16 +476,39 @@
     gap 160ms ease;
 }
 
-.feed-page__post-view a span {
-  color: #00aeef;
 
-  font-size: 15px;
-  line-height: 1;
+/* =========================================================
+   VIEW POST SVG ARROW
+   ========================================================= */
+
+.feed-page__post-view a svg {
+  display: block;
+
+  width: 15px;
+  height: 15px;
+
+  flex: 0 0 15px;
+
+  fill: none;
+
+  stroke: #00aeef;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transition:
+    transform 160ms ease,
+    stroke 160ms ease;
 }
 
 .feed-page__post-view a:hover {
   gap: 14px;
   color: #00aeef;
+}
+
+.feed-page__post-view a:hover svg {
+  transform: translate(3px, -3px);
+  stroke: #00aeef;
 }
 
 
@@ -533,12 +551,45 @@
 }
 
 .feed-page__actions button span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   font-size: 14px;
   font-weight: 400;
 }
 
 .feed-page__actions button:hover {
   color: rgba(255, 255, 255, 0.82);
+}
+
+
+/* =========================================================
+   ACTION SVG
+   ========================================================= */
+
+.feed-page__actions button svg {
+  display: block;
+
+  width: 14px;
+  height: 14px;
+
+  flex: 0 0 14px;
+
+  fill: none;
+
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.feed-page__actions button:hover svg {
+  transform: translate(2px, -2px);
 }
 
 
@@ -554,13 +605,6 @@
 
   width: 100%;
   height: fit-content;
-
-  /*
-    Important:
-    The sidebar itself is sticky, so both
-    "About this feed" and "Elsewhere"
-    remain together while scrolling.
-  */
 }
 
 .feed-page__sidebar-card {
@@ -651,13 +695,29 @@
   padding-bottom: 0;
 }
 
-.feed-page__social-list a span {
-  color: rgba(255, 255, 255, 0.24);
 
-  font-size: 13px;
+/* =========================================================
+   SOCIAL SVG ARROW
+   ========================================================= */
+
+.feed-page__social-list a svg {
+  display: block;
+
+  width: 14px;
+  height: 14px;
+
+  flex: 0 0 14px;
+
+  fill: none;
+
+  stroke: rgba(255, 255, 255, 0.24);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 
   transition:
     color 160ms ease,
+    stroke 160ms ease,
     transform 160ms ease;
 }
 
@@ -666,8 +726,8 @@
   color: #00aeef;
 }
 
-.feed-page__social-list a:hover span {
-  color: #00aeef;
+.feed-page__social-list a:hover svg {
+  stroke: #00aeef;
   transform: translate(2px, -2px);
 }
 
@@ -745,11 +805,6 @@
     gap: 70px;
   }
 
-
-  /*
-    Disable sticky behaviour once the
-    layout becomes a single column.
-  */
 
   .feed-page__sidebar {
     position: static;
@@ -886,10 +941,6 @@
   }
 
 
-  /*
-    Smaller mobile attachments.
-  */
-
   .feed-page__post-image,
   .feed-page__post-video {
     width: min(330px, 100%);
@@ -918,6 +969,19 @@
   }
 
 
+  .feed-page__post-view a {
+    gap: 9px;
+  }
+
+
+  .feed-page__post-view a svg {
+    width: 14px;
+    height: 14px;
+
+    flex-basis: 14px;
+  }
+
+
   .feed-page__actions {
     gap: 17px;
     margin-top: 24px;
@@ -934,9 +998,13 @@
   }
 
 
-  /*
-    Sidebar becomes normal flow on mobile.
-  */
+  .feed-page__actions button svg {
+    width: 13px;
+    height: 13px;
+
+    flex-basis: 13px;
+  }
+
 
   .feed-page__sidebar {
     display: block;
@@ -967,6 +1035,14 @@
 
   .feed-page__sidebar-card p {
     max-width: 420px;
+  }
+
+
+  .feed-page__social-list a svg {
+    width: 13px;
+    height: 13px;
+
+    flex-basis: 13px;
   }
 
 }
@@ -1041,9 +1117,11 @@
   .feed-page__post-title-link h2,
   .feed-page__post-image img,
   .feed-page__post-view a,
+  .feed-page__post-view a svg,
   .feed-page__actions button,
+  .feed-page__actions button svg,
   .feed-page__social-list a,
-  .feed-page__social-list a span {
+  .feed-page__social-list a svg {
     transition: none;
   }
 

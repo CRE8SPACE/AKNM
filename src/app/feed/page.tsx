@@ -48,6 +48,82 @@ type FeedPost = {
 
 
 /* =========================================================
+   ICONS
+   ========================================================= */
+
+function ArrowIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className="feed-page__arrow-icon"
+    >
+      <path
+        d="M5 12h13"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="m13 6 6 6-6 6"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+
+function ExternalArrowIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className="feed-page__arrow-icon"
+    >
+      <path
+        d="M7 17 17 7"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M9 7h8v8"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+
+function VideoPlayIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className="feed-page__video-play-icon"
+    >
+      <path
+        d="M9 6.5v11L18 12z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+
+/* =========================================================
    PAGE
    ========================================================= */
 
@@ -792,7 +868,7 @@ export default async function FeedPage() {
                               <span
                                 className="feed-page__video-play"
                               >
-                                ▶
+                                <VideoPlayIcon />
                               </span>
 
                             </div>
@@ -839,7 +915,7 @@ export default async function FeedPage() {
                               <span
                                 className="feed-page__video-play"
                               >
-                                ▶
+                                <VideoPlayIcon />
                               </span>
 
                             </div>
@@ -867,7 +943,7 @@ export default async function FeedPage() {
                           View post
 
                           <span>
-                            →
+                            <ArrowIcon />
                           </span>
 
                         </Link>
@@ -922,7 +998,7 @@ export default async function FeedPage() {
                         >
 
                           <span>
-                            ↗
+                            <ExternalArrowIcon />
                           </span>
 
                           Share
@@ -1033,25 +1109,37 @@ export default async function FeedPage() {
 
                     <a href="#">
                       Instagram
-                      <span>↗</span>
+
+                      <span>
+                        <ExternalArrowIcon />
+                      </span>
                     </a>
 
 
                     <a href="#">
                       YouTube
-                      <span>↗</span>
+
+                      <span>
+                        <ExternalArrowIcon />
+                      </span>
                     </a>
 
 
                     <a href="#">
                       X
-                      <span>↗</span>
+
+                      <span>
+                        <ExternalArrowIcon />
+                      </span>
                     </a>
 
 
                     <a href="#">
                       LinkedIn
-                      <span>↗</span>
+
+                      <span>
+                        <ExternalArrowIcon />
+                      </span>
                     </a>
 
                   </div>

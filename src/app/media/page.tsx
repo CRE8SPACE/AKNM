@@ -13,38 +13,23 @@ import "./media.css";
    ========================================================= */
 
 type MediaCategory = {
-
   id: string;
-
   name: string;
-
   slug: string;
-
 };
 
 
 type VideoMedia = {
-
   id: string;
-
   title: string | null;
-
   description: string | null;
-
   media_type: "video";
-
   public_url: string | null;
-
   thumbnail_url: string | null;
-
   mime_type: string | null;
-
   duration_seconds: number | null;
-
   created_at: string;
-
   category: MediaCategory | null;
-
 };
 
 
@@ -53,14 +38,63 @@ type VideoMedia = {
    ========================================================= */
 
 type MediaPageProps = {
-
   searchParams: Promise<{
-
     category?: string;
-
   }>;
-
 };
+
+
+/* =========================================================
+   SVG ICONS
+   ========================================================= */
+
+function ArrowIcon() {
+  return (
+    <svg
+      className="media-page__arrow-icon"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        d="M3 13L13 3"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M5 3H13V11"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+
+function PlayIcon() {
+  return (
+    <svg
+      className="media-page__play-icon"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        d="M9 6.5L17 12L9 17.5V6.5Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
 
 
 /* =========================================================
@@ -75,9 +109,7 @@ function formatDate(
     "en",
     {
       day: "2-digit",
-
       month: "short",
-
       year: "numeric",
     }
   )
@@ -380,14 +412,6 @@ export default async function MediaPage({
      FEATURED VIDEO
      ======================================================= */
 
-  /*
-   * The first item is the newest video because
-   * the query is ordered newest → oldest.
-   *
-   * When a category is selected, this therefore becomes
-   * the newest video belonging to that category.
-   */
-
   const featuredVideo =
     filteredVideos.length >
     0
@@ -646,8 +670,11 @@ export default async function MediaPage({
 
                   View all
 
-                  <span>
-                    ↗
+                  <span
+                    className="media-page__inline-arrow"
+                    aria-hidden="true"
+                  >
+                    <ArrowIcon />
                   </span>
 
                 </Link>
@@ -778,8 +805,9 @@ export default async function MediaPage({
 
                     <span
                       className="media-page__play"
+                      aria-hidden="true"
                     >
-                      ▶
+                      <PlayIcon />
                     </span>
 
                   </div>
@@ -841,8 +869,11 @@ export default async function MediaPage({
 
                       Watch video
 
-                      <span>
-                        ↗
+                      <span
+                        className="media-page__inline-arrow"
+                        aria-hidden="true"
+                      >
+                        <ArrowIcon />
                       </span>
 
                     </span>
@@ -1007,8 +1038,9 @@ export default async function MediaPage({
                               media-page__play
                               media-page__play--small
                             "
+                            aria-hidden="true"
                           >
-                            ▶
+                            <PlayIcon />
                           </span>
 
                         </div>
@@ -1070,8 +1102,9 @@ export default async function MediaPage({
 
                           <span
                             className="media-page__card-arrow"
+                            aria-hidden="true"
                           >
-                            ↗
+                            <ArrowIcon />
                           </span>
 
                         </div>
@@ -1139,8 +1172,11 @@ export default async function MediaPage({
 
                     View all videos
 
-                    <span>
-                      ↗
+                    <span
+                      className="media-page__inline-arrow"
+                      aria-hidden="true"
+                    >
+                      <ArrowIcon />
                     </span>
 
                   </Link>

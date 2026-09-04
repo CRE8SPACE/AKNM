@@ -13,6 +13,53 @@ import "./book-detail.css";
 
 
 /* =========================================================
+   ICONS
+   ========================================================= */
+
+/**
+ * AKNM.PRO standard ArrowUpRight icon.
+ *
+ * IMPORTANT:
+ * This is the same arrow SVG used throughout the
+ * AKNM.PRO interface.
+ *
+ * Do not replace with:
+ * - Unicode arrows
+ * - emoji arrows
+ * - text characters
+ * - CSS-drawn arrows
+ */
+function ArrowUpRightIcon() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      aria-hidden="true"
+      focusable="false"
+      className="book-public__arrow-icon"
+    >
+      <path
+        d="M3 13L13 3"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M6 3H13V10"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+
+/* =========================================================
    TYPES
    ========================================================= */
 
@@ -880,7 +927,11 @@ export default async function PublicBookPage({
               href="/books"
               className="book-public-back"
             >
-              ← Back to Books
+              <span>
+                Back to Books
+              </span>
+
+              <ArrowUpRightIcon />
             </Link>
 
 
@@ -1024,11 +1075,13 @@ export default async function PublicBookPage({
                       rel="noreferrer"
                       className="book-public-primary-action"
                     >
-                      Read book
 
                       <span>
-                        ↗
+                        Read book
                       </span>
+
+                      <ArrowUpRightIcon />
+
                     </a>
 
                   )}
@@ -1086,11 +1139,13 @@ export default async function PublicBookPage({
                       download
                       className="book-public-secondary-action"
                     >
-                      Download PDF
 
                       <span>
-                        ↓
+                        Download PDF
                       </span>
+
+                      <ArrowUpRightIcon />
+
                     </a>
 
                   )}
@@ -1518,11 +1573,12 @@ export default async function PublicBookPage({
                               target="_blank"
                               rel="noreferrer"
                             >
-                              Listen
 
                               <span>
-                                ↗
+                                Listen
                               </span>
+
+                              <ArrowUpRightIcon />
 
                             </a>
 
@@ -1670,11 +1726,12 @@ export default async function PublicBookPage({
               <Link
                 href="/books"
               >
-                Explore the library
 
                 <span>
-                  ↗
+                  Explore the library
                 </span>
+
+                <ArrowUpRightIcon />
 
               </Link>
 

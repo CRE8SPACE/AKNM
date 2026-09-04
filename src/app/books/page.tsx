@@ -9,6 +9,53 @@ import "./books.css";
 
 
 /* =========================================================
+   ICONS
+   ========================================================= */
+
+/**
+ * AKNM.PRO standard ArrowUpRight icon.
+ *
+ * IMPORTANT:
+ * This is the same arrow SVG used throughout the
+ * AKNM.PRO interface.
+ *
+ * Do not replace with:
+ * - Unicode arrows
+ * - emoji arrows
+ * - text characters
+ * - CSS-drawn arrows
+ */
+function ArrowUpRightIcon() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      aria-hidden="true"
+      focusable="false"
+      className="books-page__arrow-icon"
+    >
+      <path
+        d="M3 13L13 3"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M6 3H13V10"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+
+/* =========================================================
    TYPES
    ========================================================= */
 
@@ -627,8 +674,10 @@ export default async function BooksPage({
                           View all books
                         </span>
 
-                        <span>
-                          ↗
+                        <span
+                          aria-hidden="true"
+                        >
+                          <ArrowUpRightIcon />
                         </span>
 
                       </Link>
@@ -859,8 +908,10 @@ export default async function BooksPage({
                           </span>
 
 
-                          <span>
-                            ↗
+                          <span
+                            aria-hidden="true"
+                          >
+                            <ArrowUpRightIcon />
                           </span>
 
                         </div>
@@ -1118,8 +1169,10 @@ export default async function BooksPage({
 
                                   Explore
 
-                                  <span>
-                                    ↗
+                                  <span
+                                    aria-hidden="true"
+                                  >
+                                    <ArrowUpRightIcon />
                                   </span>
 
                                 </span>
@@ -1198,8 +1251,10 @@ export default async function BooksPage({
                   </div>
 
 
-                  <span>
-                    ↗
+                  <span
+                    aria-hidden="true"
+                  >
+                    <ArrowUpRightIcon />
                   </span>
 
                 </article>
@@ -1226,8 +1281,10 @@ export default async function BooksPage({
                   </div>
 
 
-                  <span>
-                    ↗
+                  <span
+                    aria-hidden="true"
+                  >
+                    <ArrowUpRightIcon />
                   </span>
 
                 </article>
@@ -1254,8 +1311,10 @@ export default async function BooksPage({
                   </div>
 
 
-                  <span>
-                    ↗
+                  <span
+                    aria-hidden="true"
+                  >
+                    <ArrowUpRightIcon />
                   </span>
 
                 </article>

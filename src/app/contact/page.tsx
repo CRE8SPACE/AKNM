@@ -56,6 +56,41 @@ const defaultSettings: ConnectSettings = {
 };
 
 /* =========================================================
+   SVG ICONS
+   ========================================================= */
+
+function ArrowIcon() {
+  return (
+    <svg
+      className="contact-page__arrow"
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        d="M2.5 11.5L11.5 2.5"
+        stroke="currentColor"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M4 2.5H11.5V10"
+        stroke="currentColor"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+/* =========================================================
    NORMALIZE SETTINGS
    ========================================================= */
 
@@ -140,7 +175,8 @@ export default function ContactPage() {
   const [enquiryTypes, setEnquiryTypes] =
     useState<EnquiryType[]>([]);
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] =
+    useState(true);
 
   const [submitting, setSubmitting] =
     useState(false);
@@ -168,7 +204,7 @@ export default function ContactPage() {
      ======================================================= */
 
   useEffect(() => {
-    loadConnect();
+    void loadConnect();
   }, []);
 
   async function loadConnect() {
@@ -267,6 +303,7 @@ export default function ContactPage() {
       setError(
         "The enquiry form is currently unavailable."
       );
+
       return;
     }
 
@@ -282,7 +319,10 @@ export default function ContactPage() {
     }
 
     if (!email) {
-      setError("Please enter your email address.");
+      setError(
+        "Please enter your email address."
+      );
+
       return;
     }
 
@@ -290,6 +330,7 @@ export default function ContactPage() {
       setError(
         "Please select what your enquiry is about."
       );
+
       return;
     }
 
@@ -509,8 +550,8 @@ export default function ContactPage() {
                         {settings.primary_email}
                       </strong>
 
-                      <span>
-                        ↗
+                      <span className="contact-page__channel-arrow">
+                        <ArrowIcon />
                       </span>
 
                     </a>
@@ -532,8 +573,8 @@ export default function ContactPage() {
                         {settings.business_email}
                       </strong>
 
-                      <span>
-                        ↗
+                      <span className="contact-page__channel-arrow">
+                        <ArrowIcon />
                       </span>
 
                     </a>
@@ -555,8 +596,8 @@ export default function ContactPage() {
                         {settings.phone}
                       </strong>
 
-                      <span>
-                        ↗
+                      <span className="contact-page__channel-arrow">
+                        <ArrowIcon />
                       </span>
 
                     </a>
@@ -583,8 +624,8 @@ export default function ContactPage() {
                         {settings.whatsapp}
                       </strong>
 
-                      <span>
-                        ↗
+                      <span className="contact-page__channel-arrow">
+                        <ArrowIcon />
                       </span>
 
                     </a>
@@ -815,8 +856,8 @@ export default function ContactPage() {
                       </span>
 
                       {!submitting && (
-                        <span>
-                          ↗
+                        <span className="contact-page__submit-arrow">
+                          <ArrowIcon />
                         </span>
                       )}
 
@@ -983,8 +1024,8 @@ export default function ContactPage() {
 
                     {social.name}
 
-                    <span>
-                      ↗
+                    <span className="contact-page__social-arrow">
+                      <ArrowIcon />
                     </span>
 
                   </a>

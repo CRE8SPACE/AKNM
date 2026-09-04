@@ -302,6 +302,18 @@ function CopyIcon() {
   );
 }
 
+function ArrowIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path d="M7 17L17 7" />
+      <path d="M8 7h9v9" />
+    </svg>
+  );
+}
+
 /* =========================================================
    COMPONENT
    ========================================================= */
@@ -1283,7 +1295,7 @@ export default function MusicPage() {
                     Support the artist
 
                     <span>
-                      ↗
+                      <ArrowIcon />
                     </span>
 
                   </button>
@@ -1553,7 +1565,6 @@ export default function MusicPage() {
 
         )}
 
-
         {/* ===============================================
             TRACKS
            =============================================== */}
@@ -1720,7 +1731,7 @@ export default function MusicPage() {
                         aria-label={`View ${track.release.title}`}
                       >
 
-                        ↗
+                        <ArrowIcon />
 
                       </button>
 
@@ -2153,7 +2164,7 @@ export default function MusicPage() {
                     Support this music
 
                     <span>
-                      ↗
+                      <ArrowIcon />
                     </span>
 
                   </button>
@@ -2189,7 +2200,7 @@ export default function MusicPage() {
 
 
                           <span>
-                            ↗
+                            <ArrowIcon />
                           </span>
 
                         </a>
@@ -2312,7 +2323,7 @@ export default function MusicPage() {
                   Support the artist
 
                   <span>
-                    ↗
+                    <ArrowIcon />
                   </span>
 
                 </button>
@@ -2401,7 +2412,7 @@ export default function MusicPage() {
                 Support the vision
 
                 <span>
-                  ↗
+                  <ArrowIcon />
                 </span>
 
               </button>
@@ -2460,7 +2471,7 @@ export default function MusicPage() {
                 Support Dom Cypherz
 
                 <span>
-                  ↗
+                  <ArrowIcon />
                 </span>
 
               </button>
@@ -2530,7 +2541,7 @@ export default function MusicPage() {
 
 
                         <span>
-                          ↗
+                          <ArrowIcon />
                         </span>
 
                       </a>

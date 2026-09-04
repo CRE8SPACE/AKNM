@@ -152,11 +152,6 @@
   color: rgba(255, 255, 255, 0.36);
 }
 
-.live-page__player.is-live + .live-page__player-footer
-.live-page__player-disabled {
-  color: #04f751;
-}
-
 
 /* =========================================================
    PLAYER
@@ -365,6 +360,48 @@
 
 
 /* =========================================================
+   SVG ICONS
+   ========================================================= */
+
+.live-page__arrow-icon {
+  display: block;
+
+  width: 13px;
+  height: 13px;
+
+  flex: 0 0 13px;
+
+  overflow: visible;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 1.5;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transition:
+    transform 160ms ease,
+    color 160ms ease;
+}
+
+.live-page__play-icon {
+  display: block;
+
+  width: 11px;
+  height: 11px;
+
+  flex: 0 0 11px;
+
+  margin-left: 2px;
+
+  fill: currentColor;
+}
+
+
+/* =========================================================
    PLAYER CONTROLS
    ========================================================= */
 
@@ -420,15 +457,18 @@
     gap 160ms ease;
 }
 
-.live-page__watch-live span {
+.live-page__watch-live .live-page__arrow-icon {
   color: #04f751;
-
-  font-size: 14px;
 }
 
 .live-page__watch-live:hover {
   gap: 13px;
+
   color: #04f751;
+}
+
+.live-page__watch-live:hover .live-page__arrow-icon {
+  transform: translate(2px, -2px);
 }
 
 .live-page__progress {
@@ -575,15 +615,18 @@
     gap 160ms ease;
 }
 
-.live-page__player-footer > button span {
+.live-page__player-footer > button .live-page__arrow-icon {
   color: #00aeef;
-
-  font-size: 13px;
 }
 
 .live-page__player-footer > button:hover {
   color: #00aeef;
+
   gap: 12px;
+}
+
+.live-page__player-footer > button:hover .live-page__arrow-icon {
+  transform: translate(2px, -2px);
 }
 
 .live-page__player-footer-empty {
@@ -662,15 +705,18 @@
     gap 160ms ease;
 }
 
-.live-page__section-heading > a span {
+.live-page__section-heading > a .live-page__arrow-icon {
   color: #00aeef;
-
-  font-size: 14px;
 }
 
 .live-page__section-heading > a:hover {
   color: #00aeef;
+
   gap: 13px;
+}
+
+.live-page__section-heading > a:hover .live-page__arrow-icon {
+  transform: translate(2px, -2px);
 }
 
 
@@ -787,15 +833,18 @@
     gap 160ms ease;
 }
 
-.live-page__remind span {
+.live-page__remind .live-page__arrow-icon {
   color: #00aeef;
-
-  font-size: 13px;
 }
 
 .live-page__remind:hover {
   color: #00aeef;
+
   gap: 12px;
+}
+
+.live-page__remind:hover .live-page__arrow-icon {
+  transform: translate(2px, -2px);
 }
 
 
@@ -1027,40 +1076,68 @@
   letter-spacing: 0.20em;
 }
 
+
+/* =========================================================
+   RECORDING PLAY BUTTON
+   ========================================================= */
+
 .live-page__recorded-visual > a {
   position: absolute;
 
   left: 18px;
   bottom: 17px;
 
-  width: 38px;
-  height: 38px;
+  z-index: 3;
+
+  width: 42px;
+  height: 42px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.30);
   border-radius: 50%;
 
-  background: rgba(0, 0, 0, 0.60);
-  color: #fff;
+  background: rgba(0, 0, 0, 0.64);
 
-  font-size: 10px;
+  color: #fff;
 
   text-decoration: none;
 
+  backdrop-filter: blur(7px);
+
   transition:
-    background-color 160ms ease,
-    border-color 160ms ease,
-    color 160ms ease;
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.live-page__recorded-visual > a .live-page__play-icon {
+  color: currentColor;
+
+  transform: translateX(1px);
 }
 
 .live-page__recorded-visual > a:hover {
   border-color: #00aeef;
+
   background: #00aeef;
+
   color: #000;
+
+  transform: scale(1.06);
 }
+
+.live-page__recorded-visual > a:active {
+  transform: scale(0.98);
+}
+
+
+/* =========================================================
+   RECORDED BODY
+   ========================================================= */
 
 .live-page__recorded-body {
   padding: 21px;
@@ -1132,15 +1209,18 @@
     gap 160ms ease;
 }
 
-.live-page__recorded-body > a span {
+.live-page__recorded-body > a .live-page__arrow-icon {
   color: #00aeef;
-
-  font-size: 13px;
 }
 
 .live-page__recorded-body > a:hover {
   color: #00aeef;
+
   gap: 13px;
+}
+
+.live-page__recorded-body > a:hover .live-page__arrow-icon {
+  transform: translate(2px, -2px);
 }
 
 
@@ -1214,15 +1294,18 @@
     gap 160ms ease;
 }
 
-.live-page__guest-content > a span {
+.live-page__guest-content > a .live-page__arrow-icon {
   color: #00aeef;
-
-  font-size: 14px;
 }
 
 .live-page__guest-content > a:hover {
   color: #00aeef;
+
   gap: 14px;
+}
+
+.live-page__guest-content > a:hover .live-page__arrow-icon {
+  transform: translate(2px, -2px);
 }
 
 
@@ -1428,6 +1511,26 @@
 
 
   /* -------------------------------------------------------
+     SVG ICONS
+     ------------------------------------------------------- */
+
+  .live-page__arrow-icon {
+    width: 12px;
+    height: 12px;
+
+    flex-basis: 12px;
+  }
+
+
+  .live-page__play-icon {
+    width: 10px;
+    height: 10px;
+
+    flex-basis: 10px;
+  }
+
+
+  /* -------------------------------------------------------
      SECTION HEADINGS
      ------------------------------------------------------- */
 
@@ -1550,6 +1653,15 @@
   }
 
 
+  .live-page__recorded-visual > a {
+    left: 15px;
+    bottom: 14px;
+
+    width: 40px;
+    height: 40px;
+  }
+
+
   /* -------------------------------------------------------
      GUEST
      ------------------------------------------------------- */
@@ -1635,6 +1747,12 @@
     margin-bottom: 20px;
   }
 
+
+  .live-page__recorded-visual > a {
+    width: 38px;
+    height: 38px;
+  }
+
 }
 
 
@@ -1645,14 +1763,20 @@
 @media (prefers-reduced-motion: reduce) {
 
   .live-page__watch-live,
+  .live-page__watch-live .live-page__arrow-icon,
   .live-page__player-footer > button,
+  .live-page__player-footer > button .live-page__arrow-icon,
   .live-page__remind,
+  .live-page__remind .live-page__arrow-icon,
   .live-page__section-heading > a,
+  .live-page__section-heading > a .live-page__arrow-icon,
   .live-page__recorded-card,
   .live-page__recorded-visual img,
   .live-page__recorded-visual > a,
-  .live-page__guest-content > a {
+  .live-page__recorded-body > a,
+  .live-page__recorded-body > a .live-page__arrow-icon,
+  .live-page__guest-content > a,
+  .live-page__guest-content > a .live-page__arrow-icon {
     transition: none;
   }
-
 }

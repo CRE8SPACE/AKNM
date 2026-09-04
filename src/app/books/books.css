@@ -4,12 +4,218 @@
 
 
 /* =========================================================
+   HEADER SVG
+   ========================================================= */
+
+/*
+ * Header contains the main AKNM.PRO SVG mark.
+ *
+ * IMPORTANT:
+ * These rules intentionally target SVGs inside <header>
+ * only. They do NOT affect the ArrowUpRightIcon used
+ * throughout the Books page.
+ */
+
+header svg {
+  display: block;
+
+  width: auto;
+  height: 28px;
+
+  max-width: 100%;
+
+  color: #fff;
+
+  fill: currentColor;
+
+  stroke: currentColor;
+
+  overflow: visible;
+
+  flex-shrink: 0;
+
+  transition:
+    color 180ms ease,
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+
+header svg path,
+header svg circle,
+header svg rect,
+header svg polygon,
+header svg polyline,
+header svg line,
+header svg ellipse {
+  transition:
+    fill 180ms ease,
+    stroke 180ms ease,
+    opacity 180ms ease;
+}
+
+
+/*
+ * Allow the Header SVG to inherit the Header's
+ * current visual color.
+ */
+
+header svg [fill="white"],
+header svg [fill="#fff"],
+header svg [fill="#FFFFFF"],
+header svg [fill="#ffffff"] {
+  fill: currentColor;
+}
+
+
+header svg [stroke="white"],
+header svg [stroke="#fff"],
+header svg [stroke="#FFFFFF"],
+header svg [stroke="#ffffff"] {
+  stroke: currentColor;
+}
+
+
+/*
+ * Header hover.
+ */
+
+header a:hover svg {
+  color: #00aeef;
+
+  opacity: 0.96;
+
+  transform: translateY(-1px);
+}
+
+
+header svg:hover {
+  color: #00aeef;
+}
+
+
+/*
+ * Preserve Header SVG proportions.
+ */
+
+header svg[width],
+header svg[height] {
+  max-width: 100%;
+
+  height: auto;
+}
+
+
+/* =========================================================
+   BOOKS PAGE — ARROW SVG
+   ========================================================= */
+
+/*
+ * AKNM.PRO standard ArrowUpRight icon.
+ *
+ * This matches:
+ *
+ * <svg
+ *   viewBox="0 0 16 16"
+ *   aria-hidden="true"
+ *   focusable="false"
+ *   className="books-page__arrow-icon"
+ * >
+ *
+ * The SVG uses currentColor, so the parent controls
+ * its visual color.
+ */
+
+.books-page__arrow-icon {
+  display: block;
+
+  width: 16px;
+  height: 16px;
+
+  min-width: 16px;
+  min-height: 16px;
+
+  flex: 0 0 16px;
+
+  color: currentColor;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  overflow: visible;
+
+  pointer-events: none;
+
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+
+/*
+ * The ArrowUpRight component contains two paths.
+ *
+ * Explicitly preserve their stroke presentation.
+ */
+
+.books-page__arrow-icon path {
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 1.5;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+}
+
+
+/*
+ * Arrow movement when its containing interactive
+ * element is hovered.
+ */
+
+.books-page__featured-card:hover
+.books-page__arrow-icon,
+
+.books-page__book:hover
+.books-page__arrow-icon {
+  transform: translate(2px, -2px);
+}
+
+
+/*
+ * Writing-list arrows.
+ */
+
+.books-page__writing-list
+article:hover
+.books-page__arrow-icon {
+  transform: translate(2px, -2px);
+}
+
+
+/*
+ * Empty-library action arrow.
+ */
+
+.books-page__featured-actions:hover
+.books-page__arrow-icon {
+  transform: translate(2px, -2px);
+}
+
+
+/* =========================================================
    PAGE
    ========================================================= */
 
 .books-page {
   min-height: 100vh;
+
   background: #000;
+
   color: rgba(255, 255, 255, 0.94);
 }
 
@@ -42,7 +248,9 @@
 
 .books-page__eyebrow {
   display: flex;
+
   align-items: center;
+
   gap: 14px;
 
   margin-bottom: 70px;
@@ -50,16 +258,20 @@
   color: rgba(255, 255, 255, 0.46);
 
   font-size: 10px;
+
   font-weight: 600;
+
   line-height: 1;
 
   letter-spacing: 0.18em;
+
   text-transform: uppercase;
 }
 
 
 .books-page__line {
   width: 34px;
+
   height: 1px;
 
   background: rgba(255, 255, 255, 0.35);
@@ -125,7 +337,7 @@
 
 
 /* =========================================================
-   FILTERS
+   FILTERS / EXPLORE
    ========================================================= */
 
 .books-page__filters {
@@ -452,7 +664,7 @@
 
 
 .books-page__featured-content
-  > .books-page__book-meta {
+> .books-page__book-meta {
   margin-top: 44px;
 
   margin-bottom: 0;
@@ -492,6 +704,8 @@
 
   font-weight: 600;
 
+  line-height: 1;
+
   letter-spacing: 0.14em;
 
   text-transform: uppercase;
@@ -502,8 +716,29 @@
 
 
 .books-page__featured-card:hover
-  .books-page__featured-actions {
+.books-page__featured-actions {
   color: #00aeef;
+}
+
+
+/*
+ * The arrow wrapper is deliberately kept as a flex item.
+ * This prevents the SVG from being affected by the text
+ * styling of the action itself.
+ */
+
+.books-page__featured-actions
+> span:last-child {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 16px;
+  height: 16px;
+
+  flex: 0 0 16px;
 }
 
 
@@ -533,7 +768,7 @@
 
 
 .books-page__section-heading > div
-  > span {
+> span {
   display: block;
 
   margin-bottom: 14px;
@@ -570,7 +805,7 @@
 
 
 .books-page__section-heading
-  > span:last-child {
+> span:last-child {
   color: rgba(255, 255, 255, 0.28);
 
   font-size: 10px;
@@ -651,6 +886,7 @@
   position: relative;
 
   width: 190px;
+
   aspect-ratio: 2 / 3;
 
   overflow: hidden;
@@ -673,7 +909,7 @@
 
 
 .books-page__small-cover
-  > span {
+> span {
   position: absolute;
 
   top: 18px;
@@ -690,7 +926,7 @@
 
 
 .books-page__small-cover
-  > strong {
+> strong {
   position: absolute;
 
   left: 18px;
@@ -767,7 +1003,7 @@
    ========================================================= */
 
 .books-page__book-body
-  .books-page__book-meta {
+.books-page__book-meta {
   margin-top: 28px;
 
   margin-bottom: 0;
@@ -780,8 +1016,8 @@
 
 
 .books-page__book-body
-  .books-page__book-meta
-  span {
+.books-page__book-meta
+span {
   font-size: 8px;
 
   letter-spacing: 0.11em;
@@ -792,8 +1028,23 @@
    BOOK EXPLORE
    ========================================================= */
 
+/*
+ * JSX:
+ *
+ * <span>
+ *   Explore
+ *
+ *   <span aria-hidden="true">
+ *     <ArrowUpRightIcon />
+ *   </span>
+ * </span>
+ *
+ * This selector therefore targets the OUTER Explore
+ * element only.
+ */
+
 .books-page__book-body
-  > span:last-child {
+> span:last-child {
   display: flex;
 
   align-items: center;
@@ -812,6 +1063,8 @@
 
   font-weight: 600;
 
+  line-height: 1;
+
   letter-spacing: 0.14em;
 
   text-transform: uppercase;
@@ -821,20 +1074,38 @@
 }
 
 
-.books-page__book-body
-  > span:last-child
-  > span {
-  font-size: 15px;
+/*
+ * Arrow wrapper inside Explore.
+ *
+ * Do NOT use a generic font-size selector here because
+ * the child is an SVG, not text.
+ */
 
-  line-height: 1;
+.books-page__book-body
+> span:last-child
+> span {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 16px;
+  height: 16px;
+
+  flex: 0 0 16px;
+
+  font-size: 0;
+
+  line-height: 0;
 
   letter-spacing: 0;
 }
 
 
 .books-page__book:hover
-  .books-page__book-body
-  > span:last-child {
+.books-page__book-body
+> span:last-child {
   color: #00aeef;
 }
 
@@ -844,30 +1115,21 @@
    ========================================================= */
 
 .books-page__book-meta
-  .books-page__hardcopy {
+.books-page__hardcopy {
   color: #04f751;
 }
 
 
 .books-page__book-meta
-  span:nth-child(3) {
+span:nth-child(3) {
   transition:
     color 160ms ease;
 }
 
 
-/*
- * Hardcopy status is displayed through
- * the existing metadata structure.
- *
- * Green = available
- * Blue = preorder
- * Dim = unavailable
- */
-
 .books-page__featured-card
-  .books-page__book-meta
-  span:last-child {
+.books-page__book-meta
+span:last-child {
   color: rgba(255, 255, 255, 0.42);
 }
 
@@ -877,14 +1139,14 @@
    ========================================================= */
 
 .books-page__featured
-  .books-page__featured-card
-  .books-page__featured-content {
+.books-page__featured-card
+.books-page__featured-content {
   min-height: 420px;
 }
 
 
 .books-page__featured-card
-  h2 {
+h2 {
   max-width: 760px;
 }
 
@@ -907,7 +1169,7 @@
 
 
 .books-page__writing-intro
-  > span {
+> span {
   display: block;
 
   margin-bottom: 20px;
@@ -988,8 +1250,8 @@
 
 
 .books-page__writing-list
-  article
-  > span:first-child {
+article
+> span:first-child {
   color: rgba(255, 255, 255, 0.26);
 
   font-size: 9px;
@@ -1001,8 +1263,8 @@
 
 
 .books-page__writing-list
-  article
-  small {
+article
+small {
   display: block;
 
   margin-bottom: 8px;
@@ -1018,8 +1280,8 @@
 
 
 .books-page__writing-list
-  article
-  h3 {
+article
+h3 {
   margin: 0;
 
   color: rgba(255, 255, 255, 0.82);
@@ -1035,24 +1297,55 @@
 }
 
 
+/*
+ * The final span contains the SVG wrapper.
+ */
+
 .books-page__writing-list
-  article
-  > span:last-child {
+article
+> span:last-child {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 16px;
+  height: 16px;
+
   color: rgba(255, 255, 255, 0.30);
 
-  font-size: 16px;
+  font-size: 0;
+
+  line-height: 0;
 
   transition:
     color 160ms ease;
 }
 
 
+/*
+ * Because the final article span contains the SVG,
+ * explicitly prevent text metrics from interfering.
+ */
+
 .books-page__writing-list
-  article:hover
-  h3,
+article
+> span:last-child
+.books-page__arrow-icon {
+  width: 16px;
+
+  height: 16px;
+}
+
+
 .books-page__writing-list
-  article:hover
-  > span:last-child {
+article:hover
+h3,
+
+.books-page__writing-list
+article:hover
+> span:last-child {
   color: #00aeef;
 }
 
@@ -1083,8 +1376,8 @@
 
 
 .books-page__publish
-  > div
-  > span {
+> div
+> span {
   display: block;
 
   margin-bottom: 20px;
@@ -1154,6 +1447,11 @@
   max-width: 1150px
 ) {
 
+  header svg {
+    height: 27px;
+  }
+
+
   .books-page__container {
     width: min(
       100%,
@@ -1200,6 +1498,11 @@
 @media (
   max-width: 900px
 ) {
+
+  header svg {
+    height: 26px;
+  }
+
 
   .books-page__hero {
     padding-top: 120px;
@@ -1273,6 +1576,11 @@
 @media (
   max-width: 700px
 ) {
+
+  header svg {
+    height: 24px;
+  }
+
 
   .books-page__container {
     width: calc(100% - 40px);
@@ -1394,6 +1702,11 @@
   max-width: 600px
 ) {
 
+  header svg {
+    height: 23px;
+  }
+
+
   .books-page__featured-card {
     min-height: 0;
   }
@@ -1438,6 +1751,40 @@
     font-size: 56px;
   }
 
+
+  /*
+   * Keep the standard arrow visually consistent on mobile.
+   */
+
+  .books-page__arrow-icon {
+    width: 15px;
+
+    height: 15px;
+
+    min-width: 15px;
+    min-height: 15px;
+
+    flex-basis: 15px;
+  }
+
+
+  .books-page__featured-actions
+  > span:last-child,
+
+  .books-page__book-body
+  > span:last-child
+  > span,
+
+  .books-page__writing-list
+  article
+  > span:last-child {
+    width: 15px;
+
+    height: 15px;
+
+    flex-basis: 15px;
+  }
+
 }
 
 
@@ -1448,6 +1795,11 @@
 @media (
   max-width: 480px
 ) {
+
+  header svg {
+    height: 21px;
+  }
+
 
   .books-page__container {
     width: calc(100% - 32px);
@@ -1475,7 +1827,7 @@
 
 
   .books-page__featured-content
-    > .books-page__book-meta {
+  > .books-page__book-meta {
     margin-top: 34px;
   }
 
@@ -1512,13 +1864,13 @@
 
 
   .books-page__book-body
-    .books-page__book-meta {
+  .books-page__book-meta {
     margin-top: 20px;
   }
 
 
   .books-page__writing-list
-    article {
+  article {
     grid-template-columns:
       34px
       minmax(0, 1fr)
@@ -1531,8 +1883,8 @@
 
 
   .books-page__writing-list
-    article
-    h3 {
+  article
+  h3 {
     font-size: 17px;
   }
 
@@ -1556,6 +1908,11 @@
 @media (
   max-width: 380px
 ) {
+
+  header svg {
+    height: 20px;
+  }
+
 
   .books-page__hero h1 {
     font-size: 51px;
@@ -1595,6 +1952,18 @@
 @media (
   prefers-reduced-motion: reduce
 ) {
+
+  header svg,
+  header svg path,
+  header svg circle,
+  header svg rect,
+  header svg polygon,
+  header svg polyline,
+  header svg line,
+  header svg ellipse,
+
+  .books-page__arrow-icon,
+  .books-page__arrow-icon path,
 
   .books-page *,
   .books-page *::before,

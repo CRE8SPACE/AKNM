@@ -501,17 +501,57 @@
 }
 
 
-.about-page__text-link {
+/* =========================================================
+   SHARED SVG ARROW
+   ========================================================= */
+
+.about-page__arrow-icon {
+  display: block;
+
+  width: 14px;
+  height: 14px;
+
+  flex: 0 0 14px;
+
+  overflow: visible;
+
+  color: #00aeef;
+
+  transition:
+    transform 180ms ease,
+    color 180ms ease;
+}
+
+
+/* =========================================================
+   TEXT CTA LINKS
+   ========================================================= */
+
+.about-page__text-link,
+.about-page__platform-link,
+.about-page__closing-link {
   display: inline-flex;
 
   align-items: center;
+  justify-content: center;
 
   gap: 10px;
 
+  min-height: 38px;
+
   margin-top: 15px;
 
+  padding: 0 16px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.14);
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
   color:
-    rgba(255, 255, 255, 0.53);
+    rgba(255, 255, 255, 0.58);
 
   font-size: 8px;
 
@@ -526,20 +566,48 @@
   text-decoration: none;
 
   transition:
-    color 160ms ease,
-    gap 160ms ease;
+    color 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    gap 180ms ease,
+    transform 180ms ease;
 }
 
 
-.about-page__text-link span {
+.about-page__text-link > span,
+.about-page__platform-link > span,
+.about-page__closing-link > span {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 14px;
+  height: 14px;
+
   color: #00aeef;
-
-  font-size: 14px;
 }
 
 
-.about-page__text-link:hover {
+.about-page__text-link:hover,
+.about-page__platform-link:hover,
+.about-page__closing-link:hover {
   gap: 14px;
+
+  border-color:
+    rgba(0, 174, 239, 0.38);
+
+  background:
+    rgba(0, 174, 239, 0.045);
+
+  color: #00aeef;
+}
+
+
+.about-page__text-link:hover .about-page__arrow-icon,
+.about-page__platform-link:hover .about-page__arrow-icon,
+.about-page__closing-link:hover .about-page__arrow-icon {
+  transform: translate(2px, -2px);
 
   color: #00aeef;
 }
@@ -629,46 +697,7 @@
 
 
 .about-page__platform-link {
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 10px;
-
   margin-top: 31px;
-
-  color:
-    rgba(255, 255, 255, 0.56);
-
-  font-size: 8px;
-
-  font-weight: 600;
-
-  line-height: 1;
-
-  letter-spacing: 0.11em;
-
-  text-transform: uppercase;
-
-  text-decoration: none;
-
-  transition:
-    color 160ms ease,
-    gap 160ms ease;
-}
-
-
-.about-page__platform-link span {
-  color: #00aeef;
-
-  font-size: 14px;
-}
-
-
-.about-page__platform-link:hover {
-  gap: 14px;
-
-  color: #00aeef;
 }
 
 
@@ -952,12 +981,36 @@
 }
 
 
+/* =========================================================
+   MEDIA SVG ARROWS
+   ========================================================= */
+
 .about-page__media-links a > span:last-child {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  width: 100%;
+
   color: #00aeef;
+}
 
-  font-size: 14px;
 
-  text-align: right;
+.about-page__media-links a .about-page__arrow-icon {
+  width: 15px;
+  height: 15px;
+
+  transition:
+    transform 180ms ease,
+    color 180ms ease;
+}
+
+
+.about-page__media-links a:hover .about-page__arrow-icon {
+  transform: translate(3px, -3px);
+
+  color: #00aeef;
 }
 
 
@@ -1185,46 +1238,7 @@
 
 
 .about-page__closing-link {
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 10px;
-
   margin-top: 32px;
-
-  color:
-    rgba(255, 255, 255, 0.57);
-
-  font-size: 8px;
-
-  font-weight: 600;
-
-  line-height: 1;
-
-  letter-spacing: 0.11em;
-
-  text-transform: uppercase;
-
-  text-decoration: none;
-
-  transition:
-    color 160ms ease,
-    gap 160ms ease;
-}
-
-
-.about-page__closing-link span {
-  color: #00aeef;
-
-  font-size: 14px;
-}
-
-
-.about-page__closing-link:hover {
-  gap: 14px;
-
-  color: #00aeef;
 }
 
 
@@ -1539,6 +1553,33 @@
   }
 
 
+  /* -------------------------------------------------------
+     MOBILE CTA
+     ------------------------------------------------------- */
+
+  .about-page__text-link,
+  .about-page__platform-link,
+  .about-page__closing-link {
+    min-height: 40px;
+
+    padding: 0 14px;
+
+    gap: 9px;
+
+    font-size: 7px;
+
+    letter-spacing: 0.10em;
+  }
+
+
+  .about-page__arrow-icon {
+    width: 13px;
+    height: 13px;
+
+    flex-basis: 13px;
+  }
+
+
   .about-page__creative-grid > div {
     min-height: 225px;
 
@@ -1602,6 +1643,12 @@
 
   .about-page__media-links a strong {
     font-size: 9px;
+  }
+
+
+  .about-page__media-links a .about-page__arrow-icon {
+    width: 13px;
+    height: 13px;
   }
 
 
@@ -1719,6 +1766,17 @@
     font-size: 53px;
   }
 
+
+  .about-page__text-link,
+  .about-page__platform-link,
+  .about-page__closing-link {
+    min-height: 38px;
+
+    padding: 0 12px;
+
+    font-size: 6.5px;
+  }
+
 }
 
 
@@ -1731,7 +1789,8 @@
   .about-page__text-link,
   .about-page__platform-link,
   .about-page__media-links a,
-  .about-page__closing-link {
+  .about-page__closing-link,
+  .about-page__arrow-icon {
     transition: none;
   }
 

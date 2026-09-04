@@ -84,6 +84,88 @@ type MediaItem = {
 
 
 /* =========================================================
+   ICONS
+   ========================================================= */
+
+function ArrowIcon({
+  direction = "right",
+}: {
+  direction?: "right" | "up-right";
+}) {
+  if (direction === "up-right") {
+    return (
+      <svg
+        className="live-replay-icon live-replay-icon--arrow"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path
+          d="M5 19L19 5"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+        />
+
+        <path
+          d="M9 5H19V15"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.7"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+
+  return (
+    <svg
+      className="live-replay-icon live-replay-icon--arrow"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        d="M5 12H18"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M13 7L18 12L13 17"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+
+function PlayIcon() {
+  return (
+    <svg
+      className="live-replay-icon live-replay-icon--play"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        d="M8 5.5L18 12L8 18.5V5.5Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+
+/* =========================================================
    HELPERS
    ========================================================= */
 
@@ -328,8 +410,6 @@ export default function LiveReplayPage() {
         /*
          * ===================================================
          * LOAD ONLY PUBLISHED SESSIONS
-         *
-         * This is important.
          *
          * A guest should never be able to open a draft,
          * scheduled, live, ended or archived session through
@@ -672,7 +752,11 @@ export default function LiveReplayPage() {
             href="/live"
             className="live-replay-button"
           >
-            Explore AKNM Live
+            <span>
+              Explore AKNM Live
+            </span>
+
+            <ArrowIcon />
           </Link>
 
         </div>
@@ -1070,12 +1154,19 @@ export default function LiveReplayPage() {
               }
             >
 
-              {copied
-                ? "Link copied"
-                : "Share replay"}
+              <span>
+                {copied
+                  ? "Link copied"
+                  : "Share replay"}
+              </span>
 
-              <strong>
-                ↗
+              <strong
+                className="live-replay-share__icon"
+                aria-hidden="true"
+              >
+                <ArrowIcon
+                  direction="up-right"
+                />
               </strong>
 
             </button>
@@ -1233,7 +1324,13 @@ export default function LiveReplayPage() {
           href="/live"
           className="live-replay-footer__link"
         >
-          More from AKNM Live →
+
+          <span>
+            More from AKNM Live
+          </span>
+
+          <ArrowIcon />
+
         </Link>
 
       </footer>
