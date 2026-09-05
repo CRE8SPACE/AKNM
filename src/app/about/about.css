@@ -1,6 +1,6 @@
 /* =========================================================
    AKNM.PRO — ABOUT
-   Editorial / Personal / Founder
+   Editorial / Personal / Founder / Entrepreneur
    ========================================================= */
 
 .about-page {
@@ -10,6 +10,8 @@
   background: #000;
 
   color: rgba(255, 255, 255, 0.92);
+
+  overflow: hidden;
 }
 
 
@@ -36,7 +38,9 @@
 
   gap: 30px;
 
-  margin-bottom: 52px;
+  width: 100%;
+
+  margin-bottom: 58px;
 
   padding-bottom: 18px;
 
@@ -47,6 +51,8 @@
 
 
 .about-page__section-heading span {
+  display: block;
+
   color:
     rgba(255, 255, 255, 0.24);
 
@@ -68,441 +74,7 @@
 
 
 /* =========================================================
-   HERO
-   ========================================================= */
-
-.about-page__hero {
-  position: relative;
-
-  overflow: hidden;
-
-  padding: 105px 0 115px;
-
-  border-bottom:
-    1px solid
-    rgba(255, 255, 255, 0.09);
-
-  background:
-    radial-gradient(
-      circle at 78% 42%,
-      rgba(0, 174, 239, 0.055),
-      transparent 34%
-    );
-}
-
-
-.about-page__hero::before {
-  content: "";
-
-  position: absolute;
-
-  width: 620px;
-  height: 620px;
-
-  top: -310px;
-  right: -220px;
-
-  border:
-    1px solid
-    rgba(0, 174, 239, 0.045);
-
-  border-radius: 50%;
-
-  pointer-events: none;
-}
-
-
-.about-page__hero::after {
-  content: "";
-
-  position: absolute;
-
-  width: 420px;
-  height: 420px;
-
-  top: -210px;
-  right: -120px;
-
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.025);
-
-  border-radius: 50%;
-
-  pointer-events: none;
-}
-
-
-.about-page__hero-top {
-  position: relative;
-  z-index: 2;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: space-between;
-
-  margin-bottom: 70px;
-}
-
-
-.about-page__eyebrow,
-.about-page__hero-index {
-  color:
-    rgba(255, 255, 255, 0.29);
-
-  font-size: 8px;
-
-  font-weight: 600;
-
-  line-height: 1;
-
-  letter-spacing: 0.15em;
-
-  text-transform: uppercase;
-}
-
-
-.about-page__eyebrow {
-  color: #00aeef;
-}
-
-
-.about-page__hero-content {
-  position: relative;
-  z-index: 2;
-
-  display: grid;
-
-  grid-template-columns:
-    minmax(0, 1fr)
-    360px;
-
-  gap: 90px;
-
-  align-items: end;
-}
-
-
-.about-page__hero h1 {
-  margin: 0;
-
-  color:
-    rgba(255, 255, 255, 0.96);
-
-  font-size:
-    clamp(90px, 13vw, 185px);
-
-  font-weight: 500;
-
-  line-height: 0.79;
-
-  letter-spacing: -0.08em;
-}
-
-
-.about-page__hero-description {
-  padding-bottom: 5px;
-}
-
-
-.about-page__hero-description > span {
-  display: block;
-
-  margin-bottom: 17px;
-
-  color:
-    rgba(255, 255, 255, 0.31);
-
-  font-size: 8px;
-
-  font-weight: 600;
-
-  line-height: 1;
-
-  letter-spacing: 0.14em;
-
-  text-transform: uppercase;
-}
-
-
-.about-page__hero-description p {
-  max-width: 340px;
-
-  margin: 0;
-
-  color:
-    rgba(255, 255, 255, 0.45);
-
-  font-size: 14px;
-
-  line-height: 1.85;
-}
-
-
-/* =========================================================
-   INTRO
-   ========================================================= */
-
-.about-page__intro {
-  padding: 105px 0 115px;
-
-  border-bottom:
-    1px solid
-    rgba(255, 255, 255, 0.09);
-}
-
-
-.about-page__intro-grid {
-  display: grid;
-
-  grid-template-columns:
-    minmax(0, 0.95fr)
-    minmax(0, 1.05fr);
-
-  gap: 110px;
-}
-
-
-.about-page__intro-title h2 {
-  margin: 0;
-
-  color:
-    rgba(255, 255, 255, 0.90);
-
-  font-size:
-    clamp(44px, 5.4vw, 72px);
-
-  font-weight: 500;
-
-  line-height: 0.97;
-
-  letter-spacing: -0.055em;
-}
-
-
-.about-page__intro-copy {
-  max-width: 630px;
-}
-
-
-.about-page__intro-copy p {
-  margin: 0 0 25px;
-
-  color:
-    rgba(255, 255, 255, 0.40);
-
-  font-size: 13px;
-
-  line-height: 1.9;
-}
-
-
-.about-page__intro-copy p:last-child {
-  margin-bottom: 0;
-
-  color:
-    rgba(255, 255, 255, 0.52);
-}
-
-
-/* =========================================================
-   ECOSYSTEM
-   ========================================================= */
-
-.about-page__ecosystem {
-  padding: 105px 0 115px;
-
-  border-bottom:
-    1px solid
-    rgba(255, 255, 255, 0.09);
-}
-
-
-.about-page__ecosystem-intro {
-  display: grid;
-
-  grid-template-columns:
-    minmax(0, 1fr)
-    360px;
-
-  gap: 90px;
-
-  align-items: end;
-
-  margin-bottom: 70px;
-}
-
-
-.about-page__ecosystem-intro h2 {
-  margin: 0;
-
-  color:
-    rgba(255, 255, 255, 0.91);
-
-  font-size:
-    clamp(54px, 7vw, 92px);
-
-  font-weight: 500;
-
-  line-height: 0.91;
-
-  letter-spacing: -0.065em;
-}
-
-
-.about-page__ecosystem-intro p {
-  max-width: 350px;
-
-  margin: 0;
-
-  color:
-    rgba(255, 255, 255, 0.39);
-
-  font-size: 12px;
-
-  line-height: 1.85;
-}
-
-
-.about-page__ecosystem-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(4, minmax(0, 1fr));
-
-  border-top:
-    1px solid
-    rgba(255, 255, 255, 0.10);
-
-  border-bottom:
-    1px solid
-    rgba(255, 255, 255, 0.10);
-}
-
-
-.about-page__ecosystem-grid article {
-  min-height: 255px;
-
-  padding: 23px 24px;
-
-  border-right:
-    1px solid
-    rgba(255, 255, 255, 0.08);
-}
-
-
-.about-page__ecosystem-grid article:last-child {
-  border-right: 0;
-}
-
-
-.about-page__ecosystem-grid article > span {
-  display: block;
-
-  margin-bottom: 55px;
-
-  color:
-    rgba(255, 255, 255, 0.20);
-
-  font-size: 8px;
-
-  font-weight: 600;
-
-  letter-spacing: 0.12em;
-}
-
-
-.about-page__ecosystem-grid h3 {
-  margin: 0;
-
-  color:
-    rgba(255, 255, 255, 0.70);
-
-  font-size: 19px;
-
-  font-weight: 500;
-
-  line-height: 1.2;
-
-  letter-spacing: -0.025em;
-}
-
-
-.about-page__ecosystem-grid p {
-  max-width: 235px;
-
-  margin: 12px 0 0;
-
-  color:
-    rgba(255, 255, 255, 0.30);
-
-  font-size: 10px;
-
-  line-height: 1.75;
-}
-
-
-/* =========================================================
-   BUILDING
-   ========================================================= */
-
-.about-page__building {
-  padding: 105px 0 115px;
-
-  border-bottom:
-    1px solid
-    rgba(255, 255, 255, 0.09);
-}
-
-
-.about-page__building-grid {
-  display: grid;
-
-  grid-template-columns:
-    minmax(0, 1fr)
-    minmax(0, 0.92fr);
-
-  gap: 120px;
-}
-
-
-.about-page__building-grid h2 {
-  margin: 0;
-
-  color:
-    rgba(255, 255, 255, 0.91);
-
-  font-size:
-    clamp(56px, 7vw, 94px);
-
-  font-weight: 500;
-
-  line-height: 0.90;
-
-  letter-spacing: -0.065em;
-}
-
-
-.about-page__building-copy {
-  max-width: 600px;
-}
-
-
-.about-page__building-copy p {
-  margin: 0 0 23px;
-
-  color:
-    rgba(255, 255, 255, 0.40);
-
-  font-size: 13px;
-
-  line-height: 1.85;
-}
-
-
-/* =========================================================
-   SHARED SVG ARROW
+   SHARED ARROW ICON
    ========================================================= */
 
 .about-page__arrow-icon {
@@ -524,7 +96,7 @@
 
 
 /* =========================================================
-   TEXT CTA LINKS
+   SHARED TEXT LINKS
    ========================================================= */
 
 .about-page__text-link,
@@ -537,9 +109,9 @@
 
   gap: 10px;
 
-  min-height: 38px;
+  min-height: 40px;
 
-  margin-top: 15px;
+  margin-top: 20px;
 
   padding: 0 16px;
 
@@ -614,11 +186,15 @@
 
 
 /* =========================================================
-   PLATFORM
+   HERO
    ========================================================= */
 
-.about-page__platform {
-  padding: 110px 0 125px;
+.about-page__hero {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 108px 0 120px;
 
   border-bottom:
     1px solid
@@ -626,22 +202,494 @@
 
   background:
     radial-gradient(
-      circle at 50% 45%,
-      rgba(0, 174, 239, 0.045),
-      transparent 42%
+      circle at 78% 42%,
+      rgba(0, 174, 239, 0.055),
+      transparent 34%
+    );
+}
+
+
+.about-page__hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 620px;
+  height: 620px;
+
+  top: -310px;
+  right: -220px;
+
+  border:
+    1px solid
+    rgba(0, 174, 239, 0.045);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+.about-page__hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  top: -210px;
+  right: -120px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.025);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+.about-page__hero-top {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 72px;
+}
+
+
+.about-page__eyebrow,
+.about-page__hero-index {
+  color:
+    rgba(255, 255, 255, 0.29);
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+.about-page__eyebrow {
+  color: #00aeef;
+}
+
+
+.about-page__hero-content {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    390px;
+
+  gap: 100px;
+
+  align-items: end;
+}
+
+
+.about-page__hero h1 {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.96);
+
+  font-size:
+    clamp(90px, 13vw, 185px);
+
+  font-weight: 500;
+
+  line-height: 0.79;
+
+  letter-spacing: -0.08em;
+}
+
+
+.about-page__hero-description {
+  padding-bottom: 5px;
+}
+
+
+.about-page__hero-description > span {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color:
+    rgba(255, 255, 255, 0.31);
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.about-page__hero-description p {
+  max-width: 365px;
+
+  margin: 0 0 18px;
+
+  color:
+    rgba(255, 255, 255, 0.45);
+
+  font-size: 14px;
+
+  line-height: 1.85;
+}
+
+
+.about-page__hero-description p:last-child {
+  margin-bottom: 0;
+
+  color:
+    rgba(255, 255, 255, 0.34);
+}
+
+
+/* =========================================================
+   INTRODUCTION / THE ENTREPRENEUR
+   ========================================================= */
+
+.about-page__intro {
+  padding: 108px 0 118px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+}
+
+
+.about-page__intro-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.92fr)
+    minmax(0, 1.08fr);
+
+  gap: 115px;
+
+  align-items: start;
+}
+
+
+.about-page__intro-title {
+  position: relative;
+}
+
+
+.about-page__intro-title h2 {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.90);
+
+  font-size:
+    clamp(44px, 5.4vw, 72px);
+
+  font-weight: 500;
+
+  line-height: 0.97;
+
+  letter-spacing: -0.055em;
+}
+
+
+.about-page__intro-copy {
+  max-width: 650px;
+}
+
+
+.about-page__intro-copy p {
+  margin: 0 0 25px;
+
+  color:
+    rgba(255, 255, 255, 0.40);
+
+  font-size: 13px;
+
+  line-height: 1.9;
+}
+
+
+.about-page__intro-copy p:last-child {
+  margin-bottom: 0;
+
+  color:
+    rgba(255, 255, 255, 0.53);
+}
+
+
+/* =========================================================
+   HOW I THINK / FOUNDER FRAMEWORK
+   ========================================================= */
+
+.about-page__ecosystem {
+  padding: 108px 0 118px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+}
+
+
+.about-page__ecosystem-intro {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    390px;
+
+  gap: 95px;
+
+  align-items: end;
+
+  margin-bottom: 72px;
+}
+
+
+.about-page__ecosystem-intro h2 {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.91);
+
+  font-size:
+    clamp(54px, 7vw, 92px);
+
+  font-weight: 500;
+
+  line-height: 0.91;
+
+  letter-spacing: -0.065em;
+}
+
+
+.about-page__ecosystem-intro p {
+  max-width: 370px;
+
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.39);
+
+  font-size: 12px;
+
+  line-height: 1.85;
+}
+
+
+.about-page__ecosystem-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  width: 100%;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.10);
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.10);
+}
+
+
+.about-page__ecosystem-grid article {
+  min-height: 275px;
+
+  padding: 24px 25px;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  transition:
+    background-color 180ms ease;
+}
+
+
+.about-page__ecosystem-grid article:last-child {
+  border-right: 0;
+}
+
+
+.about-page__ecosystem-grid article:hover {
+  background:
+    rgba(255, 255, 255, 0.012);
+}
+
+
+.about-page__ecosystem-grid article > span {
+  display: block;
+
+  margin-bottom: 58px;
+
+  color:
+    rgba(255, 255, 255, 0.20);
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 0.12em;
+}
+
+
+.about-page__ecosystem-grid h3 {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.70);
+
+  font-size: 20px;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.025em;
+}
+
+
+.about-page__ecosystem-grid p {
+  max-width: 245px;
+
+  margin: 13px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.30);
+
+  font-size: 10px;
+
+  line-height: 1.78;
+}
+
+
+/* =========================================================
+   VENTURES
+   ========================================================= */
+
+.about-page__building {
+  padding: 108px 0 118px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+}
+
+
+.about-page__building-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 0.92fr);
+
+  gap: 120px;
+
+  align-items: start;
+}
+
+
+.about-page__building-grid > div:first-child {
+  position: sticky;
+
+  top: 110px;
+}
+
+
+.about-page__building-grid h2 {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.91);
+
+  font-size:
+    clamp(56px, 7vw, 94px);
+
+  font-weight: 500;
+
+  line-height: 0.90;
+
+  letter-spacing: -0.065em;
+}
+
+
+.about-page__building-copy {
+  max-width: 620px;
+}
+
+
+.about-page__building-copy p {
+  margin: 0 0 23px;
+
+  color:
+    rgba(255, 255, 255, 0.40);
+
+  font-size: 13px;
+
+  line-height: 1.87;
+}
+
+
+.about-page__building-copy p:last-of-type {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   CRETESPACE / BUILDING COMPANIES
+   ========================================================= */
+
+.about-page__platform {
+  padding: 112px 0 128px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+
+  background:
+    radial-gradient(
+      circle at 52% 44%,
+      rgba(0, 174, 239, 0.052),
+      transparent 43%
     );
 }
 
 
 .about-page__platform-content {
-  max-width: 950px;
+  max-width: 980px;
 }
 
 
 .about-page__platform-label {
   display: block;
 
-  margin-bottom: 23px;
+  margin-bottom: 24px;
 
   color: #00aeef;
 
@@ -658,6 +706,8 @@
 
 
 .about-page__platform-content h2 {
+  max-width: 950px;
+
   margin: 0;
 
   color:
@@ -675,9 +725,9 @@
 
 
 .about-page__platform-content p {
-  max-width: 680px;
+  max-width: 720px;
 
-  margin: 30px 0 0;
+  margin: 31px 0 0;
 
   color:
     rgba(255, 255, 255, 0.39);
@@ -697,16 +747,16 @@
 
 
 .about-page__platform-link {
-  margin-top: 31px;
+  margin-top: 34px;
 }
 
 
 /* =========================================================
-   CREATIVE / PUBLISHING
+   TECHNOLOGY / PRODUCT + INFRASTRUCTURE
    ========================================================= */
 
 .about-page__creative {
-  padding: 105px 0 115px;
+  padding: 108px 0 118px;
 
   border-bottom:
     1px solid
@@ -720,6 +770,8 @@
   grid-template-columns:
     repeat(2, minmax(0, 1fr));
 
+  width: 100%;
+
   border-top:
     1px solid
     rgba(255, 255, 255, 0.10);
@@ -731,13 +783,16 @@
 
 
 .about-page__creative-grid > div {
-  min-height: 330px;
+  min-height: 335px;
 
-  padding: 25px 28px;
+  padding: 26px 29px;
 
   border-right:
     1px solid
     rgba(255, 255, 255, 0.08);
+
+  transition:
+    background-color 180ms ease;
 }
 
 
@@ -746,10 +801,16 @@
 }
 
 
+.about-page__creative-grid > div:hover {
+  background:
+    rgba(255, 255, 255, 0.012);
+}
+
+
 .about-page__creative-number {
   display: block;
 
-  margin-bottom: 75px;
+  margin-bottom: 78px;
 
   color:
     rgba(255, 255, 255, 0.21);
@@ -757,6 +818,8 @@
   font-size: 8px;
 
   font-weight: 600;
+
+  line-height: 1;
 
   letter-spacing: 0.12em;
 }
@@ -768,7 +831,7 @@
   color:
     rgba(255, 255, 255, 0.78);
 
-  font-size: 29px;
+  font-size: 30px;
 
   font-weight: 500;
 
@@ -779,71 +842,30 @@
 
 
 .about-page__creative-grid p {
-  max-width: 420px;
+  max-width: 470px;
 
-  margin: 13px 0 0;
+  margin: 14px 0 0;
 
   color:
     rgba(255, 255, 255, 0.32);
 
   font-size: 11px;
 
-  line-height: 1.75;
+  line-height: 1.78;
 }
 
 
 /* =========================================================
-   MUSIC
+   AKODIA / WEB MEDIA
    ========================================================= */
 
-.about-page__music {
-  padding: 105px 0 115px;
-
-  border-bottom:
-    1px solid
-    rgba(255, 255, 255, 0.09);
-}
-
-
-.about-page__music-grid {
-  display: grid;
-
-  grid-template-columns:
-    minmax(0, 1fr)
-    400px;
-
-  gap: 110px;
-
-  align-items: end;
-}
-
-
-.about-page__music-grid h2 {
-  margin: 0;
-
-  color:
-    rgba(255, 255, 255, 0.91);
-
-  font-size:
-    clamp(56px, 7vw, 92px);
-
-  font-weight: 500;
-
-  line-height: 0.90;
-
-  letter-spacing: -0.065em;
-}
-
-
-.about-page__music-grid p {
-  margin: 0 0 22px;
-
-  color:
-    rgba(255, 255, 255, 0.40);
-
-  font-size: 13px;
-
-  line-height: 1.85;
+.about-page__platform + .about-page__creative {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.006),
+      transparent
+    );
 }
 
 
@@ -852,7 +874,7 @@
    ========================================================= */
 
 .about-page__media {
-  padding: 105px 0 115px;
+  padding: 108px 0 118px;
 
   border-bottom:
     1px solid
@@ -865,13 +887,13 @@
 
   grid-template-columns:
     minmax(0, 1fr)
-    360px;
+    390px;
 
-  gap: 100px;
+  gap: 105px;
 
   align-items: end;
 
-  margin-bottom: 68px;
+  margin-bottom: 70px;
 }
 
 
@@ -893,7 +915,7 @@
 
 
 .about-page__media-intro p {
-  margin: 0;
+  margin: 0 0 18px;
 
   color:
     rgba(255, 255, 255, 0.39);
@@ -904,7 +926,14 @@
 }
 
 
+.about-page__media-intro p:last-child {
+  margin-bottom: 0;
+}
+
+
 .about-page__media-links {
+  width: 100%;
+
   border-top:
     1px solid
     rgba(255, 255, 255, 0.10);
@@ -940,8 +969,8 @@
   text-decoration: none;
 
   transition:
-    padding 160ms ease,
-    background-color 160ms ease;
+    padding 180ms ease,
+    background-color 180ms ease;
 }
 
 
@@ -951,7 +980,7 @@
 
 
 .about-page__media-links a:hover {
-  padding-left: 28px;
+  padding-left: 29px;
 
   background:
     rgba(255, 255, 255, 0.015);
@@ -964,6 +993,8 @@
   font-size: 8px;
 
   font-weight: 600;
+
+  line-height: 1;
 
   letter-spacing: 0.12em;
 
@@ -978,12 +1009,10 @@
   font-size: 11px;
 
   font-weight: 500;
+
+  line-height: 1.4;
 }
 
-
-/* =========================================================
-   MEDIA SVG ARROWS
-   ========================================================= */
 
 .about-page__media-links a > span:last-child {
   display: inline-flex;
@@ -1000,10 +1029,6 @@
 .about-page__media-links a .about-page__arrow-icon {
   width: 15px;
   height: 15px;
-
-  transition:
-    transform 180ms ease,
-    color 180ms ease;
 }
 
 
@@ -1015,15 +1040,101 @@
 
 
 /* =========================================================
-   PHILOSOPHY
+   PUBLISHING / INTELLECTUAL PROPERTY
    ========================================================= */
 
-.about-page__philosophy {
-  padding: 110px 0 125px;
+.about-page__creative:nth-of-type(8) {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.004),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   MUSIC / CULTURE
+   ========================================================= */
+
+.about-page__music {
+  padding: 108px 0 118px;
 
   border-bottom:
     1px solid
     rgba(255, 255, 255, 0.09);
+}
+
+
+.about-page__music-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    410px;
+
+  gap: 110px;
+
+  align-items: end;
+}
+
+
+.about-page__music-grid h2 {
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.91);
+
+  font-size:
+    clamp(56px, 7vw, 92px);
+
+  font-weight: 500;
+
+  line-height: 0.90;
+
+  letter-spacing: -0.065em;
+}
+
+
+.about-page__music-grid > div:last-child {
+  max-width: 410px;
+}
+
+
+.about-page__music-grid p {
+  margin: 0 0 22px;
+
+  color:
+    rgba(255, 255, 255, 0.40);
+
+  font-size: 13px;
+
+  line-height: 1.85;
+}
+
+
+.about-page__music-grid p:last-of-type {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   PHILOSOPHY
+   ========================================================= */
+
+.about-page__philosophy {
+  padding: 112px 0 128px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.09);
+
+  background:
+    radial-gradient(
+      circle at 20% 50%,
+      rgba(0, 174, 239, 0.022),
+      transparent 34%
+    );
 }
 
 
@@ -1032,7 +1143,7 @@
 
   grid-template-columns:
     minmax(0, 1fr)
-    390px;
+    410px;
 
   gap: 110px;
 
@@ -1087,7 +1198,7 @@
    ========================================================= */
 
 .about-page__focus {
-  padding: 105px 0 115px;
+  padding: 108px 0 118px;
 
   border-bottom:
     1px solid
@@ -1099,7 +1210,9 @@
   display: grid;
 
   grid-template-columns:
-    repeat(4, minmax(0, 1fr));
+    repeat(3, minmax(0, 1fr));
+
+  width: 100%;
 
   border-top:
     1px solid
@@ -1112,25 +1225,43 @@
 
 
 .about-page__focus-grid > div {
-  min-height: 240px;
+  position: relative;
 
-  padding: 22px 24px;
+  min-height: 265px;
+
+  padding: 23px 25px;
 
   border-right:
     1px solid
     rgba(255, 255, 255, 0.08);
+
+  transition:
+    background-color 180ms ease;
 }
 
 
-.about-page__focus-grid > div:last-child {
+.about-page__focus-grid > div:hover {
+  background:
+    rgba(255, 255, 255, 0.012);
+}
+
+
+.about-page__focus-grid > div:nth-child(3n) {
   border-right: 0;
+}
+
+
+.about-page__focus-grid > div:nth-child(n + 4) {
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
 }
 
 
 .about-page__focus-grid > div > span {
   display: block;
 
-  margin-bottom: 58px;
+  margin-bottom: 62px;
 
   color:
     rgba(255, 255, 255, 0.20);
@@ -1138,6 +1269,8 @@
   font-size: 8px;
 
   font-weight: 600;
+
+  line-height: 1;
 
   letter-spacing: 0.12em;
 }
@@ -1149,25 +1282,27 @@
   color:
     rgba(255, 255, 255, 0.70);
 
-  font-size: 18px;
+  font-size: 19px;
 
   font-weight: 500;
 
   line-height: 1.15;
+
+  letter-spacing: -0.02em;
 }
 
 
 .about-page__focus-grid p {
-  max-width: 230px;
+  max-width: 270px;
 
-  margin: 11px 0 0;
+  margin: 12px 0 0;
 
   color:
     rgba(255, 255, 255, 0.30);
 
   font-size: 10px;
 
-  line-height: 1.75;
+  line-height: 1.78;
 }
 
 
@@ -1176,21 +1311,54 @@
    ========================================================= */
 
 .about-page__closing {
-  padding: 135px 0 155px;
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 140px 0 165px;
 
   background:
     radial-gradient(
       circle at 50% 35%,
-      rgba(0, 174, 239, 0.045),
+      rgba(0, 174, 239, 0.05),
       transparent 42%
     );
+}
+
+
+.about-page__closing::before {
+  content: "";
+
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  top: -260px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border:
+    1px solid
+    rgba(0, 174, 239, 0.025);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+.about-page__closing > .about-page__container {
+  position: relative;
+  z-index: 2;
 }
 
 
 .about-page__closing > .about-page__container > span {
   display: block;
 
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 
   color: #00aeef;
 
@@ -1207,6 +1375,8 @@
 
 
 .about-page__closing h2 {
+  max-width: 1050px;
+
   margin: 0;
 
   color:
@@ -1224,9 +1394,9 @@
 
 
 .about-page__closing p {
-  max-width: 550px;
+  max-width: 620px;
 
-  margin: 32px 0 0;
+  margin: 34px 0 0;
 
   color:
     rgba(255, 255, 255, 0.38);
@@ -1237,17 +1407,24 @@
 }
 
 
+.about-page__closing p + p {
+  margin-top: 20px;
+}
+
+
 .about-page__closing-link {
-  margin-top: 32px;
+  margin-top: 34px;
 }
 
 
 /* =========================================================
-   FOCUS STATES
+   FOCUS / ACCESSIBILITY
    ========================================================= */
 
 .about-page a:focus-visible {
-  outline: 1px solid #00aeef;
+  outline:
+    1px solid
+    #00aeef;
 
   outline-offset: 4px;
 }
@@ -1257,25 +1434,25 @@
    LARGE TABLET
    ========================================================= */
 
-@media (max-width: 1050px) {
+@media (max-width: 1100px) {
 
   .about-page__container {
-    width: min(100% - 48px, 1000px);
+    width: min(100% - 52px, 1000px);
   }
 
 
   .about-page__hero-content {
     grid-template-columns:
       minmax(0, 1fr)
-      300px;
+      320px;
 
-    gap: 60px;
+    gap: 70px;
   }
 
 
   .about-page__intro-grid,
   .about-page__building-grid {
-    gap: 70px;
+    gap: 75px;
   }
 
 
@@ -1283,35 +1460,21 @@
   .about-page__media-intro {
     grid-template-columns:
       minmax(0, 1fr)
-      300px;
+      320px;
 
-    gap: 55px;
+    gap: 65px;
   }
 
 
-  .about-page__ecosystem-grid,
+  .about-page__music-grid,
+  .about-page__philosophy-content {
+    gap: 75px;
+  }
+
+
   .about-page__focus-grid {
     grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-  }
-
-
-  .about-page__ecosystem-grid article:nth-child(2),
-  .about-page__focus-grid > div:nth-child(2) {
-    border-right: 0;
-  }
-
-
-  .about-page__ecosystem-grid article:nth-child(n + 3),
-  .about-page__focus-grid > div:nth-child(n + 3) {
-    border-top:
-      1px solid
-      rgba(255, 255, 255, 0.08);
-  }
-
-
-  .about-page__philosophy-content {
-    gap: 65px;
+      repeat(3, minmax(0, 1fr));
   }
 
 }
@@ -1321,39 +1484,32 @@
    TABLET
    ========================================================= */
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
+
+  .about-page__container {
+    width: min(100% - 46px, 760px);
+  }
+
 
   .about-page__hero {
-    padding: 82px 0 85px;
+    padding: 85px 0 90px;
   }
 
 
   .about-page__hero-content {
     grid-template-columns: 1fr;
 
-    gap: 42px;
+    gap: 45px;
   }
 
 
   .about-page__hero-description {
-    max-width: 520px;
+    max-width: 560px;
   }
 
 
-  .about-page__intro,
-  .about-page__ecosystem,
-  .about-page__building,
-  .about-page__creative,
-  .about-page__music,
-  .about-page__media,
-  .about-page__focus {
-    padding: 82px 0 88px;
-  }
-
-
-  .about-page__platform,
-  .about-page__philosophy {
-    padding: 88px 0 96px;
+  .about-page__hero-description p {
+    max-width: 560px;
   }
 
 
@@ -1367,11 +1523,39 @@
   }
 
 
+  .about-page__building-grid > div:first-child {
+    position: static;
+  }
+
+
   .about-page__ecosystem-intro,
   .about-page__media-intro {
     grid-template-columns: 1fr;
 
     gap: 35px;
+  }
+
+
+  .about-page__ecosystem-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .about-page__ecosystem-grid article {
+    min-height: 245px;
+  }
+
+
+  .about-page__ecosystem-grid article:nth-child(2) {
+    border-right: 0;
+  }
+
+
+  .about-page__ecosystem-grid article:nth-child(n + 3) {
+    border-top:
+      1px solid
+      rgba(255, 255, 255, 0.08);
   }
 
 
@@ -1381,7 +1565,7 @@
 
 
   .about-page__creative-grid > div {
-    min-height: 270px;
+    min-height: 275px;
 
     border-right: 0;
   }
@@ -1394,13 +1578,46 @@
   }
 
 
+  .about-page__media-links a {
+    grid-template-columns:
+      145px
+      minmax(0, 1fr)
+      28px;
+  }
+
+
+  .about-page__focus-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .about-page__focus-grid > div:nth-child(3n) {
+    border-right:
+      1px solid
+      rgba(255, 255, 255, 0.08);
+  }
+
+
+  .about-page__focus-grid > div:nth-child(2n) {
+    border-right: 0;
+  }
+
+
+  .about-page__focus-grid > div:nth-child(n + 3) {
+    border-top:
+      1px solid
+      rgba(255, 255, 255, 0.08);
+  }
+
+
   .about-page__philosophy-content > div {
-    max-width: 600px;
+    max-width: 620px;
   }
 
 
   .about-page__closing {
-    padding: 105px 0 120px;
+    padding: 110px 0 125px;
   }
 
 }
@@ -1417,13 +1634,38 @@
   }
 
 
+  /* -------------------------------------------------------
+     SECTION SPACING
+     ------------------------------------------------------- */
+
+  .about-page__intro,
+  .about-page__ecosystem,
+  .about-page__building,
+  .about-page__creative,
+  .about-page__music,
+  .about-page__media,
+  .about-page__focus {
+    padding: 70px 0 76px;
+  }
+
+
+  .about-page__platform,
+  .about-page__philosophy {
+    padding: 78px 0 85px;
+  }
+
+
+  /* -------------------------------------------------------
+     HERO
+     ------------------------------------------------------- */
+
   .about-page__hero {
-    padding: 64px 0 70px;
+    padding: 64px 0 72px;
   }
 
 
   .about-page__hero-top {
-    margin-bottom: 47px;
+    margin-bottom: 48px;
   }
 
 
@@ -1435,20 +1677,33 @@
   }
 
 
+  .about-page__hero-description {
+    padding-bottom: 0;
+  }
+
+
   .about-page__hero-description > span {
+    margin-bottom: 17px;
+
     font-size: 7px;
   }
 
 
   .about-page__hero-description p {
+    max-width: 100%;
+
     font-size: 12px;
 
-    line-height: 1.8;
+    line-height: 1.82;
   }
 
 
+  /* -------------------------------------------------------
+     SHARED SECTION HEADING
+     ------------------------------------------------------- */
+
   .about-page__section-heading {
-    margin-bottom: 38px;
+    margin-bottom: 39px;
 
     padding-bottom: 15px;
   }
@@ -1459,53 +1714,53 @@
   }
 
 
-  .about-page__intro,
-  .about-page__ecosystem,
-  .about-page__building,
-  .about-page__creative,
-  .about-page__music,
-  .about-page__media,
-  .about-page__focus {
-    padding: 68px 0 74px;
-  }
+  /* -------------------------------------------------------
+     INTRO
+     ------------------------------------------------------- */
 
-
-  .about-page__platform,
-  .about-page__philosophy {
-    padding: 75px 0 82px;
-  }
-
-
-  .about-page__intro-grid,
-  .about-page__building-grid,
-  .about-page__music-grid,
-  .about-page__philosophy-content {
+  .about-page__intro-grid {
     gap: 40px;
   }
 
 
   .about-page__intro-title h2 {
     font-size: 39px;
+
+    line-height: 0.98;
   }
 
 
-  .about-page__intro-copy p,
-  .about-page__building-copy p,
-  .about-page__music-grid p,
-  .about-page__philosophy-content p {
+  .about-page__intro-copy p {
+    margin-bottom: 21px;
+
     font-size: 11px;
 
-    line-height: 1.8;
+    line-height: 1.82;
+  }
+
+
+  /* -------------------------------------------------------
+     FOUNDER FRAMEWORK
+     ------------------------------------------------------- */
+
+  .about-page__ecosystem-intro {
+    gap: 32px;
+
+    margin-bottom: 48px;
   }
 
 
   .about-page__ecosystem-intro h2 {
-    font-size: 53px;
+    font-size: 52px;
   }
 
 
   .about-page__ecosystem-intro p {
+    max-width: 100%;
+
     font-size: 11px;
+
+    line-height: 1.82;
   }
 
 
@@ -1518,7 +1773,7 @@
   .about-page__ecosystem-grid article:nth-child(2) {
     min-height: 205px;
 
-    padding: 19px 18px;
+    padding: 20px 18px;
 
     border-right: 0;
   }
@@ -1532,56 +1787,92 @@
 
 
   .about-page__ecosystem-grid article > span {
-    margin-bottom: 40px;
+    margin-bottom: 41px;
+  }
+
+
+  .about-page__ecosystem-grid h3 {
+    font-size: 18px;
+  }
+
+
+  .about-page__ecosystem-grid p {
+    max-width: 100%;
+
+    font-size: 10px;
+  }
+
+
+  /* -------------------------------------------------------
+     VENTURES
+     ------------------------------------------------------- */
+
+  .about-page__building-grid {
+    gap: 40px;
   }
 
 
   .about-page__building-grid h2 {
     font-size: 57px;
+
+    line-height: 0.90;
+  }
+
+
+  .about-page__building-copy p {
+    margin-bottom: 21px;
+
+    font-size: 11px;
+
+    line-height: 1.82;
+  }
+
+
+  /* -------------------------------------------------------
+     CRETESPACE / PLATFORM
+     ------------------------------------------------------- */
+
+  .about-page__platform-content {
+    max-width: 100%;
+  }
+
+
+  .about-page__platform-label {
+    margin-bottom: 20px;
+
+    font-size: 7px;
   }
 
 
   .about-page__platform-content h2 {
     font-size: 49px;
+
+    line-height: 0.92;
   }
 
 
   .about-page__platform-content p {
+    max-width: 100%;
+
+    margin-top: 24px;
+
     font-size: 11px;
 
-    line-height: 1.8;
+    line-height: 1.82;
+  }
+
+
+  .about-page__platform-link {
+    margin-top: 28px;
   }
 
 
   /* -------------------------------------------------------
-     MOBILE CTA
+     TECHNOLOGY / CREATIVE
      ------------------------------------------------------- */
 
-  .about-page__text-link,
-  .about-page__platform-link,
-  .about-page__closing-link {
-    min-height: 40px;
-
-    padding: 0 14px;
-
-    gap: 9px;
-
-    font-size: 7px;
-
-    letter-spacing: 0.10em;
-  }
-
-
-  .about-page__arrow-icon {
-    width: 13px;
-    height: 13px;
-
-    flex-basis: 13px;
-  }
-
-
   .about-page__creative-grid > div {
-    min-height: 225px;
+    min-height: 235px;
 
     padding: 20px 18px;
   }
@@ -1593,17 +1884,27 @@
 
 
   .about-page__creative-grid h2 {
-    font-size: 25px;
+    font-size: 26px;
   }
 
 
   .about-page__creative-grid p {
+    max-width: 100%;
+
     font-size: 10px;
+
+    line-height: 1.76;
   }
 
 
-  .about-page__music-grid h2 {
-    font-size: 54px;
+  /* -------------------------------------------------------
+     MEDIA
+     ------------------------------------------------------- */
+
+  .about-page__media-intro {
+    gap: 32px;
+
+    margin-bottom: 48px;
   }
 
 
@@ -1614,12 +1915,14 @@
 
   .about-page__media-intro p {
     font-size: 11px;
+
+    line-height: 1.82;
   }
 
 
   .about-page__media-links a {
     grid-template-columns:
-      100px
+      95px
       minmax(0, 1fr)
       20px;
 
@@ -1643,6 +1946,8 @@
 
   .about-page__media-links a strong {
     font-size: 9px;
+
+    line-height: 1.4;
   }
 
 
@@ -1652,10 +1957,67 @@
   }
 
 
-  .about-page__philosophy-content h2 {
-    font-size: 59px;
+  /* -------------------------------------------------------
+     MUSIC
+     ------------------------------------------------------- */
+
+  .about-page__music-grid {
+    gap: 40px;
   }
 
+
+  .about-page__music-grid h2 {
+    font-size: 53px;
+  }
+
+
+  .about-page__music-grid p {
+    margin-bottom: 20px;
+
+    font-size: 11px;
+
+    line-height: 1.82;
+  }
+
+
+  /* -------------------------------------------------------
+     PHILOSOPHY
+     ------------------------------------------------------- */
+
+  .about-page__philosophy-content {
+    gap: 42px;
+  }
+
+
+  .about-page__philosophy-content h2 {
+    font-size: 59px;
+
+    line-height: 0.88;
+  }
+
+
+  .about-page__philosophy-content > div {
+    padding-top: 0;
+  }
+
+
+  .about-page__philosophy-content p {
+    margin-bottom: 21px;
+
+    font-size: 11px;
+
+    line-height: 1.82;
+  }
+
+
+  .about-page__philosophy-content p:first-child {
+    font-size: 13px;
+  }
+
+
+  /* -------------------------------------------------------
+     CURRENT FOCUS
+     ------------------------------------------------------- */
 
   .about-page__focus-grid {
     grid-template-columns: 1fr;
@@ -1663,10 +2025,11 @@
 
 
   .about-page__focus-grid > div,
-  .about-page__focus-grid > div:nth-child(2) {
-    min-height: 190px;
+  .about-page__focus-grid > div:nth-child(2),
+  .about-page__focus-grid > div:nth-child(3n) {
+    min-height: 205px;
 
-    padding: 19px 18px;
+    padding: 20px 18px;
 
     border-right: 0;
   }
@@ -1680,22 +2043,97 @@
 
 
   .about-page__focus-grid > div > span {
-    margin-bottom: 43px;
+    margin-bottom: 44px;
   }
 
 
+  .about-page__focus-grid h3 {
+    font-size: 18px;
+  }
+
+
+  .about-page__focus-grid p {
+    max-width: 100%;
+
+    font-size: 10px;
+
+    line-height: 1.76;
+  }
+
+
+  /* -------------------------------------------------------
+     CLOSING
+     ------------------------------------------------------- */
+
   .about-page__closing {
-    padding: 90px 0 105px;
+    padding: 92px 0 108px;
+  }
+
+
+  .about-page__closing::before {
+    width: 460px;
+    height: 460px;
+
+    top: -150px;
+  }
+
+
+  .about-page__closing > .about-page__container > span {
+    margin-bottom: 20px;
+
+    font-size: 7px;
   }
 
 
   .about-page__closing h2 {
     font-size: 62px;
+
+    line-height: 0.88;
   }
 
 
   .about-page__closing p {
+    max-width: 100%;
+
+    margin-top: 27px;
+
     font-size: 11px;
+
+    line-height: 1.82;
+  }
+
+
+  .about-page__closing p + p {
+    margin-top: 17px;
+  }
+
+
+  /* -------------------------------------------------------
+     MOBILE CTA
+     ------------------------------------------------------- */
+
+  .about-page__text-link,
+  .about-page__platform-link,
+  .about-page__closing-link {
+    min-height: 40px;
+
+    margin-top: 19px;
+
+    padding: 0 14px;
+
+    gap: 9px;
+
+    font-size: 7px;
+
+    letter-spacing: 0.10em;
+  }
+
+
+  .about-page__arrow-icon {
+    width: 13px;
+    height: 13px;
+
+    flex-basis: 13px;
   }
 
 }
@@ -1712,8 +2150,12 @@
   }
 
 
+  /* -------------------------------------------------------
+     HERO
+     ------------------------------------------------------- */
+
   .about-page__hero {
-    padding: 55px 0 62px;
+    padding: 56px 0 63px;
   }
 
 
@@ -1727,13 +2169,38 @@
   }
 
 
+  /* -------------------------------------------------------
+     SECTIONS
+     ------------------------------------------------------- */
+
+  .about-page__intro,
+  .about-page__ecosystem,
+  .about-page__building,
+  .about-page__creative,
+  .about-page__music,
+  .about-page__media,
+  .about-page__focus {
+    padding: 63px 0 69px;
+  }
+
+
+  .about-page__platform,
+  .about-page__philosophy {
+    padding: 70px 0 77px;
+  }
+
+
+  /* -------------------------------------------------------
+     TYPOGRAPHY
+     ------------------------------------------------------- */
+
   .about-page__intro-title h2 {
     font-size: 34px;
   }
 
 
   .about-page__ecosystem-intro h2 {
-    font-size: 46px;
+    font-size: 45px;
   }
 
 
@@ -1748,7 +2215,7 @@
 
 
   .about-page__music-grid h2 {
-    font-size: 48px;
+    font-size: 47px;
   }
 
 
@@ -1767,6 +2234,36 @@
   }
 
 
+  /* -------------------------------------------------------
+     MEDIA
+     ------------------------------------------------------- */
+
+  .about-page__media-links a {
+    grid-template-columns:
+      82px
+      minmax(0, 1fr)
+      18px;
+
+    gap: 9px;
+
+    padding: 0 11px;
+  }
+
+
+  .about-page__media-links a:hover {
+    padding-left: 15px;
+  }
+
+
+  .about-page__media-links a strong {
+    font-size: 8.5px;
+  }
+
+
+  /* -------------------------------------------------------
+     CTA
+     ------------------------------------------------------- */
+
   .about-page__text-link,
   .about-page__platform-link,
   .about-page__closing-link {
@@ -1775,6 +2272,64 @@
     padding: 0 12px;
 
     font-size: 6.5px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 350px) {
+
+  .about-page__container {
+    width: calc(100% - 24px);
+  }
+
+
+  .about-page__hero h1 {
+    font-size: 59px;
+  }
+
+
+  .about-page__intro-title h2 {
+    font-size: 31px;
+  }
+
+
+  .about-page__ecosystem-intro h2 {
+    font-size: 41px;
+  }
+
+
+  .about-page__building-grid h2 {
+    font-size: 45px;
+  }
+
+
+  .about-page__platform-content h2 {
+    font-size: 39px;
+  }
+
+
+  .about-page__music-grid h2 {
+    font-size: 43px;
+  }
+
+
+  .about-page__media-intro h2 {
+    font-size: 40px;
+  }
+
+
+  .about-page__philosophy-content h2 {
+    font-size: 47px;
+  }
+
+
+  .about-page__closing h2 {
+    font-size: 48px;
   }
 
 }
@@ -1790,7 +2345,10 @@
   .about-page__platform-link,
   .about-page__media-links a,
   .about-page__closing-link,
-  .about-page__arrow-icon {
+  .about-page__arrow-icon,
+  .about-page__ecosystem-grid article,
+  .about-page__creative-grid > div,
+  .about-page__focus-grid > div {
     transition: none;
   }
 

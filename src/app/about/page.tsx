@@ -78,7 +78,7 @@ export default function AboutPage() {
               </span>
 
               <span className="about-page__hero-index">
-                01 / 11
+                01 / 12
               </span>
 
             </div>
@@ -95,16 +95,24 @@ export default function AboutPage() {
               <div className="about-page__hero-description">
 
                 <span>
-                  Entrepreneur / Creator / Builder
+                  Entrepreneur / Builder / Creator
                 </span>
 
                 <p>
                   I&apos;m Akonam — an entrepreneur,
-                  creator, author, music artist and
-                  technology builder developing
+                  technology builder, creator, author,
+                  music artist and founder developing
                   businesses, products, media and
-                  experiences around ideas I believe
-                  should exist.
+                  intellectual property around ideas
+                  I believe should exist.
+                </p>
+
+                <p>
+                  I am interested in more than starting
+                  businesses. I want to build companies,
+                  systems and assets that can become
+                  larger than the person who started
+                  them.
                 </p>
 
               </div>
@@ -127,7 +135,7 @@ export default function AboutPage() {
             <div className="about-page__section-heading">
 
               <span>
-                02 / The person
+                02 / The entrepreneur
               </span>
 
               <span>
@@ -146,7 +154,7 @@ export default function AboutPage() {
                   <br />
                   building things
                   <br />
-                  that matter.
+                  that outlive me.
                 </h2>
 
               </div>
@@ -155,33 +163,47 @@ export default function AboutPage() {
               <div className="about-page__intro-copy">
 
                 <p>
-                  My work sits at the intersection
-                  of entrepreneurship, technology,
-                  creativity and media.
+                  Entrepreneurship is at the centre
+                  of my work.
                 </p>
 
                 <p>
-                  I enjoy taking an idea from its
-                  earliest form — often just a
-                  thought — and turning it into a
-                  structured business, product,
-                  experience or body of work.
+                  I like taking an idea from its
+                  earliest form — sometimes just a
+                  thought or an observation — and
+                  turning it into something structured:
+                  a business, product, platform,
+                  company, publication, experience or
+                  body of work.
                 </p>
 
                 <p>
-                  That has led me across different
-                  fields: technology, business,
-                  publishing, music, digital media,
-                  hospitality and creative work.
+                  My interests move across technology,
+                  commerce, media, publishing, music,
+                  hospitality and other forms of
+                  creative enterprise. The industries
+                  may change, but the underlying
+                  objective remains the same: create
+                  something useful, own it, improve it
+                  and give it room to grow.
                 </p>
 
                 <p>
-                  I am not interested in building
-                  simply for the sake of being busy.
-                  I want to build assets, systems,
-                  companies and intellectual property
-                  that can continue to exist and grow
-                  beyond me.
+                  I am especially interested in the
+                  relationship between entrepreneurship
+                  and technology — how software,
+                  systems, media and intellectual
+                  property can turn a small operation
+                  into something capable of reaching
+                  far beyond its original environment.
+                </p>
+
+                <p>
+                  I am not trying to build a collection
+                  of disconnected projects. I am building
+                  a body of companies, products and
+                  intellectual property that can compound
+                  over time.
                 </p>
 
               </div>
@@ -194,7 +216,7 @@ export default function AboutPage() {
 
 
         {/* =================================================
-            ECOSYSTEM
+            ENTREPRENEURIAL APPROACH
             ================================================= */}
 
         <section className="about-page__ecosystem">
@@ -204,11 +226,11 @@ export default function AboutPage() {
             <div className="about-page__section-heading">
 
               <span>
-                03 / The ecosystem
+                03 / How I think
               </span>
 
               <span>
-                AKNM
+                Founder / Operator
               </span>
 
             </div>
@@ -217,16 +239,18 @@ export default function AboutPage() {
             <div className="about-page__ecosystem-intro">
 
               <h2>
-                One person.
+                I think in
                 <br />
-                Multiple worlds.
+                systems and possibilities.
               </h2>
 
               <p>
-                AKNM is the broader ecosystem through
-                which I organise my work across
-                technology, business, media,
-                publishing, music and experiences.
+                I am naturally drawn to the space between
+                an idea and what it could eventually
+                become. I look for ways to turn individual
+                activities into systems, systems into
+                products and products into businesses
+                that can operate and grow independently.
               </p>
 
             </div>
@@ -241,15 +265,14 @@ export default function AboutPage() {
                 </span>
 
                 <h3>
-                  Technology
+                  Build
                 </h3>
 
                 <p>
-                  Building digital products,
-                  platforms and systems that solve
-                  practical problems and create new
-                  ways for people to work, discover
-                  and transact.
+                  I like creating things from the ground
+                  up — businesses, software, platforms,
+                  media properties and intellectual
+                  property.
                 </p>
 
               </article>
@@ -262,14 +285,14 @@ export default function AboutPage() {
                 </span>
 
                 <h3>
-                  Ventures
+                  Own
                 </h3>
 
                 <p>
-                  Developing businesses across
-                  different industries with a focus
-                  on ownership, systems, scalability
-                  and long-term value.
+                  I value ownership of the underlying
+                  assets, technology, brand, customer
+                  relationship and intellectual property
+                  behind what I build.
                 </p>
 
               </article>
@@ -282,14 +305,14 @@ export default function AboutPage() {
                 </span>
 
                 <h3>
-                  Media
+                  Systemise
                 </h3>
 
                 <p>
-                  Building an independent media
-                  presence through writing, video,
-                  live broadcasts, conversations and
-                  original content.
+                  I am interested in turning manual
+                  operations into repeatable systems
+                  that can function, improve and scale
+                  without depending entirely on me.
                 </p>
 
               </article>
@@ -302,13 +325,15 @@ export default function AboutPage() {
                 </span>
 
                 <h3>
-                  Culture
+                  Scale
                 </h3>
 
                 <p>
-                  Music, books, creative projects and
-                  experiences that allow ideas to exist
-                  beyond conventional business.
+                  The long-term objective is not simply
+                  to make something work. It is to create
+                  structures capable of reaching more
+                  people, generating more value and
+                  becoming increasingly independent.
                 </p>
 
               </article>
@@ -321,7 +346,7 @@ export default function AboutPage() {
 
 
         {/* =================================================
-            BUILDING
+            VENTURES
             ================================================= */}
 
         <section className="about-page__building">
@@ -331,11 +356,11 @@ export default function AboutPage() {
             <div className="about-page__section-heading">
 
               <span>
-                04 / Building
+                04 / Ventures
               </span>
 
               <span>
-                Products / Systems
+                Companies / Businesses
               </span>
 
             </div>
@@ -348,9 +373,9 @@ export default function AboutPage() {
                 <h2>
                   I build
                   <br />
-                  systems,
+                  businesses,
                   <br />
-                  not just ideas.
+                  not just brands.
                 </h2>
 
               </div>
@@ -359,30 +384,38 @@ export default function AboutPage() {
               <div className="about-page__building-copy">
 
                 <p>
-                  A significant part of my work is
-                  technology.
+                  My entrepreneurial work extends
+                  beyond technology.
                 </p>
 
                 <p>
-                  I design and build digital platforms
-                  that bring together content,
-                  commerce, identity, media and
-                  business operations.
+                  I am interested in building companies
+                  across different industries where
+                  strong ideas can be transformed into
+                  commercially viable businesses,
+                  systems and long-term assets.
                 </p>
 
                 <p>
-                  I am particularly interested in
-                  software that gives individuals and
-                  businesses more ownership over their
-                  digital presence rather than forcing
-                  everything into someone else&apos;s
-                  platform.
+                  One example is CRETESPACE — a business
+                  centre operation being transformed into
+                  a technology-enabled service platform.
+                  The larger ambition is to move beyond
+                  the traditional business centre model
+                  and build infrastructure that can
+                  support how people and businesses
+                  access services, technology and
+                  operations.
                 </p>
 
                 <p>
-                  That thinking is behind the broader
-                  AKNM.PRO vision and the products I am
-                  developing around it.
+                  Other ventures and concepts explore
+                  different markets and experiences. I
+                  do not expect every idea to become a
+                  company. The objective is to identify
+                  the ideas with real potential, build
+                  them properly and allow the strongest
+                  ones to compound.
                 </p>
 
                 <Link
@@ -409,7 +442,7 @@ export default function AboutPage() {
 
 
         {/* =================================================
-            AKODIA / AKNM.PRO
+            CRETESPACE
             ================================================= */}
 
         <section className="about-page__platform">
@@ -419,11 +452,11 @@ export default function AboutPage() {
             <div className="about-page__section-heading">
 
               <span>
-                05 / The bigger idea
+                05 / Building companies
               </span>
 
               <span>
-                AKNM.PRO
+                CRETESPACE
               </span>
 
             </div>
@@ -432,48 +465,60 @@ export default function AboutPage() {
             <div className="about-page__platform-content">
 
               <span className="about-page__platform-label">
-                Web Media
+                Business / Technology
               </span>
 
               <h2>
-                The internet should
+                Turning a business
                 <br />
-                belong to the people
+                centre into
                 <br />
-                using it.
+                infrastructure.
               </h2>
 
               <p>
-                AKNM.PRO is the company and
-                technology environment behind a
-                larger idea: giving people a more
-                owned, customisable and independent
-                way to exist on the web.
+                CRETESPACE represents an important
+                part of my entrepreneurial journey:
+                taking a traditional service business
+                and asking what it could become when
+                technology is placed at its centre.
               </p>
 
               <p>
-                The long-term product vision is
-                <strong> AKODIA</strong> — a Web Media
-                platform where a person&apos;s digital
-                presence can become something closer
-                to an owned website and media property
-                than a traditional social-media
-                profile.
+                What began as a physical business
+                centre has evolved into a broader
+                technology and service-platform
+                vision — connecting customers,
+                services, ordering, payments,
+                fulfilment and business operations
+                through software.
               </p>
 
               <p>
-                Instead of reducing identity to a
-                username inside someone else&apos;s
-                network, the idea is to give people a
-                digital home that they can shape,
-                publish through and build upon.
+                The objective is not simply to operate
+                another business centre. It is to build
+                systems that can make this type of
+                business more efficient, accessible,
+                scalable and increasingly independent
+                of physical location.
+              </p>
+
+              <p>
+                CRETESPACE is therefore both a business
+                and an experiment in a larger question:
+                <strong>
+                  {" "}
+                  how much of a traditional service
+                  business can be transformed into
+                  technology infrastructure?
+                </strong>
               </p>
 
               <Link
                 href="/ventures"
                 className="about-page__platform-link"
               >
-                Discover what I&apos;m building
+                Explore what I&apos;m building
 
                 <span
                   aria-hidden="true"
@@ -491,7 +536,7 @@ export default function AboutPage() {
 
 
         {/* =================================================
-            PUBLISHING
+            TECHNOLOGY
             ================================================= */}
 
         <section className="about-page__creative">
@@ -501,11 +546,11 @@ export default function AboutPage() {
             <div className="about-page__section-heading">
 
               <span>
-                06 / Publishing
+                06 / Technology
               </span>
 
               <span>
-                Books / Ideas
+                Products / Infrastructure
               </span>
 
             </div>
@@ -520,28 +565,15 @@ export default function AboutPage() {
                 </span>
 
                 <h2>
-                  Author
+                  Product
                 </h2>
 
                 <p>
-                  Writing is one of the ways I turn
-                  ideas, experiences and observations
-                  into something permanent.
+                  I build software around real-world
+                  problems — platforms that connect
+                  people, services, content, commerce
+                  and operations.
                 </p>
-
-                <Link
-                  href="/books"
-                  className="about-page__text-link"
-                >
-                  Explore the books
-
-                  <span
-                    aria-hidden="true"
-                  >
-                    <ArrowUpRightIcon />
-                  </span>
-
-                </Link>
 
               </div>
 
@@ -553,29 +585,16 @@ export default function AboutPage() {
                 </span>
 
                 <h2>
-                  Publisher
+                  Infrastructure
                 </h2>
 
                 <p>
-                  Through AKNM Publishing, the goal is
-                  to create and distribute original
-                  intellectual property across digital
-                  and physical formats.
+                  My long-term technology work extends
+                  into systems such as CRETO, CREVA and
+                  BICEN — ideas focused on intelligence,
+                  automation and operating infrastructure
+                  for businesses and digital environments.
                 </p>
-
-                <Link
-                  href="/books"
-                  className="about-page__text-link"
-                >
-                  Enter the library
-
-                  <span
-                    aria-hidden="true"
-                  >
-                    <ArrowUpRightIcon />
-                  </span>
-
-                </Link>
 
               </div>
 
@@ -587,67 +606,90 @@ export default function AboutPage() {
 
 
         {/* =================================================
-            MUSIC
+            AKODIA / AKNM.PRO
             ================================================= */}
 
-        <section className="about-page__music">
+        <section className="about-page__platform">
 
           <div className="about-page__container">
 
             <div className="about-page__section-heading">
 
               <span>
-                07 / Music
+                07 / The bigger idea
               </span>
 
               <span>
-                AKNM Records
+                AKNM.PRO / AKODIA
               </span>
 
             </div>
 
 
-            <div className="about-page__music-grid">
+            <div className="about-page__platform-content">
 
-              <div>
+              <span className="about-page__platform-label">
+                Web Media
+              </span>
 
-                <h2>
-                  Music is
-                  <br />
-                  another language.
-                </h2>
+              <h2>
+                The internet should
+                <br />
+                give people more
+                <br />
+                ownership.
+              </h2>
 
-              </div>
+              <p>
+                AKNM.PRO is the company and technology
+                environment through which I am developing
+                a broader vision for personal digital
+                ownership.
+              </p>
 
+              <p>
+                The long-term product vision is
+                <strong> AKODIA</strong> — a Web Media
+                platform designed around the idea that
+                a person&apos;s presence on the internet
+                should be capable of becoming something
+                closer to an owned digital property than
+                a profile inside someone else&apos;s
+                network.
+              </p>
 
-              <div>
+              <p>
+                Instead of reducing identity to a
+                username, follower count or profile
+                inside a closed social network, AKODIA
+                explores a model where individuals can
+                have a customisable digital home through
+                which they can publish, communicate,
+                build an audience and develop their own
+                media presence.
+              </p>
 
-                <p>
-                  Music is an important part of my
-                  creative identity.
-                </p>
+              <p>
+                This is part of a broader belief that
+                technology should not only make people
+                more connected. It should also give them
+                greater control over what they create
+                and how they exist digitally.
+              </p>
 
-                <p>
-                  AKNM Records provides a home for
-                  music, releases and the wider creative
-                  work surrounding them.
-                </p>
+              <Link
+                href="/ventures"
+                className="about-page__platform-link"
+              >
+                Discover the vision
 
-                <Link
-                  href="/music"
-                  className="about-page__text-link"
+                <span
+                  aria-hidden="true"
                 >
-                  Explore the music
+                  <ArrowUpRightIcon />
+                </span>
 
-                  <span
-                    aria-hidden="true"
-                  >
-                    <ArrowUpRightIcon />
-                  </span>
-
-                </Link>
-
-              </div>
+              </Link>
 
             </div>
 
@@ -671,7 +713,7 @@ export default function AboutPage() {
               </span>
 
               <span>
-                AKNM TV / Live
+                AKNM TV / Live / Journal
               </span>
 
             </div>
@@ -680,19 +722,27 @@ export default function AboutPage() {
             <div className="about-page__media-intro">
 
               <h2>
-                I&apos;m building
+                I am building
                 <br />
-                my own media
+                an independent
                 <br />
-                infrastructure.
+                media presence.
               </h2>
 
               <p>
-                AKNM is not only a place to publish
-                written work. It is becoming an
-                independent media environment for
-                video, broadcasts, conversations,
-                updates and original programming.
+                Entrepreneurship and media increasingly
+                intersect. I want to build an audience
+                around the ideas, businesses, experiments
+                and perspectives behind my work rather
+                than relying entirely on traditional
+                advertising or third-party platforms.
+              </p>
+
+              <p>
+                AKNM is becoming a place for video,
+                conversations, podcasts, broadcasts,
+                writing, documentation and original
+                programming.
               </p>
 
             </div>
@@ -764,6 +814,183 @@ export default function AboutPage() {
 
 
         {/* =================================================
+            PUBLISHING
+            ================================================= */}
+
+        <section className="about-page__creative">
+
+          <div className="about-page__container">
+
+            <div className="about-page__section-heading">
+
+              <span>
+                09 / Intellectual property
+              </span>
+
+              <span>
+                Books / Publishing
+              </span>
+
+            </div>
+
+
+            <div className="about-page__creative-grid">
+
+              <div>
+
+                <span className="about-page__creative-number">
+                  01
+                </span>
+
+                <h2>
+                  Author
+                </h2>
+
+                <p>
+                  Writing is one of the ways I turn
+                  ideas, experiences and observations
+                  into intellectual property that can
+                  exist independently of me.
+                </p>
+
+                <Link
+                  href="/books"
+                  className="about-page__text-link"
+                >
+                  Explore the books
+
+                  <span
+                    aria-hidden="true"
+                  >
+                    <ArrowUpRightIcon />
+                  </span>
+
+                </Link>
+
+              </div>
+
+
+              <div>
+
+                <span className="about-page__creative-number">
+                  02
+                </span>
+
+                <h2>
+                  Publisher
+                </h2>
+
+                <p>
+                  Through AKNM Publishing, I am building
+                  a home for original books, ideas and
+                  other intellectual property across
+                  digital and physical formats.
+                </p>
+
+                <Link
+                  href="/books"
+                  className="about-page__text-link"
+                >
+                  Enter the library
+
+                  <span
+                    aria-hidden="true"
+                  >
+                    <ArrowUpRightIcon />
+                  </span>
+
+                </Link>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        {/* =================================================
+            MUSIC & CULTURE
+            ================================================= */}
+
+        <section className="about-page__music">
+
+          <div className="about-page__container">
+
+            <div className="about-page__section-heading">
+
+              <span>
+                10 / Culture
+              </span>
+
+              <span>
+                Music / Experiences
+              </span>
+
+            </div>
+
+
+            <div className="about-page__music-grid">
+
+              <div>
+
+                <h2>
+                  Business is
+                  <br />
+                  not the whole
+                  <br />
+                  story.
+                </h2>
+
+              </div>
+
+
+              <div>
+
+                <p>
+                  I am also interested in the cultural
+                  and creative side of building.
+                </p>
+
+                <p>
+                  Music, books, hospitality, experiences
+                  and other creative projects provide
+                  different ways of expressing ideas,
+                  creating communities and building
+                  intellectual and cultural value.
+                </p>
+
+                <p>
+                  AKNM Records provides a home for music,
+                  releases and the wider creative work
+                  surrounding them.
+                </p>
+
+                <Link
+                  href="/music"
+                  className="about-page__text-link"
+                >
+                  Explore the music
+
+                  <span
+                    aria-hidden="true"
+                  >
+                    <ArrowUpRightIcon />
+                  </span>
+
+                </Link>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        {/* =================================================
             PHILOSOPHY
             ================================================= */}
 
@@ -774,7 +1001,7 @@ export default function AboutPage() {
             <div className="about-page__section-heading">
 
               <span>
-                09 / Philosophy
+                11 / Philosophy
               </span>
 
               <span>
@@ -801,22 +1028,39 @@ export default function AboutPage() {
                 </p>
 
                 <p>
-                  I want to build things I can
-                  understand, control and continue
-                  developing over time.
+                  I want to understand the businesses,
+                  products and systems I build and retain
+                  meaningful control over the assets that
+                  make them valuable.
                 </p>
 
                 <p>
-                  I value independence because it
-                  creates room to think differently,
-                  experiment and build without having
-                  to follow somebody else&apos;s formula.
+                  I value independence because it creates
+                  room to think differently, experiment
+                  and build without having to follow
+                  somebody else&apos;s formula.
                 </p>
 
                 <p>
-                  And ultimately, ideas only matter
-                  when they become reality. The goal
-                  is always execution.
+                  I believe technology should create
+                  leverage — allowing people and businesses
+                  to accomplish more without simply
+                  adding more complexity.
+                </p>
+
+                <p>
+                  I also believe ambition has to be matched
+                  by discipline. Ideas are abundant.
+                  Execution, customer value, revenue,
+                  systems and persistence are what turn
+                  them into companies.
+                </p>
+
+                <p>
+                  Ultimately, I am interested in building
+                  things that can continue to create value
+                  long after the excitement of starting
+                  them has passed.
                 </p>
 
               </div>
@@ -839,7 +1083,7 @@ export default function AboutPage() {
             <div className="about-page__section-heading">
 
               <span>
-                10 / Now
+                12 / Now
               </span>
 
               <span>
@@ -858,13 +1102,15 @@ export default function AboutPage() {
                 </span>
 
                 <h3>
-                  AKNM.PRO
+                  CRETESPACE
                 </h3>
 
                 <p>
-                  Building the technology and digital
-                  infrastructure for the wider AKNM
-                  ecosystem.
+                  Transforming a traditional business
+                  centre into a technology-enabled service
+                  platform and building the systems required
+                  to operate and scale it beyond a single
+                  physical location.
                 </p>
 
               </div>
@@ -877,13 +1123,14 @@ export default function AboutPage() {
                 </span>
 
                 <h3>
-                  AKODIA
+                  AKNM.PRO
                 </h3>
 
                 <p>
-                  Developing the long-term Web Media
-                  vision for a more owned and
-                  customisable internet presence.
+                  Building the technology, media and
+                  digital infrastructure that connects
+                  my entrepreneurial, creative and
+                  publishing work.
                 </p>
 
               </div>
@@ -896,12 +1143,13 @@ export default function AboutPage() {
                 </span>
 
                 <h3>
-                  Publishing
+                  AKODIA
                 </h3>
 
                 <p>
-                  Expanding books, digital publishing
-                  and original intellectual property.
+                  Developing a long-term Web Media vision
+                  for a more owned, customisable and
+                  independent digital presence.
                 </p>
 
               </div>
@@ -914,13 +1162,53 @@ export default function AboutPage() {
                 </span>
 
                 <h3>
+                  Technology
+                </h3>
+
+                <p>
+                  Exploring the next generation of
+                  software and operating infrastructure
+                  through projects including CRETO,
+                  CREVA and BICEN.
+                </p>
+
+              </div>
+
+
+              <div>
+
+                <span>
+                  05
+                </span>
+
+                <h3>
                   Media
                 </h3>
 
                 <p>
-                  Growing AKNM TV, AKNM Live, Journal
-                  and the broader independent media
-                  operation.
+                  Growing AKNM TV, AKNM Live, Journal,
+                  podcasts, video and original programming
+                  as an independent media operation.
+                </p>
+
+              </div>
+
+
+              <div>
+
+                <span>
+                  06
+                </span>
+
+                <h3>
+                  Intellectual Property
+                </h3>
+
+                <p>
+                  Developing books, music, publishing
+                  projects, creative work and other
+                  original assets that can exist and
+                  compound independently.
                 </p>
 
               </div>
@@ -941,20 +1229,28 @@ export default function AboutPage() {
           <div className="about-page__container">
 
             <span>
-              11 / Continue
+              Beyond the beginning
             </span>
 
             <h2>
-              This is only
+              I am not building
               <br />
-              the beginning.
+              one thing.
             </h2>
 
             <p>
-              I&apos;m building businesses, products,
-              media and intellectual property for the
-              long term. AKNM is the environment in
-              which those ideas come together.
+              I am building the capacity to build many
+              things — companies, technology, media,
+              intellectual property and experiences that
+              can create value independently and together.
+            </p>
+
+            <p>
+              AKNM is the environment in which those
+              ideas come together. The work is still
+              early, but the direction is deliberate:
+              build, own, systemise, execute and keep
+              going.
             </p>
 
             <Link
