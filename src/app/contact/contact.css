@@ -1598,3 +1598,15 @@
   }
 
 }
+
+/* =========================================================
+   MOBILE INPUT ZOOM PROTECTION
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .contact-page input,
+  .contact-page textarea,
+  .contact-page select {
+    font-size: 16px !important;
+  }
+}
