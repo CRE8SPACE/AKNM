@@ -3,11 +3,19 @@
    ========================================================= */
 
 .studio-layout {
+  position: relative;
+
+  width: 100%;
   min-height: 100svh;
+
+  margin: 0;
+  padding: 0;
 
   background: #050505;
 
   color: #fff;
+
+  overflow-x: clip;
 }
 
 
@@ -16,9 +24,15 @@
    ========================================================= */
 
 .studio-layout__main {
+  position: relative;
+
   min-height: 100svh;
 
-  margin-left: 250px;
+  margin-left: 270px;
+
+  min-width: 0;
+
+  box-sizing: border-box;
 }
 
 
@@ -27,8 +41,29 @@
    ========================================================= */
 
 .studio-layout__content {
+  position: relative;
+
+  width: 100%;
+
   min-height:
     calc(100svh - 70px);
+
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  overflow-x: clip;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .studio-layout__main {
+    margin-left: 245px;
+  }
 }
 
 
@@ -36,14 +71,87 @@
    MOBILE
    ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+  .studio-layout {
+    min-height: 100svh;
+
+    overflow-x: hidden;
+  }
 
   .studio-layout__main {
+    width: 100%;
+
+    min-height: 100svh;
+
     margin-left: 0;
   }
 
   .studio-layout__content {
+    width: 100%;
+
     min-height:
       calc(100svh - 64px);
+
+    padding-bottom:
+      env(safe-area-inset-bottom);
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .studio-layout__content {
+    min-height:
+      calc(100svh - 60px);
+  }
+}
+
+
+/* =========================================================
+   MOBILE FORM CONTROLS
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .studio-layout input,
+  .studio-layout textarea,
+  .studio-layout select {
+    font-size: 16px;
+  }
+
+  .studio-layout button,
+  .studio-layout input,
+  .studio-layout textarea,
+  .studio-layout select {
+    touch-action: manipulation;
+  }
+}
+
+
+/* =========================================================
+   SAFER BOX SIZING
+   ========================================================= */
+
+.studio-layout *,
+.studio-layout *::before,
+.studio-layout *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .studio-layout *,
+  .studio-layout *::before,
+  .studio-layout *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }

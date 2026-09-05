@@ -25,24 +25,60 @@ type SidebarParent = {
 };
 
 /* =========================================================
+   ICONS
+   ========================================================= */
+
+function ExternalLinkIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path d="M14 4h6v6" />
+      <path d="M20 4 11 13" />
+      <path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5" />
+    </svg>
+  );
+}
+
+
+function CloseIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path d="M6 6l12 12" />
+      <path d="M18 6 6 18" />
+    </svg>
+  );
+}
+
+
+function MenuIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path d="M4 7h16" />
+      <path d="M4 12h16" />
+      <path d="M4 17h16" />
+    </svg>
+  );
+}
+
+
+/* =========================================================
    SIDEBAR STRUCTURE
    ========================================================= */
 
 const navigation: SidebarParent[] = [
-  /* =======================================================
-     OVERVIEW
-     ======================================================= */
-
   {
     label: "Overview",
     number: "01",
     href: "/studio",
   },
-
-  /* =======================================================
-     PAGES
-     Public website page management
-     ======================================================= */
 
   {
     label: "Pages",
@@ -56,11 +92,6 @@ const navigation: SidebarParent[] = [
     ],
   },
 
-  /* =======================================================
-     VENTURES
-     Companies, products and projects
-     ======================================================= */
-
   {
     label: "Ventures",
     number: "03",
@@ -70,18 +101,12 @@ const navigation: SidebarParent[] = [
         label: "All Ventures",
         href: "/studio/ventures",
       },
-
       {
         label: "New Venture",
         href: "/studio/ventures/new",
       },
     ],
   },
-
-  /* =======================================================
-     CONTENT
-     Journal / editorial content
-     ======================================================= */
 
   {
     label: "Content",
@@ -92,22 +117,16 @@ const navigation: SidebarParent[] = [
         label: "All Content",
         href: "/studio/content",
       },
-
       {
         label: "Create Post",
         href: "/studio/content/new",
       },
-
       {
         label: "Categories",
         href: "/studio/content/categories",
       },
     ],
   },
-
-  /* =======================================================
-     BOOKS
-     ======================================================= */
 
   {
     label: "Books",
@@ -118,17 +137,12 @@ const navigation: SidebarParent[] = [
         label: "All Books",
         href: "/studio/books",
       },
-
       {
         label: "New Book",
         href: "/studio/books/new",
       },
     ],
   },
-
-  /* =======================================================
-     MUSIC
-     ======================================================= */
 
   {
     label: "Music",
@@ -139,7 +153,6 @@ const navigation: SidebarParent[] = [
         label: "All Music",
         href: "/studio/music",
       },
-
       {
         label: "New Music",
         href: "/studio/music/new",
@@ -147,20 +160,11 @@ const navigation: SidebarParent[] = [
     ],
   },
 
-  /* =======================================================
-     MEDIA
-     ======================================================= */
-
   {
     label: "Media",
     number: "07",
-
     href: "/studio/media",
   },
-
-  /* =======================================================
-     LIVE
-     ======================================================= */
 
   {
     label: "Live",
@@ -171,17 +175,12 @@ const navigation: SidebarParent[] = [
         label: "Go Live",
         href: "/studio/live",
       },
-
       {
         label: "Live History",
         href: "/studio/live/history",
       },
     ],
   },
-
-  /* =======================================================
-     PUBLISHING
-     ======================================================= */
 
   {
     label: "Publishing",
@@ -192,17 +191,12 @@ const navigation: SidebarParent[] = [
         label: "Publishing",
         href: "/studio/publishing",
       },
-
       {
         label: "Distribution",
         href: "/studio/publishing/channels",
       },
     ],
   },
-
-  /* =======================================================
-     INSIGHTS
-     ======================================================= */
 
   {
     label: "Insights",
@@ -213,12 +207,10 @@ const navigation: SidebarParent[] = [
         label: "Analytics",
         href: "/studio/insights",
       },
-
       {
         label: "Content Analytics",
         href: "/studio/insights/content",
       },
-
       {
         label: "Audience",
         href: "/studio/insights/audience",
@@ -227,58 +219,52 @@ const navigation: SidebarParent[] = [
   },
 ];
 
+
 /* =========================================================
    ACTIVE PATH
    ========================================================= */
 
-function isPathActive(pathname: string, href: string) {
-  /*
-   * Overview should only be active
-   * on the exact Studio homepage.
-   */
-
+function isPathActive(
+  pathname: string,
+  href: string,
+) {
   if (href === "/studio") {
     return pathname === "/studio";
   }
 
-  /*
-   * Other routes are active when the
-   * current pathname matches the route
-   * or sits beneath it.
-   */
-
-  return pathname === href || pathname.startsWith(`${href}/`);
+  return (
+    pathname === href ||
+    pathname.startsWith(`${href}/`)
+  );
 }
+
 
 /* =========================================================
    INITIAL OPEN STATE
    ========================================================= */
 
-function getInitialOpenState(pathname: string) {
+function getInitialOpenState(
+  pathname: string,
+) {
   const state: Record<string, boolean> = {};
 
   navigation.forEach((item) => {
-    /*
-     * Direct links do not have
-     * expandable state.
-     */
-
     if (!item.children) {
       return;
     }
 
-    /*
-     * Automatically open the section
-     * containing the active page.
-     */
-
-    state[item.label] = item.children.some((child) =>
-      isPathActive(pathname, child.href),
-    );
+    state[item.label] =
+      item.children.some((child) =>
+        isPathActive(
+          pathname,
+          child.href,
+        ),
+      );
   });
 
   return state;
 }
+
 
 /* =========================================================
    COMPONENT
@@ -287,9 +273,19 @@ function getInitialOpenState(pathname: string) {
 export default function StudioSidebar() {
   const pathname = usePathname();
 
-  const [openMenus, setOpenMenus] = useState<Record<string, boolean>>(() =>
-    getInitialOpenState(pathname),
+  const [
+    openMenus,
+    setOpenMenus,
+  ] = useState<Record<string, boolean>>(
+    () =>
+      getInitialOpenState(pathname),
   );
+
+  const [
+    isDrawerOpen,
+    setIsDrawerOpen,
+  ] = useState(false);
+
 
   /* =======================================================
      AUTO OPEN ACTIVE SECTION
@@ -306,15 +302,13 @@ export default function StudioSidebar() {
           return;
         }
 
-        const hasActiveChild = item.children.some((child) =>
-          isPathActive(pathname, child.href),
-        );
-
-        /*
-         * If the current page belongs
-         * to a section, keep that section
-         * open after navigation.
-         */
+        const hasActiveChild =
+          item.children.some((child) =>
+            isPathActive(
+              pathname,
+              child.href,
+            ),
+          );
 
         if (hasActiveChild) {
           next[item.label] = true;
@@ -323,7 +317,67 @@ export default function StudioSidebar() {
 
       return next;
     });
+
+    /* Close mobile drawer after navigation */
+    setIsDrawerOpen(false);
   }, [pathname]);
+
+
+  /* =======================================================
+     LOCK PAGE SCROLL WHILE DRAWER IS OPEN
+     ======================================================= */
+
+  useEffect(() => {
+    if (!isDrawerOpen) {
+      document.body.classList.remove(
+        "studio-drawer-open",
+      );
+
+      return;
+    }
+
+    document.body.classList.add(
+      "studio-drawer-open",
+    );
+
+    return () => {
+      document.body.classList.remove(
+        "studio-drawer-open",
+      );
+    };
+  }, [isDrawerOpen]);
+
+
+  /* =======================================================
+     ESCAPE KEY
+     ======================================================= */
+
+  useEffect(() => {
+    if (!isDrawerOpen) {
+      return;
+    }
+
+    const handleKeyDown = (
+      event: KeyboardEvent,
+    ) => {
+      if (event.key === "Escape") {
+        setIsDrawerOpen(false);
+      }
+    };
+
+    window.addEventListener(
+      "keydown",
+      handleKeyDown,
+    );
+
+    return () => {
+      window.removeEventListener(
+        "keydown",
+        handleKeyDown,
+      );
+    };
+  }, [isDrawerOpen]);
+
 
   /* =======================================================
      TOGGLE MENU
@@ -332,181 +386,357 @@ export default function StudioSidebar() {
   function toggleMenu(label: string) {
     setOpenMenus((current) => ({
       ...current,
-
       [label]: !current[label],
     }));
   }
+
 
   /* =======================================================
      RENDER
      ======================================================= */
 
   return (
-    <aside className="studio-sidebar">
-      {/* =================================================
-          BRAND
-          ================================================= */}
+    <>
+      {/* ===================================================
+          MOBILE MENU BUTTON
+         =================================================== */}
 
-      <Link
-        href="/studio"
-        className="studio-sidebar__brand"
+      <button
+        type="button"
+        className="studio-mobile-menu"
+        onClick={() =>
+          setIsDrawerOpen(true)
+        }
+        aria-label="Open Studio navigation"
+        aria-expanded={isDrawerOpen}
+      >
+        <MenuIcon />
+      </button>
+
+
+      {/* ===================================================
+          MOBILE BACKDROP
+         =================================================== */}
+
+      <button
+        type="button"
+        className={[
+          "studio-sidebar__backdrop",
+          isDrawerOpen
+            ? "is-visible"
+            : "",
+        ]
+          .filter(Boolean)
+          .join(" ")}
+        onClick={() =>
+          setIsDrawerOpen(false)
+        }
+        aria-label="Close Studio navigation"
+        tabIndex={
+          isDrawerOpen ? 0 : -1
+        }
+      />
+
+
+      {/* ===================================================
+          SIDEBAR
+         =================================================== */}
+
+      <aside
+        className={[
+          "studio-sidebar",
+          isDrawerOpen
+            ? "is-drawer-open"
+            : "",
+        ]
+          .filter(Boolean)
+          .join(" ")}
         aria-label="AKNM Studio"
       >
-        <Logo />
-      </Link>
+        {/* ===============================================
+            MOBILE DRAWER HEADER
+           =============================================== */}
 
-      {/* =================================================
-          LABEL
-          ================================================= */}
+        <div className="studio-sidebar__mobile-header">
+          <Link
+            href="/studio"
+            className="studio-sidebar__mobile-brand"
+            aria-label="AKNM Studio"
+          >
+            <Logo />
+          </Link>
 
-      <div className="studio-sidebar__label">AKNM STUDIO</div>
+          <button
+            type="button"
+            className="studio-sidebar__close"
+            onClick={() =>
+              setIsDrawerOpen(false)
+            }
+            aria-label="Close Studio navigation"
+          >
+            <CloseIcon />
+          </button>
+        </div>
 
-      {/* =================================================
-          NAVIGATION
-          ================================================= */}
 
-      <nav
-        className="studio-sidebar__navigation"
-        aria-label="Studio navigation"
-      >
-        {navigation.map((item) => {
-          const hasChildren = Boolean(item.children?.length);
+        {/* ===============================================
+            BRAND
+           =============================================== */}
 
-          const directActive = item.href
-            ? isPathActive(pathname, item.href)
-            : false;
+        <Link
+          href="/studio"
+          className="studio-sidebar__brand"
+          aria-label="AKNM Studio"
+        >
+          <Logo />
+        </Link>
 
-          const childActive =
-            item.children?.some((child) =>
-              isPathActive(pathname, child.href),
-            ) ?? false;
 
-          const isActive = directActive || childActive;
+        {/* ===============================================
+            LABEL
+           =============================================== */}
 
-          const isOpen = openMenus[item.label] ?? false;
+        <div className="studio-sidebar__label">
+          AKNM STUDIO
+        </div>
 
-          /* =========================================
+
+        {/* ===============================================
+            NAVIGATION
+           =============================================== */}
+
+        <nav
+          className="studio-sidebar__navigation"
+          aria-label="Studio navigation"
+        >
+          {navigation.map((item) => {
+            const hasChildren =
+              Boolean(
+                item.children?.length,
+              );
+
+            const directActive =
+              item.href
+                ? isPathActive(
+                    pathname,
+                    item.href,
+                  )
+                : false;
+
+            const childActive =
+              item.children?.some(
+                (child) =>
+                  isPathActive(
+                    pathname,
+                    child.href,
+                  ),
+              ) ?? false;
+
+            const isActive =
+              directActive ||
+              childActive;
+
+            const isOpen =
+              openMenus[item.label] ??
+              false;
+
+
+            /* =========================================
                DIRECT LINK
                ========================================= */
 
-          if (!hasChildren) {
-            return (
-              <Link
-                key={item.label}
-                href={item.href || "/studio"}
-                className={["studio-sidebar__link", isActive ? "is-active" : ""]
-                  .filter(Boolean)
-                  .join(" ")}
-              >
-                <span className="studio-sidebar__number">{item.number}</span>
+            if (!hasChildren) {
+              return (
+                <Link
+                  key={item.label}
+                  href={
+                    item.href ||
+                    "/studio"
+                  }
+                  className={[
+                    "studio-sidebar__link",
+                    isActive
+                      ? "is-active"
+                      : "",
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
+                >
+                  <span className="studio-sidebar__number">
+                    {item.number}
+                  </span>
 
-                <span className="studio-sidebar__name">{item.label}</span>
+                  <span className="studio-sidebar__name">
+                    {item.label}
+                  </span>
 
-                <span className="studio-sidebar__arrow">↗</span>
-              </Link>
-            );
-          }
+                  <span
+                    className="studio-sidebar__arrow"
+                    aria-hidden="true"
+                  >
+                    <ExternalLinkIcon />
+                  </span>
+                </Link>
+              );
+            }
 
-          /* =========================================
+
+            /* =========================================
                PARENT
                ========================================= */
 
-          return (
-            <section
-              key={item.label}
-              className={[
-                "studio-sidebar__group",
-                isOpen ? "is-open" : "",
-                isActive ? "is-active" : "",
-              ]
-                .filter(Boolean)
-                .join(" ")}
-            >
-              {/* =====================================
-                    PARENT BUTTON
-                    ===================================== */}
-
-              <button
-                type="button"
-                className="studio-sidebar__parent"
-                onClick={() => toggleMenu(item.label)}
-                aria-expanded={isOpen}
-              >
-                <span className="studio-sidebar__number">{item.number}</span>
-
-                <span className="studio-sidebar__name">{item.label}</span>
-
-                <span className="studio-sidebar__toggle" aria-hidden="true">
-                  <span />
-                  <span />
-                </span>
-              </button>
-
-              {/* =====================================
-                    CHILDREN
-                    ===================================== */}
-
-              <div
+            return (
+              <section
+                key={item.label}
                 className={[
-                  "studio-sidebar__children-wrapper",
-                  isOpen ? "is-open" : "",
+                  "studio-sidebar__group",
+                  isOpen
+                    ? "is-open"
+                    : "",
+                  isActive
+                    ? "is-active"
+                    : "",
                 ]
                   .filter(Boolean)
                   .join(" ")}
               >
-                <div className="studio-sidebar__children">
-                  {item.children?.map((child, index) => {
-                    const childIsActive = isPathActive(pathname, child.href);
+                <button
+                  type="button"
+                  className="studio-sidebar__parent"
+                  onClick={() =>
+                    toggleMenu(
+                      item.label,
+                    )
+                  }
+                  aria-expanded={
+                    isOpen
+                  }
+                >
+                  <span className="studio-sidebar__number">
+                    {item.number}
+                  </span>
 
-                    return (
-                      <Link
-                        key={child.href}
-                        href={child.href}
-                        className={[
-                          "studio-sidebar__child",
-                          childIsActive ? "is-active" : "",
-                        ]
-                          .filter(Boolean)
-                          .join(" ")}
-                      >
-                        <span className="studio-sidebar__child-branch">
-                          <span />
-                        </span>
+                  <span className="studio-sidebar__name">
+                    {item.label}
+                  </span>
 
-                        <span className="studio-sidebar__child-number">
-                          {String(index + 1).padStart(2, "0")}
-                        </span>
+                  <span
+                    className="studio-sidebar__toggle"
+                    aria-hidden="true"
+                  >
+                    <span />
+                    <span />
+                  </span>
+                </button>
 
-                        <span className="studio-sidebar__child-name">
-                          {child.label}
-                        </span>
 
-                        {childIsActive && (
-                          <span className="studio-sidebar__child-active" />
-                        )}
-                      </Link>
-                    );
-                  })}
+                {/* =====================================
+                    CHILDREN
+                   ===================================== */}
+
+                <div
+                  className={[
+                    "studio-sidebar__children-wrapper",
+                    isOpen
+                      ? "is-open"
+                      : "",
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
+                >
+                  <div className="studio-sidebar__children">
+                    {item.children?.map(
+                      (
+                        child,
+                        index,
+                      ) => {
+                        const childIsActive =
+                          isPathActive(
+                            pathname,
+                            child.href,
+                          );
+
+                        return (
+                          <Link
+                            key={
+                              child.href
+                            }
+                            href={
+                              child.href
+                            }
+                            className={[
+                              "studio-sidebar__child",
+                              childIsActive
+                                ? "is-active"
+                                : "",
+                            ]
+                              .filter(
+                                Boolean,
+                              )
+                              .join(
+                                " ",
+                              )}
+                          >
+                            <span className="studio-sidebar__child-branch">
+                              <span />
+                            </span>
+
+                            <span className="studio-sidebar__child-number">
+                              {String(
+                                index +
+                                  1,
+                              ).padStart(
+                                2,
+                                "0",
+                              )}
+                            </span>
+
+                            <span className="studio-sidebar__child-name">
+                              {
+                                child.label
+                              }
+                            </span>
+
+                            {childIsActive && (
+                              <span className="studio-sidebar__child-active" />
+                            )}
+                          </Link>
+                        );
+                      },
+                    )}
+                  </div>
                 </div>
-              </div>
-            </section>
-          );
-        })}
-      </nav>
+              </section>
+            );
+          })}
+        </nav>
 
-      {/* =================================================
-          BOTTOM
-          ================================================= */}
 
-      <div className="studio-sidebar__bottom">
-        <Link href="/" className="studio-sidebar__website">
-          <span>View website</span>
+        {/* ===============================================
+            BOTTOM
+           =============================================== */}
 
-          <span>↗</span>
-        </Link>
+        <div className="studio-sidebar__bottom">
+          <Link
+            href="/"
+            className="studio-sidebar__website"
+          >
+            <span>
+              View website
+            </span>
 
-        <div className="studio-sidebar__version">AKNM.PRO / STUDIO</div>
-      </div>
-    </aside>
+            <span
+              aria-hidden="true"
+            >
+              <ExternalLinkIcon />
+            </span>
+          </Link>
+
+          <div className="studio-sidebar__version">
+            AKNM.PRO / STUDIO
+          </div>
+        </div>
+      </aside>
+    </>
   );
 }

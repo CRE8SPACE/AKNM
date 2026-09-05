@@ -1,16 +1,38 @@
 @import "../styles/variables.css";
 @import "../styles/typography.css";
 
-* {
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* =========================================================
+   ROOT
+   ========================================================= */
+
 html {
   background: var(--color-black);
+
   scroll-behavior: smooth;
+
+  /*
+   * Prevent mobile browsers from automatically changing
+   * text scale when the viewport changes.
+   */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
+
+/* =========================================================
+   BODY
+   ========================================================= */
 
 body {
   background: var(--color-black);
@@ -18,7 +40,17 @@ body {
 
   font-family: var(--font-body);
 
-  h1,
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+h1,
 h2,
 h3,
 h4,
@@ -27,19 +59,9 @@ h6 {
   font-family: var(--font-heading);
 }
 
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-
-  overflow-x: hidden;
-}
-
-body,
-button,
-input,
-textarea,
-select {
-  font-family: inherit;
-}
+/* =========================================================
+   FORM CONTROLS
+   ========================================================= */
 
 body,
 button,
@@ -56,16 +78,44 @@ select {
   font: inherit;
 }
 
+/*
+ * Prevent mobile browsers, particularly iOS Safari, from
+ * automatically zooming the page when an editable control
+ * receives focus.
+ *
+ * 16px is the important threshold for mobile Safari.
+ */
+
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
 button {
   border: 0;
   background: none;
   color: inherit;
+
+  cursor: pointer;
 }
+
+/* =========================================================
+   LINKS
+   ========================================================= */
 
 a {
   color: inherit;
   text-decoration: none;
 }
+
+/* =========================================================
+   MEDIA
+   ========================================================= */
 
 img,
 video {
@@ -77,19 +127,27 @@ img {
   height: auto;
 }
 
+/* =========================================================
+   LISTS
+   ========================================================= */
+
 ul,
 ol {
   list-style: none;
 }
+
+/* =========================================================
+   TEXT SELECTION
+   ========================================================= */
 
 ::selection {
   background: var(--color-white);
   color: var(--color-black);
 }
 
-/* ========================================
+/* =========================================================
    GLOBAL LAYOUT
-   ======================================== */
+   ========================================================= */
 
 .page {
   min-height: 100vh;
@@ -110,17 +168,20 @@ ol {
   padding: 128px 0;
 }
 
-/* ========================================
+/* =========================================================
    BUTTONS
-   ======================================== */
+   ========================================================= */
 
 .button {
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
+
   gap: 10px;
 
   min-height: 48px;
+
   padding: 0 22px;
 
   border: 1px solid var(--color-border);
@@ -155,9 +216,28 @@ ol {
   border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* ========================================
+/* =========================================================
+   MOBILE FORM CONTROLS
+   ========================================================= */
+
+@media (max-width: 768px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    touch-action: manipulation;
+  }
+}
+
+/* =========================================================
    RESPONSIVE
-   ======================================== */
+   ========================================================= */
 
 @media (max-width: 768px) {
   :root {
@@ -166,5 +246,23 @@ ol {
 
   .section {
     padding: 96px 0;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }

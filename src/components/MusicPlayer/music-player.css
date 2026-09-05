@@ -68,6 +68,10 @@
 }
 
 
+/* =========================================================
+   TOP ACCENT
+   ========================================================= */
+
 .aknm-global-player::before {
   content: "";
 
@@ -90,6 +94,8 @@
     );
 
   opacity: 0.6;
+
+  pointer-events: none;
 }
 
 
@@ -321,6 +327,10 @@
 }
 
 
+/* =========================================================
+   DESKTOP CLOSE BUTTON
+   ========================================================= */
+
 .aknm-close-button svg {
   fill: none;
 
@@ -329,6 +339,85 @@
   stroke-width: 1.8;
 
   stroke-linecap: round;
+}
+
+
+/* =========================================================
+   DEDICATED MOBILE CLOSE BUTTON
+   ========================================================= */
+
+.aknm-mobile-close-button {
+  display: none;
+
+  position: absolute;
+
+  top: 8px;
+  right: 8px;
+
+  width: 34px;
+  height: 34px;
+
+  padding: 0;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.08);
+
+  border-radius: 50%;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    rgba(255, 255, 255, 0.04);
+
+  color:
+    rgba(255, 255, 255, 0.65);
+
+  cursor: pointer;
+
+  z-index: 20;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.aknm-mobile-close-button:hover {
+  color: #ffffff;
+
+  background:
+    rgba(255, 255, 255, 0.1);
+
+  border-color:
+    rgba(255, 255, 255, 0.18);
+
+  transform:
+    scale(1.05);
+}
+
+
+.aknm-mobile-close-button:active {
+  transform:
+    scale(0.94);
+}
+
+
+.aknm-mobile-close-button svg {
+  width: 17px;
+  height: 17px;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 2;
+
+  stroke-linecap: round;
+
+  pointer-events: none;
 }
 
 
@@ -872,12 +961,29 @@
 
     padding: 14px;
 
+    padding-top: 18px;
+
     border-radius: 22px;
   }
 
 
+  /* -------------------------------------------------------
+     SHOW MOBILE CLOSE BUTTON
+     ------------------------------------------------------- */
+
+  .aknm-mobile-close-button {
+    display: flex;
+  }
+
+
+  /* -------------------------------------------------------
+     TRACK
+     ------------------------------------------------------- */
+
   .aknm-player-track {
     width: 100%;
+
+    padding-right: 38px;
   }
 
 
@@ -889,10 +995,22 @@
   }
 
 
+  /* -------------------------------------------------------
+     CENTER
+     ------------------------------------------------------- */
+
   .aknm-player-center {
     width: 100%;
+
+    padding-right: 0;
   }
 
+
+  /* -------------------------------------------------------
+     HIDE DESKTOP ACTIONS
+     
+     The dedicated mobile close button remains visible.
+     ------------------------------------------------------- */
 
   .aknm-player-actions {
     display: none;
@@ -912,6 +1030,10 @@
   }
 
 
+  /* -------------------------------------------------------
+     MINI PLAYER
+     ------------------------------------------------------- */
+
   .aknm-mini-player {
     left: 12px;
     right: 12px;
@@ -924,6 +1046,10 @@
 }
 
 
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
 @media (
   max-width: 480px
 ) {
@@ -931,7 +1057,39 @@
   .aknm-global-player {
     padding: 12px;
 
+    padding-top: 18px;
+
     gap: 10px;
+
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+
+    border-radius: 20px;
+  }
+
+
+  /* -------------------------------------------------------
+     MOBILE CLOSE BUTTON
+     ------------------------------------------------------- */
+
+  .aknm-mobile-close-button {
+    top: 7px;
+    right: 7px;
+
+    width: 32px;
+    height: 32px;
+  }
+
+
+  .aknm-mobile-close-button svg {
+    width: 16px;
+    height: 16px;
+  }
+
+
+  .aknm-player-track {
+    padding-right: 36px;
   }
 
 
@@ -962,8 +1120,77 @@
   }
 
 
+  .aknm-mini-player {
+    left: 8px;
+    right: 8px;
+
+    bottom: 8px;
+  }
+
+
   .aknm-mini-expand {
     display: none;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (
+  max-width: 360px
+) {
+
+  .aknm-global-player {
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+
+    padding: 10px;
+
+    padding-top: 17px;
+  }
+
+
+  .aknm-player-cover {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 12px;
+  }
+
+
+  .aknm-player-controls {
+    gap: 2px;
+  }
+
+
+  .aknm-control-button {
+    width: 30px;
+    height: 30px;
+  }
+
+
+  .aknm-main-play-button {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .aknm-time {
+    font-size: 9px;
+  }
+
+
+  .aknm-progress-row {
+    grid-template-columns:
+      30px
+      minmax(0, 1fr)
+      30px;
+
+    gap: 7px;
   }
 
 }

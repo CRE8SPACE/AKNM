@@ -162,7 +162,13 @@ function CloseIcon() {
       viewBox="0 0 24 24"
       aria-hidden="true"
     >
-      <path d="M6 6l12 12M18 6L6 18" />
+      <path
+        d="M6 6l12 12M18 6L6 18"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }
@@ -520,11 +526,16 @@ export default function GlobalMusicPlayer() {
         </button>
 
 
+        {/* =================================================
+            MOBILE / MINI PLAYER CLOSE BUTTON
+           ================================================= */}
+
         <button
           type="button"
           className="aknm-mini-close"
           onClick={handleClose}
-          aria-label="Close player"
+          aria-label="Close music player"
+          title="Close music player"
         >
           <CloseIcon />
         </button>
@@ -552,7 +563,28 @@ export default function GlobalMusicPlayer() {
      ======================================================= */
 
   return (
-    <div className="aknm-global-player">
+    <div
+      className="aknm-global-player"
+      role="region"
+      aria-label="Music player"
+    >
+
+      {/* =================================================
+          MOBILE CLOSE BUTTON
+          
+          Kept separately from the desktop action group
+          so CSS can position it visibly on mobile.
+         ================================================= */}
+
+      <button
+        type="button"
+        className="aknm-mobile-close-button"
+        onClick={handleClose}
+        aria-label="Close music player"
+        title="Close music player"
+      >
+        <CloseIcon />
+      </button>
 
 
       {/* =================================================
@@ -560,7 +592,6 @@ export default function GlobalMusicPlayer() {
          ================================================= */}
 
       <div className="aknm-player-track">
-
 
         <div className="aknm-player-cover">
 
@@ -613,7 +644,6 @@ export default function GlobalMusicPlayer() {
 
         </div>
 
-
       </div>
 
 
@@ -623,9 +653,7 @@ export default function GlobalMusicPlayer() {
 
       <div className="aknm-player-center">
 
-
         <div className="aknm-player-controls">
-
 
           <button
             type="button"
@@ -716,12 +744,10 @@ export default function GlobalMusicPlayer() {
             />
           </button>
 
-
         </div>
 
 
         <div className="aknm-progress-row">
-
 
           <span className="aknm-time">
 
@@ -779,9 +805,7 @@ export default function GlobalMusicPlayer() {
 
           </span>
 
-
         </div>
-
 
       </div>
 
@@ -792,9 +816,7 @@ export default function GlobalMusicPlayer() {
 
       <div className="aknm-player-actions">
 
-
         <div className="aknm-volume">
-
 
           <button
             type="button"
@@ -838,7 +860,6 @@ export default function GlobalMusicPlayer() {
             aria-label="Volume"
           />
 
-
         </div>
 
 
@@ -854,18 +875,21 @@ export default function GlobalMusicPlayer() {
         </button>
 
 
+        {/* =================================================
+            DESKTOP CLOSE BUTTON
+           ================================================= */}
+
         <button
           type="button"
           className="aknm-control-button aknm-close-button"
           onClick={handleClose}
           aria-label="Close player"
+          title="Close player"
         >
           <CloseIcon />
         </button>
 
-
       </div>
-
 
     </div>
   );

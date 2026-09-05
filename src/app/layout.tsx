@@ -1,15 +1,12 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 import { Inter, Poppins } from "next/font/google";
 
 import { MusicPlayerProvider } from "@/components/MusicPlayer/MusicPlayerProvider";
-
 import GlobalMusicPlayer from "@/components/MusicPlayer/GlobalMusicPlayer";
-
 import AnalyticsTracker from "@/components/Analytics/AnalyticsTracker";
 
 import "./globals.css";
-
 
 /* =========================================================
    FONTS
@@ -21,14 +18,12 @@ const inter = Inter({
   display: "swap",
 });
 
-
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
 });
-
 
 /* =========================================================
    METADATA
@@ -41,6 +36,22 @@ export const metadata: Metadata = {
     "The official website of Akonam — entrepreneur, founder, CEO, author, music artist and builder.",
 };
 
+/* =========================================================
+   VIEWPORT
+   =========================================================
+   Global viewport configuration for both the public website
+   and Studio.
+
+   We intentionally do NOT disable user scaling globally.
+   Public pages should remain accessible to users who need
+   browser zoom.
+   ========================================================= */
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
 /* =========================================================
    ROOT LAYOUT
@@ -57,7 +68,6 @@ export default function RootLayout({
       className={`${inter.variable} ${poppins.variable}`}
     >
       <body>
-
         {/* =================================================
             ANALYTICS
             Records public website page views.
@@ -66,19 +76,15 @@ export default function RootLayout({
 
         <AnalyticsTracker />
 
-
         {/* =================================================
             MUSIC SYSTEM
             ================================================= */}
 
         <MusicPlayerProvider>
-
           {children}
 
           <GlobalMusicPlayer />
-
         </MusicPlayerProvider>
-
       </body>
     </html>
   );
